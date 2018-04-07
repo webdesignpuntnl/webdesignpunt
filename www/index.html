@@ -1,17 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="all">
+	<meta name="Description" content="Webdesignpuntnl in Culemborg is een eenmanszaak gespecialiseerd in het ontwerpen en bouwen van websites.">
+    <meta name="copyright" content="Copyright Webdesignpuntnl Culemborg">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/webdesignpuntnl-styles.css">
-    <title>Document</title>
+    <title>Webdesignpuntnl - bouwen voor het web</title>
 </head>
 <body>
-    <h1 id="h1">Test</h1>
-    <h2>test</h2>
-    <h3>test</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sequi, sint eaque quod rerum in vitae inventore? Praesentium labore repellat iusto distinctio, quae sint tenetur, consequuntur cupiditate voluptates architecto officia?</p>
+    <div class="pageWrapper">
+        <header> <!-- top logo  -->
+            <a href="">
+            <div class="logo"> 
+                <div class="top">
+                    <!-- <span>yellow background color</span> --> 
+                    <span>half orange cirkel</span>
+                </div> 
+                <h1>webdesign<span>punt</span>nl</h1>
+                <div class="bottom">
+                    <!-- <span>orange background color</span> -->
+                    <span>half yellow cirkel</span>
+                </div> 
+            </div>
+            </a>
+            <nav> <!-- top navigation -->
+                <ul>
+                    <li><a href="index.html" class="active">home</a></li>
+                    <li><a href="about.html">over</a></li>
+                    <li><a href="pages/projects.html">projecten</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="pages/experience.html">ervaring</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article> <!-- about -->
+                <h2>Webdesignpuntnl</h2>
+                <p>
+                    Webdesigpuntnl is een fullservice eenmanszaak voor het ontwikkelen van webappllicties.
+                    Wij kunnen er voor zorgen dat u bedrijf te vinden is op internet. De applicaties die we
+                    bouwen werken op elk schermformaat en worden gebouwd met de laatste technieken.
+                    Webdesignpuntl heeft de meeste kennis zelf in huis. Mochten we er echter niet uitkomen zoeken we samenwerking 
+                    met andere professionals. Wilt u meer informatie neem dan contact met ons op.
+                </p>
+            </article>
+            <form method="post" action="pages/contact-verzonden.html" enctype="multipart/form-data" autocomplete="on" id="contactForm"> <!-- contact form -->
+                <fieldset>
+                    <label for="nameField">naam</label>
+                        <input name="name" type="text" id="nameField" required pattern="^[a-zA-Z ]*$" placeholder="naam" title="gebruik alleen letters en geen cijfers">
+                    <label for="subjectField">onderwerp</label>
+                        <input name="onderwerp" type="text"  id="subjectField" placeholder="onderwerp" title="vul hier een onderwerp in">
+                    <label for="emailField">email</label>
+                        <input name="email" type="email"  id="emailField" required pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" placeholder="email" title="vul een geldig emailadres in">
+                    <label for="phoneField">telefoon</label>
+                        <input name="phone" type="phone"  id="phoneField" required pattern="^[0-9]*$" placeholder="telefoon" title="vul een geldig telefoonnummer in">
+                    <label for="remarksField">bericht</label>
+                        <textarea rows="8" name="remarks"  id="remarksField" required placeholder="bericht"></textarea>
+                    <input name="insturen" type="submit" id="formSubmitButton" value="versturen">    
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <div class="topFooter"> <!-- top section of the footer -->
+                <div class="adress">
+                    <h3>adres</h3>
+                    <address>
+                        <ul>
+                            <li><a href="tel:0031638399229">&plus;31638399229</a></li>
+                            <li><span>Culemborg</span></li>
+                            <li><span>Holland</span></li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="social">
+                    <ul>
+                        <h3>Social links</h3>
+                        <li><a href="https://www.facebook.com" target="_blank"><span class="iconFacebook">Facebook</span></a></li> <!-- icon in sprite in css -->
+                        <li><a href="https://www.twitter.com" target="_blank"><span class="iconTwitter">Twitter</span></a></li> <!-- icon in sprite in css -->
+                        <li><a href="https://www.pinterest.com" target="_blank"><span class="iconPinterest">Pinterest</span></a></li> <!-- icon in sprite in css -->
+                    </ul> 
+                </div> 
+            </div>
+            <div class="bottomFooter"> <!-- bottom section of the footer -->
+                <p>Webdesignpuntnl 2018</p>
+            </div>
+        </footer>
+    </div> <!-- end of wrapper -->
     <script src="js/webdesignpuntnl-script.js"></script>
 </body>
 </html>

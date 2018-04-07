@@ -1,0 +1,79 @@
+main {
+    text-align: center;
+
+    h2 {
+        padding: 3rem 0 1rem 0;
+    }
+
+    p {
+        font-size: 1.2rem;
+        text-align: left;
+        display: block;
+        margin: 0 2rem 2rem 2rem;
+        max-width: 600px;
+    }
+
+    form {
+        text-align: left;
+        margin: 3rem 2rem;
+        display: block;
+        
+
+        fieldset {
+            border: none;
+        }
+
+        label {
+            display: none;
+        }
+
+        input {
+            display: block;
+            border-bottom: 1px solid $blackColor;
+            margin: 0 0 1.5rem 0;
+            padding: 0 0 0.2rem 0;
+            width: 100%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        ::placeholder {
+            font-size: 0.9rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        textarea {
+            resize: none;
+            width: 100%;
+            border-bottom: 1px solid $blackColor;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input[type=submit] {
+            font-family: $fontRaleway;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: none;
+            margin: 2rem  0 0 0;
+            text-align: left;
+            padding: 1rem;
+            background-color: $yellowColor;
+            width: initial;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                border: 2px solid $yellowColor;
+                background-color: $blackColor;
+                color: $whiteColor;
+            }
+        }
+    }
+}

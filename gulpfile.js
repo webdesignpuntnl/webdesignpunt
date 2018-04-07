@@ -51,7 +51,8 @@ gulp.task('browser-sync', function(){
     browserSync.init(["www/css/*.css", "www/js/*.js", "www/*.html", "www/pages/*.html" , "www/media/images/*"], {
         server: {
             baseDir: "www"
-        }
+        },
+        notify: false
     })
 });
 
@@ -72,6 +73,6 @@ gulp.task('browser-sync', function(){
         .pipe(gulp.dest('www/media/images'));
     });
 
-gulp.task('default', ['sass', 'browser-sync', 'scripts', 'image', 'css'], function(){
-    gulp.watch(["_source/scss/*.scss", "_source/js/*.js", "_source/images/*", "www/*.html", "www/pages/*.html", "www/js/*.js"], ['sass', 'scripts', 'image', 'css']);
+gulp.task('default', ['sass', 'browser-sync', 'scripts', 'image'], function(){
+    gulp.watch(["_source/scss/*.scss", "_source/js/*.js", "_source/images/*", "www/*.html", "www/pages/*.html", "www/js/*.js"], ['sass', 'scripts', 'image']);
 });

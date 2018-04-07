@@ -1,0 +1,19 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: $orangeColor;
+    font-family: $fontRaleway;
+    position: relative;
+}
+
+.pageWrapper {
+    // max-width: 1200px;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 1;
+}
+
