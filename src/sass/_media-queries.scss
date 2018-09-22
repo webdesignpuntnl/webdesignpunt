@@ -3,6 +3,8 @@
     ######################################### */
 @media screen and (min-width:320px) {
     // use @include here and @mixin in the partial
+
+    @include logo--320;
 }
 
 /*  ######################################### 
@@ -10,13 +12,17 @@
     ######################################### */
 @media screen and (min-width:512px) {
     
+    
 }
 
 /*  ######################################### 
     600
     ######################################### */
 @media screen and (min-width:600px) {
-
+    
+    @include header--600;
+    @include logo--600;
+    @include main--600;
 }
 
 /*  ######################################### 
@@ -24,6 +30,8 @@
     ######################################### */
 @media screen and (min-width:768px) {
 
+        @include header--768;
+        @include footer--768;
 }
 
 

@@ -1,8 +1,10 @@
 main {
+    margin: 12rem 0 0 0;
     text-align: center;
 
     h2 {
-        padding: 3rem 0 1rem 0;
+        font-size: 1.8rem;
+        padding: 9rem 0 1.5rem 0;
     }
 
     p {
@@ -15,9 +17,13 @@ main {
 
     form {
         text-align: left;
-        margin: 3rem 2rem;
+        margin: 0 2rem 3rem 2rem;
         display: block;
         
+        h2 {
+            text-align: center;
+            margin: 4rem 0 0 0;
+        }
 
         fieldset {
             border: none;
@@ -42,6 +48,8 @@ main {
         ::placeholder {
             font-size: 0.9rem;
             font-weight: 400;
+            color: $whiteColor;
+            // color: lighten($blackColor, 40%);
             text-transform: uppercase;
         }
 
@@ -61,19 +69,46 @@ main {
             font-weight: 700;
             text-transform: uppercase;
             border: none;
-            margin: 2rem  0 0 0;
-            text-align: left;
+            margin: 2rem auto;
             padding: 1rem;
             background-color: $yellowColor;
             width: initial;
+            border: 2px solid $yellowColor;
             border-radius: 5px;
             cursor: pointer;
+            transition: 1.2s;
 
             &:hover {
-                border: 2px solid $yellowColor;
                 background-color: $blackColor;
                 color: $whiteColor;
+                transform: all;
             }
+        }
+    }
+}
+
+@mixin main--600 {
+    article {
+
+        h2 {
+            font-size: 2rem;
+            padding: 5rem 0 1.5rem 0;
+        }
+
+        p {
+            margin: 0 auto;
+            width: 550px;
+            // max-width: 600px;
+        }
+    }
+
+    main {
+
+        form {
+            display: block;
+            margin: 0 auto 3rem auto;
+            width: 550px;
+            // max-width: 600px;
         }
     }
 }

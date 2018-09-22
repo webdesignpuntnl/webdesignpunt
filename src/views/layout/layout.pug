@@ -1,0 +1,73 @@
+doctype html
+html(lang="nl")
+    head
+        meta(charset="UTF-8") 
+        meta(http-equiv="X-UA-Compatible" content="ie=edge") 
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes") 
+        meta(name="robots" content="all") 
+        meta(name="Description" content="Webdesignpuntnl Culemborg is een eenmanszaak gespecialiseerd in het ontwerpen en bouwen van websites.") 
+        meta(name="copyright" content="Copyright Webdesignpuntnl Culemborg") 
+        link(href="logo.ico" rel="shortcut icon")
+        link(href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet')
+        //- link(href='css/main.css' rel='stylesheet')
+        title Webdesignpuntnl - bouwen voor het web
+    body
+        <!-- top logo -->
+        header 
+            a(href="#" title="homepage")
+                .logo
+                    .top
+                        span half orange cirkel
+                    h1 webdesign
+                        span punt
+                        | nl
+                    .bottom 
+                        span half yellow cirkel
+            <!-- top navigation -->
+            nav
+                a(href="#" class="active") home
+                ul
+                    li
+                        a(href="pages/about.html") over
+                    li
+                        a(href="pages/projects.html") projecten
+                    li
+                        a(href="pages/tools.html") gereedschap
+                    li
+                        a(href="#contactForm") contact
+                <!-- hamburger icon -->
+                div(class="menuSmall" id="hamburgerIcon", role="button")
+                    div.line01 Lijn01
+                    div.line02 Lijn02
+                    div.line03 Lijn03
+        .pageWrapper
+            main
+                block content
+                    
+        footer
+            .topFooter
+                .adress
+                    h3 gegevens
+                    adress
+                        ul
+                            li
+                                a(href="tel:0031638399229") &plus;31638399229
+                            li
+                                span Culemborg
+                            li
+                                span Holland
+                .social
+                    h3 Social Links
+                    ul
+                        li
+                            a(href="https://www.linkedin.com" target="_blank") 
+                                span(class="iconLinkedin") Facebook 
+                        li
+                            a(href="https://www.twitter.com" target="_blank")
+                                span(class="iconTwitter") Twitter 
+                        li
+                            a(href="https://www.facebook.com" target="_blank")
+                                span(class="iconFacebook") Facebook
+                .bottomFooter
+                    p Webdesignpuntnl 2018
+        //- script(src="js/bundle.js")

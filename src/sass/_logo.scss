@@ -1,0 +1,100 @@
+.logo {
+    // border: 1px solid $blackColor;
+    margin: 0 auto 2rem auto;
+    max-width: 200px;
+    overflow: hidden;
+
+    h1 {
+        font-family: $fontLogo;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.1rem;
+        font-size: 1.1rem;
+        color: $blackColor;
+        text-align: center;
+        position: absolute;
+        z-index: 999;
+        top: 36px;
+        left: 50%;
+        transform: translate(-50%);
+
+        span {
+            padding: 0 0.6rem;
+        }
+    }
+
+    .top {
+        font-size: 0;
+        height: 31px;
+        background-color: $yellowColor;
+        transition: background-color 1s ease-in-out;
+
+        span {
+            background: linear-gradient($orangeColor, $orangeColor 50%, $yellowColor, $yellowColor 50%);
+            display: block;
+            position: relative;
+            left: 108px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }            
+    }
+
+    .bottom {
+        font-size: 0;
+        background-color: $orangeColor;
+        height: 30px;
+        vertical-align: bottom;
+        transition: background-color 1s ease-in-out;
+    }
+
+    &:hover { 
+        .top {
+            background-color: $orangeColor;
+
+            span {
+                background: linear-gradient($yellowColor, $yellowColor 50%, $orangeColor, $orangeColor 50%);
+            }
+        }
+        .bottom {
+            background-color: $yellowColor;
+        }
+    }
+}
+
+@mixin logo--320 {
+    .logo {
+        max-width: 300px;
+
+        h1 {
+            font-size: 1.8rem;
+            top: 35px;
+        }
+
+        .top {
+            height: 36px;
+            
+            span {
+                top: 0;
+                left: 177px;
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        .bottom {
+            height: 35px;
+        }
+    }
+}
+
+@mixin logo--600 {
+
+    .logo {
+        margin: 0 0 4rem 1rem;
+
+        h1 {
+            left: 166px;
+        }
+    }
+}

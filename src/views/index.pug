@@ -1,0 +1,65 @@
+extends layout/layout
+
+block content
+    <!-- about -->
+    article
+        h2 Webdesignpuntnl
+        p Webdesigpuntnl is een fullservice eenmanszaak voor het ontwikkelen van webappllicties.
+            | Wij kunnen er voor zorgen dat u bedrijf te vinden is op internet. De applicaties die we
+            | bouwen werken op elk schermformaat en worden gebouwd met de laatste technieken.
+            | Webdesignpuntl heeft de meeste kennis zelf in huis. Mochten we er echter niet uitkomen zoeken we samenwerking 
+            | met andere professionals. Wilt u meer informatie neem dan contact met ons op.
+    <!-- contact form -->
+    form(
+        method="post" 
+        action="pages/contact-verzonden.html" 
+        enctype="multipart/form-data" 
+        autocomplete="on" 
+        id="contactForm")
+        h2 contact
+        fieldset
+            label(for="nameField") naam
+            input(
+                name="name" 
+                type="text" 
+                id="nameField" 
+                pattern="^[a-zA-Z ]*$" 
+                placeholder="naam" 
+                required 
+                title="gebruik alleen letters en geen cijfers") 
+            label(for="subjectField") onderwerp
+            input(
+                name="onderwerp" 
+                type="text"  
+                id="subjectField" 
+                placeholder="onderwerp" 
+                title="vul hier een onderwerp in")
+            label(for="emailField") email
+            input(
+                name="email" 
+                type="email"  
+                id="emailField" 
+                required 
+                pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
+                placeholder="email" title="vul een geldig emailadres in")
+            label(for="phoneField") telefoon
+            input(
+                name="phone" 
+                type="tel"  
+                id="phoneField" 
+                required 
+                pattern="^[0-9]*$" 
+                placeholder="telefoon" 
+                title="vul een geldig telefoonnummer in")
+            label(for="remarksField") bericht
+            textarea(
+                rows="8" 
+                name="remarks"  
+                id="remarksField" 
+                required 
+                placeholder="bericht")
+            input(
+                name="insturen" 
+                type="submit" 
+                id="formSubmitButton" 
+                value="versturen")
