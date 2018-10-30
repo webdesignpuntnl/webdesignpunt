@@ -1,5 +1,9 @@
 extends layout/layout
 
+block prepend header
+    - var page = "index"
+    - var path = ""
+
 block content
     <!-- about -->
     article
@@ -15,51 +19,63 @@ block content
         action="pages/contact-verzonden.html" 
         enctype="multipart/form-data" 
         autocomplete="on" 
-        id="contactForm")
-        h2 contact
-        fieldset
-            label(for="nameField") naam
-            input(
-                name="name" 
-                type="text" 
-                id="nameField" 
-                pattern="^[a-zA-Z ]*$" 
-                placeholder="naam" 
-                required 
-                title="gebruik alleen letters en geen cijfers") 
-            label(for="subjectField") onderwerp
-            input(
-                name="onderwerp" 
-                type="text"  
-                id="subjectField" 
-                placeholder="onderwerp" 
-                title="vul hier een onderwerp in")
-            label(for="emailField") email
-            input(
-                name="email" 
-                type="email"  
-                id="emailField" 
-                required 
-                pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
-                placeholder="email" title="vul een geldig emailadres in")
-            label(for="phoneField") telefoon
-            input(
-                name="phone" 
-                type="tel"  
-                id="phoneField" 
-                required 
-                pattern="^[0-9]*$" 
-                placeholder="telefoon" 
-                title="vul een geldig telefoonnummer in")
-            label(for="remarksField") bericht
-            textarea(
-                rows="8" 
-                name="remarks"  
-                id="remarksField" 
-                required 
-                placeholder="bericht")
-            input(
-                name="insturen" 
-                type="submit" 
-                id="formSubmitButton" 
-                value="versturen")
+        id="contactForm"
+        class="form")
+        h2(class="form__h2") contact
+        fieldset(class="form__fieldset")
+            div(class="input")
+                input(
+                    name="name" 
+                    type="text" 
+                    id="nameField"
+                    class="input__textInput" 
+                    pattern="^[a-zA-Z ]*$" 
+                    placeholder="naam" 
+                    required 
+                    title="gebruik alleen letters en geen cijfers") 
+                label(for="nameField" class="input__textInput__label") naam
+            div(class="input")
+                input(
+                    name="onderwerp" 
+                    type="text"  
+                    id="subjectField"
+                    class="input__textInput" 
+                    placeholder="onderwerp" 
+                    title="vul hier een onderwerp in")
+                label(for="subjectField" class="input__textInput__label") onderwerp
+            div(class="input")
+                input(
+                    name="email" 
+                    type="email"  
+                    id="emailField"
+                    class="input__textInput" 
+                    required 
+                    pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
+                    placeholder="email" title="vul een geldig emailadres in")
+                label(for="emailField" class="input__textInput__label") email
+            div(class="input")
+                input(
+                    name="phone" 
+                    type="tel"  
+                    id="phoneField"
+                    class="input__textInput" 
+                    required 
+                    pattern="^[0-9]*$" 
+                    placeholder="telefoon" 
+                    title="vul een geldig telefoonnummer in")
+                label(for="phoneField" class="input__textInput__label") telefoon
+            div(class="input")
+                textarea(
+                    name="remarks"  
+                    id="remarksField"
+                    class="input__textInput form__input__textarea" 
+                    required 
+                    placeholder="bericht")
+                label(for="remarksField" class="input__textInput__label") bericht
+            div(class="input")
+                input(
+                    name="insturen" 
+                    type="submit" 
+                    id="formSubmitButton"
+                    class="input__textInput input__textInput__submitButton"
+                    value="versturen")

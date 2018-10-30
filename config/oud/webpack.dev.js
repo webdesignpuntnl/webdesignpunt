@@ -4,7 +4,6 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const utils = require('./utils');
 
@@ -58,9 +57,7 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: "[name].[ext]",
-                            outputPath: './images/',
-                            publicPath: '../images/'
+                            name: "images/[name].[ext]",
                         } 
                     }
                 ]
@@ -80,11 +77,6 @@ module.exports = {
             template: "src/views/index.pug",
             inject: true,
         }),
-        new CopyWebpackPlugin([
-            { from: 'src/assets/**/*',
-              to: '[name].[ext]'
-             }
-         ]) ,
         ...utils.pages(),
     ]
 };

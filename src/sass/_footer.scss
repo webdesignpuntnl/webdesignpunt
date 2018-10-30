@@ -1,112 +1,107 @@
-footer {
+.footer {
     background-color: $yellowColor;    
 }
 
-.topFooter {
+.footer__top {
     border-top: 1px solid $blackColor;
+}
 
-    .adress { // adres list
-        margin: 3rem auto;
-        text-align: center;
-        letter-spacing: 0.1rem;
-        
-        h3 {
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            padding: 0 0 0.3rem;
-        }
-
-        a:link, a:visited {
-            text-decoration: none;
-            color: $blackColor;
-        }
-
-        li {
-            font-style: normal;
-            padding: 0.1rem;
-        }
+.footer__top__adress { // adres list
+    margin: 3rem auto;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    
+    &__heading {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding: 0 0 0.3rem;
     }
 
-    .social { // social icons
+    &__tel:link, &__tel:visited {
+        text-decoration: none;
+        color: $blackColor;
+    }
 
-        h3 {
-            display: none;
-        }
+    &__item {
+        font-style: normal;
+        padding: 0.2rem;
+    }
+}
 
-        ul {
-            text-align: center;
-            margin: 2rem 0 1rem 0;
+.footer__top__social { // social icons
 
-            li {
-                display: inline-block;
-                margin: 0 0.8rem 0 0;
-            }
-        }
+    &__heading {
+        display: none;
+    }
 
-        span {
-            display: block;
-            font-size: 0;
-            width: 50px;
-            height: 50px;
-            border: 1px solid $blackColor;
-            border-radius: 50%;
-            transition: 0.5s;
+    &__list {
+        text-align: center;
+        margin: 2rem 0 1rem 0;
 
-            &:hover {
-                background-color: $orangeColor;
-                transform: all;
-            }
-        }
-
-        .iconLinkedin, .iconTwitter, .iconFacebook {
-            background-image: url("../images/icons-social-normal.svg"); 
-            background-size: 90px;
-            background-position: 13px 11px;
-
-            &:hover {
-                background-image: url("../images/icons-social-hover.svg");
-                transform: all;
-            }
-        }
-
-        .iconTwitter {
-            background-size: 90px;
-            background-position: -49px 13px;
-        }
-
-        .iconFacebook {
-            background-size: 125px;
-            background-position: -34px 8px;
+        &__item {
+            display: inline-block;
+            margin: 0 0.8rem 0 0;
         }
     }
 }
 
-.bottomFooter { // bottom footer name company
+.footer__top__icon {
+    display: block;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $blackColor;
+    border-radius: 50%;
+    transition: 0.2s;
+    background-image: url("../images/icons-social-normal.svg"); 
+    background-size: 90px;
+    background-position: 13px 11px;
+
+    &:hover {
+        background-color: $orangeColor;
+        border-color: $whiteColor;
+        background-image: url("../images/icons-social-hover.svg");
+        transform: all;
+    }
+
+    &--twitter {
+        background-size: 90px;
+        background-position: -49px 13px;  
+    }
+
+    &--facebook {
+        background-size: 125px;
+        background-position: -34px 8px;
+    }
+}
+
+.footer__bottom { // bottom footer name company
+    background-color: $orangeColor;
     border-top: 1px solid $blackColor;
     text-align: center;
     font-size: 0.7rem;
     padding: 0.8rem 0 1rem 0;
 }
 
-@mixin footer--768 {
+@mixin footer--m {
     
-    .topFooter {
+    .footer__top {
         text-align: center;
+    }
         
-        .adress {
-            display: inline-block;
-            margin: 3rem 5rem 3rem 0;
+    .footer__top__adress {
+        display: inline-block;
+        margin: 3rem 5rem 3rem 0;
 
-            ul {
-                list-style-type: none;
-            }
+        ul {
+            list-style-type: none;
         }
+    }
         
-        .social {
-            display: inline-block;
-            vertical-align: top;
-            margin: 0;
-            padding: 0;
-        }
+    .footer__top__social {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
     }
 }

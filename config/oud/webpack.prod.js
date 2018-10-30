@@ -14,7 +14,6 @@ const imageminJpegtran = require("imagemin-jpegtran"); // losless
 const imageminMozjpeg = require("imagemin-mozjpeg"); // lossy
 const imageminOptinpng = require("imagemin-optipng"); // losless
 const imageminSvgo = require("imagemin-svgo"); // losless
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const plugins = [imageminGifsicle(), imageminMozjpeg(), imageminOptinpng(), imageminSvgo()];
 
@@ -57,15 +56,13 @@ module.exports =  {
                 ]
             },
             {
-                test: /\.(jpg|gif|png|svg|ico)$/,
+                test: /\.(jpg|gif|png|svg|ico)$/i,
                 use: [
                     {
                         loader: "file-loader",
                         options: {
-                            name: "images/[name].[ext]",
-                            // publicPath: function(url) {
-                            //     return url.replace(/images/, '../images')
-                            // }
+                            name: "[name].[ext]",
+                            outputPath: "images/"
                         } 
                     }
                 ]
@@ -75,7 +72,7 @@ module.exports =  {
     optimization: {
         minimizer: [new UglifyJsPlugin()]
     },
-    devtool: "inline-source-map", 
+    devtool: "inline-source-map",
     plugins: [
         new CleanWebpackPlugin(['dist'], {
             root: path.join(__dirname, '..')
@@ -86,14 +83,14 @@ module.exports =  {
         new PurgecssPlugin({
             paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
         }),
-        new OptimizeCss({
+        // new OptimizeCss({
 
-        }),
+        // }),
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "src/views/index.pug",
             inject: true,
-            // favicon: 'src/images/logo.ico'
+            favicon: 'src/images/logo.ico'
         }),
         ...utils.pages(),
         new ImageminWebpackPlugin({
@@ -113,11 +110,6 @@ module.exports =  {
                 ie8: false,
                 keep_fnames: false,
               }
-        }),
-        new CopyWebpackPlugin([
-           { from: 'src/assets/**/*',
-             to: '[name].[ext]'
-            }
-        ]) 
+        })
     ]
 };

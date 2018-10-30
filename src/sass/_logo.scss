@@ -1,35 +1,20 @@
 .logo {
-    // border: 1px solid $blackColor;
+    display: block;
     margin: 0 auto 2rem auto;
     max-width: 200px;
+}
+
+.logo__top {
+    border: 1px solid $blackColor;
     overflow: hidden;
 
-    h1 {
-        font-family: $fontLogo;
-        font-weight: 400;
-        font-style: normal;
-        letter-spacing: 0.1rem;
-        font-size: 1.1rem;
-        color: $blackColor;
-        text-align: center;
-        position: absolute;
-        z-index: 999;
-        top: 36px;
-        left: 50%;
-        transform: translate(-50%);
-
-        span {
-            padding: 0 0.6rem;
-        }
-    }
-
-    .top {
+    &__cirkelTop {
         font-size: 0;
         height: 31px;
         background-color: $yellowColor;
         transition: background-color 1s ease-in-out;
 
-        span {
+        &__orange {
             background: linear-gradient($orangeColor, $orangeColor 50%, $yellowColor, $yellowColor 50%);
             display: block;
             position: relative;
@@ -39,62 +24,93 @@
             border-radius: 50%;
         }            
     }
+}
 
-    .bottom {
-        font-size: 0;
-        background-color: $orangeColor;
-        height: 30px;
-        vertical-align: bottom;
-        transition: background-color 1s ease-in-out;
-    }
+.logo__cirkelBottom {
+    font-size: 0;
+    background-color: $orangeColor;
+    height: 30px;
+    vertical-align: bottom;
+    transition: background-color 1s ease-in-out;
+}
 
-    &:hover { 
-        .top {
-            background-color: $orangeColor;
+.logo__text {
+    font-family: $fontLogo;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
+    color: $blackColor;
+    text-align: center;
+    position: absolute;
+    z-index: 999;
+    top: 36px;
+    left: 50%;
+    transform: translate(-50%);
 
-            span {
-                background: linear-gradient($yellowColor, $yellowColor 50%, $orangeColor, $orangeColor 50%);
-            }
-        }
-        .bottom {
-            background-color: $yellowColor;
-        }
+    &__dot {
+        padding: 0 0.6rem;
+        transition: all 0.5s ease-in-out;
     }
 }
 
-@mixin logo--320 {
+.logo__top:hover {
+
+    .logo__cirkelBottom {
+        background-color: $yellowColor;
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    .logo__top__cirkelTop__orange {
+        background: linear-gradient($yellowColor, $yellowColor 50%, $yellowColor, $yellowColor 50%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .logo__text__dot {
+        padding: 0;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+
+@mixin logo--vs { // 320
     .logo {
         max-width: 300px;
+    }
 
-        h1 {
-            font-size: 1.8rem;
-            top: 35px;
-        }
-
-        .top {
+    .logo__top {
+        // max-width: 300px;
+        
+        &__cirkelTop {
             height: 36px;
             
-            span {
+            &__orange {
                 top: 0;
                 left: 177px;
                 width: 70px;
                 height: 70px;
             }
         }
+    }
 
-        .bottom {
-            height: 35px;
-        }
+    .logo__text {
+        font-size: 1.8rem;
+        top: 35px;
+    }
+
+
+    .logo__cirkelBottom {
+        height: 35px;
     }
 }
 
-@mixin logo--600 {
 
+@mixin logo--ms { // 600
     .logo {
         margin: 0 0 4rem 1rem;
+    }
 
-        h1 {
-            left: 166px;
-        }
+    .logo__text {
+        left: 166px;
     }
 }
