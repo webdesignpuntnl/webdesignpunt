@@ -1,32 +1,22 @@
 .header {
-    position: fixed;
     width: 100%;
     z-index: 999;
     background-color: $yellowColor;
     border-bottom: 1px solid $blackColor;
-    padding: 1rem 0 0 0;
+    padding: 1rem 0 2rem 0;
 }
 
 .header__nav {
-    @include clearfix;
-    padding: 0 0 2rem 0;
-    // padding: 0 0 11rem 0;
-    position: relative;
 
     &__menu {
-        text-align: center;
-        position: absolute;
-        list-style-type: none;
-        margin: 0 0 10rem 0;
-        top: 180px;
-        left: 50%;
-        transform: translate(-50%);
+        margin: 1.5rem 0 0 0;
+        height: 135px;
+        opacity: 1;
+        font-size: 1rem;
+        // transition: height 500ms ease-in-out 100ms, opacity 800ms ease-in-out, font-size 100ms ease-in-out;
         
         &__page {
-            display: none;
-            width: 200px;
-            padding: 0.3rem 0;
-            transition: 0.8s;
+            margin: 0.5rem 0 0 0.5rem;
         }
     }
 }
@@ -35,7 +25,6 @@
         font-family: $fontRaleway;
         font-weight: 700;
         font-style: normal;
-        font-size: 1.2rem;
         letter-spacing: 0.1rem;
         color: $blackColor;
         text-transform: uppercase;
@@ -80,7 +69,9 @@
    width: 50px;
    border: 1px solid $blackColor;
    border-radius: 5px;
-   float: right;
+   position: absolute;
+   top: 7.2rem;
+   right: 0;
    margin: 0 1rem;
    padding: 0.2rem 0.4rem;
    cursor: pointer;
@@ -103,6 +94,13 @@
    }
 }
 
+.hideMenu {
+    height: 0;
+    opacity: 0;
+    font-size: 0;
+    transition: height 500ms ease-in-out 100ms, opacity 800ms ease-in-out, font-size 100ms ease-in-out;
+}
+
 // rotate the top line
 .change .menuSmall__line01 {
    transform: rotate(-45deg) translate(-6px, 7px);
@@ -120,11 +118,16 @@
 
 
 @mixin header--ms { // 600
+    .hideMenu {
+        opacity: 1;
+    }
 
     .header__nav {
         position: initial;
 
         &__menu {
+            height: auto;
+            display: block;
             position: initial;
             float: right; 
             margin: 0 1rem 0 0;
