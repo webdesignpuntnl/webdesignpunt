@@ -44,14 +44,14 @@ html(lang="nl")
                             li(class="header__nav__menu__page")
                                 a(href=(`${path}pages/tools.html`) class=(page == "tools" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) tools
                             li(class="header__nav__menu__page")
-                                a(href="#contactForm" class=(page == "contact" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) contact
+                                a(href=(`${path}pages/contact.html`) class=(page == "contact" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) contact
                         <!-- hamburger icon -->
                         div(class="menuSmall change" id="hamburgerIcon", role="button")
                             div(class="menuSmall__line01") Lijn01
                             div(class="menuSmall__line02") Lijn02
                             div(class="menuSmall__line03") Lijn03
         .pageWrapper
-            main
+            main(class="main")
                 block content
                     
         footer(class="footer")

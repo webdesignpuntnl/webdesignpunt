@@ -5,6 +5,40 @@ block prepend header
     - var path = "../"
 
 block content
-  article
-    h2 projecten
-    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia saepe nobis ipsum, id officia animi amet consectetur ab maxime corrupti officiis similique facilis aperiam obcaecati consequatur sit illo cum natus!
+  article(class="article")
+  h2(class="h2") projecten
+  p(class="p") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac justo et nunc ornare rutrum. Proin libero nulla, ultricies vitae maximus id, bibendum et felis. Mauris accumsan finibus mi. Aliquam erat volutpat. Aenean tincidunt est ut magna porttitor, sed iaculis lorem pharetra. Nullam in auctor odio. Sed bibendum suscipit erat in suscipit. Aenean tincidunt vitae leo vitae vestibulum. Nulla eget venenatis justo. Suspendisse eu volutpat lorem, dapibus aliquam est. Nulla in eros vitae erat feugiat malesuada. Praesent mollis tincidunt purus ut aliquet. Mauris scelerisque massa eu nunc viverra sagittis. Sed fringilla scelerisque nisi, non posuere elit. Phasellus diam augue, posuere ut pulvinar ac, porta ut ante. Praesent dictum mauris eu arcu rutrum, vitae semper lacus convallis.
+  article(class="article")
+      div(class="projects" title="de Vlinderfabriek")
+        a(href="https://www.vlinderfabriek.nl" target="_blank" class="projects__link")
+          div(class="projects__card")
+            .projects__overlay 
+              p(class="projects__overlay__p") 
+                | De Vlinderfabriek wil kinderen en jongeren het creatieve &amp; grenzeloze van theater laten ontdekken.
+            h2(class="projects__card__h2") de Vlinderfabriek
+            img(src="../images/screenshot-vlinderfabriek.png" class="projects__card__screenshots" alt="de Vlinderfabriek")
+      div(class="projects" title="buurtpanel Culemborg")
+        a(href="https://www.buurtpanel Culemborg.nl" target="_blank" class="projects__link" title="buurtpanel Culemborg")
+          div(class="projects__card")
+            .projects__overlay 
+              p(class="projects__overlay__p") 
+                | Het buurtpanel is een onafhankelijke groep bewoners uit alle delen van Culemborg,
+                | die geld beschikbaar stelt voor initiatieven die de leefbaarheid van uw wijk verhogen. J
+                | Jaarlijks ontvangt het daarvoor van de gemeente en KleurrijkWonen een budget.
+            h2(class="projects__card__h2") Buurtpanel Culemborg
+            img(src="../images/screenshot-buurtpanel.png" class="projects__card__screenshots" alt="buurtpanel Culemborg")
+      div(class="projects" title="test01")
+        a(href="https://www.buurtpanel Culemborg.nl" target="_blank" class="projects__link" title="test01")
+          div(class="projects__card")
+            .projects__overlay 
+              p(class="projects__overlay__p") test 01
+            h2(class="projects__card__h2") test 01
+            img(src="../images/screenshot-buurtpanel.png" class="projects__card__screenshots" alt="test01")
+      div(class="projects" title="test02")
+        a(href="https://www.buurtpanel Culemborg.nl" target="_blank" class="projects__link" title="test02")
+          div(class="projects__card")
+            .projects__overlay 
+              p(class="projects__overlay__p") test 02
+            h2(class="projects__card__h2") test 02
+            img(src="../images/screenshot-buurtpanel.png" class="projects__card__screenshots" alt="test02")
+        

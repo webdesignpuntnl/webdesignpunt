@@ -1,0 +1,74 @@
+extends ../layout/layout
+
+block prepend header
+    - var page = "contact"
+    - var path = "../"
+
+block content
+  article(class="article")
+    h2(class="h2") contact
+    p(class="p") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac justo et nunc ornare rutrum. Proin libero nulla, ultricies vitae maximus id, bibendum et felis. Mauris accumsan finibus mi. Aliquam erat volutpat. Aenean tincidunt est ut magna porttitor, sed iaculis lorem pharetra. Nullam in auctor odio. Sed bibendum suscipit erat in suscipit. Aenean tincidunt vitae leo vitae vestibulum. Nulla eget venenatis justo. Suspendisse eu volutpat lorem, dapibus aliquam est. Nulla in eros vitae erat feugiat malesuada. Praesent mollis tincidunt purus ut aliquet. Mauris scelerisque massa eu nunc viverra sagittis. Sed fringilla scelerisque nisi, non posuere elit. Phasellus diam augue, posuere ut pulvinar ac, porta ut ante. Praesent dictum mauris eu arcu rutrum, vitae semper lacus convallis.
+  form(
+        method="post" 
+        action="pages/contact-verzonden.html" 
+        enctype="multipart/form-data" 
+        autocomplete="on" 
+        id="contactForm"
+        class="form")
+        fieldset(class="form__fieldset")
+            div(class="input")
+                input(
+                    name="name" 
+                    type="text" 
+                    id="nameField"
+                    class="input__textInput" 
+                    pattern="^[a-zA-Z ]*$" 
+                    placeholder="naam" 
+                    required 
+                    title="gebruik alleen letters en geen cijfers") 
+                label(for="nameField" class="input__textInput__label") naam
+            div(class="input")
+                input(
+                    name="onderwerp" 
+                    type="text"  
+                    id="subjectField"
+                    class="input__textInput" 
+                    placeholder="onderwerp" 
+                    title="vul hier een onderwerp in")
+                label(for="subjectField" class="input__textInput__label") onderwerp
+            div(class="input")
+                input(
+                    name="email" 
+                    type="email"  
+                    id="emailField"
+                    class="input__textInput" 
+                    required 
+                    pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
+                    placeholder="email" title="vul een geldig emailadres in")
+                label(for="emailField" class="input__textInput__label") email
+            div(class="input")
+                input(
+                    name="phone" 
+                    type="tel"  
+                    id="phoneField"
+                    class="input__textInput" 
+                    required 
+                    pattern="^[0-9]*$" 
+                    placeholder="telefoon" 
+                    title="vul een geldig telefoonnummer in")
+                label(for="phoneField" class="input__textInput__label") telefoon
+            div(class="input")
+                textarea(
+                    name="remarks"  
+                    id="remarksField"
+                    class="input__textInput form__input__textarea" 
+                    required 
+                    placeholder="bericht")
+                label(for="remarksField" class="input__textInput__label") bericht
+            div(class="input")
+                input(
+                    name="insturen" 
+                    type="submit" 
+                    id="formSubmitButton"
+                    class="input__textInput input__textInput__submitButton"
+                    value="versturen")

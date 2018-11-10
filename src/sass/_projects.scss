@@ -1,0 +1,136 @@
+.projects {
+    margin: 1rem auto 2rem auto;
+    position: relative;
+}
+
+.projects__card {
+    display: inline-block;
+    position: relative;
+    max-width: 350px;
+    margin: 1rem;
+    background-color: $yellowColor;
+    box-shadow: $blackColor 1px 1px 8px 1px;
+}
+
+.projects__overlay {
+    font-size: 0;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+}
+
+
+.projects__card:hover .projects__overlay {
+    font-size: 0.8rem;
+    
+    background-color: $orangeColor;
+    border: 2px solid $yellowColor;
+    transition: background-color 0.5s ease-in-out, font-size 0.8s 0.5s ease-in-out;
+}
+
+.projects__overlay__p {
+    display: block;
+    position: relative;   
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 1rem;
+}
+
+.projects__link:link, .projects__link:visited  {
+    color: $blackColor;
+}
+
+.projects__card__h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: $orangeColor;
+    text-shadow: 1px 1px 0 $blackColor;
+}
+
+.projects__card__screenshots {
+    display: block;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    box-shadow: $greyColor 1px 1px 8px 0;
+    z-index: 900;
+    opacity: 0.2;
+}
+
+.projects__card__p {
+    display: block;
+    text-align: left;
+    width: 210px;
+    margin: 0.5rem auto 1rem auto;
+}
+
+.projects__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($orangeColor, 0.95);
+    
+    &__screenshots {
+        display: block;
+        width: 80%;
+        margin: 6rem auto 2rem auto;
+    }
+
+    &__p {
+        display: block;
+        width: 80%;
+        margin: 0.5rem auto 0 auto;
+        text-align: left; 
+    }
+}
+
+// close the Modal
+.closeModal {
+    text-align: center;
+    font-size: 0;
+    width: 50px;
+    border-radius: 5px;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    margin: 0 1rem;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+ 
+    &__line01, &__line02 {
+        margin: 5px 0;
+        padding: 0.2rem 0.5rem;
+        background-color: $yellowColor;
+        border-radius: 3px;
+        transition: background-color 0.5s ease-in-out;
+    }
+ 
+    &:hover {
+        .closeModal__line01, .closeModal__line02 {
+            background-color: $blackColor;
+        }
+    }
+ }
+ 
+ // top line
+.closeModal__line01 {
+    transform: rotate(-45deg) translate(-8px, 0);
+ }
+ 
+ // second line
+.closeModal__line02 {
+     transform: rotate(45deg) translate(-8px, 0);
+ }
+
+@mixin projects--m {
+}
