@@ -18,7 +18,8 @@ function showPoppup(e) {
           </div>
           <img src="${info.image}" class="projects__modal__screenshots" alt="${info.client}">
           <h2 class="projects__modal__h2">${info.client}</h2>
-          <p class="projects__modal__p">${info.content}</p>`;
+          <p class="projects__modal__p">${info.content}</p>
+          <a href=${info.link} class="projects__modal__link" target="_blank">Ga naar de site</a>`;
       newDiv.innerHTML = markup;
     }
   });

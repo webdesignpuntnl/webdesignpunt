@@ -10,7 +10,7 @@
 }
 
 .p {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-align: left;
     letter-spacing: 0.1rem;
     display: block;
@@ -40,7 +40,7 @@
 
     .input {
         position: relative;
-    
+        
         &__textInput {
             display: block;
             margin: 0 0 3rem 0;
@@ -130,7 +130,6 @@
 @mixin main--ms {
     article {
 
-        
         p {
             margin: 0 auto;
             // width: 550px;

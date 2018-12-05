@@ -1,0 +1,13 @@
+extends ../layout/layout-error
+
+
+block prepend head
+    - var title = "403 Forbidden"
+    - var color = "blue"
+
+
+block content
+    main(class="main main__vlindernieuws main--blue")
+        h1 Oeps u heeft geen toegang tot dit document
+        article
+            p Helaas er is iets mis gegaan. Probeer het opnieuw of kies via de buttons een andere pagina!

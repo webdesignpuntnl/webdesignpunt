@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const utils = require('./utils');
+const utilsErrorDocs = require('./utilsErrorDocs');
 
 module.exports = {
     entry: {
@@ -86,5 +87,6 @@ module.exports = {
              }
          ]) ,
         ...utils.pages(),
+        ...utilsErrorDocs.Errorpages(),
     ]
 };

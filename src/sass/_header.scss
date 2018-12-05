@@ -47,6 +47,7 @@
         background-color: transparent;
         border-bottom: 2px solid $orangeColor;
         padding: 0;
+        margin: 0 0 0 1.2rem;
         cursor: initial;
 
         &:hover {
@@ -64,6 +65,7 @@
 
 // hamburgermenu 
 .menuSmall {
+    display: none;
    text-align: center;
    font-size: 0;
    width: 50px;
