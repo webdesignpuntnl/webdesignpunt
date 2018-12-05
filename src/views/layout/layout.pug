@@ -40,7 +40,7 @@ html(lang="nl")
                         <!-- top navigation -->
                         nav(class="header__nav")
                             a(href=(`${path}index.html`) class=(page == "index" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) home
-                            ul(class="header__nav__menu")
+                            ul(class="header__nav__menu" data-show="1")
                                 li(class="header__nav__menu__page")
                                     a(href=(`${path}pages/about.html`) class=(page == "about" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) over
                                 li(class="header__nav__menu__page")
