@@ -2,12 +2,19 @@ import poppupInfo from './poppupInfo';
 
 const projects = Array.from(document.querySelectorAll('.projects'));
 const newDiv = document.createElement('div');
+const pageBlurr = document.createElement('div');
+const main = document.querySelector('.main');
+const pageWrapper = document.querySelector('.pageWrapper');
 let overlayShow = false;
+
+pageWrapper.insertBefore(pageBlurr, main);
+
 
 newDiv.setAttribute('class', 'projects__modal');
 
 function showPoppup(e) {
   e.preventDefault();
+  pageBlurr.setAttribute('class', 'pageBlurr');
   const client = this;
   poppupInfo.forEach((info) => {
     if (client.title === info.client) {
@@ -28,7 +35,10 @@ function showPoppup(e) {
 
   if (overlayShow) {
     const closeModal = document.querySelector('.closeModal');
-    closeModal.addEventListener('click', () => overlay.parentElement.removeChild(newDiv));
+    closeModal.addEventListener('click', () => {
+      overlay.parentElement.removeChild(newDiv);
+      pageBlurr.setAttribute('class', '');
+    });
     overlayShow = false;
   }
 }
