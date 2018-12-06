@@ -3,14 +3,36 @@ import poppupInfo from './poppupInfo';
 const projects = Array.from(document.querySelectorAll('.projects'));
 const newDiv = document.createElement('div');
 const pageBlurr = document.createElement('div');
-const main = document.querySelector('.main');
-const pageWrapper = document.querySelector('.pageWrapper');
+const header = document.querySelector('.header');
+const projectsOverlays = document.querySelectorAll('.projects__overlay');
 let overlayShow = false;
 
-pageWrapper.insertBefore(pageBlurr, main);
-
-
+header.appendChild(pageBlurr);
 newDiv.setAttribute('class', 'projects__modal');
+
+function moveIn(overlay) {
+  overlay.style.left = '-999%';
+  let add = -75;
+  setInterval(() => {
+    if (add <= 50) {
+      add += 2;
+      overlay.style.left = `${add}%`;
+    }
+  }, 10);
+}
+
+function moveOut(overlay) {
+  let down = 1;
+  const disappear = setInterval(() => {
+    overlay.style.opacity = `${down}`;
+    down -= 0.02;
+    if (down <= 0) {
+      clearInterval(disappear);
+      overlay.style.opacity = 1;
+      overlay.parentElement.removeChild(newDiv);
+    }
+  }, 10);
+}
 
 function showPoppup(e) {
   e.preventDefault();
@@ -23,24 +45,33 @@ function showPoppup(e) {
               <div class="closeModal__line01">Lijn01</div>
               <div class="closeModal__line02">Lijn02</div>
           </div>
-          <img src="${info.image}" class="projects__modal__screenshots" alt="${info.client}">
+          <a href="${info.link}" target="_blank"><img src="${info.image}" class="projects__modal__screenshots" alt="${info.client}"><a/>
           <h2 class="projects__modal__h2">${info.client}</h2>
           <p class="projects__modal__p">${info.content}</p>
           <a href=${info.link} class="projects__modal__link" target="_blank">Ga naar de site</a>`;
       newDiv.innerHTML = markup;
     }
   });
+
   const overlay = this.parentElement.appendChild(newDiv);
+  moveIn(overlay);
   overlayShow = true;
 
   if (overlayShow) {
     const closeModal = document.querySelector('.closeModal');
     closeModal.addEventListener('click', () => {
-      overlay.parentElement.removeChild(newDiv);
+      moveOut(overlay);
       pageBlurr.setAttribute('class', '');
+      projectsOverlays.forEach((projectOverlay) => {
+        projectOverlay.style.zIndex = '1000';
+      });
     });
     overlayShow = false;
   }
+
+  projectsOverlays.forEach((projectOverlay) => {
+    projectOverlay.style.zIndex = 'initial';
+  });
 }
 
 projects.forEach(project => project.addEventListener('click', showPoppup));

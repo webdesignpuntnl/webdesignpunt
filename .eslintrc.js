@@ -10,6 +10,8 @@ module.exports = {
     "rules": {
         "linebreak-style": 0, //0 is off, 1 is warn, 2 is error
         "prefer-arrow-callback": 1,
-        "no-console": 0
+        "no-console": 0,
+        "no-param-reassign": 0,
+        "no-plusplus": 0,
     }
 };
