@@ -12,6 +12,5 @@ module.exports = {
         "prefer-arrow-callback": 1,
         "no-console": 0,
         "no-param-reassign": 0,
-        "no-plusplus": 0,
     }
 };
