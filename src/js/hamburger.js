@@ -17,12 +17,33 @@ function windowResize() {
   }
 }
 
-// open or close the menu.Menu stays open on pagechange
-function handleMenu() {
+// open or close the menu. Menu stays open on pagechange
+function handleMenu(e) {
+  let isClicked;
+  if (e) isClicked = true; // als er geklikt wordt
+  let menuState = sessionStorage.getItem('menu');
   const newHamburgerMenu = document.querySelector('.menuSmall');
-  if (topMenu.dataset.show === '2') {
-    newHamburgerMenu.classList.toggle('change');
-    topMenu.classList.toggle('hideMenu');
+
+  // het menu verbergt zich als js aan staat cookie menu wordt close
+  if (menuState === 'close' || !menuState) {
+    newHamburgerMenu.classList.remove('change');
+    topMenu.classList.add('hideMenu');
+    sessionStorage.setItem('menu', 'close');
+    menuState = sessionStorage.getItem('menu');
+
+    /* bij een click gaat het menu open en blijft open cookie wordt op open
+  gezet en kan dus niet meer op pagina reload gesloten worden */
+    if (e) {
+      newHamburgerMenu.classList.add('change');
+      topMenu.classList.remove('hideMenu');
+      sessionStorage.setItem('menu', 'open');
+      menuState = sessionStorage.getItem('menu');
+    }
+  } else if (isClicked) { // bij nog een click gaat het menu dicht en cookie op close
+    newHamburgerMenu.classList.remove('change');
+    topMenu.classList.add('hideMenu');
+    sessionStorage.setItem('menu', 'close');
+    menuState = sessionStorage.getItem('menu');
   }
 }
 
@@ -42,10 +63,7 @@ nav.appendChild(hamburgerMenu);
 windowResize();
 
 // hide the menu on pageload
-if (topMenu.dataset.show === '1') {
-  handleMenu();
-  topMenu.dataset.show = '2';
-}
+handleMenu();
 
 // event listeners
 hamburgerMenu.addEventListener('click', handleMenu);
