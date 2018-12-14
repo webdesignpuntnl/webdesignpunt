@@ -89,7 +89,6 @@
             width: initial;
             border: 2px solid $blackColor;
             border-radius: 5px;
-            cursor: pointer;
             transition: 0.5s;
 
             &:hover {
@@ -124,6 +123,11 @@
     border-bottom: 1px solid lighten($blackColor, 30%);
     color: lighten($blackColor, 30%);
     transition: opacity 150ms ease-in-out 150ms, top 450ms ease-in-out; 
+}
+
+.input__message {
+    color: white;
+    padding: 0 0 1rem 0;
 }
 
 

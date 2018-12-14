@@ -19,24 +19,25 @@ block content
         class="form")
         fieldset(class="form__fieldset")
             div(class="input")
+                //- div.input__message test
                 input(
                     name="name" 
                     type="text" 
                     id="nameField"
                     class="input__textInput" 
-                    pattern="^[a-zA-Z ]*$" 
+                    pattern="^[a-zA-Z]*$" 
                     placeholder="naam" 
-                    required 
-                    title="gebruik alleen letters en geen cijfers") 
+                    title="dit veld is verplicht en kan alleen letters bevatten!") 
                 label(for="nameField" class="input__textInput__label") naam
             div(class="input")
                 input(
                     name="onderwerp" 
                     type="text"  
                     id="subjectField"
-                    class="input__textInput" 
+                    class="input__textInput"
+                    pattern="^[a-zA-Z0-9]*$" 
                     placeholder="onderwerp" 
-                    title="vul hier een onderwerp in")
+                    title="vul een onderwerp in")
                 label(for="subjectField" class="input__textInput__label") onderwerp
             div(class="input")
                 input(
@@ -44,7 +45,6 @@ block content
                     type="email"  
                     id="emailField"
                     class="input__textInput" 
-                    required 
                     pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
                     placeholder="email" title="vul een geldig emailadres in")
                 label(for="emailField" class="input__textInput__label") email
@@ -54,7 +54,6 @@ block content
                     type="tel"  
                     id="phoneField"
                     class="input__textInput" 
-                    required 
                     pattern="^[0-9]*$" 
                     placeholder="telefoon" 
                     title="vul een geldig telefoonnummer in")
@@ -64,13 +63,12 @@ block content
                     name="remarks"  
                     id="remarksField"
                     class="input__textInput form__input__textarea" 
-                    required 
+                     
                     placeholder="bericht")
                 label(for="remarksField" class="input__textInput__label") bericht
-            div(class="input")
-                input(
-                    name="insturen" 
-                    type="submit" 
-                    id="formSubmitButton"
-                    class="input__textInput input__textInput__submitButton"
-                    value="versturen")
+            button(
+                name="insturen" 
+                type="submit" 
+                id="formSubmitButton"
+                class="input__textInput input__textInput__submitButton"
+                value="versturen") versturen
