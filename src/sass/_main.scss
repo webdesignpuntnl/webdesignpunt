@@ -95,6 +95,11 @@
                 background-color: $blackColor;
                 color: $whiteColor;
                 border: 2px solid $yellowColor;
+                box-shadow: $yellowColor 1px 1px 15px 1px;
+            }
+
+            &:focus {
+                padding: 1rem;
             }
         }
     }
