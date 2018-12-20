@@ -26,7 +26,8 @@ const PATHS = { src: path.join(__dirname, '../src') }
 module.exports =  {
     
     entry: {
-        main: [ "./main.js" ] 
+        main: [ "./main.js" ]
+        // account: ["./src/js/popup.js"]
     },
     mode: "production",   
     output: {
