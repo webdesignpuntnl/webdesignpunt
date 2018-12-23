@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config=config/webpack.dev.js --open",
-    "build": "webpack --config=config/webpack.prod.js",
+    "start": "webpack-dev-server --config=config/webpack.dev.js --open --mode development",
+    "build": "webpack --config=config/webpack.prod.js --mode production",
     "clean": "trash dist"
   },
   "keywords": [],

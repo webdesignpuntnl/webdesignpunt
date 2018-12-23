@@ -26,8 +26,8 @@ const PATHS = { src: path.join(__dirname, '../src') }
 module.exports =  {
     
     entry: {
-        main: [ "./main.js" ]
-        // account: ["./src/js/popup.js"]
+        main: [ "./main.js" ],
+        // contactForm: ["./src/js/formvalidate.js"]
     },
     mode: "production",   
     output: {
@@ -94,7 +94,7 @@ module.exports =  {
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "src/views/index.pug",
-            inject: true,
+            inject: 'body',
             // favicon: 'src/images/logo.ico'
         }),
         ...utils.pages(),

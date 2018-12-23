@@ -19,59 +19,65 @@ block content
         class="form")
         fieldset(class="form__fieldset")
             div(class="input")
-                //- div.input__message test
+                //- div.input__message
                 input(
                     name="name" 
                     type="text" 
                     id="nameField"
                     class="input__textInput" 
-                    pattern="^[a-zA-Z]*$" 
+                    pattern="^[a-zA-Z\\s]*$" 
                     placeholder="naam" 
-                     
+                    required
                     title="gebruik alleen letters en geen cijfers") 
                 label(for="nameField" class="input__textInput__label") naam
             div(class="input")
+                //- div.input__message
                 input(
                     name="onderwerp" 
                     type="text"  
                     id="subjectField"
                     class="input__textInput"
-                    pattern="^[a-zA-Z0-9]*$" 
+                    pattern="^[a-zA-Z\\s]*$" 
+                    required
                     placeholder="onderwerp" 
                     title="vul een onderwerp in")
                 label(for="subjectField" class="input__textInput__label") onderwerp
-            //- div(class="input")
-            //-     input(
-            //-         name="email" 
-            //-         type="email"  
-            //-         id="emailField"
-            //-         class="input__textInput" 
-                     
-            //-         pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
-            //-         placeholder="email" title="vul een geldig emailadres in")
-            //-     label(for="emailField" class="input__textInput__label") email
-            //- div(class="input")
-            //-     input(
-            //-         name="phone" 
-            //-         type="tel"  
-            //-         id="phoneField"
-            //-         class="input__textInput" 
-                     
-            //-         pattern="^[0-9]*$" 
-            //-         placeholder="telefoon" 
-            //-         title="vul een geldig telefoonnummer in")
-            //-     label(for="phoneField" class="input__textInput__label") telefoon
-            //- div(class="input")
-            //-     textarea(
-            //-         name="remarks"  
-            //-         id="remarksField"
-            //-         class="input__textInput form__input__textarea" 
-                     
-            //-         placeholder="bericht"
-            //-         title="vul aub een vraag in")
-            //-     label(for="remarksField" class="input__textInput__label") bericht
+            div(class="input")
+                input(
+                    name="email" 
+                    type="email"  
+                    id="emailField"
+                    class="input__textInput" 
+                    required
+                    pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
+                    placeholder="email" title="vul een geldig emailadres in")
+                label(for="emailField" class="input__textInput__label") email
+            div(class="input")
+                input(
+                    name="phone" 
+                    type="tel"  
+                    id="phoneField"
+                    class="input__textInput" 
+                    required
+                    placeholder="telefoon" 
+                    title="vul een geldig telefoonnummer in")
+                label(for="phoneField" class="input__textInput__label") telefoon
+            div(class="input")
+                textarea(
+                    name="remarks"  
+                    id="remarksField"
+                    class="input__textInput form__input__textarea" 
+                    required 
+                    placeholder="bericht"
+                    title="vul aub een vraag in")
+                label(for="remarksField" class="input__textInput__label") bericht
             div(class="input")
                 input(
                     name="insturen" 
                     type="submit" 
-                    class="input__textInput input__textInput__submitButton") 
+                    class="input__textInput input__textInput__submitButton")
+//- block script
+    script(src=`${path}js/contactForm-bundle.js`)
+    script(src=`${path}js/main-bundle.js`)
+
+
