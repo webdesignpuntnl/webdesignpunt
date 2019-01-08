@@ -1,11 +1,13 @@
 html {
     font-size: 100%;
+    height: 100%;
 }
 
 body {
     background-color: $orangeColor;
     font-family: $fontRaleway;
     position: relative;
+    min-height: 100%;
 }
 
 .pageWrapper {

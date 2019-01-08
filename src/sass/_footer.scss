@@ -1,5 +1,10 @@
 .footer {
-    background-color: $yellowColor;    
+    display: block;
+    background-color: $yellowColor; 
+    position: absolute;
+    bottom: 0;  
+    left: 0;
+    right: 0;
 }
 
 .footer__top {
@@ -7,9 +12,10 @@
 }
 
 .footer__top__adress { // adres list
-    margin: 3rem auto;
+    margin: 1.5rem auto 0 auto;
     text-align: center;
     letter-spacing: 0.1rem;
+    list-style-type: none;
     
     &__heading {
         font-size: 1.4rem;
@@ -36,7 +42,7 @@
 
     &__list {
         text-align: center;
-        margin: 2rem 0 1rem 0;
+        margin: 1.5rem 0 2rem 0;
 
         &__item {
             display: inline-block;
@@ -75,13 +81,13 @@
     }
 }
 
-.footer__bottom { // bottom footer name company
-    background-color: $orangeColor;
-    border-top: 1px solid $blackColor;
-    text-align: center;
-    font-size: 0.7rem;
-    padding: 0.8rem 0 1rem 0;
-}
+// .footer__bottom { // bottom footer name company
+    // background-color: $orangeColor;
+    // border-top: 1px solid $blackColor;
+    // text-align: center;
+    // font-size: 0.7rem;
+    // padding: 0.8rem 0 1rem 0;
+// }
 
 @mixin footer--m {
     

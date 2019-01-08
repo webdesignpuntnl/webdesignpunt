@@ -8,6 +8,34 @@ block prepend head
 
 block content
   article(class="article")
-    h2(class="h2") tools
-    p(class="p") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac justo et nunc ornare rutrum. Proin libero nulla, ultricies vitae maximus id, bibendum et felis. Mauris accumsan finibus mi. Aliquam erat volutpat. Aenean tincidunt est ut magna porttitor, sed iaculis lorem pharetra. Nullam in auctor odio. Sed bibendum suscipit erat in suscipit. Aenean tincidunt vitae leo vitae vestibulum. Nulla eget venenatis justo. Suspendisse eu volutpat lorem, dapibus aliquam est. Nulla in eros vitae erat feugiat malesuada. Praesent mollis tincidunt purus ut aliquet. Mauris scelerisque massa eu nunc viverra sagittis. Sed fringilla scelerisque nisi, non posuere elit. Phasellus diam augue, posuere ut pulvinar ac, porta ut ante. Praesent dictum mauris eu arcu rutrum, vitae semper lacus convallis.
-    p(class="p") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac justo et nunc ornare rutrum. Proin libero nulla, ultricies vitae maximus id, bibendum et felis. Mauris accumsan finibus mi. Aliquam erat volutpat. Aenean tincidunt est ut magna porttitor, sed iaculis lorem pharetra. Nullam in auctor odio. Sed bibendum suscipit erat in suscipit. Aenean tincidunt vitae leo vitae vestibulum. Nulla eget venenatis justo. Suspendisse eu volutpat lorem, dapibus aliquam est. Nulla in eros vitae erat feugiat malesuada. Praesent mollis tincidunt purus ut aliquet. Mauris scelerisque massa eu nunc viverra sagittis. Sed fringilla scelerisque nisi, non posuere elit. Phasellus diam augue, posuere ut pulvinar ac, porta ut ante. Praesent dictum mauris eu arcu rutrum, vitae semper lacus convallis.
+    h2(class="h2") Tools
+    div.align
+      p(class="p p--right") 
+        strong.p__firstWord De tools 
+        |  die ik gebruik veranderen eigenlijk constant. Dit komt enerzijds omdat de tools zelf veranderen, ze verdwijnen, worden vervangen door modernere of verbeteren. Aan de andere kant vraagt elk project om zijn eigen toolset. Een site met 1 pagina is minder complex dat een site met een grote database of een betaalsysteem. Ook maakt het uit of je in een team werkt of alleen.
+    div.align
+      a(href="https://pugjs.org" target="_blank")
+        img(src="../images/pug-logo.svg" class="tools__image")
+      p(class="p p--left") 
+          strong.p__firstWord PUG
+          | is een preprocessor voor html. 
+          a(href="https://pugjs.org" target="_blank" class="link") pug
+          |  vereenvoudigt en versneld het schrijven van html. Je kan werken met layouts en mixins. Je hebt met een layout file 1 bestand voor je algemene opmaak, dit bestand kan je dan in al je html bestanden terug laten komen. Mocht je iets willen aanpassen dan gebeurt dit in alle html bestanden waarin je je layout bestnd aanroept. Je kunt in 
+          a(href="https://pugjs.org" target="_blank" class="link") pug
+          |  Javascript gebruiken (pug is Javascript). Je kunt dus werken met variabelen, if-statemens, loops en functies. Erg handig!!
+    div.align
+      a(href="https://sass-lang.com/" target="_blank")
+        img(src="../images/sass-logo.svg" class="tools__image")
+      p(class="p p--right") 
+          strong.p__firstWord sass
+          | is ook een preprocessor maar dan voor CSS. Met 
+          a(href="https://sass-lang.com/" target="_blank" class="link") sass 
+          | heb je veel meer mogelijkheden dan met css. Je beschikt over variabelen (bijvoorbeeld voor kleuren of lettertypes) over mixins en formules. Ook kan je je css opdelen in blokken of partials, dit is heel prettig voor het overzicht. Dit wordt uiteindelijk weer samengevoegd tot een css bestand.
+    div.align
+      a(href="http://getbem.com/" target="_blank")
+        img(src="../images/bem-logo.svg" class="tools__image")
+      p(class="p p--left") 
+          strong.p__firstWord bem
+          | of block element modifier is een systeem om het gebruik van css te versimpelen. Elk block wat gestyled moet worden krijgt een classnaam. Door deze naamconventie wordt het gemakkelijker om goede classnamen te maken die gemakkelijk terug te vinden zijn. Je krijgt eigenlijk blokken css.
+    
+    

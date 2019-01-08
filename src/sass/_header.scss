@@ -12,7 +12,7 @@
         margin: 1.5rem 0 0 0;
         height: 135px;
         opacity: 1;
-        font-size: 1rem;
+        font-size: 1.1rem;
         // transition: height 500ms ease-in-out 100ms, opacity 800ms ease-in-out, font-size 100ms ease-in-out;
         
         &__page {
@@ -25,6 +25,7 @@
         font-family: $fontRaleway;
         font-weight: 700;
         font-style: normal;
+        font-size: 1.1rem;
         letter-spacing: 0.1rem;
         color: $blackColor;
         text-transform: uppercase;
@@ -147,7 +148,7 @@
     }
 
     .header__nav__link {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         display: inline-block;
     }
 
@@ -173,6 +174,6 @@
 
 @mixin header--l { // 1200
     .header__nav__link {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
 } 
 }

@@ -9,7 +9,7 @@ const poppupInfo = [
   {
     client: 'buurtpanel Culemborg',
     image: '../images/screenshot-buurtpanel.png',
-    content: 'Het buurtpanel is een onafhankelijke groep bewoners uit alle delen van Culemborg., die geld beschikbaar stelt voor initiatieven die de leefbaarheid van uw wijk verhogen.',
+    content: 'Het buurtpanel is een onafhankelijke groep bewoners uit alle delen van Culemborg, die geld beschikbaar stelt voor initiatieven die de leefbaarheid van uw wijk verhogen.',
     link: 'https://www.buurtpanelculemborg.nl',
   },
   {

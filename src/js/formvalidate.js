@@ -1,3 +1,5 @@
+//! moet nog kijken naar codesplitting. Nu wordt deze code op elke pagina geladen
+
 const form = document.querySelector('#contactForm');
 const nameField = form.querySelector('#nameField');
 const subjectField = form.querySelector('#subjectField');

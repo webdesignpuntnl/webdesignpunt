@@ -12,7 +12,7 @@ const utilsErrorDocs = require('./utilsErrorDocs');
 module.exports = {
     entry: {
         main: [ "./main.js" ],
-        contactForm: ["./src/js/formvalidate.js"]
+        // contactForm: ["./src/js/formvalidate.js"]
     },
     mode: "development",    
     output: {
