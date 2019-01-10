@@ -30,8 +30,9 @@
 @media screen and (min-width:768px) {
 
         @include header--m;
-        @include footer--m;
+        @include main--m;
         @include projects--m;
+        @include footer--m;
 }
 
 
@@ -40,6 +41,6 @@
     ######################################### */
 @media screen and (min-width:1200px) {
     @include header--l;
-    @include main--l;
+    // @include main--l;
 }
 

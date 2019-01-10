@@ -14,7 +14,7 @@ exports.pages = function() {
       const options = {
         filename: `pages/${viewName}.html`,
         template: `src/views/pages/${view}`,
-        inject: true
+        inject: false
       };
   
       

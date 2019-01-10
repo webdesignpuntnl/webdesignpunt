@@ -27,7 +27,7 @@ module.exports =  {
     
     entry: {
         main: [ "./main.js" ],
-        // contactForm: ["./src/js/formvalidate.js"]
+        contactForm: ["./src/js/formvalidate.js"]
     },
     mode: "production",   
     output: {
@@ -94,7 +94,7 @@ module.exports =  {
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "src/views/index.pug",
-            inject: 'body',
+            inject: false,
             // favicon: 'src/images/logo.ico'
         }),
         ...utils.pages(),
