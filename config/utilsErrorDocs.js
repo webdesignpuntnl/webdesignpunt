@@ -14,7 +14,7 @@ exports.Errorpages = function() {
       const options = {
         filename: `error_docs/${viewName}.html`,
         template: `src/views/error_docs/${view}`,
-        inject: true,
+        inject: false,
       };
   
       

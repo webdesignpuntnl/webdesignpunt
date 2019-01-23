@@ -1,0 +1,17 @@
+extends ../layout/layout
+
+block prepend head
+    - var page = ""
+    - var title = "contactformulier"
+    - var description = "neem contact met ons op voor een afspraak, vragen of opmerkingen"
+    - var path = "../"
+
+block content
+  article(class="article")
+    h2(class="h2") contact aanvraag ontvangen
+    p(class="p p--contactForm") Uw vraag is met succes door ons ontvangen! Wij nemen zo spoedig mogelijk contact met u op!
+block script
+    //- script(src=`${path}js/contactForm-bundle.js`)
+    //- script(src=`${path}js/main-bundle.js`)
+
+

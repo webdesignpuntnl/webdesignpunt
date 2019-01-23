@@ -12,11 +12,16 @@ block content
     p(class="p p--contactForm") Heb je een vraag? Wil je meer weten? Of wil je een afspraak maken? Vul onderstaand formulier in en we nemen zo snel mogelijk contact met je op!
   form(
         method="post" 
-        action="pages/contact-verzonden.html" 
+        action="../php/formmailContact.php" 
         enctype="multipart/form-data" 
         autocomplete="on" 
         id="contactForm"
         class="form")
+        input(type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER")
+        input(type="hidden" name="recipients" value="info@webdesignpuntnl.com")
+        input(type="hidden" name="good_url" value="../pages/contact-verzonden.html")
+        input(type="hidden" name="bad_url" value="../pages/contact-niet-verzonden.html")
+        input(type="hidden" name="subject" value="contactformulier")
         fieldset(class="form__fieldset")
             div(class="input")
                 //- div.input__message
@@ -76,7 +81,7 @@ block content
                     name="insturen" 
                     type="submit" 
                     class="input__textInput input__textInput__submitButton")
-//- block script
+block script
     script(src=`${path}js/contactForm-bundle.js`)
     script(src=`${path}js/main-bundle.js`)
 

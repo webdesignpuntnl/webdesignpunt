@@ -86,7 +86,12 @@ module.exports = {
             { from: 'src/assets/**/*',
               to: '[name].[ext]'
              }
-         ]) ,
+         ]),
+         new CopyWebpackPlugin([
+            { from: 'src/php/**/*',
+              to: '[name].[ext]'
+             }
+         ]),
         ...utils.pages(),
         ...utilsErrorDocs.Errorpages(),
     ]
