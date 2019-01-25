@@ -48,15 +48,15 @@ function validate(whichField, valid) {
 }
 
 fields.forEach((field) => {
-  field.addEventListener('focus', function () {
-    testInput(this);
-  });
+  // field.addEventListener('focus', function () {
+  //   testInput(this);
+  // });
   field.addEventListener('blur', function () {
     testInput(this);
   });
-  field.addEventListener('click', function () {
-    testInput(this);
-  });
+  // field.addEventListener('click', function () {
+  //   testInput(this);
+  // });
 
   const div = document.createElement('div');
   div.setAttribute('class', 'input__message');

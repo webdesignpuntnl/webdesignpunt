@@ -10,7 +10,7 @@ exports.pages = function() {
   
     fs.readdirSync(viewsFolder).forEach(view => {
       const viewName = view.split('.')[0];
-  
+      
       const options = {
         filename: `pages/${viewName}.html`,
         template: `src/views/pages/${view}`,
