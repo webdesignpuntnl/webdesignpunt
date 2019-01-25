@@ -11,7 +11,7 @@ header.appendChild(pageBlurr);
 newDiv.setAttribute('class', 'projects__modal');
 
 function moveIn(overlay) {
-  overlay.style.left = '-999%';
+  overlay.style.left = '-1000%';
   let add = -75;
   setInterval(() => {
     if (add <= 50) {
@@ -41,14 +41,17 @@ function showPoppup(e) {
   poppupInfo.forEach((info) => {
     if (client.title === info.client) {
       const markup = `
+        <div class="modal__header">
           <div class="closeModal role="button">
               <div class="closeModal__line01">Lijn01</div>
               <div class="closeModal__line02">Lijn02</div>
           </div>
-          <a href="${info.link}" target="_blank"><img src="${info.image}" class="projects__modal__screenshots" alt="${info.client}"><a/>
+        <a href="${info.link}" target="_blank">  
+          </div>
+          <img src="${info.image}" class="projects__modal__screenshots" alt="${info.client}">
           <h2 class="projects__modal__h2">${info.client}</h2>
           <p class="projects__modal__p">${info.content}</p>
-          <a href=${info.link} class="projects__modal__link" target="_blank">Ga naar de site</a>`;
+        </a>`;
       newDiv.innerHTML = markup;
     }
   });

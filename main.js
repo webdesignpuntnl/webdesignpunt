@@ -5,7 +5,7 @@ require('./src/sass/main.scss');
 require('./src/js/hamburger.js');
 require('./src/js/popup.js');
 require('./src/js/poppupInfo.js');
-// require('./src/js/formvalidate.js');
+require('./src/js/formvalidate.js');
 
 // images
 require('./src/images/icons-social-hover.svg');

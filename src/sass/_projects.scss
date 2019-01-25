@@ -1,9 +1,11 @@
 .projects {
     display: inline-block;
-    width: 350px;
+    width: 90%;
+    max-width: 450px;
     position: relative;
+    text-align: center;
 
-    margin: 1rem auto 2rem auto;
+    padding: 1rem 1rem 0 1rem;
 }
 
 .projects__card {
@@ -11,7 +13,6 @@
     position: relative;
     max-width: 350px;
     height: 200px;
-    margin: 1rem;
     overflow: hidden;
     background-color: $yellowColor;
     box-shadow: $blackColor 1px 1px 8px 1px;
@@ -65,7 +66,6 @@
     text-align: center;
     position: relative;
     width: 100%;
-    height: 100%;
     box-shadow: $greyColor 1px 1px 8px 0;
     z-index: 900;
     opacity: 0.25;
@@ -78,31 +78,50 @@
     margin: 0.5rem auto 1rem auto;
 }
 
+// .modal__header {
+//     position: fixed;
+// }
+
 .projects__modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    width: 90vw;
+    width: 80%;
     background-color: rgba($yellowColor, 1);
     border: 3px solid $blackColor;
     border-radius: 5px;
+    overflow: auto;
+
+    a {
+        text-decoration: none;
+        color: $blackColor;
+        display: block;
+        width: 100%;
+        height: 90%;
+        // overflow: hidden;
+    }
+    
     
     &__screenshots {
         display: block;
-        width: 80%;
-        margin: 6rem auto 2.5rem auto;
+        width: 60%;
+        margin: 2rem 0 2.5rem 1rem;
         box-shadow: $greyColor 1px 1px 8px 0;
+    }
+
+    &__h2 {
+        text-align: left;
+        margin: 0 0 0 1rem;
     }
     
     &__p {
-        text-align: center;
-        // display: block;
-        // width: 80%;
-        margin: 0.5rem 0 0 0;
-        // text-align: left;
-
+        text-align: left;
+        width: 100%;
+        max-width: 800px;
+        margin: 0;
+        padding: 0.5rem 2rem 2rem 1rem;
     }
 
     &__link {
@@ -122,14 +141,14 @@
 
 // close the Modal
 .closeModal {
+    position: absolute;
     text-align: center;
     font-size: 0;
-    width: 50px;
+    width: 60px;
     border-radius: 5px;
-    position: absolute;
     top: 2rem;
     right: 0;
-    margin: 0 1rem;
+    margin: 0 0.5rem 0 0.5rem;
     padding: 0.2rem 0.4rem;
     cursor: pointer;
  
@@ -162,7 +181,7 @@
  
  // top line
 .closeModal__line01 {
-    transform: rotate(-45deg) translate(-8px, 0);
+    transform: rotate(-45deg) translate(-9px, 0);
  }
  
  // second line
@@ -170,5 +189,15 @@
      transform: rotate(45deg) translate(-8px, 0);
  }
 
+@mixin projects--vs {
+    .projects__modal {
+        height: 90vh;
+        max-height: 60vmax;
+    }
+}
 @mixin projects--m {
+    .projects__modal {
+        height: 65vh;
+        max-height: 50vmax;
+    }
 }
