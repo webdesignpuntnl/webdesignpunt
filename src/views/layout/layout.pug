@@ -51,6 +51,8 @@ html(lang="nl")
                                 li(class="header__nav__menu__page")
                                     a(href=(`${path}pages/tools.html`) class=(page == "tools" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) tools
                                 li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/privacy.html`) class=(page == "privacy" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) privacy
+                                li(class="header__nav__menu__page")
                                     a(href=(`${path}pages/contact.html`) class=(page == "contact" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) contact
                             <!-- hamburger icon -->
                             div(class="menuSmall change" id="hamburgerIcon", role="button")
@@ -85,6 +87,7 @@ html(lang="nl")
                             li(class="footer__top__social__list__item")
                                 a(href="https://www.facebook.com" target="_blank")
                                     span(class="iconFacebook" class="footer__top__icon footer__top__icon--facebook") Facebook
+                a(class="footer__cookieSetup" href="#" id="noat-cookie-consent__setup") cookie instellingen
                     //- div(class="footer__bottom")
                         p Webdesignpuntnl 2018
             //- block script
