@@ -5,7 +5,7 @@
     position: relative;
     text-align: center;
 
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
 }
 
 .projects__card {
@@ -29,7 +29,7 @@
 
 
 .projects__card:hover .projects__overlay {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     
     background-color: $orangeColor;
     border: 2px solid $blackColor;

@@ -94,7 +94,7 @@ module.exports =  {
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "src/views/index.pug",
-            inject: true,
+            inject: false,
             // favicon: 'src/images/logo.ico'
         }),
         ...utils.pages(),

@@ -38,16 +38,14 @@ function showPoppup(e) {
   e.preventDefault();
   pageBlurr.setAttribute('class', 'pageBlurr');
   const client = this;
-  poppupInfo.forEach((info) => {
+  poppupInfo.forEach(info => {
     if (client.title === info.client) {
       const markup = `
-        <div class="modal__header">
           <div class="closeModal role="button">
               <div class="closeModal__line01">Lijn01</div>
               <div class="closeModal__line02">Lijn02</div>
           </div>
-        <a href="${info.link}" target="_blank">  
-          </div>
+          <a href="${info.link}" target="_blank">  
           <img src="${info.image}" class="projects__modal__screenshots" alt="${info.client}">
           <h2 class="projects__modal__h2">${info.client}</h2>
           <p class="projects__modal__p">${info.content}</p>
@@ -65,14 +63,14 @@ function showPoppup(e) {
     closeModal.addEventListener('click', () => {
       moveOut(overlay);
       pageBlurr.setAttribute('class', '');
-      projectsOverlays.forEach((projectOverlay) => {
+      projectsOverlays.forEach(projectOverlay => {
         projectOverlay.style.zIndex = '1000';
       });
     });
     overlayShow = false;
   }
 
-  projectsOverlays.forEach((projectOverlay) => {
+  projectsOverlays.forEach(projectOverlay => {
     projectOverlay.style.zIndex = 'initial';
   });
 }

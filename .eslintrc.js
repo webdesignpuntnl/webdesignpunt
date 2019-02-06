@@ -1,5 +1,6 @@
 module.exports = {
-    "extends": "airbnb-base",
+    "plugins": ["prettier"],
+    "extends": ["airbnb-base", "prettier"],
     "env": {
         "es6": true,
         "browser": true,
@@ -8,11 +9,10 @@ module.exports = {
     },
 
     "rules": {
+        "prettier/prettier": ["error"],
         "linebreak-style": 0, //0 is off, 1 is warn, 2 is error
         "prefer-arrow-callback": 1,
-        "no-console": 1,
-        "no-param-reassign": 0,
-        "no-unused-vars": 1,
-        "no-unused-expressions": 0,
+        "no-console": 0,
+        "no-param-reassign": 1
     }
 };

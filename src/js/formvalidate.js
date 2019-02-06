@@ -30,10 +30,14 @@ function testInput(whichField) {
     valid = /[a-zA-Z]/.test(whichField.value);
     displayMessage(valid, whichField);
   } else if (whichField === emailField) {
-    valid = /^[A-Za-z0-9](([_.-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([.-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$/.test(whichField.value);
+    valid = /^[A-Za-z0-9](([_.-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([.-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$/.test(
+      whichField.value
+    );
     displayMessage(valid, whichField);
   } else if (whichField === phoneField) {
-    valid = /^((\+|00(\s|\s?-\s?)?)31(\s|\s?-\s?)?(\(0\)[-\s]?)?|0)[1-9]((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/.test(whichField.value);
+    valid = /^((\+|00(\s|\s?-\s?)?)31(\s|\s?-\s?)?(\(0\)[-\s]?)?|0)[1-9]((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/.test(
+      whichField.value
+    );
     displayMessage(valid, whichField);
   } else if (whichField === remarksField) {
     valid = /[a-zA-Z0-9][^/:http@]$/.test(whichField.value);
@@ -47,11 +51,11 @@ function validate(whichField, valid) {
   return valid;
 }
 
-fields.forEach((field) => {
+fields.forEach(field => {
   // field.addEventListener('focus', function () {
   //   testInput(this);
   // });
-  field.addEventListener('blur', function () {
+  field.addEventListener('blur', function blur() {
     testInput(this);
   });
   // field.addEventListener('click', function () {
@@ -63,7 +67,7 @@ fields.forEach((field) => {
   field.parentNode.insertBefore(div, field);
 });
 
-submitButton.addEventListener('click', (e) => {
+submitButton.addEventListener('click', e => {
   const nameValid = validate(nameField);
   const subjectValid = validate(subjectField);
   const emailValid = validate(emailField);

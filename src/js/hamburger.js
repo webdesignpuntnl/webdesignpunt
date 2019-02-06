@@ -39,7 +39,8 @@ function handleMenu(e) {
       sessionStorage.setItem('menu', 'open');
       menuState = sessionStorage.getItem('menu');
     }
-  } else if (isClicked) { // bij nog een click gaat het menu dicht en cookie op close
+  } else if (isClicked) {
+    // bij nog een click gaat het menu dicht en cookie op close
     newHamburgerMenu.classList.remove('change');
     topMenu.classList.add('hideMenu');
     sessionStorage.setItem('menu', 'close');
