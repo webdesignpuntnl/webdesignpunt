@@ -48,12 +48,20 @@
     font-size: 1rem;
 
     &:hover {
-        color: $yellowColor;
+        color: $whiteColor;
     }
 
     &:visited {
         color: $whiteColor;
     }
+}
+
+.list {
+    font: $fontRaleway;
+    font-size: 1.1rem;
+    list-style-type: disc;
+    text-align: left;
+    margin: -4rem 0 2rem 5rem;
 }
 
 .p--contactForm {
