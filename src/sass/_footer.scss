@@ -60,8 +60,8 @@
     border-radius: 50%;
     transition: 0.2s;
     background-image: url("../images/icons-social-normal.svg"); 
-    background-size: 90px;
-    background-position: 13px 11px;
+    background-size: 105px;
+    background-position: 11px 8px;
 
     &:hover {
         background-color: $orangeColor;
@@ -71,13 +71,13 @@
     }
 
     &--twitter {
-        background-size: 90px;
-        background-position: -49px 13px;  
+        background-size: 95px;
+        background-position: -53px 13px;  
     }
 
-    &--facebook {
-        background-size: 125px;
-        background-position: -34px 8px;
+    &--instagram {
+        background-size: 134px;
+        background-position: -38px 4px;
     }
 }
 
