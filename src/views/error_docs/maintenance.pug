@@ -3,11 +3,12 @@ extends ../layout/layout-error
 
 block prepend head
     - var title = "503 Service Temporarily Unavailable"
-    - var color = "blue" 
+    - var color = "blue"
+    - var path = "../"
 
 
 block content
     main(class="main main__vlindernieuws main--blue")
         h1 Oeps 
         article
-            p Wegens onderhoud is de pagina tijdelijk niet beschikbaar! Probeer het later nog eens.
+            p.error__p Wegens onderhoud is de pagina tijdelijk niet beschikbaar! Probeer het later nog eens.

@@ -2,79 +2,95 @@ doctype html
 html(lang="nl")
     block head
         head
+            base(href="/error_docs/") 
             meta(charset="UTF-8") 
             meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes") 
             meta(http-equiv="X-UA-Compatible" content="ie=edge")
-            meta(name="robots" content="all")
+            meta(name="robots" content="noindex, follow")
             meta(name="Description" content="De Vlinderfabriek wil kinderen en jongeren het creatieve & grenzeloze van theater laten ontdekken.")
             meta(name="copyright" content="Copyright Webdesignpuntnl Culemborg")
-            link(rel="apple-touch-icon" sizes="76x76" href="../httpdocs/apple-touch-icon.png")
-            link(rel="icon" type="image/png" sizes="32x32" href="../httpdocs/favicon-32x32.png")
-            link(rel="icon" type="image/png" sizes="16x16" href="../httpdocs/favicon-16x16.png")
-            link(rel="manifest" href="../httpdocs/site.webmanifest")
-            link(rel="mask-icon" href="../httpdocs/safari-pinned-tab.svg" color="#5bbad5")
-            meta(name="msapplication-TileColor" content="#ffc40d")
-            meta(name="theme-color" content="#ffffff") 
-            meta(property="og:title" content="Vlinderfabriek")
-            meta(property="og:description" content="Jeugdtheater en workshops voor scholen, kinderen en volwassenen")
-            meta(property="og:type" content="theater eduactie")
-            meta(property="og:url" content="https://www.vlinderfabriek.nl")
-            meta(property="og:image" content="http://www.vlinderfabriek.nl/images/fabriek-bluep.svg")         
+            link(rel="apple-touch-icon" sizes="180x180" href=`${path}httpdocs/apple-touch-icon.png`)
+            link(rel="icon" type="image/png" sizes="32x32" href=`${path}httpdocs/favicon-32x32.png`)
+            link(rel="icon" type="image/png" sizes="16x16" href=`${path}httpdocs/favicon-16x16.png`)
+            link(rel="manifest" href=`${path}httpdocs/site.webmanifest`)
+            link(rel="mask-icon" href=`${path}httpdocs/safari-pinned-tab.svg` color="#5bbad5")
+            meta(name="msapplication-TileColor" content="#da532c")
+            meta(name="theme-color" content="#ffffff")
+            meta(property="og:title" content="Webdesignpuntnl")
+            meta(property="og:description" content="Webdesignpuntnl Culemborg is een eenmanszaak gespecialiseerd in het ontwerpen en bouwen van websites.")
+            meta(property="og:type" content="service")
+            meta(property="og:url" content="https://www.webdesignpuntnl.com")
+            meta(property="og:image" content="https://www.webdesignpuntnl.com/favicon-32x32.png")
+            link(href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet')
+            link(href=`${path}css/main.css` rel='stylesheet')         
             
             title #{title} 
-            base(href="/error_docs/") 
+    title Webdesignpuntnl - #{title}
     body
-        div(class="pageWrapper" id="backToTop")
             block header
-                header
-                    div
-                        a(href="../index.html" class="header__link")
-                            object(type="image/svg+xml", data="../images/fabriek-blue.svg" class="header__logo")
-                                //- img(src="images/fabriek-blue.svg" alt="logo" class="header__logo")
-                        a(href="../index.html")
-                            img(src="../images/woordlogo.png" alt="logo" class="header__wordlogo")
-                    block navigation
-                        nav
-                            ul(class="butterflys")
-                                li
-                                    a(href="../pages/verdieping.html")
-                                        img(src="../images/vlinder-groen-outline.png" alt="verdieping")
-                                        span verdieping
-                                li
-                                    a(href="../pages/lesaanbod.html")
-                                        img(src="../images/vlinder-rood-outline.png" alt="lesaanbod")
-                                        span lesaanbod
-                                li
-                                    a(href="../pages/op-school.html")
-                                        img(src="../images/vlinder-oranje-outline.png" alt="op School")
-                                        span op school
-                                li
-                                    a(href="../index.html")
-                                        img(src="../images/vlinder-blauw-outline.png" alt="home")
-                                        span home
-                            block buttons 
-                                ul(class="buttons buttons--blue")
-                                    li
-                                        a(href="../index.html" title="nieuws") nieuws 
-                                    li
-                                        a(href="../pages/over-ons.html" title="over ons") over ons
-                                    li
-                                        a(href="../pages/wie-zijn-wij.html" title="wij zijn wij") wij zijn wij
-                                    li
-                                        a(href="../pages/contact.html" title="contact") contact
-                                    li
-                                        a(href="../pages/achter-de-schermen.html" title="bestuur") bestuur
-                                    li
-                                        a(href="../pages/privacy.html" title="privacy") privacy
-            block content
-        block footer
-            footer(class=`footer footer--${color}`)
-                a(class="footer__link" href="#backToTop")
-                    img(class="footer__link__arrow" src=`../images/pijl-terug-${color}.png` alt="klik voor terug omhoog" title="klik voor terug omhoog")
-                a(class="footer__link" href="https://www.facebook.com/De-Vlinderfabriek-365229100205779/" target="_blank")
-                    img(class="footer__link__facebookLogo" src="../images/logo-facebook-normal.svg" alt="facebook" title="facebook")
-                a(class="footer__link footer__link__copyright" href="https://www.webdesignpuntnl.com") &copy; Webdesignpuntnl   
-                a(class="footer__link footer__link__cookieSetup" href="#" id="noat-cookie-consent__setup") cookie instellingen 
-        block script
-            script(src=`${path}js/main-bundle.js`)  
-
+                <!-- top logo -->
+                header(class="header") 
+                    a(href=`${path}index.html` title="homepage" class="logo")
+                        div(class="logo__top")
+                            div(class="logo__top__cirkelTop")
+                                span(class="logo__top__cirkelTop__orange") half orange cirkel
+                            h1(class="logo__text") webdesign
+                                span(class="logo__text__dot") punt
+                                | nl
+                            div(class="logo__cirkelBottom") 
+                                span(class="logo__cirkelBottom__yellow") half yellow cirkel
+                    block navigation 
+                        <!-- top navigation -->
+                        nav(class="header__nav")
+                            a(href=(`${path}index.html`) class=(page == "index" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) home
+                            ul(class="header__nav__menu" data-show="1")
+                                //- li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/about.html`) class=(page == "about" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) over
+                                //- li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/blog.html`) class=(page == "blog" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) blog
+                                li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/projects.html`) class=(page == "projects" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) projecten
+                                li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/tools.html`) class=(page == "tools" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) tools
+                                li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/privacy.html`) class=(page == "privacy" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) privacy
+                                li(class="header__nav__menu__page")
+                                    a(href=(`${path}pages/contact.html`) class=(page == "contact" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) contact
+                            <!-- hamburger icon -->
+                            div(class="menuSmall change" id="hamburgerIcon", role="button")
+                                div(class="menuSmall__line01") Lijn01
+                                div(class="menuSmall__line02") Lijn02
+                                div(class="menuSmall__line03") Lijn03
+            .pageWrapper
+                main(class="main")
+                    block content
+                        
+            footer(class="footer")
+                div(class="footer__top")
+                    div(class="footer__top__adress")
+                        h3(class="footer__top__adress__heading") adres gegevens
+                        address
+                            ul
+                                li(class="footer__top__adress__item")
+                                    a(href="tel:0031638399229" class="footer__top__adress__tel") &plus;31638399229
+                                li(class="footer__top__adress__item")
+                                    span Culemborg
+                                li(class="footer__top__adress__item")
+                                    span Holland
+                    div(class="footer__top__social")
+                        h3(class="footer__top__social__heading") Social Links
+                        ul(class="footer__top__social__list")
+                            li(class="footer__top__social__list__item")
+                                a(href="https://www.linkedin.com/in/renee-de-kruijf-365031a/" target="_blank") 
+                                    span(class="iconLinkedin" class="footer__top__icon footer__top__icon--linkedin") Linkedin 
+                            li(class="footer__top__social__list__item")
+                                a(href="https://twitter.com/reneedekruijf" target="_blank")
+                                    span(class="iconTwitter" class="footer__top__icon footer__top__icon--twitter") Twitter 
+                            li(class="footer__top__social__list__item")
+                                a(href="https://twitter.com/reneedekruijf" target="_blank")
+                                    span(class="iconInstgram" class="footer__top__icon footer__top__icon--instagram") Instagram
+                a(class="footer__cookieSetup" href="#" id="noat-cookie-consent__setup") cookie instellingen
+                    //- div(class="footer__bottom")
+                        p Webdesignpuntnl 2018
+            block script
+                script(src=`${path}js/main-bundle.js`)

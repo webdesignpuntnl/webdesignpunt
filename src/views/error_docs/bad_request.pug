@@ -3,11 +3,12 @@ extends ../layout/layout-error
 
 block prepend head
     - var title = "400 Bad Request"
-    - var color = "blue" 
+    - var color = "blue"
+     - var path = "../" 
 
 
 block content
     main(class="main main__vlindernieuws main--blue")
         h1 Oeps - de pagina is niet gevonden
         article
-            p Helaas er is iets mis gegaan. Probeer het opnieuw of kies via de buttons een andere pagina!
+            p.error__p Helaas er is iets mis gegaan. Probeer het opnieuw of kies via de buttons een andere pagina!

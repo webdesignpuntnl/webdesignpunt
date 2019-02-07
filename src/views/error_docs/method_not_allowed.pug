@@ -4,10 +4,11 @@ extends ../layout/layout-error
 block prepend head
     - var title = "405 Method Not Allowed" 
     - var color = "blue"
+    .error__p- var path = "../"
 
 
 block content
     main(class="main main__vlindernieuws main--blue")
         h1 Oeps - dit is niet toegestaan
         article
-            p Helaas er is iets mis gegaan. Probeer het opnieuw of kies via de buttons een andere pagina!
+            p.error__p Helaas er is iets mis gegaan. Probeer het opnieuw of kies via de buttons een andere pagina!
