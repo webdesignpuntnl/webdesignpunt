@@ -65,14 +65,14 @@
 
     &:hover {
         background-color: $orangeColor;
-        border-color: $whiteColor;
+        // border-color: $whiteColor;
         background-image: url("../images/icons-social-hover.svg");
         transform: all;
     }
 
     &--twitter {
-        background-size: 95px;
-        background-position: -53px 13px;  
+        background-size: 93px;
+        background-position: -53px 12px;  
     }
 
     &--instagram {
