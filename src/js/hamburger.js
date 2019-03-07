@@ -45,15 +45,19 @@ function handleMenu(e) {
     topMenu.classList.add('hideMenu');
     sessionStorage.setItem('menu', 'close');
     menuState = sessionStorage.getItem('menu');
+    // const lines = newHamburgerMenu.querySelectorAll('#line');
+    // lines.forEach(line => {
+    //   line.style.backgroundColor = '#F39200';
+    // });
   }
 }
 
 // markup for the hamburgermenu
 const markup = `
   <div class="menuSmall change" id="hamburgerIcon" role="button">
-    <div class="menuSmall__line01">Lijn01</div>
-    <div class="menuSmall__line02">Lijn02</div>
-    <div class="menuSmall__line03">Lijn03</div>
+    <div class="menuSmall__line01" id="line">Lijn01</div>
+    <div class="menuSmall__line02" id="line">Lijn02</div>
+    <div class="menuSmall__line03" id="line">Lijn03</div>
   </div>`;
 
 // put the html into the dom
@@ -63,7 +67,7 @@ nav.appendChild(hamburgerMenu);
 // call the resize function
 windowResize();
 
-// hide the menu on pageload
+// hide the menu on pageloadconsole.log(e.type);
 handleMenu();
 
 // event listeners

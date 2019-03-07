@@ -87,13 +87,7 @@
        border-radius: 3px;
        transition: 0.3s;
        position: initial;
-   }
-
-   &:hover {
-       .menuSmall__line01, .menuSmall__line02, .menuSmall__line03 {
-           background-color: $blackColor;
-           border-color: $blackColor;
-       }
+       transition: background-color 1s, border-color 1s;
    }
 }
 
@@ -107,16 +101,22 @@
 // rotate the top line
 .change .menuSmall__line01 {
    transform: rotate(-45deg) translate(-6px, 7px);
+   background-color: $blackColor;
+   border-color: $blackColor;
 }
 
 // fade out the middle line
 .change .menuSmall__line02 {
     opacity: 0;
+    background-color: $blackColor;
+    border-color: $blackColor;
 }
 
 // rotate the bottom line
 .change .menuSmall__line03 {
     transform: rotate(45deg) translate(-8px, -8px);
+    background-color: $blackColor;
+    border-color: $blackColor;
 }
 
 
