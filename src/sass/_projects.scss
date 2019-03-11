@@ -88,7 +88,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    width: 80%;
+    width: 80vw;
+    // height: 90vw;
     background-color: rgba($yellowColor, 1);
     border: 3px solid $blackColor;
     border-radius: 5px;
@@ -121,7 +122,7 @@
         width: 100%;
         max-width: 800px;
         margin: 0;
-        padding: 0.5rem 2rem 2rem 1rem;
+        padding: 0.5rem 2rem 5rem 1rem;
     }
 
     &__link {
@@ -191,13 +192,13 @@
 
 @mixin projects--vs {
     .projects__modal {
-        height: 90vh;
-        max-height: 60vmax;
+        // height: 90vh;
+        // max-height: 60vmax;
     }
 }
 @mixin projects--m {
     .projects__modal {
-        height: 65vh;
-        max-height: 50vmax;
+        // height: 65vh;
+        // max-height: 50vmax;
     }
 }
