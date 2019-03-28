@@ -23,3 +23,6 @@ require('./src/images/sass-logo.svg');
 require('./src/images/vscode-logo.svg');
 require('./src/images/webpack-logo.svg');
 require('./src/images/bem-logo.svg');
+require('./src/images/foto-renee.png');
+require('./src/images/code.jpg');
+require('./src/images/kantoor.jpg');

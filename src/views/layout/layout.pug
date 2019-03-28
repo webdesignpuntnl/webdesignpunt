@@ -6,8 +6,10 @@ html(lang="nl")
             meta(http-equiv="X-UA-Compatible" content="ie=edge") 
             meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes") 
             meta(name="robots" content="all") 
-            meta(name="Description" content=description) 
+            meta(itemprop="description" content=description) 
             meta(name="copyright" content="Copyright Webdesignpuntnl Culemborg") 
+            meta(name="image" content="https://www.webdesignpuntnl.com/site-image.jpg")
+            meta(itemprop="name" content="Webdesignpuntnl")
             link(rel="apple-touch-icon" sizes="180x180" href=`${path}apple-touch-icon.png`)
             link(rel="icon" type="image/png" sizes="32x32" href=`${path}favicon-32x32.png`)
             link(rel="icon" type="image/png" sizes="16x16" href=`${path}favicon-16x16.png`)
@@ -15,11 +17,19 @@ html(lang="nl")
             link(rel="mask-icon" href=`${path}safari-pinned-tab.svg` color="#5bbad5")
             meta(name="msapplication-TileColor" content="#da532c")
             meta(name="theme-color" content="#ffffff")
-            meta(property="og:title" content="Webdesignpuntnl")
-            meta(property="og:description" content="Webdesignpuntnl Culemborg is een eenmanszaak gespecialiseerd in het ontwerpen en bouwen van websites.")
-            meta(property="og:type" content="service")
-            meta(property="og:url" content="https://www.webdesignpuntnl.com")
-            meta(property="og:image" content="https://www.webdesignpuntnl.com/favicon-32x32.png")
+            meta(name="twitter:card" content="summary")
+            meta(name="twitter:title" content="Webdesignpuntnl")
+            meta(name="twitter:description" content="Webdesignpuntnl Culemborg is een eenmanszaak gespecialiseerd in het ontwerpen en bouwen van websites.")
+            meta(name="twitter:site" content="@reneedekruijf")
+            meta(name="twitter:creator" content="@reneedekruijf")
+            meta(name="twitter:image:src" content="https://www.webdesignpuntnl.com/site-image-preview.jpg")
+            meta(name="og:title" content="Webdesignpuntnl")
+            meta(name="og:description" content="Webdesignpuntnl Culemborg is een eenmanszaak gespecialiseerd in het ontwerpen en bouwen van websites.")
+            meta(name="og:image" content="https://www.webdesignpuntnl.com/site-image-preview.jpg")
+            meta(name="og:url" content="https://www.webdesignpuntnl.com")
+            meta(name="og:site_name" content="Webdesignpuntnl")
+            meta(name="og:locale" content="nl")
+            meta(name="og:type" content="website")
             link(href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet')
             link(href=`${path}css/main.css` rel='stylesheet')
 
@@ -50,7 +60,7 @@ html(lang="nl")
                                     a(href=(`${path}pages/projects.html`) class=(page == "projects" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) projecten
                                 li(class="header__nav__menu__page")
                                     a(href=(`${path}pages/tools.html`) class=(page == "tools" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) tools
-                                li(class="header__nav__menu__page")
+                                //- li(class="header__nav__menu__page")
                                     a(href=(`${path}pages/privacy.html`) class=(page == "privacy" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) privacy
                                 li(class="header__nav__menu__page")
                                     a(href=(`${path}pages/contact.html`) class=(page == "contact" ? "header__nav__link header__nav__link--active" : 'header__nav__link')) contact
@@ -85,11 +95,12 @@ html(lang="nl")
                                 a(href="https://twitter.com/reneedekruijf" target="_blank")
                                     span(class="iconTwitter" class="footer__top__icon footer__top__icon--twitter") Twitter 
                             li(class="footer__top__social__list__item")
-                                a(href="https://twitter.com/reneedekruijf" target="_blank")
+                                a(href="https://instagram.com/webdesignpuntnl" target="_blank")
                                     span(class="iconInstgram" class="footer__top__icon footer__top__icon--instagram") Instagram
-                a(class="footer__cookieSetup" href="#" id="noat-cookie-consent__setup") cookie instellingen
+                a(class="footer__bottomLinks" href="#" id="noat-cookie-consent__setup") cookie instellingen
+                a(class="footer__bottomLinks" href=(`${path}pages/privacy.html`)) privacy
                     //- div(class="footer__bottom")
                         p Webdesignpuntnl 2018
             block script
-                //- script(src=`${path}js/main-bundle.js`)
+                script(src=`${path}js/main-bundle.js`)
         
