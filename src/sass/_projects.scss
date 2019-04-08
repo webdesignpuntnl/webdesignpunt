@@ -33,7 +33,7 @@
     
     background-color: $orangeColor;
     border: 2px solid $blackColor;
-    transition: background-color 0.5s ease-in-out, font-size 0.8s 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out, font-size 0.8s 0.2s ease-in-out;
 }
 
 .projects__overlay__p {
@@ -57,8 +57,8 @@
     z-index: 999;
     transform: translate(-50%, -50%);
     font-size: 2rem;
-    color: $orangeColor;
-    text-shadow: 1px 1px 0 $blackColor;
+    color: $blackColor;
+    // text-shadow: 1px 1px 0 $blackColor;
 }
 
 .projects__card__screenshots {
