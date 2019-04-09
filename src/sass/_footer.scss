@@ -59,14 +59,14 @@
     border: 1px solid $blackColor;
     border-radius: 50%;
     transition: 0.2s;
-    background-image: url("../images/icons-social-normal-kopie.svg"); 
+    background-image: url("../images/icons-social-normal.svg"); 
     background-size: 145px;
     background-position: 10px 2px;
 
     &:hover {
         background-color: $orangeColor;
         // border-color: $whiteColor;
-        background-image: url("../images/icons-social-hover-kopie.svg");
+        background-image: url("../images/icons-social-hover.svg");
         transform: all;
     }
 

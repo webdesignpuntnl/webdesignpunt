@@ -9,8 +9,8 @@ require('./src/js/poppupInfo.js');
 // require('./src/js/formvalidate.js');
 
 // images
-require('./src/images/icons-social-hover-kopie.svg');
-require('./src/images/icons-social-normal-kopie.svg');
+require('./src/images/icons-social-hover.svg');
+require('./src/images/icons-social-normal.svg');
 require('./src/images/screenshot-vlinderfabriek.png');
 require('./src/images/screenshot-buurtpanel.png');
 require('./src/images/pug-logo.svg');
