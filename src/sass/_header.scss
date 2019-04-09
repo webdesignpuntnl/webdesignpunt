@@ -13,7 +13,7 @@
         height: 135px;
         opacity: 1;
         font-size: 1.1rem;
-        // transition: height 500ms ease-in-out 100ms, opacity 800ms ease-in-out, font-size 100ms ease-in-out;
+        transition: height 500ms ease-in-out 100ms, opacity 800ms 500ms ease-in-out, font-size 100ms ease-in-out;
         
         &__page {
             margin: 0.5rem 0 0 0.5rem;
@@ -95,7 +95,7 @@
     height: 0;
     opacity: 0;
     font-size: 0;
-    transition: height 500ms ease-in-out 100ms, opacity 800ms ease-in-out, font-size 100ms ease-in-out;
+    transition: height 500ms ease-in-out 100ms, opacity 300ms ease-in-out, font-size 100ms ease-in-out;
 }
 
 // rotate the top line
