@@ -26,3 +26,4 @@ require('./src/images/bem-logo.svg');
 require('./src/images/foto-renee.png');
 require('./src/images/code.jpg');
 require('./src/images/kantoor.jpg');
+require('./src/images/figma-logo.svg');

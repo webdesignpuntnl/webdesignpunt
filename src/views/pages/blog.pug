@@ -2,12 +2,38 @@ extends ../layout/layout
 
 block prepend head
     - var page = "blog"
-    - var title = "blog met interessante artikelen"
+    - var title = "blog over alles en nog wat over bouwen voor het www"
     - var description = "Webdesignpuntnl houdt een blog bij. Hier schrijven we over alles wat met het web te maken heeft."
     - var path = "../"
 
 block content
   article(class="article")
-    h2(class="h2") blog
-    p(class="p") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac justo et nunc ornare rutrum. Proin libero nulla, ultricies vitae maximus id, bibendum et felis. Mauris accumsan finibus mi. Aliquam erat volutpat. Aenean tincidunt est ut magna porttitor, sed iaculis lorem pharetra. Nullam in auctor odio. Sed bibendum suscipit erat in suscipit. Aenean tincidunt vitae leo vitae vestibulum. Nulla eget venenatis justo. Suspendisse eu volutpat lorem, dapibus aliquam est. Nulla in eros vitae erat feugiat malesuada. Praesent mollis tincidunt purus ut aliquet. Mauris scelerisque massa eu nunc viverra sagittis. Sed fringilla scelerisque nisi, non posuere elit. Phasellus diam augue, posuere ut pulvinar ac, porta ut ante. Praesent dictum mauris eu arcu rutrum, vitae semper lacus convallis.
-    p(class="p") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac justo et nunc ornare rutrum. Proin libero nulla, ultricies vitae maximus id, bibendum et felis. Mauris accumsan finibus mi. Aliquam erat volutpat. Aenean tincidunt est ut magna porttitor, sed iaculis lorem pharetra. Nullam in auctor odio. Sed bibendum suscipit erat in suscipit. Aenean tincidunt vitae leo vitae vestibulum. Nulla eget venenatis justo. Suspendisse eu volutpat lorem, dapibus aliquam est. Nulla in eros vitae erat feugiat malesuada. Praesent mollis tincidunt purus ut aliquet. Mauris scelerisque massa eu nunc viverra sagittis. Sed fringilla scelerisque nisi, non posuere elit. Phasellus diam augue, posuere ut pulvinar ac, porta ut ante. Praesent dictum mauris eu arcu rutrum, vitae semper lacus convallis.
+  //- a(class="twitter-follow-button" href="https://twitter.com/reneedekruijf") Follow
+  h2(class="h2 h2--blog") Webdesignpuntnl Blog
+  p(class="p") Middels deze blog wil ik schrijven over web development en ondewerpen daarover die mij bezig houden.
+    | Je kunt dan denken aan tools zoals 
+    a(href="https://figma.com" target="_blank") Figma,
+    |   
+    a(href="https://www.npmjs.com" target="_blank") NPM,
+    | 
+    a(href="https://nodejs.org" target="_blank") Node,
+    | 
+    a(href="https://webpack.js.org/" target="_blank") Webpack
+    |  en nog veel meer.
+  div.align
+    p(class="p p__left p__left--blog") 
+        strong.p__firstWord Figma
+        | Aan het bouwen van een website (dus het programeren van de HTML, CSS en Javascript) gaan nog wel wat dingen vooraf. Je begint altijd met een gesprek met je opdrachtgever om er precies achter ter komen wat hij of zij voor ogen heeft. Heel belangrijk is de gebruiker van de site, wie gaat hem geberuiken en wat wil je dat die bezoeker gaat vinden of zoeken. Met andere woorden wat is het doel van de site en wie is de bezoeker? 
+    p(class="p p__left p__left--blog") Praten is nodig maar dit gaat altijd makkelijker als je het visueel kunt maken. |    | We gaan dus een ontwerp maken. Het begint meestal met een schets, die wordt dan omgezet in een wireframe          (zonder afbeeldingen, tekst en kleur), dan komt er een ontwerp (met afbeeldingen, tekst en kleur) en als            laatste kan je nog een prototype maken. Met Figma kan dit allemaal. Omdat het in de browser werkt kan je het        overal gebruiken en kan je anderen laten meewerken. Ook kan je het eindresultaat delen met anderen.
+    p(class="p p__left p__left--blog")
+        a(href="https://figma.com" target="_blank") Figma
+        |  werkt met componenten. Je kunt een button ontwerpen en die dan omzetten in een component zodat je deze in een ander deel van je ontwerp weer gemakkelijk opnieuw kunt gebruiken. Het mooie hiervan is dat als je de mastercomponent aanpast dat alle andere meegaan. Denk bijvoorbeeld aan de kleur. Wil je een enkele instance van de button aanpassen dan kan dat ook.
+    p(class="p p__left p__left--blog") 
+        a(href="https://figma.com" target="_blank") Figma
+        |  is voor het grootste deel gratis. Wil je gebruik maken van het werken in teams dan is er een starter en een professioneel pakket. De starter is beperkt en gratis, het professionele plan is US$ 12 per maand per editor. Ik kan je zeker aanraden eens een kijkje te nemen op de site van 
+        a(href="https://figma.com" target="_blank") Figma.
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="figma" data-show-count="false") Tweet
+    a(href="https://pugjs.org" target="_blank")
+      img(src="../images/figma-logo.svg" class="tools__image tools__image--blog" alt="figma logo")
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")

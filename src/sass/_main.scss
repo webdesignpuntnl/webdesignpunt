@@ -1,6 +1,12 @@
 .error__p {
     margin-top: 2rem;
 }
+
+.twitter-share-button {
+    display: block;
+    margin: 1rem;
+}
+
 .main {
     margin: 2rem 0 20rem 0;
     text-align: center;
@@ -30,6 +36,10 @@
     letter-spacing: 0.1rem;
     margin: 0 auto 6rem auto;
     padding: 0 2rem;
+
+    &__left--blog {
+        margin: 2rem 0 0 0;
+    }
 }
 
 .p__firstWord {
@@ -218,18 +228,28 @@
 }
 
 @mixin main--m {
+
+    .h2--blog {
+        text-align: left;
+        margin-left: 2rem;
+    }
     
     .align {
         @include clearfix;
         margin-top: 1rem;
     }
     
-    .p--left {
+    .p__left {
         float: left;
         width: 60%;
+
+        &--blog {
+            width: 80%;
+            margin: 1rem 0 0 0;
+        }
     }
     
-    .p--right {
+    .p__right {
         width: 60%;
         float: right;
     }

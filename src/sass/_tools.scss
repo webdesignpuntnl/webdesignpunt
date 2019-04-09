@@ -1,5 +1,10 @@
 .tools__image {
   width: 50%;
-  max-width: 200px;
+  max-width: 150px;
   padding: 0 0 2rem 0;
+
+  &--blog {
+    max-width: 100px;
+    margin-top: 2rem;
+  }
 }
