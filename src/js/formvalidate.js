@@ -1,6 +1,7 @@
 //! moet nog kijken naar codesplitting. Nu wordt deze code op elke pagina geladen
 
 const form = document.querySelector('#contactForm');
+const hiddenField = document.querySelector('#hiddenField');
 const nameField = form.querySelector('#nameField');
 const subjectField = form.querySelector('#subjectField');
 const emailField = form.querySelector('#emailField');
@@ -40,8 +41,12 @@ function testInput(whichField) {
     );
     displayMessage(valid, whichField);
   } else if (whichField === remarksField) {
-    valid = /[a-zA-Z0-9][^/:http@]$/.test(whichField.value);
+    valid = /[a-zA-Z0-9]$/.test(whichField.value);
     displayMessage(valid, whichField);
+  } else if (whichField === hiddenField) {
+    if (hiddenField.value === '') {
+      valid = true;
+    }
   }
   return valid;
 }
@@ -73,8 +78,9 @@ submitButton.addEventListener('click', e => {
   const emailValid = validate(emailField);
   const phoneValid = validate(phoneField);
   const remarksValid = validate(remarksField);
+  const hiddenFieldValid = validate(hiddenField);
 
-  const allFieldsValid = nameValid && subjectValid && emailValid && phoneValid && remarksValid;
+  const allFieldsValid = nameValid && subjectValid && emailValid && phoneValid && remarksValid && hiddenFieldValid;
   submitClicked = true;
 
   if (!allFieldsValid) e.preventDefault();

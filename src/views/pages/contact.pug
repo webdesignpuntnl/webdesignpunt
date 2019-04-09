@@ -23,6 +23,11 @@ block content
         input(type="hidden" name="bad_url" value="../pages/contact-niet-verzonden.html")
         input(type="hidden" name="subject" value="contactformulier")
         fieldset(class="form__fieldset")
+            input(
+                name="hiddenField" 
+                type="text" 
+                id="hiddenField"
+                class="input__textInput input__textInput--hidden" )
             div(class="input")
                 //- div.input__message
                 input(
@@ -82,7 +87,7 @@ block content
                     type="submit" 
                     class="input__textInput input__textInput__submitButton") versturen
 block script
-    script(src=`${path}js/contactForm-bundle.js`)
-    script(src=`${path}js/main-bundle.js`)
+    //- script(src=`${path}js/contactForm-bundle.js`)
+    //- script(src=`${path}js/main-bundle.js`)
 
 
