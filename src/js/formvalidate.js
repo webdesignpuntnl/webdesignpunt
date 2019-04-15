@@ -10,7 +10,7 @@ const remarksField = form.querySelector('#remarksField');
 const submitButton = form.querySelector('.input__textInput__submitButton');
 let submitClicked = false;
 
-const fields = [nameField, subjectField, emailField, phoneField, remarksField];
+const fields = [hiddenField, nameField, subjectField, emailField, phoneField, remarksField];
 
 function displayMessage(valid, whichField) {
   const userMessage = whichField.parentNode.querySelector('.input__message');
