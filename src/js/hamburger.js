@@ -55,9 +55,9 @@ function handleMenu(e) {
 // markup for the hamburgermenu
 const markup = `
   <div class="menuSmall change" id="hamburgerIcon" role="button">
-    <div class="menuSmall__line01" id="line">Lijn01</div>
-    <div class="menuSmall__line02" id="line">Lijn02</div>
-    <div class="menuSmall__line03" id="line">Lijn03</div>
+    <div class="menuSmall__line01">Lijn01</div>
+    <div class="menuSmall__line02">Lijn02</div>
+    <div class="menuSmall__line03">Lijn03</div>
   </div>`;
 
 // put the html into the dom

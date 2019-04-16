@@ -58,7 +58,7 @@
     height: 50px;
     border: 1px solid $blackColor;
     border-radius: 50%;
-    transition: 0.2s;
+    transition: 0.8s;
     background-image: url("../images/icons-social-normal.svg"); 
     background-size: 145px;
     background-position: 10px 2px;
@@ -67,7 +67,7 @@
         background-color: $orangeColor;
         // border-color: $whiteColor;
         background-image: url("../images/icons-social-hover.svg");
-        transform: all;
+        transition: 0.4s;
     }
 
     &--twitter {
