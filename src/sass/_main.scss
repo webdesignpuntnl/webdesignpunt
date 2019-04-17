@@ -216,6 +216,17 @@
     padding: 0 0 1rem 0;
 }
 
+.twitter-share-button {
+    margin: 0;
+    padding: 0;
+}
+
+.span__date {
+    display: block;
+    text-align: left;
+    padding: 2rem 0 0.5rem 0;
+}
+
 
 @mixin main--ms { // 600
     article {
