@@ -30,6 +30,17 @@
     }
 }
 
+.index__image {
+    width: 200px;
+    max-width: 250px;
+    margin: 0 0 2rem 0;
+    border-radius: 10px;
+
+    &:first-child {
+        margin-top: 3rem;
+    }
+}
+
 .p {
     font-size: 1.1rem;
     text-align: left;
@@ -206,7 +217,7 @@
 }
 
 
-@mixin main--ms {
+@mixin main--ms { // 600
     article {
 
         p {
@@ -230,9 +241,32 @@
             // max-width: 600px;
         }
     }
+
+    .align {
+        @include clearfix;
+        margin-top: 3rem;
+    }
+
+    .index__image {
+        margin: 0;
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+
+    .p__left--index {
+        float: left;
+        width: 60%;
+    }
+
+    .p__right--index {
+        float: right;
+        width: 60%;
+    }
 }
 
-@mixin main--m {
+@mixin main--m { // 768
 
     .h2--blog {
         text-align: left;
