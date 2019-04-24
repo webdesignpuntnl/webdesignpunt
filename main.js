@@ -27,3 +27,14 @@ require('./src/images/renee.jpg');
 require('./src/images/code-high.jpg');
 require('./src/images/kantoor.jpg');
 require('./src/images/figma-logo.svg');
+
+// require('./src/fonts/raleway/raleway-v13-latin-700.eot');
+// require('./src/fonts/raleway/raleway-v13-latin-700.svg');
+// require('./src/fonts/raleway/raleway-v13-latin-700.ttf');
+// require('./src/fonts/raleway/raleway-v13-latin-700.woff');
+// require('./src/fonts/raleway/raleway-v13-latin-700.woff2');
+// require('./src/fonts/raleway/raleway-v13-latin-regular.eot');
+// require('./src/fonts/raleway/raleway-v13-latin-regular.svg');
+// require('./src/fonts/raleway/raleway-v13-latin-regular.ttf');
+// require('./src/fonts/raleway/raleway-v13-latin-regular.woff');
+// require('./src/fonts/raleway/raleway-v13-latin-regular.woff2');

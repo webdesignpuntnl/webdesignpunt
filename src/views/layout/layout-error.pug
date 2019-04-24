@@ -20,7 +20,7 @@ html(lang="nl")
             meta(property="og:type" content="service")
             meta(property="og:url" content="https://www.webdesignpuntnl.com")
             meta(property="og:image" content="https://www.webdesignpuntnl.com/favicon-32x32.png")
-            link(href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet')
+            //- link(href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet')
             link(href=`${path}css/main.css` rel='stylesheet')         
             
             title #{title} 
@@ -86,10 +86,12 @@ html(lang="nl")
                                 a(href="https://twitter.com/reneedekruijf" target="_blank" rel="noopener noreferrer")
                                     span(class="iconTwitter" class="footer__top__icon footer__top__icon--twitter") Twitter 
                             li(class="footer__top__social__list__item")
-                                a(href="https://twitter.com/reneedekruijf" target="_blank" rel="noopener noreferrer")
+                                a(href="https://instagram.com/webdesignpuntnl" target="_blank" rel="noopener noreferrer")
                                     span(class="iconInstgram" class="footer__top__icon footer__top__icon--instagram") Instagram
-                a(class="footer__cookieSetup" href="#" id="noat-cookie-consent__setup") cookie instellingen
-                    //- div(class="footer__bottom")
-                        p Webdesignpuntnl 2018
+                            li(class="footer__top__social__list__item")
+                                a(href="https://github.com/webdesignpuntnl" target="_blank" rel="noopener noreferrer")
+                                    span(class="iconGithub" class="footer__top__icon footer__top__icon--github") Github
+                a(class="footer__bottomLinks" href="#" id="noat-cookie-consent__setup") cookie instellingen
+                a(class="footer__bottomLinks" href=(`${path}pages/privacy.html`)) privacy
             block script
                 script(src=`${path}js/main-bundle.js`)
