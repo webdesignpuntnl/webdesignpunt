@@ -27,6 +27,8 @@ require('./src/images/renee.jpg');
 require('./src/images/code-high.jpg');
 require('./src/images/kantoor.jpg');
 require('./src/images/figma-logo.svg');
+require('./src/images/polypane-logo.svg');
+require('./src/images/polypane-screenshot.png');
 
 // require('./src/fonts/raleway/raleway-v13-latin-700.eot');
 // require('./src/fonts/raleway/raleway-v13-latin-700.svg');

@@ -30,6 +30,14 @@
     }
 }
 
+.article--blog {
+    margin-top: 4rem;
+
+    &:first-child {
+        margin-top: 1rem;
+    }
+}
+
 .index__image {
     width: 200px;
     max-width: 250px;
@@ -227,6 +235,13 @@
     padding: 2rem 0 0.5rem 0;
 }
 
+.blog__image {
+    width: 100%;
+    max-width: 650px;
+    margin: 0.5rem 2rem 3rem 0;
+    float: left;
+}
+
 
 @mixin main--ms { // 600
     article {
@@ -282,6 +297,10 @@
     .h2--blog {
         text-align: left;
         margin-left: 2rem;
+    }
+
+    .article--blog {
+        margin-top: 6rem;
     }
     
     .align {

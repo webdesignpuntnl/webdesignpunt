@@ -7,34 +7,66 @@ block prepend head
     - var path = "../"
 
 block content
-  article(class="article")
-  //- a(class="twitter-follow-button" href="https://twitter.com/reneedekruijf") Follow
-  h2(class="h2 h2--blog") Webdesignpuntnl Blog
-  p(class="p") Middels deze blog wil ik schrijven over web development en ondewerpen daarover die mij bezig houden.
-    | Je kunt dan denken aan tools zoals 
-    a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma,
-    |   
-    a(href="https://www.npmjs.com" target="_blank" rel="noopener noreferrer") NPM,
-    | 
-    a(href="https://nodejs.org" target="_blank" rel="noopener noreferrer") Node,
-    | 
-    a(href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer") Webpack
-    |  en nog veel meer.
-  div.align
-    p(class="p p__left p__left--blog") 
-        strong.p__firstWord Figma
-        | Aan het bouwen van een website (dus het programmeren van de HTML, CSS en Javascript) gaan nog wel wat dingen vooraf. Je begint altijd met een gesprek met je opdrachtgever om er precies achter ter komen wat hij of zij voor ogen heeft. Heel belangrijk is de gebruiker van de site, wie gaat hem geberuiken en wat wil je dat die bezoeker gaat vinden of zoeken. Met andere woorden wat is het doel van de site en wie is de bezoeker? 
-    p(class="p p__left p__left--blog") Praten is nodig maar dit gaat altijd makkelijker als je het visueel kunt maken. |    | We gaan dus een ontwerp maken. Het begint meestal met een schets, die wordt dan omgezet in een wireframe          (zonder afbeeldingen, tekst en kleur), dan komt er een ontwerp (met afbeeldingen, tekst en kleur) en als            laatste kan je nog een prototype maken. Met Figma kan dit allemaal. Omdat het in de browser werkt kan je het        overal gebruiken en kan je anderen laten meewerken. Ook kan je het eindresultaat delen met anderen.
-    p(class="p p__left p__left--blog")
-        a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
-        |  werkt met componenten. Je kunt een button ontwerpen en die dan omzetten in een component zodat je deze in een ander deel van je ontwerp weer gemakkelijk opnieuw kunt gebruiken. Het mooie hiervan is dat als je de mastercomponent aanpast dat alle andere meegaan. Denk bijvoorbeeld aan de kleur. Wil je een enkele instance van de button aanpassen dan kan dat ook.
-    p(class="p p__left p__left--blog") 
-        a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
-        |  is voor het grootste deel gratis. Wil je gebruik maken van het werken in teams dan is er een starter en een professioneel pakket. De starter is beperkt en gratis, het professionele plan is US$ 12 per maand per editor. Ik kan je zeker aanraden eens een kijkje te nemen op de site van 
-        a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma.
-        span(class="span__date") Gepubliceerd op 9 april 2019  
-        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="figma" data-show-count="false") Tweet
-    a(href="https://figma.com" target="_blank" rel="noopener noreferrer")
-      img(src="../images/figma-logo.svg" class="tools__image tools__image--blog" alt="figma logo")
+  section(class="section")
+    //- a(class="twitter-follow-button" href="https://twitter.com/reneedekruijf") Follow
+    h2(class="h2 h2--blog") Webdesignpuntnl Blog
+    p(class="p") Middels deze blog wil ik schrijven over web development en ondewerpen daarover die mij bezig houden.
+      | Je kunt dan denken aan tools zoals 
+      a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma,
+      |   
+      a(href="https://www.npmjs.com" target="_blank" rel="noopener noreferrer") NPM,
+      | 
+      a(href="https://nodejs.org" target="_blank" rel="noopener noreferrer") Node,
+      | 
+      a(href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer") Webpack
+      |  en nog veel meer.
+  //-  figma
+  article(class="article article--blog") 
+    div.align
+      p(class="p p__left p__left--blog") 
+          strong.p__firstWord Figma
+          | Aan het bouwen van een website (dus het programmeren van de HTML, CSS en Javascript) gaan nog wel wat dingen vooraf. Je begint altijd met een gesprek met je opdrachtgever om er precies achter ter komen wat hij of zij voor ogen heeft. Heel belangrijk is de gebruiker van de site, wie gaat hem geberuiken en wat wil je dat die bezoeker gaat vinden of zoeken. Met andere woorden wat is het doel van de site en wie is de bezoeker? 
+      p(class="p p__left p__left--blog") 
+          | Praten is nodig maar dit gaat altijd makkelijker als je het visueel kunt maken. We gaan dus een ontwerp maken. Het begint meestal met een schets, die wordt dan omgezet in een wireframe (zonder afbeeldingen, tekst en kleur), dan komt er een ontwerp (met afbeeldingen, tekst en kleur) en als laatste kan je nog een prototype maken. Met Figma kan dit allemaal. Omdat het in de browser werkt kan je het overal gebruiken en kan je anderen laten meewerken. Ook kan je het eindresultaat delen met anderen.
+      p(class="p p__left p__left--blog")
+          a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
+          |  werkt met componenten. Je kunt een button ontwerpen en die dan omzetten in een component zodat je deze in een ander deel van je ontwerp weer gemakkelijk opnieuw kunt gebruiken. Het mooie hiervan is dat als je de mastercomponent aanpast dat alle andere meegaan. Denk bijvoorbeeld aan de kleur. Wil je een enkele instance van de button aanpassen dan kan dat ook.
+      p(class="p p__left p__left--blog") 
+          a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
+          |  is voor het grootste deel gratis. Wil je gebruik maken van het werken in teams dan is er een starter en een professioneel pakket. De starter is beperkt en gratis, het professionele plan is US$ 12 per maand per editor. Ik kan je zeker aanraden eens een kijkje te nemen op de site van 
+          a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma.
+          span(class="span__date") Gepubliceerd op 9 april 2019  
+          a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="figma" data-show-count="false") Tweet
+      a(href="https://figma.com" target="_blank" rel="noopener noreferrer")
+        img(src="../images/figma-logo.svg" class="tools__image tools__image--blog" alt="figma logo")
+    //-  Polypane
+  article(class="article article--blog") 
+    div.align
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Polypane
+        | is een nieuwe browser gemaakt door Kilian Valkhof. In deze browser kun je tegelijkertijd je site zien op verschillende devices en viewports.
+        a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
+        |  is gebasseerd op Chromium. Naast de Chromium developer tools bevat de browser nog meer handig functies.
+      p(class="p p__left p__left--blog")
+        | Even snel een site opzoeken op je mobiel is vandaag de dag heel normaal. Sterker nog er wordt meer gesurft op draagbare apparaten dan op de desktop. Developers moeten hier rekening mee houden en ontwerpen apps en websites voor verschillende scherm formaten. Dit kan op vele manieren maar het meets gebruikelijk (op dit moment) is het gebruik van css media&dash;queries. Het ontwerp schaalt mee op de verschillende schermen. Je hebt dus een HTML bestand en via CSS kun je breekpunten bepalen waarop de CSS verandert. Op een groot scherm met snel internet laat je bijvoorbeeld een hero&dash;image zien die je kunt verbergen op kleine schermen zodat de gebruiker hier geen dure datakosten voor hoeft te betalen.
+      p(class="p p__left p__left--blog")
+          img(src="../images/polypane-screenshot.png" class="blog__image" alt="Polypane screenshot" title="Screenshot gemaakt met Polypane")
+          | In elke browser kun je zien hoe je site eruit ziet op verschillende schermen. Je moet dan de breedte van de browser aanpassen of in de devtools de responsive view inschakelen. Je kunt niet alle devices in 1 keer zien.
+          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
+          |  lost dit op. Je kunt meerdere formaten in 1 keer bekijken. Je kan dit doen op basis van de breekpunten in js CCS, 
+          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
+          |  ziet de breekpunten en maakt op basis hiervan een overzicht. Je kan er ook voor kiezen om 1 view te zien. Je kan een screenshot maken van wat er op dit moment in de viewport zichtbaar is. Wat ook heel handig is synchronised scrolling, alle views scrollen dan synchroon mee en blijven ongeveer op de dezelfde hoogte. Als je de html of de css aanpast wordt dat in alle views zichtbaar. 
+          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
+          |  heeft dezelfde devtools als elke Chromiumm browser, je kunt dus snel even iets aanpassen of debuggen.
+      p(class="p p__left p__left--blog") 
+          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
+          |  is beschikbaar voor Windows, Mac en Linux. Je kan kiezen uit een paar prijsplannen en hebt de keuze voor een maand&dash; of een jaar abbonnement. Bij betaling per jaar krijg je 20% korting. Ben je lid van 
+          a(href="https://fronteers.nl/inschrijven" target="_blank" rel="noopener noreferrer") Fronteers
+          |  dan kun je 25% korting krijgen. Lees hier meer over de korting op de site van 
+          a(href="https://fronteers.nl/blog/2019/05/25-procent-fronteers-korting-op-nieuwe-browser-polypane" target="_blank" rel="noopener noreferrer") Fronteers
+          span(class="span__date") Gepubliceerd op 17 mei 2019  
+          a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="polypane" data-show-count="false") Tweet
+      a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer")
+        img(src="../images/polypane-logo.svg" class="tools__image tools__image--blog" alt="Polypane logo")
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
