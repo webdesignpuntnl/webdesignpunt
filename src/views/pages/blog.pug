@@ -20,8 +20,16 @@ block content
       | 
       a(href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer") Webpack
       |  en nog veel meer.
+  aside.blog__nav
+    ul.blog__nav__list
+      li.blog__nav__list__item
+        a(href="#figma" class="blog__nav__list__link") Figma
+      li.blog__nav__list__item
+        a(href="#polypane" class="blog__nav__list__link") Polypane
+      li.blog__nav__list__item
+        a(href="#cssscan" class="blog__nav__list__link") cssscan
   //-  figma
-  article(class="article article--blog") 
+  article(class="article article--blog" id="figma") 
     div.align
       p(class="p p__left p__left--blog") 
           strong.p__firstWord Figma
@@ -40,9 +48,9 @@ block content
       a(href="https://figma.com" target="_blank" rel="noopener noreferrer")
         img(src="../images/figma-logo.svg" class="tools__image tools__image--blog" alt="figma logo")
     //-  Polypane
-  article(class="article article--blog") 
+  article(class="article article--blog" id="polypane") 
     div.align
-      p(class="p p__left p__left--blog") 
+      p(class="p p__left p__left--blog" ) 
         strong.p__firstWord Polypane
         | is een nieuwe browser gemaakt door Kilian Valkhof. In deze browser kun je tegelijkertijd je site zien op verschillende devices en viewports.
         a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
