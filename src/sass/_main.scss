@@ -260,8 +260,12 @@
 .blog__image {
     width: 100%;
     max-width: 650px;
-    margin: 0.5rem 2rem 3rem 0;
+    margin: 1rem 2rem 3rem 1rem;
     float: left;
+
+    &--cssscan {
+        max-width: 300px;
+    }
 }
 
 
