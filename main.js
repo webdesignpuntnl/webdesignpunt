@@ -31,6 +31,9 @@ require('./src/images/polypane-logo.svg');
 require('./src/images/polypane-screenshot.png');
 require('./src/images/cssscan-logo.png');
 require('./src/images/cssscan-screenshot.png');
+require('./src/images/git-log.png');
+require('./src/images/git-log-oneline.png');
+require('./src/images/git-logo.png');
 
 // require('./src/fonts/raleway/raleway-v13-latin-700.eot');
 // require('./src/fonts/raleway/raleway-v13-latin-700.svg');
