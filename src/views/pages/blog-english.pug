@@ -1,0 +1,57 @@
+extends ../layout/layout
+
+block prepend head
+    - var page = "blog"
+    - var title = "blog over alles en nog wat over bouwen voor het www"
+    - var description = "Webdesignpuntnl houdt een blog bij. Hier schrijven we over alles wat met het web te maken heeft."
+    - var path = "../"
+
+block content
+  section(class="section__blog")
+    a(href="blog.html" title="dutch flag" class="blog__flag") 
+      img(src="../images/flag-dutch.svg", alt="dutch flag")
+    //- a(class="twitter-follow-button" href="https://twitter.com/reneedekruijf") Follow
+    h2(class="h2 h2--blog") Webdesignpuntnl Blog
+    p(class="p") Through this blog i would like to write about web developement. You can think about stuff like:  
+      a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma,
+      |   
+      a(href="https://www.npmjs.com" target="_blank" rel="noopener noreferrer") NPM,
+      | 
+      a(href="https://nodejs.org" target="_blank" rel="noopener noreferrer") Node,
+      | 
+      a(href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer") Webpack
+      |  and off course much more.
+  //- aside.blog__nav
+  //-   ul.blog__nav__list
+  //-     li.blog__nav__list__item
+  //-       a(href="#figma" class="blog__nav__list__link") Figma
+  //-     li.blog__nav__list__item
+  //-       a(href="#polypane" class="blog__nav__list__link") Polypane
+  //-     li.blog__nav__list__item
+  //-       a(href="#cssscan" class="blog__nav__list__link") cssscan
+  //-     li.blog__nav__list__item
+  //-       a(href="#gitOneline" class="blog__nav__list__link") oneline
+  //-     li.blog__nav__list__item
+  //-       a(href="#focus" class="blog__nav__list__link") :focus-within
+  //- figma
+  article(class="article article--blog" id="figma") 
+    div.align
+      p(class="p p__left p__left--blog") 
+          strong.p__firstWord Figma
+          | Before the building of a website (coding with HTML, CSS and Javascript) lots of other stuff has to be done first. Start with talking to the customer, you have to know his vision. Also thinking about the user is very important. Who is using the site, what does he need? How is he going ot find what he needs?  
+      p(class="p p__left p__left--blog") 
+          | By talking to the customer and the user you get a lot of information, but we all know an image says more than a thousand words. So we have to start designing. First make a sketch, turn this into a wireframe, create a design and last we could build a protoype. All of this is possible with Figma. Figma works in the browser, so you can access it from everywhere, collaborate with others and share the designs.
+      p(class="p p__left p__left--blog")
+          a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
+          |  works with components. You can design a button and turn it into a component. This component is now easilly reussable. If you change the mastercomponent any instance of the master is changed as well. Changing just a single instance is also possible of course. 
+      p(class="p p__left p__left--blog") 
+          a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
+          |  is free for the most part. For teams there is a starter and a professional package. The starter is limited and free. The professional plan is US$ 12 for one month and one editor. If you want to know more you can take a look on the 
+          a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
+          |  site. 
+          span(class="span__date") Published on april 9 2019  
+          a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="figma" data-show-count="false") Tweet
+      a(href="https://figma.com" target="_blank" rel="noopener noreferrer")
+        img(src="../images/figma-logo.svg" class="tools__image tools__image--blog" alt="figma logo")
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")

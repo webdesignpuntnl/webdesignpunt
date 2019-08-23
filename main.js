@@ -34,6 +34,10 @@ require('./src/images/cssscan-screenshot.png');
 require('./src/images/git-log.png');
 require('./src/images/git-log-oneline.png');
 require('./src/images/git-logo.png');
+require('./src/images/focus-box.jpg');
+require('./src/images/focus-dropdown.jpg');
+require('./src/images/flag-english.svg');
+require('./src/images/flag-dutch.svg');
 
 // require('./src/fonts/raleway/raleway-v13-latin-700.eot');
 // require('./src/fonts/raleway/raleway-v13-latin-700.svg');

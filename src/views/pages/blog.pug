@@ -7,7 +7,9 @@ block prepend head
     - var path = "../"
 
 block content
-  section(class="section")
+  section(class="section__blog")
+    a(href="blog-english.html" title="english flag" class="blog__flag") 
+      img(src="../images/flag-english.svg", alt="english flag")
     //- a(class="twitter-follow-button" href="https://twitter.com/reneedekruijf") Follow
     h2(class="h2 h2--blog") Webdesignpuntnl Blog
     p(class="p") Middels deze blog wil ik schrijven over web development en ondewerpen daarover die mij bezig houden.
@@ -30,7 +32,9 @@ block content
         a(href="#cssscan" class="blog__nav__list__link") cssscan
       li.blog__nav__list__item
         a(href="#gitOneline" class="blog__nav__list__link") oneline
-  //-  figma
+      li.blog__nav__list__item
+        a(href="#focus" class="blog__nav__list__link") :focus-within
+    //- figma
   article(class="article article--blog" id="figma") 
     div.align
       p(class="p p__left p__left--blog") 
@@ -43,8 +47,9 @@ block content
           |  werkt met componenten. Je kunt een button ontwerpen en die dan omzetten in een component zodat je deze in een ander deel van je ontwerp weer gemakkelijk opnieuw kunt gebruiken. Het mooie hiervan is dat als je de mastercomponent aanpast dat alle andere meegaan. Denk bijvoorbeeld aan de kleur. Wil je een enkele instance van de button aanpassen dan kan dat ook.
       p(class="p p__left p__left--blog") 
           a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
-          |  is voor het grootste deel gratis. Wil je gebruik maken van het werken in teams dan is er een starter en een professioneel pakket. De starter is beperkt en gratis, het professionele plan is US$ 12 per maand per editor. Ik kan je zeker aanraden eens een kijkje te nemen op de site van 
-          a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma.
+          |  is voor het grootste deel gratis. Wil je gebruik maken van het werken in teams dan is er een starter en een professioneel pakket. De starter is beperkt en gratis, het professionele plan is US$ 12 per maand per editor. Ik kan je zeker aanraden eens een kijkje te nemen op de site van
+          a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
+          |  site. 
           span(class="span__date") Gepubliceerd op 9 april 2019  
           a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="figma" data-show-count="false") Tweet
       a(href="https://figma.com" target="_blank" rel="noopener noreferrer")
@@ -126,5 +131,21 @@ block content
         a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="git log --oneline" data-show-count="false") Tweet
       a(href="https://git-scm.com/" target="_blank" rel="noopener noreferrer")
         img(src="../images/git-logo.png" class="tools__image tools__image--blog" alt="git logo")
+  article(class="article article--blog" id="focus") 
+    div.align
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord :focus-within 
+        | is een ietwat vreemde css pseudo selector. Vreemd omdat je met deze selector een parent element kan selecteren gebaseerd op de staat waarin een child element zich bevind. Er zijn een paar usecases te vinden voor deze selector maar ik gebruik hem vooral om de accessibility van een dropdownmenu te verbeteren. De meeste bezoekers navigeren een site met de muis maar er zijn ook veel mensen die geen muis kunnen of willen gebruiken. Die gebruiken bijvoorbeeld een screenreader of het toetsenbord. Met de tabtoets kun je naar elk interactief element navigeren. Denk dan aan links, buttons, formulieren, velden van formulieren, dropdowns enzovoort. Maar hoe weet je waar je bent op de pagina? Dit wordt geregeld door de :focus selector, een kader om een element heen. Standaard is deze blauw en altijd aanwezig bij een interactief element.
+      p(class="p p__left p__left--blog")
+        img(src="../images/focus-box.jpg" class="blog__image blog__image--gitTop" alt="blauwe focus kader van een element" title="blauwe focus kader van een element")
+        | Vaak wordt de focus weggehaald omdat designers het lelijk vinden. Weghalen is geen goed idee (vanwege de eerder genoemde accessibility) maar je kunt hem met :focus wel anders stijlen natuurlijk. Ook dit kan echter verwarrend zijn voor mensen die altijd met een toetsenbord navigeren.
+        | Maar goed daar hebben we het nu niet over. We hebben het over :focus-within. Stel we hebben een dropdownmenu.
+      p(class="p p__left p__left--blog")
+        img(src="../images/focus-dropdown.jpg" class="blog__image blog__image--gitTop" alt="blauwe focus kader van een element" title="blauwe focus kader van een element")        
+        | Dit is meestal een unodered list met in 1 van de listitems een tweede (hidden) unordered list. Door met de muis over het juiste listitems te hooveren wordt het submenu zichtbaar.
+        | Maar hoe bereik je de items in de dropdown als je geen muis gebruikt? Dan gebruik je tab. Met tab kan je alle menu-items bereiken. Alleen kent de tab toets geen hover functie, dus met tab wordt de dropdown niet zichtbaar. Je loopt wel door alle menu-items heen maar je ziet niet wat je doet, het menu zakt niet. Met :focu-within kun je CSS schrijven waardoor het dropdownmenu wel zichtbaar wordt als je met tab de bovenste menu link selecteerd, als er focus is op de bovenste link.
+        | Standaard is het dropdown verborgen met display: none. Middels de :hover pseudo selector zet je dit op display: block. Dat doe je nu dus ook met de :focus-within.   
+        span(class="span__date") Gepubliceerd op 16 augustus 2019  
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags=":focus-within" data-show-count="false") Tweet
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")

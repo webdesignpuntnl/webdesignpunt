@@ -8,7 +8,7 @@
 }
 
 .main {
-  margin: 2rem 0 20rem 0;
+  margin: 1rem 0 20rem 0;
   text-align: center;
   position: relative;
   @include clearfix;
@@ -28,6 +28,17 @@
     text-align: left;
     margin: 2rem 0 0.5rem 2rem;
   }
+}
+
+.blog__flag {
+  display: block;
+  width: 3rem;
+  float: right;
+  margin: 0 1rem 2rem 0.5rem;
+}
+
+.section__blog {
+  margin-top: 2rem;
 }
 
 .article--blog {
@@ -288,6 +299,10 @@
     padding: 5rem 0 1.5rem 0;
   }
 
+  .h2--blog {
+    padding: 0 0 1.5rem 0;
+  }
+
   main {
     form {
       display: block;
@@ -329,8 +344,16 @@
     margin-left: 2rem;
   }
 
+  .section__blog {
+    margin-right: 4.5rem;
+  }
+
   .article--blog {
     margin-top: 6rem;
+  }
+
+  .blog__flag {
+    margin: 0 0 2rem 0.5rem;
   }
 
   .align {
