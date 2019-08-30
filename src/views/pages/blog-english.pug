@@ -2,8 +2,8 @@ extends ../layout/layout
 
 block prepend head
     - var page = "blog"
-    - var title = "blog over alles en nog wat over bouwen voor het www"
-    - var description = "Webdesignpuntnl houdt een blog bij. Hier schrijven we over alles wat met het web te maken heeft."
+    - var title = "blog about building stuff for the web"
+    - var description = "Webdesignpuntnl keeps a blog. You can read about all kinds of web related stuff."
     - var path = "../"
 
 block content
@@ -12,7 +12,7 @@ block content
       img(src="../images/flag-dutch.svg", alt="dutch flag")
     //- a(class="twitter-follow-button" href="https://twitter.com/reneedekruijf") Follow
     h2(class="h2 h2--blog") Webdesignpuntnl Blog
-    p(class="p") Through this blog i would like to write about web developement. You can think about stuff like:  
+    p(class="p") Through this blog i write about web developement. You can think about stuff like:  
       a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma,
       |   
       a(href="https://www.npmjs.com" target="_blank" rel="noopener noreferrer") NPM,
@@ -21,18 +21,18 @@ block content
       | 
       a(href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer") Webpack
       |  and off course much more.
-  //- aside.blog__nav
-  //-   ul.blog__nav__list
-  //-     li.blog__nav__list__item
-  //-       a(href="#figma" class="blog__nav__list__link") Figma
-  //-     li.blog__nav__list__item
-  //-       a(href="#polypane" class="blog__nav__list__link") Polypane
-  //-     li.blog__nav__list__item
-  //-       a(href="#cssscan" class="blog__nav__list__link") cssscan
-  //-     li.blog__nav__list__item
-  //-       a(href="#gitOneline" class="blog__nav__list__link") oneline
-  //-     li.blog__nav__list__item
-  //-       a(href="#focus" class="blog__nav__list__link") :focus-within
+  aside.blog__nav
+    ul.blog__nav__list
+      li.blog__nav__list__item
+        a(href="#figma" class="blog__nav__list__link") Figma
+      li.blog__nav__list__item
+        a(href="#polypane" class="blog__nav__list__link") Polypane
+      li.blog__nav__list__item
+        a(href="#cssscan" class="blog__nav__list__link") cssscan
+      li.blog__nav__list__item
+        a(href="#gitOneline" class="blog__nav__list__link") oneline
+      li.blog__nav__list__item
+        a(href="#focus" class="blog__nav__list__link") :focus-within
   //- figma
   article(class="article article--blog" id="figma") 
     div.align
@@ -53,5 +53,99 @@ block content
           a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="figma" data-show-count="false") Tweet
       a(href="https://figma.com" target="_blank" rel="noopener noreferrer")
         img(src="../images/figma-logo.svg" class="tools__image tools__image--blog" alt="figma logo")
+  //-  Polypane
+  article(class="article article--blog" id="polypane") 
+    div.align
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord Polypane
+        | is a new browser made by Kilian Valkhof. This browser shows a site on different devices and viewports in one screen. 
+        a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
+        |  is based on Chromium. Beside the Chrome developer tools Polypane also has a few more nice functions.
+      p(class="p p__left p__left--blog")
+        | More than ever people browse the net on mobile devices. So Developers have to take this into account and have to build apps and websites for different screen sizes. CSS ships with mediaqueries. Each screen gets his own design. On a large screen with a fast internet connection you show a hero&dash;image, on smaller screens you show just a small image so the user uses less mobile data to load the site. 
+      p(class="p p__left p__left--blog")
+          img(src="../images/polypane-screenshot.png" class="blog__image" alt="Polypane screenshot" title="Screenshot van Polypane")
+          | Every modern browser has the option to show the site on different screen sizes. Either you manually change the size of the browser of in the devtools you can use mobile view. But viewing all the breakpoints at once is not possible in the browser. 
+          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
+          |  solves this. In one view you can see all the different breakpoints. 
+          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
+          |  checks the breakpoints and shows the different designs. You can also choose to view just one breakpoint. You can make a screenshot of what is currently visible. Polypane has synchronised scrolling, all views move simultaniously up dan down. If you change something in the HTML or the CSS all views update. 
+          a(href="https://polypane.rocks/" targpolypaneet="_blank" rel="noopener noreferrer") Polypane
+          |  has the same devtools like the Chrome browser, so it is easy to change or debugg something.
+      p(class="p p__left p__left--blog") 
+          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
+          |  is availlable for Windows, Mac and Linux. You can choose a monthly or a yearly subscription. For a yearly subscription there is a 20% discount. A 25% discount is availlable for members of 
+          a(href="https://fronteers.nl/inschrijven" target="_blank" rel="noopener noreferrer") Fronteers
+          |. Check it out on the 
+          a(href="https://fronteers.nl/blog/2019/05/25-procent-fronteers-korting-op-nieuwe-browser-polypane" target="_blank" rel="noopener noreferrer") Fronteers
+          |  website. 
+          span(class="span__date") Published on may 17 2019  
+          a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="polypane" data-show-count="false") Tweet
+      a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer")
+        img(src="../images/polypane-logo.svg" class="tools__image tools__image--blog" alt="Polypane logo")
+      //-  css scan
+  article(class="article article--blog" id="cssscan") 
+    div.align
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord cssscan
+        | is a browser extension wich enables you to quickly check the css styles on a page without opening the devtools. 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") Cssscan
+        |  lets you hover over the page, the styles of the element are shwon in a floating box. With a mouseclick you cab copy them to memory and use them everywhere you need them.
+      p(class="p p__left p__left--blog")
+        img(src="../images/cssscan-screenshot.png" class="blog__image blog__image--cssscan" alt="css screenshot" title="Screenshot van cssscan")
+        | On activation a little menu shows up with a few options. The menu can be postitioned on the top or the bottom of the browser. You can pause or close 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") cssscan
+        |  with the buttons form the menu. 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") Cssscan
+        |  can also be used whith keyboard shortcuts. There is a button for feedback and there is a button for some options. You can copy the hoverstyles or nesting for SASS or LESS and you can place a grid over the entire page.
+        | I use 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") cssscan
+        |  for some time now. I i come across something i like it's very easy to quickly check the styles. for now it's not yet common for me to use 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") cssscan
+        |  during development, but it's very handy if you want to quickly check and copy some styling. 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") Cssscan
+        |  is availlable as an extension for Chrome and Firefox. Safari comming soon.
+      p(class="p p__left p__left--blog")
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") Cssscan
+        |  is not free. The normal price is &dollar;29.99. 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") cssscan
+        |  is often for sale, so check the site for more info.
+        span(class="span__date") Published on may 24 2019  
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="cssscan" data-show-count="false") Tweet
+      a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer")
+        img(src="../images/cssscan-logo.png" class="tools__image tools__image--blog" alt="cssscan logo")
+  //- git log --online
+  article(class="article article--blog" id="gitOneline") 
+    div.align
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord Git log --oneline
+        | is maybe obvious for people who work a lot with Git but i find out about it just recently when i did a workshop with  
+        a(href="https://fronteers.nl/workshops/getting-to-grips-with-git" target="_blank" rel="noopener noreferrer") Fronteers
+        |  about Git.
+      p(class="p p__left p__left--blog")
+        img(src="../images/git-log.png" class="blog__image blog__image--gitTop" alt="git log screendump" title="git log screendump")
+        | With Git log you can go back in time. At the top there is the most recent commit and more down the older ones. Most of the time the commits are two lines long. A heading and below that some more information about the commit.
+      p(class="p p__left p__left--blog")
+        img(src="../images/git-log-oneline.png" class="blog__image blog__image--gitBottom" alt="git log --online screendump" title="git log --online screendump")
+        | With git log --online you can see history but just the first line. This gives a quick look. If you need to see more just use git log. If you want to use a title and a body just commit like this: git commit -m "title" -m "body text". By using -m twice you get a title with a body. This way you're commits are getting much more clear.
+        span(class="span__date") Published on june 4 2019  
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="git log --oneline" data-show-count="false") Tweet
+      a(href="https://git-scm.com/" target="_blank" rel="noopener noreferrer")
+        img(src="../images/git-logo.png" class="tools__image tools__image--blog" alt="git logo")
+  article(class="article article--blog" id="focus") 
+    div.align
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord :focus-within 
+        | is a little bit of a strange psuedo selector. Strange because with this selector you can select a parent element based on the state of the child element. There are a few usecases for this selector but i mainly use it to improve accessabillity of a dropdownmenu. Most visitor of a website use a mouse to navigate but there are also a lot of people who use a screenreader or the keyboard. With the tabkey it is possible to navigate to each interactive element on a webpage. So links, buttons, forms, formfields etc. A blue box shows the user which element is active. This is standard behaviour. If you want to change this behavior you can use the psuedo selector :focus.
+      p(class="p p__left p__left--blog")
+        img(src="../images/focus-box.jpg" class="blog__image blog__image--gitTop" alt="blauwe focus kader van een element" title="blauwe focus kader van een element")
+        | Lost of times the blue box is removed because designers think is ugly. Removing it completely is not wise, because of the accessabillity. Styling it differently is an option but could also be confussing for those who are use to navigate with the keyboard.
+      p(class="p p__left p__left--blog")
+        img(src="../images/focus-dropdown.jpg" class="blog__image blog__image--gitTop" alt="blauwe focus kader van een element" title="blauwe focus kader van een element")        
+        | A dropdownmenu is most of the time and unordered list with inside the listitems another (hidden) list. By hovering over the listitem the CSS triggers and shows the dropdown.
+        | How does this work without a mouse? If you use tab you select all the items but there is no hover with tab so the dropdown wont show. Now we use :focu-within to write CSS wich makes the dropdown visible when there is focus on the top link of the menu.
+        | So the dropdown is hidden with display: none. With the :hover pseudo selector we put on display: block. We do the same with the :focus-within selector and now the dropdown shows on a mouse hover and if we focus the parent element with the tab key.   
+        span(class="span__date") Published on august 16 2019  
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags=":focus-within" data-show-count="false") Tweet
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
