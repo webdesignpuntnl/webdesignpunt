@@ -1,179 +1,181 @@
 .header {
-    width: 100%;
-    z-index: 999;
-    background-color: $yellowColor;
-    border-bottom: 1px solid $blackColor;
-    padding: 1rem 0 1rem 0;
+  width: 100%;
+  z-index: 999;
+  background-color: $yellowColor;
+  border-bottom: 1px solid $blackColor;
+  padding: 1rem 0 1rem 0;
 }
 
 .header__nav {
+  &__menu {
+    margin: 1.5rem 0 0 0;
+    height: 135px;
+    opacity: 1;
+    font-size: 1.1rem;
+    transition: height 500ms ease-in-out 100ms, opacity 800ms 500ms ease-in-out, font-size 100ms ease-in-out;
 
-    &__menu {
-        margin: 1.5rem 0 0 0;
-        height: 135px;
-        opacity: 1;
-        font-size: 1.1rem;
-        transition: height 500ms ease-in-out 100ms, opacity 800ms 500ms ease-in-out, font-size 100ms ease-in-out;
-        
-        &__page {
-            margin: 0.5rem 0 0 0.5rem;
-        }
+    &__page {
+      margin: 0.5rem 0 0 0.5rem;
     }
+  }
 }
 
 .header__nav__link {
-        font-family: $fontRaleway;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 1.1rem;
-        letter-spacing: 0.1rem;
-        color: $blackColor;
-        text-transform: uppercase;
-        text-decoration: none;
-        margin: 0 0 0 0.8rem;
-        transition: 0.5s;
+  font-family: $fontRaleway;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  color: $blackColor;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 0 0 0.8rem;
+  transition: 0.5s;
+
+  &:hover {
+    color: $orangeColor;
+    text-shadow: $blackColor 2px 2px 3px;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  &--active {
+    color: $orangeColor;
+    text-shadow: 1px 1px 0 $blackColor;
+    letter-spacing: 0.1rem;
+    transition: none;
+    background-color: transparent;
+    border-bottom: 2px solid $orangeColor;
+    padding: 0;
+    margin: 0 0 0 1.2rem;
+    cursor: initial;
 
     &:hover {
-        color: $orangeColor;
-        text-shadow: $blackColor 1px 1px 0;
-        padding: 0 0.5rem;
-        border-radius: 0.5rem;
+      color: $orangeColor;
+      text-shadow: 1px 1px 0 $blackColor;
+      letter-spacing: 0.1rem;
+      transition: none;
+      background-color: transparent;
+      border-radius: initial;
+      padding: 0;
+      cursor: initial;
     }
-
-    &--active {
-        color: $orangeColor;
-        text-shadow: 1px 1px 0 $blackColor;
-        letter-spacing: 0.1rem;
-        transition: none;
-        background-color: transparent;
-        border-bottom: 2px solid $orangeColor;
-        padding: 0;
-        margin: 0 0 0 1.2rem;
-        cursor: initial;
-
-        &:hover {
-            color: $orangeColor;
-            text-shadow: 1px 1px 0 $blackColor;
-            letter-spacing: 0.1rem;
-            transition: none;
-            background-color: transparent;
-            border-radius: initial;
-            padding: 0;
-            cursor: initial;
-        }
-    }
+  }
 }
 
-// hamburgermenu 
+// hamburgermenu
 .menuSmall {
-    display: none;
-   text-align: center;
-   font-size: 0;
-   width: 50px;
-   border: 1px solid $blackColor;
-   border-radius: 5px;
-   position: absolute;
-   top: 7.2rem;
-   right: 0;
-   margin: 0 1rem;
-   padding: 0.2rem 0.4rem;
-   cursor: pointer;
+  display: none;
+  text-align: center;
+  font-size: 0;
+  width: 50px;
+  border: 1px solid $blackColor;
+  border-radius: 5px;
+  position: absolute;
+  top: 7.2rem;
+  right: 0;
+  margin: 0 1rem;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
 
-   &__line01, &__line02, &__line03 {
-       margin: 5px 0;
-       padding: 0.1rem 0.5rem;
-       background-color: $orangeColor;
-       border: 1px solid $orangeColor;
-       border-radius: 3px;
-       transition: 0.3s;
-       position: initial;
-       transition: background-color 1s, border-color 1s;
-   }
+  &__line01,
+  &__line02,
+  &__line03 {
+    margin: 5px 0;
+    padding: 0.1rem 0.5rem;
+    background-color: $orangeColor;
+    border: 1px solid $orangeColor;
+    border-radius: 3px;
+    transition: 0.3s;
+    position: initial;
+    transition: background-color 1s, border-color 1s;
+  }
 }
 
 .hideMenu {
-    height: 0;
-    opacity: 0;
-    font-size: 0;
-    transition: height 500ms ease-in-out 100ms, opacity 300ms ease-in-out, font-size 100ms ease-in-out;
+  height: 0;
+  opacity: 0;
+  font-size: 0;
+  transition: height 500ms ease-in-out 100ms, opacity 300ms ease-in-out, font-size 100ms ease-in-out;
 }
 
 // rotate the top line
 .change .menuSmall__line01 {
-   transform: rotate(-45deg) translate(-6px, 7px);
-   background-color: $blackColor;
-   border-color: $blackColor;
+  transform: rotate(-45deg) translate(-6px, 7px);
+  background-color: $blackColor;
+  border-color: $blackColor;
 }
 
 // fade out the middle line
 .change .menuSmall__line02 {
-    opacity: 0;
-    background-color: $blackColor;
-    border-color: $blackColor;
+  opacity: 0;
+  background-color: $blackColor;
+  border-color: $blackColor;
 }
 
 // rotate the bottom line
 .change .menuSmall__line03 {
-    transform: rotate(45deg) translate(-8px, -8px);
-    background-color: $blackColor;
-    border-color: $blackColor;
+  transform: rotate(45deg) translate(-8px, -8px);
+  background-color: $blackColor;
+  border-color: $blackColor;
 }
 
+@mixin header--ms {
+  // 600
+  .hideMenu {
+    opacity: 1;
+  }
 
-@mixin header--ms { // 600
-    .hideMenu {
-        opacity: 1;
-    }
+  .header__nav {
+    position: initial;
 
-    .header__nav {
-        position: initial;
+    &__menu {
+      height: auto;
+      display: block;
+      position: initial;
+      float: right;
+      margin: 0 1rem 0 0;
+      padding: 0;
+      transform: initial;
 
-        &__menu {
-            height: auto;
-            display: block;
-            position: initial;
-            float: right; 
-            margin: 0 1rem 0 0;
-            padding: 0;
-            transform: initial;
-
-            &__page {
-                display: inline-block;
-                width: auto;
-                margin: 0 0 1rem 1rem;
-                text-align: center;
-                vertical-align: top;
-            }
-        }
-    }
-
-    .header__nav__link {
-        font-size: 1.1rem;
+      &__page {
         display: inline-block;
+        width: auto;
+        margin: 0 0 1rem 1rem;
+        text-align: center;
+        vertical-align: top;
+      }
     }
+  }
 
-    .menuSmall {
-        display: none;
-        @include clearfix;
-    }
+  .header__nav__link {
+    font-size: 1.1rem;
+    display: inline-block;
+  }
+
+  .menuSmall {
+    display: none;
+    @include clearfix;
+  }
 }
 
-@mixin header--m { // 768
-    .header__nav {
-
-        &__menu {
-            &__page {
-                margin: 0 1rem 1rem 1rem;
-            }
-        }
+@mixin header--m {
+  // 768
+  .header__nav {
+    &__menu {
+      &__page {
+        margin: 0 1rem 1rem 1rem;
+      }
     }
-    .header__nav__link {
-            font-size: 1.2rem;
-    }
+  }
+  .header__nav__link {
+    font-size: 1.2rem;
+  }
 }
 
-@mixin header--l { // 1200
-    .header__nav__link {
-        font-size: 1.3rem;
-} 
+@mixin header--l {
+  // 1200
+  .header__nav__link {
+    font-size: 1.3rem;
+  }
 }

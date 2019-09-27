@@ -5,8 +5,8 @@ if (!window.noat) {
 }
 window.noat.cookieConsent = {
   text: 'Deze site maakt gebruik van Cookies!',
-  privacyPolicyText: 'Lees hier onze privacy verklaring',
-  privacyPolicyUrl: '../pages/privacy.html',
+  privacyPolicyText: 'Lees hier onze privacyverklaring',
+  privacyPolicyUrl: '../pages/privacy.html#cookies',
   denyText: 'Weigeren',
   allowText: 'Accepteren'
   // useCustomCSS: true

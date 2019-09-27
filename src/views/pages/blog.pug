@@ -11,128 +11,32 @@ block content
     a(href="blog-english.html" title="english flag" class="blog__flag") 
       img(src="../images/flag-english.svg", alt="english flag")
     //- a(class="twitter-follow-button" href="https://twitter.com/reneedekruijf") Follow
-    h2(class="h2 h2--blog") Webdesignpuntnl Blog
-    p(class="p") Middels deze blog wil ik schrijven over web development en onderwerpen daarover die mij bezig houden.
+    h2(class="h2") blog
+    p(class="p p--center") Middels deze blog wil ik schrijven over web development en onderwerpen daarover die mij bezig houden.
       | Je kunt dan denken aan tools zoals 
-      a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma,
+      a(href="https://figma.com" target="_blank" rel="noopener noreferrer" class="link") Figma,
       |   
-      a(href="https://www.npmjs.com" target="_blank" rel="noopener noreferrer") NPM,
+      a(href="https://www.npmjs.com" target="_blank" rel="noopener noreferrer" class="link") NPM,
       | 
-      a(href="https://nodejs.org" target="_blank" rel="noopener noreferrer") Node,
+      a(href="https://nodejs.org" target="_blank" rel="noopener noreferrer" class="link") Node,
       | 
-      a(href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer") Webpack
+      a(href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer" class="link") Webpack
       |  en nog veel meer.
   aside.blog__nav
     ul.blog__nav__list
       li.blog__nav__list__item
-        a(href="#figma" class="blog__nav__list__link") Figma
-      li.blog__nav__list__item
-        a(href="#polypane" class="blog__nav__list__link") Polypane
-      li.blog__nav__list__item
-        a(href="#cssscan" class="blog__nav__list__link") cssscan
+        a(href="#focus" class="blog__nav__list__link") :focus-within
       li.blog__nav__list__item
         a(href="#gitOneline" class="blog__nav__list__link") oneline
       li.blog__nav__list__item
-        a(href="#focus" class="blog__nav__list__link") :focus-within
-    //- figma
-  article(class="article article--blog" id="figma") 
-    div.align
-      p(class="p p__left p__left--blog") 
-          strong.p__firstWord Figma
-          | Aan het bouwen van een website (dus het programmeren van de HTML, CSS en Javascript) gaan nog wel wat dingen vooraf. Je begint altijd met een gesprek met je opdrachtgever om er precies achter ter komen wat hij of zij voor ogen heeft. Heel belangrijk is de gebruiker van de site, wie gaat hem bezoeken en wat wil je dat die bezoeker gaat vinden of zoeken. Met andere woorden wat is het doel van de site en wie is de bezoeker? 
-      p(class="p p__left p__left--blog") 
-          | Praten is nodig maar dit gaat altijd makkelijker als je het visueel kunt maken. We gaan dus een ontwerp maken. Het begint meestal met een schets, die wordt dan omgezet in een wireframe (zonder afbeeldingen, tekst en kleur), dan komt er een ontwerp (met afbeeldingen, tekst en kleur) en als laatste kan je nog een prototype maken. Met Figma kan dit allemaal. Omdat het in de browser werkt kan je het overal gebruiken en kan je anderen laten meewerken. Ook kan je het eindresultaat delen met anderen.
-      p(class="p p__left p__left--blog")
-          a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
-          |  werkt met componenten. Je kunt een button ontwerpen en die dan omzetten in een component zodat je deze in een ander deel van je ontwerp weer gemakkelijk opnieuw kunt gebruiken. Het mooie hiervan is dat als je de mastercomponent aanpast dat alle andere meegaan. Denk bijvoorbeeld aan de kleur. Wil je een enkele instance van de button aanpassen dan kan dat ook.
-      p(class="p p__left p__left--blog") 
-          a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
-          |  is voor het grootste deel gratis. Wil je gebruik maken van het werken in teams dan is er een starter en een professioneel pakket. De starter is beperkt en gratis, het professionele plan is US$ 12 per maand per editor. Ik kan je zeker aanraden eens een kijkje te nemen op de site van
-          a(href="https://figma.com" target="_blank" rel="noopener noreferrer") Figma
-          |  site. 
-          span(class="span__date") Gepubliceerd op 9 april 2019  
-          a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="figma" data-show-count="false") Tweet
-      a(href="https://figma.com" target="_blank" rel="noopener noreferrer")
-        img(src="../images/figma-logo.svg" class="tools__image tools__image--blog" alt="figma logo")
-    //-  Polypane
-  article(class="article article--blog" id="polypane") 
-    div.align
-      p(class="p p__left p__left--blog" ) 
-        strong.p__firstWord Polypane
-        | is een nieuwe browser gemaakt door Kilian Valkhof. In deze browser kun je tegelijkertijd je site zien op verschillende devices en viewports.
-        a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
-        |  is gebasseerd op Chromium. Naast de Chrome developer tools bevat de browser nog meer handig functies.
-      p(class="p p__left p__left--blog")
-        | Even snel een site opzoeken op je mobiel is vandaag de dag heel normaal. Sterker nog er wordt meer gesurft op draagbare apparaten dan op de desktop. Developers moeten hier rekening mee houden en ontwerpen apps en websites voor verschillende scherm formaten. Dit kan op vele manieren maar het meest gebruikelijk (op dit moment) is het gebruik van css media&dash;queries. Het ontwerp schaalt mee op de verschillende schermen. Je hebt dus een HTML bestand en via CSS kun je breekpunten bepalen waarop de CSS verandert. Op een groot scherm met snel internet laat je bijvoorbeeld een hero&dash;image zien die je kunt verbergen op kleine schermen zodat de gebruiker hier geen dure datakosten voor hoeft te betalen.
-      p(class="p p__left p__left--blog")
-          img(src="../images/polypane-screenshot.png" class="blog__image" alt="Polypane screenshot" title="Screenshot van Polypane")
-          | In elke browser kun je zien hoe je site eruit ziet op verschillende schermen. Je moet dan de breedte van de browser aanpassen of in de devtools de responsive view inschakelen. Je kunt niet alle devices in 1 keer zien.
-          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
-          |  lost dit op. Je kunt meerdere formaten in 1 keer bekijken. Je kan dit doen op basis van de breekpunten in js CCS, 
-          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
-          |  ziet de breekpunten en maakt op basis hiervan een overzicht. Je kan er ook voor kiezen om 1 view te zien. Je kan een screenshot maken van wat er op dit moment in de viewport zichtbaar is. Wat ook heel handig is synchronised scrolling, alle views scrollen dan synchroon mee en blijven ongeveer op de dezelfde hoogte. Als je de html of de css aanpast wordt dat in alle views zichtbaar. 
-          a(href="https://polypane.rocks/" targpolypaneet="_blank" rel="noopener noreferrer") Polypane
-          |  heeft dezelfde devtools als elke Chromiumm browser, je kunt dus snel even iets aanpassen of debuggen.
-      p(class="p p__left p__left--blog") 
-          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer") Polypane
-          |  is beschikbaar voor Windows, Mac en Linux. Je kan kiezen uit een paar prijsplannen en hebt de keuze voor een maand&dash; of een jaar abbonnement. Bij betaling per jaar krijg je 20% korting. Ben je lid van 
-          a(href="https://fronteers.nl/inschrijven" target="_blank" rel="noopener noreferrer") Fronteers
-          |  dan kun je 25% korting krijgen. Lees hier meer over de korting op de site van 
-          a(href="https://fronteers.nl/blog/2019/05/25-procent-fronteers-korting-op-nieuwe-browser-polypane" target="_blank" rel="noopener noreferrer") Fronteers
-          span(class="span__date") Gepubliceerd op 17 mei 2019  
-          a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="polypane" data-show-count="false") Tweet
-      a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer")
-        img(src="../images/polypane-logo.svg" class="tools__image tools__image--blog" alt="Polypane logo")
-  //-  css scan
-  article(class="article article--blog" id="cssscan") 
-    div.align
-      p(class="p p__left p__left--blog" ) 
-        strong.p__firstWord cssscan
-        | is een browser extensie waarme je devtools minder snel hoeft te gebruiken om de CCS stijlen van een item op een webpagina te bekijken. 
-        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") Cssscan
-        |  geeft je de mogelijkheid om over elk item van een pagina te hoveren, de stijlen verschijnen dan in een kader en met een klik kopieer je ze naar het klembord. Je kan de stijlen dan direct in je stijlsheet plakken en gebruiken.
-      p(class="p p__left p__left--blog")
-        img(src="../images/cssscan-screenshot.png" class="blog__image blog__image--cssscan" alt="css screenshot" title="Screenshot van cssscan")
-        | Als je de extensie activeert dan krijg je een balkje met wat menuopties. Voor de positie van het balkje kan je kiezen uit boven- of onder in de browser. Er zijn knoppen om  
-        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") cssscan
-        |  te pauseren of helemaal te sluiten. 
-        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") Cssscan
-        |  is te ook te bedienen met keywboard shortcuts. Er is een knop voor feedback en er is een knop voor enkele opties. Zo kun bijvoorbeeld ook de hoverstijlen kopieren of nesten voor SASS of LESS en je kan er voor kiezen om een grid over de pagina te plaatsen.
-        | Ik gebruik 
-        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") cssscan
-        |  nu enige tijd. Als ik op een mooie site kom dan is het heel handig om even snel wat stijlen te checken. Het is nog geen gewoonte om 
-        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") cssscan
-        |  tijdens het developen te gebruiken. Ben nog iets te veel aan de devtools gewend. Maar als je even snel wat stijlen wilt knippen en plakken dan is het zeker geweldig. 
-        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") Cssscan
-        |  is te krijgen als extensie voor Chrome en Firefox. Safari is op dit moment in de maak.
-      p(class="p p__left p__left--blog")
-        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") Cssscan
-        |  is niet gratis. De normale prijs is &dollar; 29.99. 
-        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer") cssscan
-        |  is echter vaak in de aanbieding.
-        span(class="span__date") Gepubliceerd op 24 mei 2019  
-        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="cssscan" data-show-count="false") Tweet
-      a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer")
-        img(src="../images/cssscan-logo.png" class="tools__image tools__image--blog" alt="cssscan logo")
-  //- git log --online
-  article(class="article article--blog" id="gitOneline") 
-    div.align
-      p(class="p p__left p__left--blog" ) 
-        strong.p__firstWord Git log --oneline
-        | is voor mensen die veel met Git werken misschien wel heel bekend maar ik kwam er pas recent mee in aanraking toen ik via 
-        a(href="https://fronteers.nl/workshops/getting-to-grips-with-git" target="_blank" rel="noopener noreferrer") Fronteers
-        |  een workshop over Git volgde.
-      p(class="p p__left p__left--blog")
-        img(src="../images/git-log.png" class="blog__image blog__image--gitTop" alt="git log screendump" title="git log screendump")
-        | Met git log kun je in terug in de tijd kijken. Je ziet bovenaan de nieuwste commit en naar onderen toe worden ze steeds ouder. Je ziet dat ze  uit twee regels bestaan. Een korte regel en daaronder een of meerdere langere regels. De eerste regel is een titel waardoor je snel kunt zien wat je precies gedaan hebt in de commit. Daaronder kan je dan met meer woorden uitleggen wat je gedaan hebt.
-      p(class="p p__left p__left--blog")
-        img(src="../images/git-log-oneline.png" class="blog__image blog__image--gitBottom" alt="git log --online screendump" title="git log --online screendump")
-        | Het mooiste is dat je ook een log kan maken waarin je alleen de eerste regel te zien krijgt. Dit doe je door git log --oneline te gebruiken. Zo kan je snel zien wat er gebeurt is. Als nog meer informatie wilt hebben dan kijk je naar de lange logs. Als je een commit doet dan gebruik je: git commit -m "Hier een beschrijving". Dit zorgt ervoor dat je aanpassingen worden toegevoegd met een lange message. Wil je een titel en een body hebben dan gebruik je: git commit -m "titel" -m "body". Dus door twee keer -m toe te voegen kan je het bericht opdelen in een titel en een body. Ik gebruik dit nu voor al mijn  projecten en het wordt er een stuk duidelijker van.
-        span(class="span__date") Gepubliceerd op 4 juni 2019  
-        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="git log --oneline" data-show-count="false") Tweet
-      a(href="https://git-scm.com/" target="_blank" rel="noopener noreferrer")
-        img(src="../images/git-logo.png" class="tools__image tools__image--blog" alt="git logo")
-  article(class="article article--blog" id="focus") 
+        a(href="#cssscan" class="blog__nav__list__link") cssscan
+      li.blog__nav__list__item
+        a(href="#polypane" class="blog__nav__list__link") Polypane
+      li.blog__nav__list__item
+        a(href="#figma" class="blog__nav__list__link") Figma
+    
+  //- :focus-within
+  article(class="article article--blog" id="focus")     
     div.align
       p(class="p p__left p__left--blog" ) 
         strong.p__firstWord :focus-within 
@@ -148,5 +52,111 @@ block content
         | Standaard is het dropdown verborgen met display: none. Middels de :hover pseudo selector zet je dit op display: block. Dat doe je nu dus ook met de :focus-within.   
         span(class="span__date") Gepubliceerd op 16 augustus 2019  
         a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags=":focus-within" data-show-count="false") Tweet
+    
+  //- git log --online
+  article(class="article article--blog" id="gitOneline") 
+    div.align
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord Git log --oneline
+        | is voor mensen die veel met Git werken misschien wel heel bekend maar ik kwam er pas recent mee in aanraking toen ik via 
+        a(href="https://fronteers.nl/workshops/getting-to-grips-with-git" target="_blank" rel="noopener noreferrer" class="link") Fronteers
+        |  een workshop over Git volgde.
+      p(class="p p__left p__left--blog")
+        img(src="../images/git-log.png" class="blog__image blog__image--gitTop" alt="git log screendump" title="git log screendump")
+        | Met git log kun je in terug in de tijd kijken. Je ziet bovenaan de nieuwste commit en naar onderen toe worden ze steeds ouder. Je ziet dat ze  uit twee regels bestaan. Een korte regel en daaronder een of meerdere langere regels. De eerste regel is een titel waardoor je snel kunt zien wat je precies gedaan hebt in de commit. Daaronder kan je dan met meer woorden uitleggen wat je gedaan hebt.
+      p(class="p p__left p__left--blog")
+        img(src="../images/git-log-oneline.png" class="blog__image blog__image--gitBottom" alt="git log --online screendump" title="git log --online screendump")
+        | Het mooiste is dat je ook een log kan maken waarin je alleen de eerste regel te zien krijgt. Dit doe je door git log --oneline te gebruiken. Zo kan je snel zien wat er gebeurt is. Als nog meer informatie wilt hebben dan kijk je naar de lange logs. Als je een commit doet dan gebruik je: git commit -m "Hier een beschrijving". Dit zorgt ervoor dat je aanpassingen worden toegevoegd met een lange message. Wil je een titel en een body hebben dan gebruik je: git commit -m "titel" -m "body". Dus door twee keer -m toe te voegen kan je het bericht opdelen in een titel en een body. Ik gebruik dit nu voor al mijn  projecten en het wordt er een stuk duidelijker van.
+        span(class="span__date") Gepubliceerd op 4 juni 2019  
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="git log --oneline" data-show-count="false") Tweet
+      a(href="https://git-scm.com/" target="_blank" rel="noopener noreferrer")
+        img(src="../images/git-logo.png" class="tools__image tools__image--blog" alt="git logo")
+
+    //- figma
+  //-  css scan
+  article(class="article article--blog" id="cssscan") 
+    div.align
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord cssscan
+        | is een browser extensie waarme je devtools minder snel hoeft te gebruiken om de CCS stijlen van een item op een webpagina te bekijken. 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer" class="link") Cssscan
+        |  geeft je de mogelijkheid om over elk item van een pagina te hoveren, de stijlen verschijnen dan in een kader en met een klik kopieer je ze naar het klembord. Je kan de stijlen dan direct in je stijlsheet plakken en gebruiken.
+      p(class="p p__left p__left--blog")
+        img(src="../images/cssscan-screenshot.png" class="blog__image blog__image--cssscan" alt="css screenshot" title="Screenshot van cssscan")
+        | Als je de extensie activeert dan krijg je een balkje met wat menuopties. Voor de positie van het balkje kan je kiezen uit boven- of onder in de browser. Er zijn knoppen om  
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer" class="link" class="link") cssscan
+        |  te pauseren of helemaal te sluiten. 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer" class="link") Cssscan
+        |  is te ook te bedienen met keywboard shortcuts. Er is een knop voor feedback en er is een knop voor enkele opties. Zo kun bijvoorbeeld ook de hoverstijlen kopieren of nesten voor SASS of LESS en je kan er voor kiezen om een grid over de pagina te plaatsen.
+        | Ik gebruik 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer" class="link") cssscan
+        |  nu enige tijd. Als ik op een mooie site kom dan is het heel handig om even snel wat stijlen te checken. Het is nog geen gewoonte om 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer" class="link") cssscan
+        |  tijdens het developen te gebruiken. Ben nog iets te veel aan de devtools gewend. Maar als je even snel wat stijlen wilt knippen en plakken dan is het zeker geweldig. 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer" class="link") Cssscan
+        |  is te krijgen als extensie voor Chrome en Firefox. Safari is op dit moment in de maak.
+      p(class="p p__left p__left--blog")
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer" class="link") Cssscan
+        |  is niet gratis. De normale prijs is &dollar; 29.99. 
+        a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer" class="link") cssscan
+        |  is echter vaak in de aanbieding.
+        span(class="span__date") Gepubliceerd op 24 mei 2019  
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="cssscan" data-show-count="false") Tweet
+      a(href="https://getcssscan.com/" target="_blank" rel="noopener noreferrer")
+        img(src="../images/cssscan-logo.png" class="tools__image tools__image--blog" alt="cssscan logo")
+  //- polypane
+  article(class="article article--blog" id="polypane") 
+    div.align
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord Polypane
+        | is een nieuwe browser gemaakt door Kilian Valkhof. In deze browser kun je tegelijkertijd je site zien op verschillende devices en viewports.
+        a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer" class="link") Polypane
+        |  is gebasseerd op Chromium. Naast de Chrome developer tools bevat de browser nog meer handig functies.
+      p(class="p p__left p__left--blog")
+        | Even snel een site opzoeken op je mobiel is vandaag de dag heel normaal. Sterker nog er wordt meer gesurft op draagbare apparaten dan op de desktop. Developers moeten hier rekening mee houden en ontwerpen apps en websites voor verschillende scherm formaten. Dit kan op vele manieren maar het meest gebruikelijk (op dit moment) is het gebruik van css media&dash;queries. Het ontwerp schaalt mee op de verschillende schermen. Je hebt dus een HTML bestand en via CSS kun je breekpunten bepalen waarop de CSS verandert. Op een groot scherm met snel internet laat je bijvoorbeeld een hero&dash;image zien die je kunt verbergen op kleine schermen zodat de gebruiker hier geen dure datakosten voor hoeft te betalen.
+      p(class="p p__left p__left--blog")
+          img(src="../images/polypane-screenshot.png" class="blog__image" alt="Polypane screenshot" title="Screenshot van Polypane")
+          | In elke browser kun je zien hoe je site eruit ziet op verschillende schermen. Je moet dan de breedte van de browser aanpassen of in de devtools de responsive view inschakelen. Je kunt niet alle devices in 1 keer zien.
+          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer" class="link") Polypane
+          |  lost dit op. Je kunt meerdere formaten in 1 keer bekijken. Je kan dit doen op basis van de breekpunten in js CCS, 
+          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer" class="link") Polypane
+          |  ziet de breekpunten en maakt op basis hiervan een overzicht. Je kan er ook voor kiezen om 1 view te zien. Je kan een screenshot maken van wat er op dit moment in de viewport zichtbaar is. Wat ook heel handig is synchronised scrolling, alle views scrollen dan synchroon mee en blijven ongeveer op de dezelfde hoogte. Als je de html of de css aanpast wordt dat in alle views zichtbaar. 
+          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer" class="link") Polypane
+          |  heeft dezelfde devtools als elke Chromiumm browser, je kunt dus snel even iets aanpassen of debuggen.
+      p(class="p p__left p__left--blog") 
+          a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer" class="link") Polypane
+          |  is beschikbaar voor Windows, Mac en Linux. Je kan kiezen uit een paar prijsplannen en hebt de keuze voor een maand&dash; of een jaar abbonnement. Bij betaling per jaar krijg je 20% korting. Ben je lid van 
+          a(href="https://fronteers.nl/inschrijven" target="_blank" rel="noopener noreferrer" class="link") Fronteers
+          |  dan kun je 25% korting krijgen. Lees hier meer over de korting op de site van 
+          a(href="https://fronteers.nl/blog/2019/05/25-procent-fronteers-korting-op-nieuwe-browser-polypane" target="_blank" rel="noopener noreferrer" class="link") Fronteers
+          span(class="span__date") Gepubliceerd op 17 mei 2019  
+          a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="polypane" data-show-count="false") Tweet
+      a(href="https://polypane.rocks/" target="_blank" rel="noopener noreferrer")
+        img(src="../images/polypane-logo.svg" class="tools__image tools__image--blog" alt="Polypane logo")
+  //- figma
+  article(class="article article--blog" id="figma") 
+    div.align
+      p(class="p p__left p__left--blog") 
+          strong.p__firstWord Figma
+          | Aan het bouwen van een website (dus het programmeren van de HTML, CSS en Javascript) gaan nog wel wat dingen vooraf. Je begint altijd met een gesprek met je opdrachtgever om er precies achter ter komen wat hij of zij voor ogen heeft. Heel belangrijk is de gebruiker van de site, wie gaat hem bezoeken en wat wil je dat die bezoeker gaat vinden of zoeken. Met andere woorden wat is het doel van de site en wie is de bezoeker? 
+      p(class="p p__left p__left--blog") 
+          | Praten is nodig maar dit gaat altijd makkelijker als je het visueel kunt maken. We gaan dus een ontwerp maken. Het begint meestal met een schets, die wordt dan omgezet in een wireframe (zonder afbeeldingen, tekst en kleur), dan komt er een ontwerp (met afbeeldingen, tekst en kleur) en als laatste kan je nog een prototype maken. Met Figma kan dit allemaal. Omdat het in de browser werkt kan je het overal gebruiken en kan je anderen laten meewerken. Ook kan je het eindresultaat delen met anderen.
+      p(class="p p__left p__left--blog")
+          a(href="https://figma.com" target="_blank" rel="noopener noreferrer" class="link") Figma
+          |  werkt met componenten. Je kunt een button ontwerpen en die dan omzetten in een component zodat je deze in een ander deel van je ontwerp weer gemakkelijk opnieuw kunt gebruiken. Het mooie hiervan is dat als je de mastercomponent aanpast dat alle andere meegaan. Denk bijvoorbeeld aan de kleur. Wil je een enkele instance van de button aanpassen dan kan dat ook.
+      p(class="p p__left p__left--blog") 
+          a(href="https://figma.com" target="_blank" rel="noopener noreferrer" class="link") Figma
+          |  is voor het grootste deel gratis. Wil je gebruik maken van het werken in teams dan is er een starter en een professioneel pakket. De starter is beperkt en gratis, het professionele plan is US$ 12 per maand per editor. Ik kan je zeker aanraden eens een kijkje te nemen op de site van
+          a(href="https://figma.com" target="_blank" rel="noopener noreferrer" class="link") Figma
+          |  site. 
+          span(class="span__date") Gepubliceerd op 9 april 2019  
+          a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="figma" data-show-count="false") Tweet
+      a(href="https://figma.com" target="_blank" rel="noopener noreferrer")
+        img(src="../images/figma-logo.svg" class="tools__image tools__image--blog" alt="figma logo")
+
+    //-  Polypane
+  
+  
+
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
