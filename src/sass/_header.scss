@@ -33,31 +33,34 @@
   transition: 0.5s;
 
   &:hover {
-    color: $orangeColor;
-    text-shadow: $blackColor 2px 2px 3px;
-    padding: 0 0.5rem;
+    // color: $orangeColor;
+    // text-shadow: $blackColor 2px 2px 3px;
+    // padding: 0 0.5rem;
     border-radius: 0.5rem;
+    background-color: $orangeColor;
+    padding: 0 1rem;
   }
 
   &--active {
-    color: $orangeColor;
-    text-shadow: 1px 1px 0 $blackColor;
+    // color: $orangeColor;
+    // text-shadow: 1px 1px 0 $blackColor;
     letter-spacing: 0.1rem;
     transition: none;
-    background-color: transparent;
-    border-bottom: 2px solid $orangeColor;
-    padding: 0;
+    background-color: $orangeColor;
+    border-radius: 0.5rem;
+    // border-bottom: 2px solid $orangeColor;
+    padding: 0 1rem;
     margin: 0 0 0 1.2rem;
     cursor: initial;
 
     &:hover {
-      color: $orangeColor;
-      text-shadow: 1px 1px 0 $blackColor;
+      // color: $orangeColor;
+      // text-shadow: 1px 1px 0 $blackColor;
       letter-spacing: 0.1rem;
       transition: none;
-      background-color: transparent;
-      border-radius: initial;
-      padding: 0;
+      // background-color: transparent;
+      // border-radius: initial;
+      // padding: 0;
       cursor: initial;
     }
   }
