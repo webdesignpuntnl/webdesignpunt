@@ -1,81 +1,79 @@
 .projects {
-    display: inline-block;
-    width: 90%;
-    max-width: 450px;
-    position: relative;
-    text-align: center;
+  display: inline-block;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  text-align: center;
 
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .projects__card {
-    display: inline-block;
-    position: relative;
-    max-width: 350px;
-    height: 200px;
-    overflow: hidden;
-    background-color: $yellowColor;
-    box-shadow: $blackColor 1px 1px 8px 1px;
+  display: inline-block;
+  position: relative;
+  max-width: 350px;
+  height: 200px;
+  overflow: hidden;
+  background-color: $yellowColor;
+  box-shadow: $blackColor 1px 1px 8px 1px;
 }
-
 
 .projects__overlay {
-    font-size: 0;
-    position: absolute;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
+  font-size: 0;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
 }
 
-
 .projects__card:hover .projects__overlay {
-    font-size: 1.2rem;
-    
-    background-color: $orangeColor;
-    border: 2px solid $blackColor;
-    transition: background-color 0.5s ease-in-out, font-size 0.8s 0.2s ease-in-out;
+  font-size: 1.2rem;
+
+  background-color: $orangeColor;
+  border: 2px solid $blackColor;
+  transition: background-color 0.5s ease-in-out, font-size 0.8s 0.2s ease-in-out;
 }
 
 .projects__overlay__p {
-    display: block;
-    position: relative;   
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); 
-    padding: 1rem;
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
 }
 
-.projects__link:link, .projects__link:visited  {
-    color: $blackColor;
+.projects__link:link,
+.projects__link:visited {
+  color: $blackColor;
 }
-
 
 .projects__card__h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 999;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    color: $blackColor;
-    // text-shadow: 1px 1px 0 $blackColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: $blackColor;
+  // text-shadow: 1px 1px 0 $blackColor;
 }
 
 .projects__card__screenshots {
-    display: block;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    box-shadow: $greyColor 1px 1px 8px 0;
-    z-index: 900;
-    opacity: 0.25;
+  display: block;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  box-shadow: $greyColor 1px 1px 8px 0;
+  z-index: 900;
+  opacity: 0.25;
 }
 
 .projects__card__p {
-    display: block;
-    text-align: left;
-    width: 210px;
-    margin: 0.5rem auto 1rem auto;
+  display: block;
+  text-align: left;
+  width: 210px;
+  margin: 0.5rem auto 1rem auto;
 }
 
 // .modal__header {
@@ -83,122 +81,128 @@
 // }
 
 .projects__modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    width: 80vw;
-    // height: 90vw;
-    background-color: rgba($yellowColor, 1);
-    border: 3px solid $blackColor;
-    border-radius: 5px;
-    overflow: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 80vw;
+  // height: 90vw;
+  background-color: rgba($yellowColor, 1);
+  border: 3px solid $blackColor;
+  border-radius: 5px;
+  overflow: auto;
 
-    a {
-        text-decoration: none;
-        color: $blackColor;
-        display: block;
-        width: 100%;
-        height: 90%;
-        // overflow: hidden;
-    }
-    
-    
-    &__screenshots {
-        display: block;
-        width: 60%;
-        margin: 2rem 0 2.5rem 1rem;
-        box-shadow: $greyColor 1px 1px 8px 0;
-    }
+  a {
+    text-decoration: none;
+    color: $blackColor;
+    display: block;
+    width: 100%;
+    height: 90%;
+    // overflow: hidden;
+  }
 
-    &__h2 {
-        text-align: left;
-        margin: 0 0 0 1rem;
-    }
-    
-    &__p {
-        text-align: left;
-        width: 100%;
-        max-width: 800px;
-        margin: 0;
-        padding: 0.5rem 2rem 5rem 1rem;
-    }
+  &__screenshots {
+    display: block;
+    width: 60%;
+    margin: 2rem 0 2.5rem 1rem;
+    box-shadow: $greyColor 1px 1px 8px 0;
+  }
 
-    &__link {
-        font-size: 1rem;
-        color: $blackColor;
+  &__h2 {
+    text-align: left;
+    margin: 0 0 0 1rem;
+  }
 
-        display: block;
+  &__p {
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    padding: 0.5rem 2rem 2rem 1rem;
 
-        padding: 3rem 0 3rem 0;
+    &--smallFont {
+      font-size: 0.7rem;
     }
+  }
+
+  &__link {
+    font-size: 1rem;
+    color: $blackColor;
+
+    display: block;
+
+    padding: 3rem 0 3rem 0;
+  }
 }
 
 .p--projects {
-    width: 80%;
-    max-width: 700px;
+  width: 80%;
+  max-width: 700px;
 }
 
 // close the Modal
 .closeModal {
-    position: absolute;
-    text-align: center;
-    font-size: 0;
-    width: 60px;
-    border-radius: 5px;
-    top: 2rem;
-    right: 0;
-    margin: 0 0.5rem 0 0.5rem;
-    padding: 0.2rem 0.4rem;
-    cursor: pointer;
- 
-    &__line01, &__line02 {
-        margin: 5px 0;
-        padding: 0.2rem 0.5rem;
-        background-color: $orangeColor;
-        border-radius: 3px;
-        transition: background-color 0.5s ease-in-out;
-    }
- 
-    &:hover {
-        .closeModal__line01, .closeModal__line02 {
-            background-color: $blackColor;
-        }
-    }
- }
+  position: absolute;
+  text-align: center;
+  font-size: 0;
+  width: 60px;
+  border-radius: 5px;
+  top: 2rem;
+  right: 0;
+  margin: 0 0.5rem 0 0.5rem;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
 
-.pageBlurr { // blur the page on opening a modal
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  &__line01,
+  &__line02 {
+    margin: 5px 0;
+    padding: 0.2rem 0.5rem;
     background-color: $orangeColor;
-    opacity: 0.85;
-    z-index: 1000;
-    transition: all 1s;
+    border-radius: 3px;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  &:hover {
+    .closeModal__line01,
+    .closeModal__line02 {
+      background-color: $blackColor;
+    }
+  }
 }
- 
- // top line
+
+.pageBlurr {
+  // blur the page on opening a modal
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $orangeColor;
+  opacity: 0.85;
+  z-index: 1000;
+  transition: all 1s;
+}
+
+// top line
 .closeModal__line01 {
-    transform: rotate(-45deg) translate(-9px, 0);
- }
- 
- // second line
+  transform: rotate(-45deg) translate(-9px, 0);
+}
+
+// second line
 .closeModal__line02 {
-     transform: rotate(45deg) translate(-8px, 0);
- }
+  transform: rotate(45deg) translate(-8px, 0);
+}
 
 @mixin projects--vs {
-    .projects__modal {
-        // height: 90vh;
-        // max-height: 60vmax;
-    }
+  .projects__modal {
+    // height: 90vh;
+    // max-height: 60vmax;
+  }
 }
 @mixin projects--m {
-    .projects__modal {
-        // height: 65vh;
-        // max-height: 50vmax;
-    }
+  .projects__modal {
+    // height: 65vh;
+    // max-height: 50vmax;
+  }
 }

@@ -13,6 +13,8 @@ require('./src/images/icons-social-hover.svg');
 require('./src/images/icons-social-normal.svg');
 require('./src/images/screenshot-vlinderfabriek.png');
 require('./src/images/screenshot-buurtpanel.png');
+require('./src/images/screenshot-echelon.png');
+require('./src/images/screenshot-theatermaker.png');
 require('./src/images/pug-logo.svg');
 require('./src/images/es6-logo.svg');
 require('./src/images/babel-logo.svg');
