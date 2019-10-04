@@ -25,6 +25,8 @@ block content
   aside.blog__nav
     ul.blog__nav__list
       li.blog__nav__list__item
+        a(href="#focusJs" class="blog__nav__list__link") focus with JS
+      li.blog__nav__list__item
         a(href="#focus" class="blog__nav__list__link") :focus-within
       li.blog__nav__list__item
         a(href="#gitOneline" class="blog__nav__list__link") oneline
@@ -34,7 +36,25 @@ block content
         a(href="#polypane" class="blog__nav__list__link") Polypane
       li.blog__nav__list__item
         a(href="#figma" class="blog__nav__list__link") Figma
-    
+  
+  //- :focus with js
+  article(class="article article--blog" id="focusJs")     
+    div.align
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord focus met JS
+        | ik van een klant de vraag of het mogelijk is om teksten te verbergen en ze met een klik zichtbaar te maken. Dat is niet zo moeilijk. Ik heb, in dit geval, de paragraaf verborgen met css en de gebruiker de mogelijkheid gegeven om de tekst weer zichtbaar te maken door op de h2 te klikken. In de afbeelding zijn dit de woorden missie, visie en uitgangspunten. Dit gebeurt allemaal in Javascript (aangezien een h2 normaal niet klikbaar is). Mocht de Javascript niet werken dan zie je gewoon alle tekst.
+      p(class="p p__left p__left--blog")
+        img(src="../images/focus-js-headings.png" class="blog__image blog__image--gitTop" alt="klikbare headings met focus" title="klikbare headings met focus")
+        | Maar met de muis werkt dit gewoon maar niet als je met je toetsenbord navigeert. Een h2 is niet te bereiken met de tab-toets omdat dit geen interactief item is. We kunnen dit oplossen met Javascript. 
+      p(class="p p__left p__left--blog")
+        img(src="../images/clickhandler.png" class="blog__image blog__image--gitTop" alt="Javascript code voor een keywdown event en tabindex" title="Javascript code voor een keywdown event en tabindex")        
+        | Naast de eventhandler om de h2 klikbaar te maken heb ik er ook eentje voor het toetsenbord opgezet. Keydown zorgt voor een event als er op een willekeurige toets wordt geklikt. Als er een toets wordt ingedrukt wordt de functie clickHanlder uitgevoerdt.De regel daaronder zorgt ervoor dat er een attribuut aan de h2 wordt toegevoegd zodat de h2 bereikbaar (focusable) wordt met de tab-toets.   
+      p(class="p p__left p__left--blog")
+        img(src="../images/keycode.png" class="blog__image blog__image--gitTop" alt="if statement voor enter of muis" title="if statement voor enter of muis")
+        | In de funtie clickHandler kijken we dan eerste of de text al zichtbaar is (zo niet dan wordt deze zichtbaar en anders wordt deze weer verborgen) vervolgens wordt gekeken of de toets een enter toets is of een muisklik. In beide gevallen wordt de tekst getoont of verborgen.  
+        span(class="span__date") Gepubliceerd op 04 oktober 2019  
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="focus toevoegen met Javascript" data-show-count="false") Tweet
+
   //- :focus-within
   article(class="article article--blog" id="focus")     
     div.align
