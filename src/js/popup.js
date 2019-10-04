@@ -49,6 +49,7 @@ function showPoppup(e) {
           <img src="${info.image}" class="projects__modal__screenshots" alt="${info.client}">
           <h2 class="projects__modal__h2">${info.client}</h2>
           <p class="projects__modal__p">${info.content}</p>
+          <p class="projects__modal__p projects__modal__p--smallFont">TOOLS: ${info.tools}</p>
         </a>`;
       newDiv.innerHTML = markup;
     }
