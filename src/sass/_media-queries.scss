@@ -1,47 +1,43 @@
 /*  ######################################### 
      very small
     ######################################### */
-@media screen and (min-width:320px) {
-    // use @include here and @mixin in the partial
+@media screen and (min-width: 320px) {
+  // use @include here and @mixin in the partial
 
-    @include logo--vs;
-    @include projects--vs;
+  @include logo--vs;
+  @include projects--vs;
 }
 
 /*  ######################################### 
      small
     ######################################### */
-@media screen and (min-width:512px) {
-    
+@media screen and (min-width: 512px) {
 }
 
 /*  ######################################### 
     medium small
     ######################################### */
-@media screen and (min-width:600px) {
-    
-    @include header--ms;
-    @include logo--ms;
-    @include main--ms;
+@media screen and (min-width: 600px) {
+  @include header--ms;
+  @include logo--ms;
+  @include main--ms;
+  @include footer--ms;
 }
 
 /*  ######################################### 
     medium
     ######################################### */
-@media screen and (min-width:768px) {
-
-        @include header--m;
-        @include main--m;
-        @include projects--m;
-        @include footer--m;
+@media screen and (min-width: 768px) {
+  @include header--m;
+  @include main--m;
+  @include projects--m;
+  @include footer--m;
 }
-
 
 /*  ######################################### 
      large
     ######################################### */
-@media screen and (min-width:1200px) {
-    @include header--l;
-    // @include main--l;
+@media screen and (min-width: 1200px) {
+  @include header--l;
+  // @include main--l;
 }
-

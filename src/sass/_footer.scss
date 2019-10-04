@@ -98,15 +98,37 @@
 
 .noat-cookie-consent__banner {
   font-family: $fontRaleway !important;
+  text-align: center;
 }
+
+.noat-cookie-consent-banner__other-actions {
+  font-size: 1rem !important;
+  text-align: center;
+  opacity: 1 !important;
+  color: $whiteColor !important;
+}
+
+.noat-cookie-consent-banner-other-actions__deny {
+  margin-top: 2rem;
+  max-height: 5rem;
+  min-height: 5rem;
+  padding: 2rem;
+  background: red;
+  text-align: center;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// .noat-cookie-consent-banner__allow {
+
+// }
 
 // .noat-cookie__consent
 // .noat-cookie-consent__banner
 // .noat-cookie-consent-banner__text {}
-// .noat-cookie-consent-banner__other-actions
 // .noat-cookie-consent-banner-other-actions__privacy-policy
-// .noat-cookie-consent-banner-other-actions__deny
-// .noat-cookie-consent-banner__allow
 
 // .footer__bottom { // bottom footer name company
 // background-color: $orangeColor;
@@ -115,6 +137,30 @@
 // font-size: 0.7rem;
 // padding: 0.8rem 0 1rem 0;
 // }
+
+@mixin footer--ms {
+  .noat-cookie-consent__banner {
+    text-align: initial;
+  }
+
+  .noat-cookie-consent-banner__other-actions {
+    font-size: initial;
+    text-align: center;
+  }
+
+  .noat-cookie-consent-banner-other-actions__deny {
+    margin-top: 1rem;
+    max-height: initial;
+    min-height: initial;
+    padding: initial;
+    background: initial;
+    text-align: center;
+    border-radius: initial;
+    text-transform: initial;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
 
 @mixin footer--m {
   .footer__top {
