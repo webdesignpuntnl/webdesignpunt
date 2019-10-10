@@ -45,3 +45,4 @@ require('./src/images/react-logo.svg');
 require('./src/images/keycode.png');
 require('./src/images/clickhandler.png');
 require('./src/images/focus-js-headings.png');
+require('./src/images/toegankelijkheid.jpg');

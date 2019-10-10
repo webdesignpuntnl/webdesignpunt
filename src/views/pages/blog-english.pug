@@ -24,6 +24,8 @@ block content
   aside.blog__nav
     ul.blog__nav__list
       li.blog__nav__list__item
+        a(href="#accessibility" class="blog__nav__list__link") accessibility
+      li.blog__nav__list__item
         a(href="#focusJS" class="blog__nav__list__link") focus with JS
       li.blog__nav__list__item
         a(href="#focus" class="blog__nav__list__link") :focus-within
@@ -35,7 +37,25 @@ block content
         a(href="#polypane" class="blog__nav__list__link") Polypane
       li.blog__nav__list__item
         a(href="#figma" class="blog__nav__list__link") Figma
-   
+
+  //- :accessibility
+  article(class="article article--blog" id="accessibility")     
+    div.align
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord accessibility
+        | means that every person must be able to participate with everything. Despite race, religion or handicap. Also people in a whealchair want to be able to eat in a restaurant of travel with public transportation. This is also true for computers and the internet. We call this digital accessibility. Since juli 1 2018 the governement is obligated to build accessible websites. Websites have to be accessible for everybody. If this is not the case some people will be shut out from society. As matter of fact all websites have to be accessible. On juli 14 2016 the VN-treaty for the rights of people with a dissability was invoked.  In Holland the law of equal treatment on grounds of a handicap or chronical disease was adapted. The law now also applies on digital goods and services for governments and companies. For more information on laws and regulations take a look on 
+        a(href="https://www.digitoegankelijk.nl/" target="_blank" rel="noopener noreferrer" class="link") digitoegankelijk (in Dutch).
+        | On the other hand for companies an accessible website is just good for buissines. If the site of a companie isn't accessible it will cost mmoney.
+      p(class="p p__left p__left--blog")
+        img(src="../images/toegankelijkheid.jpg" class="blog__image blog__image--gitTop" alt="exmaple of a accessible website" title="exmaple of a accessible website")        
+        | An exmaple of how to make a website accessible. The 
+        a(href="https://weekvandetoegankelijkheid.nl/" target="_blank" rel="noopener noreferrer" class="link") site
+        |  where this toolbar comes from looks nice for people without a handicap. For people with a handicap it could be a problem. But with this toolbar they have the option to adjust a few items. The font-size can be adapted, the colors, the contrast and it is even possible to let a screenreader read the text out loud. Even though you can build a site wich is suitable for evenrybody these are some very nice features. For an explanation of the rules for an accessible site check out (in Dutch)  
+        a(href="https://www.digitoegankelijk.nl/onderwerpen/themas/eenvoudige-uitleg" target="_blank" rel="noopener noreferrer" class="link") simple explanation of demands.
+        |  The technical stuff of the website must also be in good shape. An example. In the HTM-code of an image there is the so called alt-attribute. This peace a code is used to describe the image. A person who has bad sight of is totaly blind uses a screenreader. The screenreader cannot give a description of an image, instead it reads the the text of the alt-tag. So it's very important to always use the alt-attribute. Making you're site accessible is just something you have to think about.
+        span(class="span__date") Published on oktober 10 2019  
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="digitoegankelijk" data-show-count="false") Tweet
+  
   //- :focus with js
   article(class="article article--blog" id="focusJs")     
     div.align
@@ -47,7 +67,7 @@ block content
         | With the mouse it works like a charme but not if someone is using the keyboard. A h2 tag is not reachable width the tab key. A h2 tag is not an interactive heading. You can solve this with Javascript.
       p(class="p p__left p__left--blog")
         img(src="../images/clickhandler.png" class="blog__image blog__image--gitTop" alt="Javascript code for a keywdown event and tabindex" title="Javascript code for a keywdown event and tabindex")        
-        | Bseide using an eventhandler for the mouseclick we also have to add one for the keydown event. The keydown event is triggert if any key on the keyboard is pressed. In this case if a key is pressed the clickHandler fucntion is executed. The next line adds a attribute to the h2 tag making the h2 focusable with the tab key.
+        | Beside using an eventhandler for the mouseclick we also have to add one for the keydown event. The keydown event is triggert if any key on the keyboard is pressed. In this case if a key is pressed the clickHandler fucntion is executed. The next line adds a attribute to the h2 tag making the h2 focusable with the tab key.
       p(class="p p__left p__left--blog")
         img(src="../images/keycode.png" class="blog__image blog__image--gitTop" alt="if statement for key and mousecheck" title="if statement for key and mousecheck")
         | Inside the function we start with an if-statement to check if the text is hidden or not (if hidden we show the text and vice versa) next we check if the enter key is pressed or if a mouseclick is used. In both cases we show the text or hide it.  
