@@ -1,9 +1,11 @@
 .hide {
   opacity: 0;
   transition: all 1s;
+  margin-left: -150px !important;
 }
 
 .show {
+  margin-left: initial !important;
   opacity: 1;
   transition: all 1s;
 }
