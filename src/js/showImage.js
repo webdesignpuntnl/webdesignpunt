@@ -1,4 +1,11 @@
-const allImages = Array.from(document.querySelectorAll('.index__image'));
+let allImages;
+if (document.querySelector('.index__image')) {
+  allImages = Array.from(document.querySelectorAll('.index__image'));
+} else {
+  allImages = Array.from(document.querySelectorAll('.tools__image'));
+}
+
+console.log(allImages);
 
 const config = {
   root: null,
