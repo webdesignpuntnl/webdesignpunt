@@ -9,11 +9,11 @@ const config = {
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      entry.target.classList.remove('hide');
+      entry.target.classList.add('show__index__image');
+      entry.target.classList.remove('hide__index__image');
     } else {
-      entry.target.classList.add('hide');
-      entry.target.classList.remove('show');
+      entry.target.classList.add('hide__index__image');
+      entry.target.classList.remove('show__index__image');
     }
   });
 }, config);
