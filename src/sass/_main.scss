@@ -152,7 +152,8 @@
   color: $blackColor;
   font-size: 1rem;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $orangeColor;
   }
 }
