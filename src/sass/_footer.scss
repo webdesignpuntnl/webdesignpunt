@@ -28,6 +28,11 @@
   &__tel:visited {
     text-decoration: none;
     color: $blackColor;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   &__item {
@@ -94,6 +99,11 @@
   float: right;
   margin: 0 2rem 1rem 0;
   font-size: 0.9rem;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 .noat-cookie-consent__banner {
