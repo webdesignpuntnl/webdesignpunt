@@ -1,3 +1,31 @@
+// hidden skip to content
+.skip-main {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+
+.skip-main:focus,
+.skip-main:active {
+  color: $whiteColor;
+  text-decoration: none;
+  background-color: $orangeColor;
+  left: 0;
+  top: auto;
+  width: 30%;
+  height: auto;
+  overflow: auto;
+  margin: 10px 35%;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.2em;
+  z-index: 999;
+}
+
 .hide__index__image {
   opacity: 0;
   transition: all 1s;
@@ -125,11 +153,7 @@
   font-size: 1rem;
 
   &:hover {
-    color: $whiteColor;
-  }
-
-  &:visited {
-    color: $whiteColor;
+    color: $orangeColor;
   }
 }
 

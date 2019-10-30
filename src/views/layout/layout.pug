@@ -38,6 +38,7 @@ html(lang="nl")
             block header
                 <!-- top logo -->
                 header(class="header") 
+                    a(class="skip-main" href="#main") spring naar de tekst
                     a(href=`${path}index.html` title="homepage" class="logo")
                         div(class="logo__top")
                             div(class="logo__top__cirkelTop")
@@ -70,7 +71,7 @@ html(lang="nl")
                                 div(class="menuSmall__line02") Lijn02
                                 div(class="menuSmall__line03") Lijn03
             .pageWrapper
-                main(class="main")
+                main(class="main" id="main")
                     block content
                         
             footer(class="footer")
