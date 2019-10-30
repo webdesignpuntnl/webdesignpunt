@@ -94,10 +94,15 @@
 }
 
 // cookies
+.footer__bottom__links {
+  float: right;
+  margin-bottom: 1rem;
+}
+
 .footer__bottomLinks {
   color: $blackColor;
-  float: right;
-  margin: 0 2rem 1rem 0;
+  // float: right;
+  margin: 0 2rem 0 0;
   font-size: 0.9rem;
 
   &:hover,
