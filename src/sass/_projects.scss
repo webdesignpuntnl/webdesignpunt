@@ -14,8 +14,8 @@
   max-width: 350px;
   height: 200px;
   overflow: hidden;
-  background-color: $yellowColor;
-  box-shadow: $blackColor 1px 1px 8px 1px;
+  // background-color: $yellowColor;
+  // box-shadow: $blackColor 1px 1px 8px 1px;
 }
 
 .projects__overlay {
@@ -29,7 +29,7 @@
 .projects__card:hover .projects__overlay {
   font-size: 1.2rem;
 
-  background-color: $orangeColor;
+  background-color: $whiteColor;
   border: 2px solid $blackColor;
   transition: background-color 0.5s ease-in-out, font-size 0.8s 0.2s ease-in-out;
 }
@@ -66,7 +66,7 @@
   width: 100%;
   box-shadow: $greyColor 1px 1px 8px 0;
   z-index: 900;
-  opacity: 0.25;
+  // opacity: 0.25;
 }
 
 .projects__card__p {
@@ -88,7 +88,8 @@
   z-index: 9999;
   width: 80vw;
   // height: 90vw;
-  background-color: rgba($yellowColor, 1);
+  // background-color: rgba($yellowColor, 1);
+  background-color: $whiteColor;
   border: 3px solid $blackColor;
   border-radius: 5px;
   overflow: auto;
@@ -178,7 +179,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: $orangeColor;
+  background-color: $whiteColor;
   opacity: 0.85;
   z-index: 1000;
   transition: all 1s;
