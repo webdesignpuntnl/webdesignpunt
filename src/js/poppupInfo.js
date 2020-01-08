@@ -26,7 +26,7 @@ const poppupInfo = [
     image: '../images/screenshot-echelon.png',
     content:
       'Echelon is er voor iedereen die iets wil doen in de vormgeving van onderwijs over levensbeschouwing, communicatie en identiteitsontwikkeling.',
-    link: '#',
+    link: 'https://www.stichtingechelon.nl',
     tools: 'Wordpress, css (Sass), Roots (Sage)'
   }
 ];
