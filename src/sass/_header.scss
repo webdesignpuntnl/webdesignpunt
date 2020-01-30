@@ -15,7 +15,7 @@ a.skip-main:active {
   text-decoration: none;
   background-color: $orangeColor;
   left: 0;
-  top: auto;  
+  top: auto;
   width: 50%;
   height: auto;
   overflow: auto;
@@ -43,7 +43,7 @@ a.skip-main:active {
     transition: height 500ms ease-in-out 100ms, opacity 800ms 500ms ease-in-out, font-size 100ms ease-in-out;
 
     &__page {
-      margin: 0.5rem 0 0 0.5rem;
+      margin: 1.1rem 0 0 0.5rem;
     }
   }
 }
