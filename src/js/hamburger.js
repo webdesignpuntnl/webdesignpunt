@@ -67,7 +67,7 @@ nav.appendChild(hamburgerMenu);
 // call the resize function
 windowResize();
 
-// hide the menu on pageloadconsole.log(e.type);
+// hide the menu on pageload;
 handleMenu();
 
 // event listeners

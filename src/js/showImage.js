@@ -5,8 +5,6 @@ if (document.querySelector('.index__image')) {
   allImages = Array.from(document.querySelectorAll('.tools__image'));
 }
 
-console.log(allImages);
-
 const config = {
   root: null,
   rootMargin: '0px',
