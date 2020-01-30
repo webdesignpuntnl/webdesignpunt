@@ -1,7 +1,35 @@
+// hidden skip to content
+a.skip-main {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+
+a.skip-main:focus,
+a.skip-main:active {
+  color: $whiteColor;
+  text-decoration: none;
+  background-color: $orangeColor;
+  left: 0;
+  top: auto;  
+  width: 50%;
+  height: auto;
+  overflow: auto;
+  margin: 10px 35%;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.2em;
+  z-index: 999;
+}
+
 .header {
   width: 100%;
   z-index: 999;
-  background-color: $yellowColor;
+  background-color: $whiteColor;
   border-bottom: 1px solid $blackColor;
   padding: 1rem 0 1rem 0;
 }
@@ -30,15 +58,15 @@
   text-transform: uppercase;
   text-decoration: none;
   margin: 0 0 0 0.8rem;
+  padding: 0.5rem 1rem;
   transition: 0.5s;
 
   &:hover {
     // color: $orangeColor;
     // text-shadow: $blackColor 2px 2px 3px;
     // padding: 0 0.5rem;
-    border-radius: 0.5rem;
+    // border-radius: 0.5rem;
     background-color: $orangeColor;
-    padding: 0 1rem;
   }
 
   &--active {
@@ -47,10 +75,10 @@
     letter-spacing: 0.1rem;
     transition: none;
     background-color: $orangeColor;
-    border-radius: 0.5rem;
+    // border-radius: 0.5rem;
     // border-bottom: 2px solid $orangeColor;
-    padding: 0 1rem;
     margin: 0 0 0 1.2rem;
+    color: white;
     cursor: initial;
 
     &:hover {
@@ -144,7 +172,7 @@
       &__page {
         display: inline-block;
         width: auto;
-        margin: 0 0 1rem 1rem;
+        margin: 0 0 1rem -1rem;
         text-align: center;
         vertical-align: top;
       }
@@ -167,7 +195,7 @@
   .header__nav {
     &__menu {
       &__page {
-        margin: 0 1rem 1rem 1rem;
+        margin: 0 1rem 1rem 0;
       }
     }
   }

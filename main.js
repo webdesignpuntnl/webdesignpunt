@@ -6,6 +6,7 @@ require('./src/js/cookieBar'); // must be on top
 require('./src/js/hamburger.js');
 require('./src/js/popup.js');
 require('./src/js/poppupInfo.js');
+require('./src/js/showImage.js');
 // require('./src/js/formvalidate.js');
 
 // images

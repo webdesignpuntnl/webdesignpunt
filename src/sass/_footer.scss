@@ -28,6 +28,11 @@
   &__tel:visited {
     text-decoration: none;
     color: $blackColor;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   &__item {
@@ -68,7 +73,7 @@
 
   &:hover {
     background-color: $orangeColor;
-    // border-color: $whiteColor;
+    border-color: $whiteColor;
     background-image: url('../images/icons-social-hover.svg');
     transition: 0.4s;
   }
@@ -89,11 +94,21 @@
 }
 
 // cookies
+.footer__bottom__links {
+  float: right;
+  margin-bottom: 1rem;
+}
+
 .footer__bottomLinks {
   color: $blackColor;
-  float: right;
-  margin: 0 2rem 1rem 0;
+  // float: right;
+  margin: 0 2rem 0 0;
   font-size: 0.9rem;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 .noat-cookie-consent__banner {

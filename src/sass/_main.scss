@@ -1,3 +1,15 @@
+.hide__index__image {
+  opacity: 0;
+  transition: all 1s;
+  margin-left: -150px !important;
+}
+
+.show__index__image {
+  margin-left: initial !important;
+  opacity: 1;
+  transition: all 1s;
+}
+
 .error__p {
   margin-top: 2rem;
 }
@@ -112,12 +124,9 @@
   color: $blackColor;
   font-size: 1rem;
 
-  &:hover {
-    color: $whiteColor;
-  }
-
-  &:visited {
-    color: $whiteColor;
+  &:hover,
+  &:focus {
+    color: $orangeColor;
   }
 }
 
