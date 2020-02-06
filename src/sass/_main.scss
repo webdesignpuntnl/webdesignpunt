@@ -263,8 +263,12 @@
 }
 
 .input__message {
-  color: white;
-  padding: 0 0 1rem 0;
+  color: $blackColor;
+  padding: 0.5rem 1rem;
+  // background-color: $orangeColor;
+  border-radius: 5px;
+  margin: 0 0 0.5rem 0;
+  width: 95%;
 }
 
 .twitter-share-button {

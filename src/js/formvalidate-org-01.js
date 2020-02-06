@@ -1,8 +1,7 @@
 //! moet nog kijken naar codesplitting. Nu wordt deze code op elke pagina geladen
-//! bij de som verdwijnt nu niet de melding als een fout antwoord is gegegeven
 
 const form = document.querySelector('#contactForm');
-const antiSpamField = form.querySelector('#antiSpamField');
+const hiddenField = document.querySelector('#hiddenField');
 const nameField = form.querySelector('#nameField');
 const subjectField = form.querySelector('#subjectField');
 const emailField = form.querySelector('#emailField');
@@ -11,7 +10,7 @@ const remarksField = form.querySelector('#remarksField');
 const submitButton = form.querySelector('.input__textInput__submitButton');
 let submitClicked = false;
 
-const fields = [nameField, subjectField, emailField, phoneField, remarksField, antiSpamField];
+const fields = [hiddenField, nameField, subjectField, emailField, phoneField, remarksField];
 
 function displayMessage(valid, whichField) {
   const userMessage = whichField.parentNode.querySelector('.input__message');
@@ -44,11 +43,9 @@ function testInput(whichField) {
   } else if (whichField === remarksField) {
     valid = /[a-zA-Z0-9]$/.test(whichField.value);
     displayMessage(valid, whichField);
-  } else if (whichField === antiSpamField) {
-    if (antiSpamField.value === '6') {
+  } else if (whichField === hiddenField) {
+    if (hiddenField.value === '') {
       valid = true;
-    } else {
-      displayMessage(valid, whichField);
     }
   }
   return valid;
@@ -81,7 +78,7 @@ submitButton.addEventListener('click', e => {
   const emailValid = validate(emailField);
   const phoneValid = validate(phoneField);
   const remarksValid = validate(remarksField);
-  const hiddenFieldValid = validate(antiSpamField);
+  const hiddenFieldValid = validate(hiddenField);
 
   const allFieldsValid = nameValid && subjectValid && emailValid && phoneValid && remarksValid && hiddenFieldValid;
   submitClicked = true;

@@ -23,7 +23,7 @@ block content
         input(type="hidden" name="bad_url" value="../pages/contact-niet-verzonden.html")
         input(type="hidden" name="subject" value="contactformulier")
         fieldset(class="form__fieldset")
-            input(
+            //- input(
                 name="hiddenField" 
                 type="text" 
                 id="hiddenField"
@@ -81,6 +81,16 @@ block content
                     placeholder="bericht"
                     title="vul een vraag in")
                 label(for="remarksField" class="input__textInput__label") bericht
+            div(class="input")
+                input(
+                    name="sum" 
+                    type="text"  
+                    id="antiSpamField"
+                    class="input__textInput" 
+                    required
+                    placeholder="Los de som op 5 + 1" 
+                    title="Geef aub het juist antwoord!")
+                label(for="antiSpamField" class="input__textInput__label") Los de som op 5 + 1
             div(class="input")
                 button(
                     name="insturen" 
