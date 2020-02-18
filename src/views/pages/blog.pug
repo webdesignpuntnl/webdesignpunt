@@ -241,3 +241,10 @@ block content
 
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}js/main-bundle.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });
