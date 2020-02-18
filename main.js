@@ -7,6 +7,7 @@ require('./src/js/hamburger.js');
 require('./src/js/popup.js');
 require('./src/js/poppupInfo.js');
 require('./src/js/showImage.js');
+require('./src/js/prism.js');
 // require('./src/js/formvalidate.js');
 
 // images
@@ -27,7 +28,7 @@ require('./src/images/vscode-logo.svg');
 require('./src/images/webpack-logo.svg');
 require('./src/images/bem-logo.svg');
 require('./src/images/renee.jpg');
-require('./src/images/code.png');
+// require('./src/images/code.png');
 require('./src/images/kantoor.jpg');
 require('./src/images/figma-logo.svg');
 require('./src/images/polypane-logo.svg');

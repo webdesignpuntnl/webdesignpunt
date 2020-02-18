@@ -144,6 +144,12 @@
   margin-bottom: 3rem;
 }
 
+// prism coding styles
+pre[class*='language-'] {
+  margin: 0 auto 4rem auto !important;
+  width: 90%;
+}
+
 .form {
   text-align: left;
   margin: 1rem auto 5rem auto;
@@ -347,6 +353,16 @@
     float: right;
     width: 60%;
   }
+
+  // prism coding styles
+  pre[class*='language-'] {
+    margin: 0 0 4rem 1rem !important;
+    float: left;
+    width: 37%;
+    word-break: break-all !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
+  }
 }
 
 @mixin main--m {
@@ -387,5 +403,11 @@
   .p__right {
     width: 60%;
     float: right;
+  }
+
+  // prism coding styles
+  pre[class*='language-'] {
+    margin: 0 1rem 4rem 3rem !important;
+    width: 30%;
   }
 }
