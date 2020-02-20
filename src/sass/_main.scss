@@ -30,6 +30,14 @@
   font-size: 1.8rem;
   padding: 0 0 1.5rem 0;
   letter-spacing: 0.1rem;
+  position: relative;
+
+  &--hidden {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -999px;
+  }
 }
 
 .h3 {
