@@ -25,6 +25,8 @@ block content
   aside.blog__nav
     ul.blog__nav__list
       li.blog__nav__list__item
+        a(href="#codeHtml" class="blog__nav__list__link") code in HTML
+      li.blog__nav__list__item
         a(href="#linkButton" class="blog__nav__list__link") link or button
       li.blog__nav__list__item
         a(href="#tabKey" class="blog__nav__list__link") Toetsenbord - TAB
@@ -42,6 +44,77 @@ block content
         a(href="#polypane" class="blog__nav__list__link") Polypane
       li.blog__nav__list__item
         a(href="#figma" class="blog__nav__list__link") Figma
+  //- use of the code tag in HTML
+  article(class="article article--blog" id="codeHtml")     
+    div.align
+      p(class="p p__left p__left--blog" )
+        strong.p__firstWord Hoe
+        | laat je een stukje code (bijvoorbeeld Javascript) zien op een website? Hoe stop je dit in de HTML? Daar heb je twee TAG's voor &lt;pre&gt; en &lt;code&gt;.
+        | Je start met de &lt;pre&gt;-tag en daar stop ik dan de &lt;code&gt;-tag in. Alle 'rare' code (in dit voorbeeld Javascript) gaat tussen de &lt;code&gt;-tag. De &lt;pre&gt;-tag is voor het gebruik van 'preformatted' tekst en zorgt evoor dat de code precies zo wordt getoont zoals gerschreven in de HTML. Alle tabs en spaties worden exact overgenomen. Kijk bij 
+        a(href="https://developer.mozilla.org/nl/docs/Web/HTML/Element/pre" target="_blank" rel="noopener noreferrer" class="link") MDN &lt;pre&gt;-tag
+        |  voor meer informatie over de &lt;pre&gt;-tag.
+        | De &lt;code&gt;-tag geeft aan dat er een stukje computercode wordt getoont. Standaard wordt er door de browser het lettertype monospace gebruikt. Kijk bij 
+        a(href="https://developer.mozilla.org/nl/docs/Web/HTML/Element/code" target="_blank" rel="noopener noreferrer" class="link") MDN &lt;code&gt;-tag
+        |  voor meer informatie over de &lt;code&gt;-tag.
+      p(class="p p__left p__left--blog" )
+        | Het enige nadeel is dat een sceenreader deze code gelijk gaat oplezen. Voor de bezoeker is het wel handig om te weten waar de code voor dient en in welke taal deze is. Ik heb geen handig manier gevonden om dit te doen. Uiteindelijk heb ik er voor gekozen om een span-tag met daarin de tekst: "Voorbeeld Javascript code" toe te voegen. Vervolgens heb ik deze met CSS uit beeld geplaatst, aangezien de code ter decoratie dient. Geef de span geen display: "none" anders is deze alsnog onzichtbaar voor de screenreader. Ik heb ook een H2 geprobeerd, je mag echter geen H2 in een &lt;code&gt; of &lt;pre&gt;-tag plaatsen. Een ARIA-LABEL lukt ook niet goed. Dus is het een span geworden.
+      p(class="p p__left p__left--blog" )
+       | Daarnaast wilde ik het er ook nog mooi en geformatteerd uit laten zien, dus ingesprongen en met kleuren zoals in een IDE (stukje software speciaal om in te programmeren, zoals VS-code) met een syntaxhighlighter (vaak een plugin die bepaalde woorden kleuren geeft zodat het overzichtelijk wordt). Ik had gezien dat dit op een site werd gebruikt. Dus ik met de DEV-tools in de code gedoken en geprobeerd dit na te maken. Kostte me behoorlijk veel tijd en echt goed lukte het ook niet. 
+      p(class="p p__left p__left--blog" )
+        | Tot ik ging Googelen en op ene site kwam die het over een 
+        a(href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer") NPM-package
+        |  had om dit voor elkaar te krijgen. Aangezien ik 
+        a(href="https://pugjs.org" target="_blank" rel="noopener noreferrer") PUG
+        |  (HTML templating engine)en 
+        a(href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer") Webpack
+        |  (bundler) (jazeker zelf geschreven) gebruik kon ik dat makkelijk invoegen. Als je ook nog 
+        a(href="https://babeljs.io/" target="_blank" rel="noopener noreferrer") Babel
+        |  (compiler) gebruikt dan kun je zelfs alleen de functies opnemen die je ook daadwerkelijk gebruikt.
+      p(class="p p__left p__left--blog" )
+        pre.language-javascript.blog
+            span.h2.h2--hidden Voorbeeld Javascript code
+            code.language-javascript
+                | const moveOut = () => {
+                |   let overlay = 1;
+                |   return overlay;
+                | }
+      p(class="p p__left p__left--blog" )
+        | In de 
+        a(href="https://pugjs.org" target="_blank" rel="noopener noreferrer") PUG
+        |  code ziet het er dan zo uit: 
+        span.showCode.first pre.language-javascript
+        span.showCode.second code.language-javascript
+        span.showCode.span span Voorbeeld Javascript code
+        span.showCode.code const moveOut = () => {
+        span.showCode.code   let overlay = 1;
+        span.showCode.code   return overlay;
+        span.showCode.code.last } 
+      p(class="p p__left p__left--blog" )
+        | Er zijn waarschijnlijk veel meer packages om dit te doen maar ik heb 
+        a(href="https://prismjs.com/index.html" target="_blank" rel="noopener noreferrer") Prism.js
+        |  gebruikt. Er zijn meerdere manieren om het te gebruiken. Je kunt een CDN gebruiken maar ook de commandline.
+      p(class="p p__left p__left--blog" )
+        | Met npm install prismjs kun je het pakket installeren. Daarna heb ik een nieuw Javscript bestand gemaakt en daar met import Prism from 'prismjs'; het pakket geïmporteerd. Daaronder zet je: Prism.highlightAll(); In principe werkt het nu al.
+      p(class="p p__left p__left--blog" ) 
+        | Als je echter maar een enkele functionaliteiten wilt gebruiken dan raad ik je aan om nog een NMP-package te installeren 
+        a(href="https://github.com/mAAdhaTTah/babel-plugin-prismjs" target="_blank" rel="noopener noreferrer") babel-plugin-prismjs.
+        |  Je kunt nu in je Babel.config.js (moet je wel ook 
+        a(href="https://babeljs.io/" target="_blank" rel="noopener noreferrer") Babel
+        |  hebben geïnstalleerd) de boel configureren.
+      p(class="p p__left p__left--blog" ) 
+        | Op mijn 
+        a(href="https://github.com/webdesignpuntnl/webdesignpuntnl/blob/master/babel.config.js" target="_blank" rel="noopener noreferrer") Github
+        |  pagina kun je zien hoe Babel.config.js er uit ziet. Bij languages kun je instellen welke talen de plugin moet stijlen. Er is ook een waslijst aan 
+        a(href="https://prismjs.com/#plugins" target="_blank" rel="noopener noreferrer") plugins
+        |  en je kunt ook nog diverse 
+        a(href="https://prismjs.com/index.html" target="_blank" rel="noopener noreferrer") thema's(zie rechtsboven)
+        |  gebruiken.
+        | css moet op true staan als je theme wilt laten werken.
+      p(class="p p__left p__left--blog" ) 
+        | Ik geeft toe het kost even tijd maar dit scheelt wel weer een afbeelding, een HTTP-request en de laadtijd van de pagina is weer ietsje sneller geworden.
+        span(class="span__date") Gepubliceerd op 21 februari 2020  
+          a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="codeinhtml" data-show-count="false") Tweet 
+
   //- link or button
   article(class="article article--blog" id="linkButton")     
     div.align
@@ -63,7 +136,7 @@ block content
       p(class="p p__left p__left--blog" )
        | Met andere woorden gebruik de HTML elementen waar ze voor bedoeld zijn!
        span(class="span__date") Gepubliceerd op 18 februari 2020  
-       a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="linkorbutton" data-show-count="false") Tweet 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="linkorbutton" data-show-count="false") Tweet 
   //- :toetsenbord tab-toets
   article(class="article article--blog" id="tabKey")     
     div.align

@@ -158,6 +158,31 @@ pre[class*='language-'] {
   width: 90%;
 }
 
+// pug code example
+.showCode {
+  display: block;
+
+  &.first {
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  &.second {
+    margin: 0 1rem 0 1.5rem;
+  }
+
+  &.span {
+    margin: 0 1rem 0 2rem;
+  }
+
+  &.code {
+    margin: 0 1rem 0 2.5rem;
+
+    &.last {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
 .form {
   text-align: left;
   margin: 1rem auto 5rem auto;
@@ -370,6 +395,11 @@ pre[class*='language-'] {
     word-break: break-all !important;
     word-wrap: break-word !important;
     overflow: hidden !important;
+
+    &.blog {
+      width: 70%;
+      float: none;
+    }
   }
 }
 
