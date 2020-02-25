@@ -1,0 +1,22 @@
+extends ../layout/layout
+
+block prepend head
+    - var page = "side"
+    - var title = "leermomenten"
+    - var description = "Dit zijn de zogenaamde side projecten. Kleine projectjes om te leren en proberen."
+    - var path = "../"
+
+block content
+    article(class="article")
+      h2(class="h2") extra projecten
+      section(class="projects" title="calculator")
+        a(href="https://side.webdesignpuntnl.com/calculator" target="_blank" rel="noopener noreferrer" class="projects__link")
+          div(class="projects__card")
+            .projects__overlay 
+              p(class="projects__overlay__p") 
+                | In dit project heb ik de Iphone calculator nagemaakt. Met CSS-grid en ES6.
+            //- h3(class="projects__card__h2") de Vlinderfabriek
+            img(src="../images/calculator.png" class="projects__card__screenshots" alt="de Vlinderfabriek")
+      
+            
+      

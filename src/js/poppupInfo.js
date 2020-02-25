@@ -28,6 +28,13 @@ const poppupInfo = [
       'Echelon is er voor iedereen die iets wil doen in de vormgeving van onderwijs over levensbeschouwing, communicatie en identiteitsontwikkeling.',
     link: 'https://www.stichtingechelon.nl',
     tools: 'Wordpress, css (Sass), Roots (Sage)'
+  },
+  {
+    client: 'calculator',
+    image: '../images/calculator.png',
+    content: 'In dit project heb ik de Iphone calculator nagemaakt. Met CSS-grid en ES6.',
+    link: 'https://side.webdesignpuntnl.com/calculator',
+    tools: 'HTML (PUG), css (Sass, Grid), JS (ES6), '
   }
 ];
 
