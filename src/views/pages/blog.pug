@@ -25,6 +25,8 @@ block content
   aside.blog__nav
     ul.blog__nav__list
       li.blog__nav__list__item
+        a(href="#skipLink" class="blog__nav__list__link") skip link
+      li.blog__nav__list__item
         a(href="#codeHtml" class="blog__nav__list__link") code in HTML
       li.blog__nav__list__item
         a(href="#linkButton" class="blog__nav__list__link") link or button
@@ -44,6 +46,76 @@ block content
         a(href="#polypane" class="blog__nav__list__link") Polypane
       li.blog__nav__list__item
         a(href="#figma" class="blog__nav__list__link") Figma
+  //- use of skip link in HTML
+  article(class="article article--blog" id="skipLink")     
+    div.align
+      p(class="p p__left p__left--blog" )
+        strong.p__firstWord Ik 
+        | heb het er al eens eerder over gehad in deze blog, niet elke bezoeker van je site navigeert met een muis. Er zijn veel mensen die het toetsenbord gebruiken. Met de TAB-toets kun je door een site navigeren. Je springt eigenlijk van link naar link. Voor buttons geldt dit ook. 
+        | Bekijk onderstaande afbeelding en beeld je eens in dat je deze site met de TAB-toets doorloopt. De site is net geladen en je drukt de eerste keer op de TAB-toets.
+      p(class="p p__left p__left--blog" )
+        | Op welk element komt je al eerste terecht? En op welke daarna? Als de site goed gebouwd is dan kom je als eerste op het logo terecht, vervolgens op home enzovoort. Stel dat ik op deze site terecht kom en ik wil meteen naar de hoofd inhoud? Dan moet ik langs het logo en langs alle menu-items. Bij deze site valt het wel mee maar stel nou dat er in het menu ook nog een aantal submenu's zitten. Daar moet je dan ook helemaal doorheen tabben. Dus voordat je bij de content bent moet je eerst alle links langs in de submenu's.
+      p(class="p p__left p__left--blog" )
+        De meeste mensen haken dan toch vrij snel af. Hoe kun je dit nou makkelijk oplossen? Met een skip-to-main-content-link. Je maakt een link (dit wordt een interne link) helemaal bovenaan in de HTML dus nog boven het (in dit geval) logo. Deze link verberg je met CSS en je zorg dat de link alleen zichtbaar wordt als de link focus krijgt met de TAB-toets. Iemand die navigeert met het toetsenbord zal nu als eerste op deze link terecht komen en kan dan meteen naar de hoofd-inhoud springen. Soms zie je zelfs een klein menu'tje met een paar links zodat de bezoeker ook nog kan kiezen naar welke content hij wil gaan.
+      p(class="p p__left p__left--blog" )
+        | Deze link stop je dus bovenin de HTML:
+      p(class="p p__left p__left--blog" )
+        pre.language-html.blog
+          span.h2.h2--hidden Voorbeeld HTML voor een skip-link
+          code.language-html
+            | &lt;a class="skip-to-content" href="#main"&gt; 
+            | Naar de hoofd inhoud
+            | &lt;/a&gt;
+        p(class="p p__left p__left--blog" )
+          | Op de content waar je heen wilt laten springen zet je nu een id met main. Naar dit punt spring je dan als je op de link hierboven klikt. Het attribuut tabindex="-1" zorgen er voor dat dit ook goed werkt in "IE" en Chrome. 
+        p(class="p p__left p__left--blog" )
+          pre.language-html.blog
+            span.h2.h2--hidden Voorbeeld HTML voor een skip-link
+            code.language-html
+              | &lt;p id="main" tabindex="-1"&gt;
+              | Dit is de hoofdinhoud door op de link te klikken 
+              | kom deze tekst bovenaan in het scherm te staan.
+              | &lt;/p&gt;
+        p(class="p p__left p__left--blog" )
+          | Zo komt de CSS er nu uit te zien:
+        p(class="p p__left p__left--blog" )
+          pre.language-css.blog
+            span.h2.h2--hidden Voorbeeld CSS voor een skip-link
+            code.language-css
+              | a.skip-main {
+              |   left:-999px;
+              |   position:absolute;
+              |   top:auto;
+              |   width:1px;
+              |   height:1px;
+              |   overflow:hidden;
+              |   z-index:-999;
+              | }
+              |
+              | a.skip-main:focus, a.skip-main:active {
+              |   color: #fff;
+              |   background-color:#000;
+              |   left: auto;
+              |   top: auto;
+              |   width: 30%;
+              |   height: auto;
+              |   overflow:auto;
+              |   margin: 10px 35%;
+              |   padding:5px;
+              |   border-radius: 15px;
+              |   border:4px solid yellow;
+              |   text-align:center;
+              |   font-size:1.2em;
+              |   z-index:999;
+              | }
+        p(class="p p__left p__left--blog" )
+          | Je moet hier geen display: "none" geven want dan wordt de link niet gezien door een screenreader en kun je deze ook met de TAB-toets niet meer bereiken.
+        p(class="p p__left p__left--blog" )
+          | In het eerste blok zorg zet je de link eigenlijk links buiten beeld. Dus de link is er nog wel maar niet zichtbaar. In het tweede blok zorg je er voor dat de code toegepast gaat worden als de link :focus krijgt. Dus als je door middel van de TAB-toets op de link terecht komt.
+        p(class="p p__left p__left--blog" )
+          | Geef je nu een enter of druk je op de spatiebalk dan spring je naar de hoofdtekst en hoef je niet alle links daarboven te doorlopen. Wil je toch door alle menu-items dan TAB je gewoon door.
+          span(class="span__date") Gepubliceerd op 27 februari 2020  
+              a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="skiplink" data-show-count="false") Tweet
   //- use of the code tag in HTML
   article(class="article article--blog" id="codeHtml")     
     div.align
