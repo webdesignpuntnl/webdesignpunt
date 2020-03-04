@@ -1,0 +1,39 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "focusWithin"
+    - var title = "focus-within"
+    - var description = "focus-within is een ietwat vreemde css pseudo selector"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- :focus-within
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog Pseudo selector :focus-within
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord :focus-within 
+        | is een ietwat vreemde css pseudo selector. Vreemd omdat je met deze selector een parent element kan selecteren gebaseerd op de staat waarin een child element zich bevind. Er zijn een paar usecases te vinden voor deze selector maar ik gebruik hem vooral om de accessibility van een dropdownmenu te verbeteren. De meeste bezoekers navigeren een site met de muis maar er zijn ook veel mensen die geen muis kunnen of willen gebruiken. Die gebruiken bijvoorbeeld een screenreader of het toetsenbord. Met de tabtoets kun je naar elk interactief element navigeren. Denk dan aan links, buttons, formulieren, velden van formulieren, dropdowns enzovoort. Maar hoe weet je waar je bent op de pagina? Dit wordt geregeld door de :focus selector, een kader om een element heen. Standaard is deze blauw en altijd aanwezig bij een interactief element.
+      p(class="p p__left p__left--blog")
+        img(src="../images/focus-box.jpg" class="blog__image blog__image--gitTop" alt="blauwe focus kader van een element" title="blauwe focus kader van een element")
+        | Vaak wordt de focus weggehaald omdat designers het lelijk vinden. Weghalen is geen goed idee (vanwege de eerder genoemde accessibility) maar je kunt hem met :focus wel anders stijlen natuurlijk. Ook dit kan echter verwarrend zijn voor mensen die altijd met een toetsenbord navigeren.
+        | Maar goed daar hebben we het nu niet over. We hebben het over :focus-within. Stel we hebben een dropdownmenu.
+      p(class="p p__left p__left--blog")
+        img(src="../images/focus-dropdown.jpg" class="blog__image blog__image--gitTop" alt="blauwe focus kader van een element" title="blauwe focus kader van een element")        
+        | Dit is meestal een unodered list met in 1 van de listitems een tweede (hidden) unordered list. Door met de muis over het juiste listitems te hooveren wordt het submenu zichtbaar.
+        | Maar hoe bereik je de items in de dropdown als je geen muis gebruikt? Dan gebruik je tab. Met tab kan je alle menu-items bereiken. Alleen kent de tab toets geen hover functie, dus met tab wordt de dropdown niet zichtbaar. Je loopt wel door alle menu-items heen maar je ziet niet wat je doet, het menu zakt niet. Met :focu-within kun je CSS schrijven waardoor het dropdownmenu wel zichtbaar wordt als je met tab de bovenste menu link selecteerd, als er focus is op de bovenste link.
+        | Standaard is het dropdown verborgen met display: none. Middels de :hover pseudo selector zet je dit op display: block. Dat doe je nu dus ook met de :focus-within.   
+        span(class="span__date") Gepubliceerd op 16 augustus 2019 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags=":focus-within" data-show-count="false") Tweet
+    
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}js/main-bundle.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

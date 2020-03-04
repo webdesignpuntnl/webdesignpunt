@@ -1,0 +1,43 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "linkOfButton"
+    - var title = "link-of-button"
+    - var description = "Wanneer gerbruik je link en wanneer gebruik je een button in je pagina's?"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- link or button
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog Wanneer een link en wanneer een button?
+      p(class="p p__left p__left--blog" )
+        strong.p__firstWord Het
+        | originele idee achter het internet -toen Tim Berners Lee HTML onwikkelde in 1989- was om documenten te aan elkaar te linken.
+      p(class="p p__left p__left--blog" )
+        | Er zijn een aantal mogelijkheden voor het gebruik van een interactief element in een website om zo naar een ander document te gaan. We kunnen een hyperlink gebruiken met de &lt;a&gt;-tag een button met de &lt;button&gt;-tag of we kunnen zelf een interactief element maken met bijvoorbeeld de &lt;div&gt;-tag. Welke kies je en waarom?
+      p(class="p p__left p__left--blog" )
+        | In de basis kun je zeggen dat je een link gebruikt om te linken naar een nieuwe pagina of een bepaald deel in de huidige pagina. Een button wordt gebruikt voor elke andere actie, zoals een formulier versturen of een menu openen. 
+      p(class="p p__left p__left--blog" )
+        | Je kunt ook zelf een button of een link maken. Je kunt tekst onderlijnen en van een &lt;div&gt; kun je met CSS gemakkelijk een button maken. Maar je bent dan wel enkele voordelen kwijt van een standaard link of button. Die kun je met Javascript wel weer toevoegen, maar waarom moeilijk doen?
+      p(class="p p__left p__left--blog" )
+       | Als je met een toetsenbord navigeert dan kan je met de tabtoets de focus leggen op de link en de button. De link is te activeren met de enter toets en de button met de spatiebalk. Als je een screenreader gebruikt dan kan je een overzicht van alle links opvragen. De button komt in het overzicht van de formulieren te staan. De standaard HTML tags hebben deze interactiviteit ingebakken maak je zelf een link of een button dan heb je deze voordelen dus niet.
+      p(class="p p__left p__left--blog" )
+       | Mensen zijn gewend aan bepaalde conventies. Je kunt op iets klikken als er een lijntje onder staat en een button ziet er uit als een button. Dus als je naar een pagina wilt linken is het slim om dit gewoon met een hyperlink te doen. De meeste ontwerpers vinden het standaard uiterlijk van een button lelijk, maar ook deze kun je gewoon met CSS aanpassen. 
+      p(class="p p__left p__left--blog" )
+       | Dit gaat zeker op voor mensen met die met een toetsenbord navigeren. Ze zien een button en verwachten dat er iets gaat gebeuren en dat is niet dat ze naar een andere pagina gaan. Er zal niks gebeuren als ze de enter toets gebruiken in plaats van de spatiebalk maar goed ook dit kan al verwarrend zijn.
+      p(class="p p__left p__left--blog" )
+       | Met andere woorden gebruik de HTML elementen waar ze voor bedoeld zijn!
+       span(class="span__date") Gepubliceerd op 18 februari 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="linkorbutton" data-show-count="false") Tweet 
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}js/main-bundle.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

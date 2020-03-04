@@ -1,0 +1,38 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "tabToets"
+    - var title = "tab-toets"
+    - var description = "Is je website te gebruiken met alleen een toetsenbord?"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- :toetsenbord tab-toets
+  article(class="article article--blog" id="tabKey")     
+    div.align
+      h2.h2.h2--blog Check je website met een toetsenbord
+      p(class="p p__left p__left--blog" )
+        strong.p__firstWord In
+        | Nederland hebben ongeveer 2 miljoen mensen een beperking (bron:
+        a(href="https://www.rijksoverheid.nl/onderwerpen/rechten-van-mensen-met-een-handicap/" target="_blank" rel="noopener noreferrer" class="link") rijksoverheid
+        | ). Ze zijn slechtziend, blind, doof, hebben psychische problemen, een lichamelijk of verstandelijk beperking. In onze maatschappij willen en mogen we niemand uitsluiten. Iedereen moet kunnen deelnemen. Dit geld ook voor de digitale wereld. Iedereen moet van het internet, apps en software gebruik kunnen maken. Bedenk maar eens dat heel veel diensten, van bedrijven en van de overheid alleen nog maar te raadplegen zijn via het internet. We moeten er dus voor zorgen dat iedereen deze diensten kan gebruiken. Dit is voor de overheid als sinds 1 juli 2018 verplicht.
+      p(class="p p__left p__left--blog" )
+        | De eerste check die ik altijd doe is kijken of mijn  site te gebruiken is met slechts een toetsenbord. Dit doe je door met de TAB-toets door de site heen te lopen. Je checkt de volgende zaken. Is de volgorde van de secties op de site logisch? Dus als ik begin in de header start met het logo, kom ik dan met de volgende TAB niet in de footer terecht? Dus zorg er voor dat je met de TAB-toets elk onderdeel van de site in een logische volgorde kunt bereiken.
+      p(class="p p__left p__left--blog" )
+        | Dit  moet ook zichtbaar zijn. Als je met de TAB-toets door de site gaat moet er te zien zijn waar je bent. Dit staat standaard aan op interactieve elementen zoals links en buttons. Het is dat blauwe kader wat je ziet als je naar een link of button gaat met TAB. Veel designers vinden dit lelijk en halen het weg. Dit raad ik af. Je ziet immers niet meer waar je bent in de pagina als je navigeert met een toetsenbord. Je kunt de stijlen wel aanpassen met CSS. Maar zorg ten allen tijde dat het duidelijk is waar je bent op de pagina.
+      p(class="p p__left p__left--blog" )
+        | Elk interactieve element moet dan te activeren zijn  met enter of de spatiebalk. Als je een link maakt met href of het button element gebruikt dan werkt dit standaard zo. Deze elementen kun je dus activeren met enter of de spatiebalk. Maar bouw je zelf een button dat is deze functionaliteit er niet. Dus bedenk altijd goed welk element je voor wat gebruikt en als je zelf iets maakt dan zul je dus deze functies zelf toe moeten voegen.
+        span(class="span__date") Gepubliceerd op 14 februari 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="tabtoets" data-show-count="false") Tweet 
+  
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}js/main-bundle.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

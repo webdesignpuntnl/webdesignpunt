@@ -2,30 +2,14 @@ extends ../layout/layout
 include ../mixins/blogNav
 
 block prepend head
-    - var page = "blog"
-    - var title = "blog over alles en nog wat over bouwen voor het www"
-    - var description = "Webdesignpuntnl houdt een blog bij. Hier schrijven we over alles wat met het web te maken heeft."
+    - var page = "skipLink"
+    - var title = "skip-link"
+    - var description = "Gebruik van een skip-link in je pagina's"
     - var path = "../"
 
 block content
-  section(class="section__blog")
-    //- a(href="blog-english.html" title="english flag" class="blog__flag") 
-      img(src="../images/flag-english.svg", alt="english flag")
-    //- a(class="twitter-follow-button" href="https://twitter.com/reneedekruijf") Follow
-    h2(class="h2") blog
-    p(class="p") Deze blog gaat over allerhande onderwerpen die te maken hebben met development. Elk onderwerp is denkbaar.
-      | Je kunt dan denken aan tools zoals 
-      a(href="https://figma.com" target="_blank" rel="noopener noreferrer" class="link") Figma,
-      |   
-      a(href="https://www.npmjs.com" target="_blank" rel="noopener noreferrer" class="link") NPM,
-      | 
-      a(href="https://nodejs.org" target="_blank" rel="noopener noreferrer" class="link") Node,
-      | 
-      a(href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer" class="link") Webpack
-      |  en nog veel meer.
-  //- use of skip link in HTML
-  +blogNav
-  article(class="article article--blog" id="skipLink")     
+  +blogNav(page)
+  article(class="article article--blog")     
     div.align
       h2.h2.h2--blog Gebruik een skip-link
       p(class="p p__left p__left--blog" )
@@ -94,7 +78,7 @@ block content
         p(class="p p__left p__left--blog" )
           | Geef je nu een enter of druk je op de spatiebalk dan spring je naar de hoofdtekst en hoef je niet alle links daarboven te doorlopen. Wil je toch door alle menu-items dan TAB je gewoon door.
           span(class="span__date") Gepubliceerd op 27 februari 2020 door Renee de Kruijf 
-            a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="skiplink" data-show-count="false") Tweet
+              a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="skiplink" data-show-count="false") Tweet
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
   script(src=`${path}js/main-bundle.js`)

@@ -1,0 +1,26 @@
+mixin blogNav(page)
+
+  aside.blog__nav
+    ul.blog__nav__list
+      li.blog__nav__list__item
+        a(href=("skip-link.html") class=(page == "skipLink" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) skip link 
+      li.blog__nav__list__item
+        a(href=("code-in-html.html") class=(page == "codeInHtml" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) code in HTML 
+      li.blog__nav__list__item
+        a(href=("link-of-button.html") class=(page == "linkOfButton" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) link of button 
+      li.blog__nav__list__item
+        a(href=("tab-toets.html") class=(page == "tabToets" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) Toetsenbord - TAB 
+      li.blog__nav__list__item
+        a(href=("digitoegankelijk.html") class=(page == "digitoegankelijk" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) digitoegankelijk 
+      li.blog__nav__list__item
+        a(href=("focus-met-javascript.html") class=(page == "focusMetJs" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) focus met JS 
+      li.blog__nav__list__item
+        a(href=("focus-within.html") class=(page == "focusWithin" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) :focus-within 
+      li.blog__nav__list__item
+        a(href=("git-log-oneline.html") class=(page == "gitOneline" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) git log --oneline 
+      li.blog__nav__list__item
+        a(href=("cssscan.html") class=(page == "cssScan" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) cssscan 
+      li.blog__nav__list__item
+        a(href=("polypane.html") class=(page == "polypane" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) Polypane 
+      li.blog__nav__list__item
+        a(href=("figma.html") class=(page == "figma" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) Figma 

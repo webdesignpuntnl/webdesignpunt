@@ -15,8 +15,7 @@
 }
 
 .twitter-share-button {
-  display: block;
-  margin: 1rem;
+  vertical-align: bottom;
 }
 
 .main {
@@ -69,6 +68,7 @@
 
 .article--blog {
   margin-top: 4rem;
+  margin-bottom: 6rem;
 
   &:first-child {
     margin-top: 1rem;
@@ -77,7 +77,7 @@
 
 .blog__nav__list {
   text-align: left;
-  margin: 0 2rem;
+  margin: 5rem 2rem 6rem 2rem;
 
   &__item {
     display: inline-block;
@@ -94,6 +94,18 @@
     color: $blackColor;
     padding: 0.4rem;
     text-transform: uppercase;
+
+    &--active {
+      text-decoration: none;
+      background-color: $orangeColor;
+      border-radius: 2px;
+      font-size: 1.2rem;
+      font-weight: bolder;
+      color: $blackColor;
+      padding: 0.4rem;
+      text-transform: uppercase;
+      cursor: default;
+    }
   }
 }
 
