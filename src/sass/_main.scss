@@ -38,6 +38,12 @@
     position: absolute;
     left: -999px;
   }
+
+  &--blog {
+    padding: 0 !important;
+    text-align: left;
+    margin: 2rem 0 0.3rem 2.3rem;
+  }
 }
 
 .h3 {
@@ -368,10 +374,6 @@ pre[class*='language-'] {
     padding: 5rem 0 1.5rem 0;
   }
 
-  .h2--blog {
-    padding: 0 0 1.5rem 0;
-  }
-
   main {
     form {
       display: block;
@@ -422,11 +424,6 @@ pre[class*='language-'] {
 
 @mixin main--m {
   // 768
-
-  .h2--blog {
-    text-align: left;
-    margin-left: 2rem;
-  }
 
   .section__blog {
     margin-right: 4.5rem;
