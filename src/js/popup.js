@@ -45,7 +45,7 @@ function showPoppup(e) {
               <div class="closeModal__line01">Lijn01</div>
               <div class="closeModal__line02">Lijn02</div>
           </div>
-          <a href="${info.link}"  rel="noopener noreferrer">  
+          <a href="${info.link}"  >  
           <img src="${info.image}" class="projects__modal__screenshots" alt="${info.client}">
           <h2 class="projects__modal__h2">${info.client}</h2>
           <p class="projects__modal__p">${info.content}</p>

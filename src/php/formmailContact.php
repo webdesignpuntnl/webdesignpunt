@@ -2354,7 +2354,7 @@ function LoadBuiltinLanguage()
 	                              '$SERVER).<br />' .
 	                              'Our supplier of forms processing software has ' .
 	                              'provided <a href="http://www.tectite.com/serverabuse.php" ' .
-	                              '  rel="noopener noreferrer">more information about this error</a>.<br /><br />' .
+	                              '  >more information about this error</a>.<br /><br />' .
 	                              '$USERINFO';
 
 	// MSG_ATTACK_MIME_INFO is the contents of the INFO parameter
