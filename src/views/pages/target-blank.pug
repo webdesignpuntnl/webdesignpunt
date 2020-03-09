@@ -1,0 +1,52 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "targetBlank"
+    - var title = "target-blank"
+    - var description = "Is het een goed idee om een link in een nieuwe tab te openen?"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- link in een nieuwe tab
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog Link openenen in een nieuwe tab?
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord Als
+        | Als we een link gebruiken in onze webpagina's dan kunnen we hier bepaalde attributen aan meegeven. Bijvoorbeeld een titel. Als je dan met je muis over de link hoovert dan krijg je deze titel te zien. Een andere belangrijke (met name wat betreft toegankelijkheid) is het target attribuut. Dit attribuut heeft 4 keywoorden. Ze beginnen allemaal met een liggend streepje. Het zijn: _self, _blank, _parent en _top. 
+        | Het gaat mij hier om het _blank keywoord. Daarmee open je een link in een nieuw venster of in een nieuwe tab. Een link die opent in een nieuw venster of tab  ziet er zo uit:
+      p(class="p p__left p__left--blog" )         
+        pre.language-html.blog
+          span.h2.h2--hidden Voorbeeld Javascript code
+          code.language-html
+            | &lt;a href="link.html" target="_blank"&gt;Linktekst&lt;/a&gt;
+      p(class="p p__left p__left--blog" ) 
+        | Wil je meer weten over dit attribuut kijk dan op de pagina van 
+        a(href="https://developer.mozilla.org/nl/docs/Web/HTML/Element/a") MDN over de a-tag
+            
+      p(class="p p__left p__left--blog" ) 
+        | Als je het target attribuut niet gebruikt dan wordt de link standaard in dezelfde tab of venster geopend. Voor mij was het altijd heel logisch om een lokale link (dus een link naar een pagina binnen mijn eigen website) te openen in de huidige tab en elke externe link te openen naar een nieuwe tab.
+      p(class="p p__left p__left--blog" ) 
+        | Ik dacht altijd dat als ik deze keuze voor de bezoeker maakte dat het voor de bezoeker gelijk duidelijk is dat het om een externe site gaat. Dat is misschien wel zo maar moet jij als bouwer deze keuze maken voor de bezoeker? Iedereen kan zelf bepalen of hij de link wil openen in een nieuwe tab door met de rechter muis toets te kiezen voor link openen in nieuw tabblad. Dit kan ook met het toetsenbord door ctrl+enter (Chrome en Windows) of command + enter (Chrome en Apple).
+      p(class="p p__left p__left--blog" ) 
+        | Als je er als bouwer toch  voor kiest om een link in een nieuwe tab te openen laat dit dan duidelijk weten aan de bezoeker. Dit kan je doen met tekst (opent in nieuwe tab) of met een icoontje.
+      p(class="p p__left p__left--blog" ) 
+        | Vanuit het oogpunt van toegankelijkheid wordt aangeraden om een link niet te openen in een nieuwe tab. Niet alle hulptechnologie kondigt dit (goed) aan. Als de bezoeker niet weet dat hij in een nieuwe tab zit kan dit veel verwarring opleveren. De 'terug-knop' doet het ook niet als je  in een nieuwe tab zit. De enige oplossing is dan tab's gaan sluiten tot de bezoeker weer terug is bij de site waar hij begonnen is.
+      p(class="p p__left p__left--blog" ) 
+        | Dit kan natuurlijk ook verwarrend zijn voor bezoekers zonder beperking. 
+      p(class="p p__left p__left--blog" ) 
+        | Met andere woorden laat deze keus aan de bezoeker zelf over.
+        span(class="span__date") Gepubliceerd op 9 maart 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="targetblank" data-show-count="false") Tweet
+
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}js/main-bundle.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

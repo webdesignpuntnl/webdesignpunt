@@ -3,6 +3,8 @@ mixin blogNav(page)
   aside.blog__nav
     ul.blog__nav__list
       li.blog__nav__list__item
+        a(href=("target-blank.html") class=(page == "targetBlank" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) target_blank 
+      li.blog__nav__list__item
         a(href=("toegankelijkheid.html") class=(page == "toegankelijkheid" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) toegankelijkheid 
       li.blog__nav__list__item
         a(href=("skip-link.html") class=(page == "skipLink" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) skip link 
