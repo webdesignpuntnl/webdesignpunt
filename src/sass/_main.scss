@@ -245,8 +245,9 @@ pre[class*='language-'] {
 
     &__textInput {
       display: block;
+      font-size: 1.2rem;
       margin: 0 0 3rem 0;
-      padding: 0.5rem 0 0.5rem 0.5rem;
+      padding: 0.8rem 0 0.5rem 0.8rem;
       width: 100%;
       border: 1px solid $blackColor;
       border-radius: 5px;
@@ -279,9 +280,9 @@ pre[class*='language-'] {
         outline: none;
         background-color: $yellowColor;
         box-shadow: $greyColor 1px 1px 5px;
-        border: none;
+        border: 1px solid $orangeColor;
         border-radius: 5px;
-        padding: 0.5rem;
+        padding: 0.8rem 0 0.5rem 0.8rem;
         transition: background-color 300ms ease-in-out;
       }
     }
@@ -303,19 +304,23 @@ pre[class*='language-'] {
       &:hover {
         background-color: $blackColor;
         color: $whiteColor;
-        border: 2px solid $yellowColor;
-        box-shadow: $yellowColor 1px 1px 15px 1px;
+        border: 2px solid $blackColor;
+        // box-shadow: $yellowColor 1px 1px 15px 1px;
       }
 
       &:focus {
         padding: 1rem;
+      }
+
+      &:active {
+        transform: translateY(2px);
       }
     }
   }
 }
 
 .input__textInput::placeholder {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
   color: $blackColor;
