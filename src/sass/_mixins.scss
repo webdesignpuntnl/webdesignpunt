@@ -1,4 +1,30 @@
 @mixin clearfix {
-        clear: both;
-        overflow: hidden;
+  clear: both;
+  overflow: hidden;
+}
+
+@mixin buttonLink {
+  display: block;
+  color: $blackColor;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+
+  padding: 1rem;
+  background-color: $yellowColor;
+  border: solid 4px $orangeColor;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: $orangeColor;
+    box-shadow: 15px 12px 12px -17px rgba(0, 0, 0, 0.25), -17px -13px 12px -17px rgba(0, 0, 0, 0.25);
+    transition: background-color 800ms, box-shadow 800ms;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
 }

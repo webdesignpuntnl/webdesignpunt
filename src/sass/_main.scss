@@ -55,6 +55,14 @@
   }
 }
 
+.link__button {
+  @include buttonLink;
+
+  margin: 0 auto 4rem auto;
+  width: 50%;
+  min-width: 130px;
+}
+
 .blog__flag {
   display: block;
   width: 3rem;
@@ -416,6 +424,13 @@ pre[class*='language-'] {
   .p__right--index {
     float: right;
     width: 60%;
+  }
+
+  .link__button {
+    float: left;
+    margin: 4rem 0 0 3rem;
+    width: 30%;
+    max-width: 500px;
   }
 
   // prism coding styles
