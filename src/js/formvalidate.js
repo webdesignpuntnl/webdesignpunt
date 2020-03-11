@@ -4,14 +4,14 @@
 const form = document.querySelector('#contactForm');
 const antiSpamField = form.querySelector('#antiSpamField');
 const nameField = form.querySelector('#nameField');
-const subjectField = form.querySelector('#subjectField');
+const linkField = form.querySelector('#linkField');
 const emailField = form.querySelector('#emailField');
 const phoneField = form.querySelector('#phoneField');
 const remarksField = form.querySelector('#remarksField');
 const submitButton = form.querySelector('.input__textInput__submitButton');
 let submitClicked = false;
 
-const fields = [nameField, subjectField, emailField, phoneField, remarksField, antiSpamField];
+const fields = [nameField, linkField, emailField, phoneField, remarksField, antiSpamField];
 
 function displayMessage(valid, whichField) {
   const userMessage = whichField.parentNode.querySelector('.input__message');
@@ -28,8 +28,8 @@ function testInput(whichField) {
   if (whichField === nameField) {
     valid = /[a-zA-Z][^0-9/:http@]$/.test(whichField.value);
     displayMessage(valid, whichField);
-  } else if (whichField === subjectField) {
-    valid = /[a-zA-Z]/.test(whichField.value);
+  } else if (whichField === linkField) {
+    valid = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/.test(whichField.value);
     displayMessage(valid, whichField);
   } else if (whichField === emailField) {
     valid = /^[A-Za-z0-9](([_.-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([.-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$/.test(
@@ -77,13 +77,13 @@ fields.forEach(field => {
 
 submitButton.addEventListener('click', e => {
   const nameValid = validate(nameField);
-  const subjectValid = validate(subjectField);
+  const linkValid = validate(linkField);
   const emailValid = validate(emailField);
   const phoneValid = validate(phoneField);
   const remarksValid = validate(remarksField);
   const hiddenFieldValid = validate(antiSpamField);
 
-  const allFieldsValid = nameValid && subjectValid && emailValid && phoneValid && remarksValid && hiddenFieldValid;
+  const allFieldsValid = nameValid && linkValid && emailValid && phoneValid && remarksValid && hiddenFieldValid;
   submitClicked = true;
 
   if (!allFieldsValid) e.preventDefault();
