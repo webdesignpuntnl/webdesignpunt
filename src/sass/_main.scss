@@ -31,13 +31,6 @@
   letter-spacing: 0.1rem;
   position: relative;
 
-  &--hidden {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    left: -999px;
-  }
-
   &--blog {
     padding: 0 !important;
     text-align: left;
@@ -52,6 +45,13 @@
   &--left {
     text-align: left;
     margin: 2rem 0 0.5rem 2rem;
+  }
+
+  &--hidden {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -999px;
   }
 }
 
@@ -420,8 +420,8 @@ pre[class*='language-'] {
 
   // prism coding styles
   pre[class*='language-'] {
-    margin: 0 0 4rem 1rem !important;
-    float: left;
+    margin: 0 1rem 4rem 0 !important;
+    float: right;
     width: 37%;
     word-break: break-all !important;
     word-wrap: break-word !important;
