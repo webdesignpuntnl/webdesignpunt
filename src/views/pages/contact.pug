@@ -64,6 +64,16 @@ block content
                 label(for="emailField" class="input__textInput__label") email
             div(class="input")
                 input(
+                    name="linkField" 
+                    type="url"  
+                    id="linkField"
+                    class="input__textInput" 
+                    required
+                    pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$" 
+                    placeholder="url website" title="vul een geldige url in")
+                label(for="linkField" class="input__textInput__label") url website
+            div(class="input")
+                input(
                     name="phone" 
                     type="tel"  
                     id="phoneField"
