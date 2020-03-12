@@ -258,6 +258,11 @@ pre[class*='language-'] {
         display: none;
       }
 
+      &--subjectField {
+        -moz-appearance: menulist;
+        -webkit-appearance: menulist;
+      }
+
       &__textarea {
         resize: none;
         width: 100%;

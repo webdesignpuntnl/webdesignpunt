@@ -16,7 +16,8 @@ block content
         enctype="multipart/form-data" 
         autocomplete="on" 
         id="contactForm"
-        class="form")
+        class="form"
+        title="contact formulier")
         input(type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER")
         input(type="hidden" name="recipients" value="info_@_webdesignpuntnl.com")
         input(type="hidden" name="good_url" value="../pages/contact-verzonden.html")
@@ -52,6 +53,17 @@ block content
                     placeholder="onderwerp" 
                     title="vul een onderwerp in")
                 label(for="subjectField" class="input__textInput__label") onderwerp
+            div(class="select")
+                select(
+                    name="onderwerp" 
+                    id="subjectField"
+                    class="input__textInput input__textInput--subjectField" 
+                    title="kies onderwerp voor je vraag")
+                    option(value="" selected disabled) onderwerp vraag 
+                    option(value="ik wil mijn site testen") ik wil mijn site vrijblijvend testen
+                    option(value="ik wil een afspraak maken") ik wil een afspraak maken
+                    option(value="ik wil meer informatie") ik wil meer informatie
+                //- label(for="subjectField" class="input__textInput__label") onderwerp
             div(class="input")
                 input(
                     name="email" 
