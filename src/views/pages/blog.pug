@@ -23,78 +23,39 @@ block content
       | 
       a(href="https://webpack.js.org/"   class="link") Webpack
       |  en nog veel meer.
-  //- use of skip link in HTML
   +blogNav
-  article(class="article article--blog" id="skipLink")     
+  //- link in een nieuwe tab
+  article(class="article article--blog")     
     div.align
-      h2.h2.h2--blog Gebruik een skip-link
-      p(class="p p__left p__left--blog" )
-        strong.p__firstWord Ik 
-        | heb het er al eens eerder over gehad in deze blog, niet elke bezoeker van je site navigeert met een muis. Er zijn veel mensen die het toetsenbord gebruiken. Met de TAB-toets kun je door een site navigeren. Je springt eigenlijk van link naar link. Voor buttons geldt dit ook. 
-        | Bekijk onderstaande afbeelding en beeld je eens in dat je deze site met de TAB-toets doorloopt. De site is net geladen en je drukt de eerste keer op de TAB-toets.
-      p(class="p p__left p__left--blog" )
-        | Op welk element komt je al eerste terecht? En op welke daarna? Als de site goed gebouwd is dan kom je als eerste op het logo terecht, vervolgens op home enzovoort. Stel dat ik op deze site terecht kom en ik wil meteen naar de hoofd inhoud? Dan moet ik langs het logo en langs alle menu-items. Bij deze site valt het wel mee maar stel nou dat er in het menu ook nog een aantal submenu's zitten. Daar moet je dan ook helemaal doorheen tabben. Dus voordat je bij de content bent moet je eerst alle links langs in de submenu's.
-      p(class="p p__left p__left--blog" )
-        | De meeste mensen haken dan toch vrij snel af. Hoe kun je dit nou makkelijk oplossen? Met een skip-to-main-content-link. Je maakt een link (dit wordt een interne link) helemaal bovenaan in de HTML dus nog boven het (in dit geval) logo. Deze link verberg je met CSS en je zorg dat de link alleen zichtbaar wordt als de link focus krijgt met de TAB-toets. Iemand die navigeert met het toetsenbord zal nu als eerste op deze link terecht komen en kan dan meteen naar de hoofd-inhoud springen. Soms zie je zelfs een klein menu'tje met een paar links zodat de bezoeker ook nog kan kiezen naar welke content hij wil gaan. Deze site heeft ook een skip-link. Ga naar boven in deze pagina, herlaad de pagina en druk op de TAB-toets. Als het goed is zie je dan een oranje button waarmee je naar de bovenkant van de main content gaat.
-      p(class="p p__left p__left--blog" )
-        | Deze link stop je dus bovenin de HTML:
-      p(class="p p__left p__left--blog" )
+      h2.h2.h2--blog Link openenen in een nieuwe tab?
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord Als
+        | Als we een link gebruiken in onze webpagina's dan kunnen we hier bepaalde attributen aan meegeven. Bijvoorbeeld een titel. Als je dan met je muis over de link hoovert dan krijg je deze titel te zien. Een andere belangrijke (met name wat betreft toegankelijkheid) is het target attribuut. Dit attribuut heeft 4 keywoorden. Ze beginnen allemaal met een liggend streepje. Het zijn: _self, _blank, _parent en _top. 
+        | Het gaat mij hier om het _blank keywoord. Daarmee open je een link in een nieuw venster of in een nieuwe tab. Een link die opent in een nieuw venster of tab  ziet er zo uit:
+      p(class="p p__left p__left--blog" )         
         pre.language-html.blog
-          span.h2.h2--hidden Voorbeeld HTML voor een skip-link
+          span.h3.h3--hidden Voorbeeld Javascript code
           code.language-html
-            | &lt;a class="skip-to-content" href="#main"&gt; 
-            | Naar de hoofd inhoud
-            | &lt;/a&gt;
-        p(class="p p__left p__left--blog" )
-          | Op de content waar je heen wilt laten springen zet je nu een id met main. Naar dit punt spring je dan als je op de link hierboven klikt. Het attribuut tabindex="-1" zorgen er voor dat dit ook goed werkt in "IE" en Chrome. 
-        p(class="p p__left p__left--blog" )
-          pre.language-html.blog
-            span.h2.h2--hidden Voorbeeld HTML voor een skip-link
-            code.language-html
-              | &lt;p id="main" tabindex="-1"&gt;
-              | Dit is de hoofdinhoud door op de link te klikken 
-              | kom deze tekst bovenaan in het scherm te staan.
-              | &lt;/p&gt;
-        p(class="p p__left p__left--blog" )
-          | Zo komt de CSS er nu uit te zien:
-        p(class="p p__left p__left--blog" )
-          pre.language-css.blog
-            span.h2.h2--hidden Voorbeeld CSS voor een skip-link
-            code.language-css
-              | a.skip-main {
-              |   left:-999px;
-              |   position:absolute;
-              |   top:auto;
-              |   width:1px;
-              |   height:1px;
-              |   overflow:hidden;
-              |   z-index:-999;
-              | }
-              |
-              | a.skip-main:focus, a.skip-main:active {
-              |   color: #fff;
-              |   background-color:#000;
-              |   left: auto;
-              |   top: auto;
-              |   width: 30%;
-              |   height: auto;
-              |   overflow:auto;
-              |   margin: 10px 35%;
-              |   padding:5px;
-              |   border-radius: 15px;
-              |   border:4px solid yellow;
-              |   text-align:center;
-              |   font-size:1.2em;
-              |   z-index:999;
-              | }
-        p(class="p p__left p__left--blog" )
-          | Je moet hier geen display: "none" geven want dan wordt de link niet gezien door een screenreader en kun je deze ook met de TAB-toets niet meer bereiken.
-        p(class="p p__left p__left--blog" )
-          | In het eerste blok zorg zet je de link eigenlijk links buiten beeld. Dus de link is er nog wel maar niet zichtbaar. In het tweede blok zorg je er voor dat de code toegepast gaat worden als de link :focus krijgt. Dus als je door middel van de TAB-toets op de link terecht komt.
-        p(class="p p__left p__left--blog" )
-          | Geef je nu een enter of druk je op de spatiebalk dan spring je naar de hoofdtekst en hoef je niet alle links daarboven te doorlopen. Wil je toch door alle menu-items dan TAB je gewoon door.
-          span(class="span__date") Gepubliceerd op 27 februari 2020 door Renee de Kruijf 
-            a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="skiplink" data-show-count="false") Tweet
+            | &lt;a href="link.html" target="_blank"&gt;Linktekst&lt;/a&gt;
+      p(class="p p__left p__left--blog" ) 
+        | Wil je meer weten over dit attribuut kijk dan op de pagina van 
+        a(href="https://developer.mozilla.org/nl/docs/Web/HTML/Element/a") MDN over de a-tag
+            
+      p(class="p p__left p__left--blog" ) 
+        | Als je het target attribuut niet gebruikt dan wordt de link standaard in dezelfde tab of venster geopend. Voor mij was het altijd heel logisch om een lokale link (dus een link naar een pagina binnen mijn eigen website) te openen in de huidige tab en elke externe link te openen naar een nieuwe tab.
+      p(class="p p__left p__left--blog" ) 
+        | Ik dacht altijd dat als ik deze keuze voor de bezoeker maakte dat het voor de bezoeker gelijk duidelijk is dat het om een externe site gaat. Dat is misschien wel zo maar moet jij als bouwer deze keuze maken voor de bezoeker? Iedereen kan zelf bepalen of hij de link wil openen in een nieuwe tab door met de rechter muis toets te kiezen voor link openen in nieuw tabblad. Dit kan ook met het toetsenbord door ctrl+enter (Chrome en Windows) of command + enter (Chrome en Apple).
+      p(class="p p__left p__left--blog" ) 
+        | Als je er als bouwer toch  voor kiest om een link in een nieuwe tab te openen laat dit dan duidelijk weten aan de bezoeker. Dit kan je doen met tekst (opent in nieuwe tab) of met een icoontje.
+      p(class="p p__left p__left--blog" ) 
+        | Vanuit het oogpunt van toegankelijkheid wordt aangeraden om een link niet te openen in een nieuwe tab. Niet alle hulptechnologie kondigt dit (goed) aan. Als de bezoeker niet weet dat hij in een nieuwe tab zit kan dit veel verwarring opleveren. De 'terug-knop' doet het ook niet als je  in een nieuwe tab zit. De enige oplossing is dan tab's gaan sluiten tot de bezoeker weer terug is bij de site waar hij begonnen is.
+      p(class="p p__left p__left--blog" ) 
+        | Dit kan natuurlijk ook verwarrend zijn voor bezoekers zonder beperking. 
+      p(class="p p__left p__left--blog" ) 
+        | Met andere woorden laat deze keus aan de bezoeker zelf over.
+        span(class="span__date") Gepubliceerd op 9 maart 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="targetblank" data-show-count="false") Tweet
+
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
   script(src=`${path}js/main-bundle.js`)
