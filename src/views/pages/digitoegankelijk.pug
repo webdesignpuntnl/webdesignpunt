@@ -1,0 +1,44 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "digitoegankelijk"
+    - var title = "digitoegankelijk"
+    - var description = "Waarom en voor wie moet een site toegankelijk zijn?"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- Wat is toegankelijkheid?
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog Wat is toegankelijkheid?
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord Wat 
+        | valt er nou eigenlijk allemaal onder de term toegankelijkheid? Als we het hebben over toegankelijkheid dan bedoelen we, meestal, dat alles wat we publiceren op het internet door iedereen moet kunnen worden gebruikt. Dus ook door mensen die geen muis gebruiken maar bijvoorbeeld een screenreader of het toetsenbord. Dit zij vaak mensen met een beperking. 
+      p(class="p p__left p__left--blog" ) 
+        | Er is ook een grote groep mensen die moeite hebben met digitale middelen in het algemeen. Je kunt daarbij dan denken aan het bedienen van moderne tv's, mobiele telefoons, thermostaten en noem maar op. Dit kan zeker ook gelden voor website's. 
+      p(class="p p__left p__left--blog" ) 
+        | Het internet is een relatief jong medium met een taal die nog steeds in ontwikkeling is, toch hebben we inmiddels al aardig wat conventies. Daar bedoel ik mee dat we snappen wat bepaalde icoontjes doen of betekenen en waar we functies in een website kunnen vinden. 
+      p(class="p p__left p__left--blog" ) 
+        | Hierbij kun je denken aan menu's, zoekvakken en het hamburgericoon. Meestal bevind een menu zich aan de bovenkant van een pagina, een zoekvak staat vaak rechtsboven en iedereen weet inmiddels dat drie liggende streepjes een menu betekend. Dit is allemaal gemeengoed geworden en het is niet altijd even slim om dit aan te passen omdat de bezoeker dan compleet de weg kwijt kan raken. Wil je het wel anders doen? Maak dit dan duidelijk aan de bezoeker.
+      p(class="p p__left p__left--blog" ) 
+        | We willen dat onze website er zo mooi mogelijk uit komt te zien en bedenken dan vaak de meest mooi websites met prachtige fonts, kleuren en animaties. Dit kan natuurlijk maar we moeten dan wel in ons achterhoofd houden dat de site wel bruikbaar blijft voor de bezoeker. Dus probeer de bestaande conventies toe te passen zodat de bezoeker niet hoeft te zoeken naar functies of naar de functie van bepaalde onderdelen.
+      p(class="p p__left p__left--blog" ) 
+        | Ik wil 1 voorbeeld geven van iets wat ik gezien heb op een bijeenkomst over toegankelijkheid. Een van de sprekers liet een filmpje zien van een persoon die de taak kreeg om op een website (ik laat namen en bedrijven even buiten beschouwing) iets op te zoeken door het zoekvak te gebruiken. De site was mooi erg mooi vorm gegeven met een hero-image bovenaan de pagina. Over de hero-image was het zoekvak geplaatst, duidelijk zichtbaar en daardoor makkelijk te vinden. Er zat echter ook nog een mooi animatie aan vast. Zodra je op het zoekvak klikt verdwijnt de hero-image en verplaats het zoekvak naar rechtsboven. De persoon raakte hier compleet van in de war en kreeg het niet voor elkaar om het zoekvak terug te vinden of de taak af te maken.
+      p(class="p p__left p__left--blog" ) 
+        | Je kunt dit soort belangrijke functies natuurlijk wel stijlen, animeren of verplaatsen maar bedenk je wel dat dit voor sommige bezoekers een probleem zou kunnen opleveren. Dus doe dit met mate en met beleid.
+      p(class="p p__left p__left--blog" ) 
+        | Dit valt wat mij betreft valt dit dan ook onder toegankelijkheid. Het web moet immers voor iedereen te gebruiken zijn. Probeer altijd vanuit de bezoeker te blijven denken. Wat voor een bedrijf of een webbouwer logisch is hoeft dat niet voor de potentiële bezoeker van een website te zijn.
+        span(class="span__date") Gepubliceerd op 6 maart 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="toegankelijkelijkheid" data-show-count="false") Tweet
+
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}js/main-bundle.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });
