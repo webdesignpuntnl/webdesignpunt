@@ -35,6 +35,14 @@ const poppupInfo = [
     content: 'In dit project heb ik de Iphone calculator nagemaakt. Met CSS-grid en ES6.',
     link: 'https://side.webdesignpuntnl.com/calculator',
     tools: 'HTML (PUG), css (Sass, Grid), JS (ES6), '
+  },
+  {
+    client: 'Random Meal app',
+    image: '../images/mealapp.png',
+    content:
+      'In dit project heb ik een app gemaakt die een willekeurig recept uit een database haalt. Met CSS-grid, React en Axios.',
+    link: 'https://side.webdesignpuntnl.com/mealapp',
+    tools: 'React, Styled-components en Axios'
   }
 ];
 
