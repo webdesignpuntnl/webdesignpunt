@@ -13,6 +13,7 @@ require('./src/js/prism.js');
 // images
 require('./src/images/mail-icon.svg');
 require('./src/images/mealapp.png');
+require('./src/images/voorbeeld-tekst-over-afbeelding.jpg');
 require('./src/images/icons-social-hover.svg');
 require('./src/images/icons-social-normal.svg');
 require('./src/images/screenshot-vlinderfabriek.png');

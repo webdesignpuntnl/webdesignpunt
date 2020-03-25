@@ -1,0 +1,27 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "contrast"
+    - var title = "contrast"
+    - var description = "Tekst met een goed contrast is belangrijk voor de leesbaarheid van je content"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  //- contrast
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog contrast
+      p(class="p p__left p__left--blog" ) 
+        strong.p__firstWord 
+
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}js/main-bundle.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

@@ -139,6 +139,15 @@
   &__left--blog {
     margin: 2rem 0 0 0;
   }
+
+  &__left--example {
+    color: #fff;
+    background-color: $yellowColor;
+    width: 70%;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 2rem 0 1rem 3rem;
+  }
 }
 
 .p__firstWord {
@@ -388,6 +397,12 @@ pre[class*='language-'] {
   &--skipLink {
     max-width: initial;
   }
+
+  &--exampleText {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+  }
 }
 
 @mixin main--ms {
@@ -487,6 +502,11 @@ pre[class*='language-'] {
     &--blog {
       width: 80%;
       margin: 1rem 0 0 0;
+    }
+
+    &--example {
+      width: 70%;
+      margin: 2rem 0 1rem 3rem;
     }
   }
 

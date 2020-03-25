@@ -24,37 +24,37 @@ block content
       a(href="https://webpack.js.org/"   class="link") Webpack
       |  en nog veel meer.
   +blogNav
-  //- link in een nieuwe tab
+  //- contrast
   article(class="article article--blog")     
     div.align
-      h2.h2.h2--blog Link openenen in een nieuwe tab?
+      h2.h2.h2--blog Contrast
       p(class="p p__left p__left--blog" ) 
-        strong.p__firstWord Als
-        | Als we een link gebruiken in onze webpagina's dan kunnen we hier bepaalde attributen aan meegeven. Bijvoorbeeld een titel. Als je dan met je muis over de link hoovert dan krijg je deze titel te zien. Een andere belangrijke (met name wat betreft toegankelijkheid) is het target attribuut. Dit attribuut heeft 4 keywoorden. Ze beginnen allemaal met een liggend streepje. Het zijn: _self, _blank, _parent en _top. 
-        | Het gaat mij hier om het _blank keywoord. Daarmee open je een link in een nieuw venster of in een nieuwe tab. Een link die opent in een nieuw venster of tab  ziet er zo uit:
-      p(class="p p__left p__left--blog" )         
-        pre.language-html.blog
-          span.h3.h3--hidden Voorbeeld Javascript code
-          code.language-html
-            | &lt;a href="link.html" target="_blank"&gt;Linktekst&lt;/a&gt;
+        strong.p__firstWord Veel
+        | mensen en bedrijven bouwen zelf een webiste in bijvoorbeeld Wordpress of een ander CMS (content management system). Dat kan natuurlijk ook heel makkelijk. Vaak zie je echter wel dat er weinig rekening wordt gehouden met de leesbaarheid van de teksten. En dat is uiteindelijk waar het allemaal om draait bij een website: informatie overbrengen. Eigenlijk bedoel ik hier met leesbaarheid contrast. Dus zijn teksten leesbaar tegenover een bepaalde achtergrond. Een voorbeeld is witte tekst op een gele achtergrond. Misschien ziet dit er mooi uit maar voor de meeste mensen is het onleesbaar. Zelfs mensen met prima ogen hebben hier moeite mee en zullen dan ook afhaken. Dus denk na over je kleurgebruik en over het contrast daarvan.
+      p(class="p p__left p__left--blog p__left--example" ) 
+        | Dit is een voorbeeld van een witte tekst op een gele achtergrond
       p(class="p p__left p__left--blog" ) 
-        | Wil je meer weten over dit attribuut kijk dan op de pagina van 
-        a(href="https://developer.mozilla.org/nl/docs/Web/HTML/Element/a") MDN over de a-tag
-            
+        | Let ook op met tekst over afbeeldingen. 
+        div.blog__image__container
+          img(src="../images/voorbeeld-tekst-over-afbeelding.jpg" class="blog__image blog__image--exampleText" alt="voorbeeld van teksten over een afbeedling")
       p(class="p p__left p__left--blog" ) 
-        | Als je het target attribuut niet gebruikt dan wordt de link standaard in dezelfde tab of venster geopend. Voor mij was het altijd heel logisch om een lokale link (dus een link naar een pagina binnen mijn eigen website) te openen in de huidige tab en elke externe link te openen naar een nieuwe tab.
-      p(class="p p__left p__left--blog" ) 
-        | Ik dacht altijd dat als ik deze keuze voor de bezoeker maakte dat het voor de bezoeker gelijk duidelijk is dat het om een externe site gaat. Dat is misschien wel zo maar moet jij als bouwer deze keuze maken voor de bezoeker? Iedereen kan zelf bepalen of hij de link wil openen in een nieuwe tab door met de rechter muis toets te kiezen voor link openen in nieuw tabblad. Dit kan ook met het toetsenbord door ctrl+enter (Chrome en Windows) of command + enter (Chrome en Apple).
-      p(class="p p__left p__left--blog" ) 
-        | Als je er als bouwer toch  voor kiest om een link in een nieuwe tab te openen laat dit dan duidelijk weten aan de bezoeker. Dit kan je doen met tekst (opent in nieuwe tab) of met een icoontje.
-      p(class="p p__left p__left--blog" ) 
-        | Vanuit het oogpunt van toegankelijkheid wordt aangeraden om een link niet te openen in een nieuwe tab. Niet alle hulptechnologie kondigt dit (goed) aan. Als de bezoeker niet weet dat hij in een nieuwe tab zit kan dit veel verwarring opleveren. De 'terug-knop' doet het ook niet als je  in een nieuwe tab zit. De enige oplossing is dan tab's gaan sluiten tot de bezoeker weer terug is bij de site waar hij begonnen is.
-      p(class="p p__left p__left--blog" ) 
-        | Dit kan natuurlijk ook verwarrend zijn voor bezoekers zonder beperking. 
-      p(class="p p__left p__left--blog" ) 
-        | Met andere woorden laat deze keus aan de bezoeker zelf over.
-        span(class="span__date") Gepubliceerd op 9 maart 2020 door Renee de Kruijf 
-        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="targetblank" data-show-count="false") Tweet
+        | Als je afbeelding veel lichte kleuren heeft en je zet daar bijvoorbeeld witte tekst overheen dan is dit lastig leesbaar. Je kunt de tekst natuurlijk weglaten of ergens anders plaatsen, je kunt de kleur van de tekst aanpassen of je zet de tekst op een gekleurde achtergrond over de afbeelding heen. 
+      p(class="p p__left p__left--blog" )
+        | Een en ander gaat ook vaak mis in combinatie met de afmetingen van de tekst. Als je tekst te klein is en als ook het contrast niet goed is dan wordt het meteen onleesbaar. Je kunt in sommige gevallen wel een slechter contrast gebruiken als je tekst dan maar groot genoeg is.
+      p(class="p p__left p__left--blog" )
+        | Er zijn op internet vele tools te vinden om je contrasten te testen. Ik gebruik vaak:  
+        a(href="https://colorshark.io/" class="link") Colorshark.
+        |  Je kunt hier de kleur van je achtergrond en van je teksten invoeren. Een melding FAIL of PASS vertelt je of je contrasten goed zijn. Als het contrast niet goed is dan vertelt de site je wat voor opties je hebt om wel een goed contrast te krijgen. Met een sliders kun je tekstkleur aanpassen of de achtergrondkleur. Net zo lang tot je een PASS krijgt. Als je een FAIL krijgt dan moet je deze combinatie niet gebruiken. Als je AA ziet met Large er naast dan kan het wel maar dan moeten de teksten minimaal 24 pixels of 19 pixels Bold zijn. Als je alleen AA ziet dan kun je de kleuren gebruiken. Als je AAA krijgt dan heb je de hoogste contrastverhouding die mogelijk is.
+      p(class="p p__left p__left--blog" )
+        | In de 
+        abbr(title="Web Content Accessibility Guidelines" lang="en") WCAG
+        |  (Web Content Accessibility Guidelines) zijn er drie niveaus van toegankelijkheid. A , AA en AAA. Wil je je site zo toegankelijk mogelijk maken dan moet je er voor zorgen dat je aan A en aan AA voldoet. Aan AAA voldoen is heel moeilijk en wordt zelfs door het 
+        abbr(title="World Wide Web Consortium" lang="en") W3C
+        |  (uitgever van de WCAG) afgeraden. 
+      p(class="p p__left p__left--blog" )
+        | Maak er een gewoonte van om de kleuren van je tekst en achtergronden te testen voordat je deze gaat gebruiken in je site. 
+        span(class="span__date") Gepubliceerd op 25 maart 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="contrast" data-show-count="false") Tweet
 
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
