@@ -2,29 +2,14 @@ extends ../layout/layout
 include ../mixins/blogNav
 
 block prepend head
-    - var page = "blog"
-    - var title = "blog over alles en nog wat over bouwen voor het www"
-    - var description = "Webdesignpuntnl houdt een blog bij. Hier schrijven we over alles wat met het web te maken heeft."
+    - var page = "heading"
+    - var title = "heading"
+    - var description = "Hoe maak je een heading klikbaar?"
     - var path = "../"
 
 block content
-  section(class="section__blog")
-    //- a(href="blog-english.html" title="english flag" class="blog__flag") 
-      img(src="../images/flag-english.svg", alt="english flag")
-    //- a(class="twitter-follow-button" href="https://twitter.com/reneedekruijf") Follow
-    h2(class="h2") blog
-    p(class="p") Deze blog gaat over allerhande onderwerpen die te maken hebben met development. Elk onderwerp is denkbaar.
-      | Je kunt dan denken aan tools zoals 
-      a(href="https://figma.com"   class="link") Figma,
-      |   
-      a(href="https://www.npmjs.com"   class="link") NPM,
-      | 
-      a(href="https://nodejs.org"   class="link") Node,
-      | 
-      a(href="https://webpack.js.org/"   class="link") Webpack
-      |  en nog veel meer.
-  +blogNav
-  //- klikbare heading
+  +blogNav(page)
+   //- klikbare heading
   article(class="article article--blog")     
     div.align
       h2.h2.h2--blog klikbare koptekst
@@ -78,6 +63,7 @@ block content
         | Blijft er wel 1 nadeel! Als de Javascript niet werkt dan is blijft de h2-kop klikbaar, we hebben immers de button in de h2 zitten, alleen gebeurt er nu niks als de bezoeker op de tekst klik. Een gebruiker kan zich dan afvragen waarom de kop wel klikbaar, lijkt, te zijn maar er niks gebeurt. Ik los dat zelf op door de button in de h2 te zetten met Javascript. Als de Javascript nu niet werkt dan is de kop een normale h2 kop en de tekst is zichtbaar.
         span(class="span__date") Gepubliceerd op 31 maart 2020 door Renee de Kruijf 
         a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="clickableheading" data-show-count="false") Tweet
+
 
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
