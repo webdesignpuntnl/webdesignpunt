@@ -203,7 +203,7 @@
 
 // prism coding styles
 pre[class*='language-'] {
-  margin: 0 auto 4rem auto !important;
+  margin: 5rem auto 4rem auto !important;
   width: 90%;
 }
 
@@ -462,7 +462,7 @@ pre[class*='language-'] {
 
   // prism coding styles
   pre[class*='language-'] {
-    margin: 0 1rem 4rem 0 !important;
+    margin: 5rem 1rem 4rem 3rem !important;
     float: right;
     width: 37%;
     word-break: break-all !important;
@@ -517,8 +517,12 @@ pre[class*='language-'] {
   }
 
   // prism coding styles
-  pre[class*='language-'] {
-    margin: 0 1rem 4rem 3rem !important;
-    width: 30%;
-  }
+  // pre[class*='language-'] {
+  //   margin: 10rem 1rem 4rem 3rem !important;
+  //   width: 30%;
+  // }
+}
+
+@mixin main--l {
+  //
 }
