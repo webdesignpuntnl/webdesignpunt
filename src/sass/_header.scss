@@ -95,6 +95,10 @@ a.skip-main:active {
   }
 }
 
+.header__icon {
+  display: none;
+}
+
 // hamburgermenu
 .menuSmall {
   display: none;
@@ -179,6 +183,41 @@ a.skip-main:active {
       }
     }
   }
+
+  .header__nav__menu__page--contact,
+  .header__nav__menu__page--tools {
+    display: none;
+  }
+
+  .header__icon {
+    display: block;
+    width: 10%;
+    max-width: 65px;
+    position: absolute;
+    top: 1rem;
+    color: $blackColor;
+    font-size: 2.2rem;
+    text-decoration: none;
+
+    &--contact {
+    right: 1.2rem;
+    }
+
+    &--tools {
+      right: 4.8rem;
+    }
+
+    &:hover,
+    &:focus {
+      color: $orangeColor;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+
 
   .header__nav__link {
     font-size: 1.1rem;
