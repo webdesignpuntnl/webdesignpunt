@@ -24,60 +24,89 @@ block content
       a(href="https://webpack.js.org/"   class="link") Webpack
       |  en nog veel meer.
   +blogNav
-  //- klikbare heading
+  //- Klikbare koptekst met Javascript
   article(class="article article--blog")     
     div.align
-      h2.h2.h2--blog klikbare koptekst
+      h2.h2.h2--blog Klikbare koptekst met Javascript
       p(class="p p__left p__left--blog" ) 
-        strong.p__firstWord Ik
-        | kreeg van een klant de vraag of het mogelijk is om tekst te verbergen en met een klik zichtbaar te maken. Natuurlijk is dat mogelijk was mijn  antwoord. Moet toch niet zo heel moeilijk zijn was mijn eerste gedachte.
-      p(class="p p__left p__left--blog" ) 
-        | Alle tekst van een bepaald artikel moet zichtbaar worden als je op een koptekst klikt. Standaard, als de pagina geladen is, is de tekst verbogen. Dit is met 
-        abbr(title="Cascading Style Sheet" lang="en") CSS 
-        | en Javascript vrij gemakkelijk te doen. Alleen vanuit het oogpunt van toegankelijk was het toch iets bewerkelijker dan ik dacht. 
+        strong.p__firstWord Voor 
+        | een klant heb ik een Wordpress site gemaakt. Ik heb dit met Wordpress gedaan omdat hij de site dan zelf bij kan houden en technische kennis van HTML tot het minimale wordt beperkt. Je moet natuurlijk wel wat kennis hebben. Dingen als afbeeldingen en koppen worden immers niet vanzelf toegevoegd. Er staat veel tekst op deze site en om mensen te laten kiezen wat ze willen lezen hebben we er voor gekozen om gedeeltes van teksten te verbergen en met een klik zichtbaar te maken. Ik heb het in de 
+        a(href="heading.html") blog klikbare koptekst
+        |  al gehad over de toegankelijkheid hiervan en wil nu naar de technische kant kijken. Om het voor de beheerder van de site zo simpel mogelijk te houden heb ik ervoor gekozen om zo min mogelijk HTML te gebruik zodat het gemakkelijk is om dit  op meerdere plekken in de site gebruiken. Je kunt volstaan met 3 tags. Een heading-tag (een h2 in dit geval), een article-tag en een div-tag. De h2 wordt klikbaar met Javascript en heeft geen class nodig. Deze h2 komt in een article-tag met de class hiddenText. In dit article komt er nog een div met de class showText, in deze div komt nu de tekst te staan die we uiteindelijk willen verbergen. De tekst in de article-tag is wel gewoon te lezen als de pagina eenmaal geladen is.
+        | Dit komt er dan zo uit te zien:
       p(class="p p__left p__left--blog" )
-        | Daarnaast moest de tekst natuurlijk wel zichtbaar zijn als de Javascript niet zou werken, oftewel 
-        span(lang="en") graceful decredation 
-        | (mocht er technisch iets mis gaan, bijvoorbeeld de Javascript of de CSS laad niet dan moet de pagina wel nog gewoon te lezen zijn). Dit laatste punt is natuurlijk ook een vorm van toegankelijkheid. Als je in de CSS de tekst op page-load zou verbergen en daarna zichtbaar zou maken met Javascript dan is de tekst dus niet zichtbaar als de CSS wel werkt en de Javascript niet. Dan maak je het voor mensen die geen handicap hebben en de tekst dus willen lezen onmogelijk om deze te lezen. Zoef en weg zijn ze. Het is dus zaak de tekst bij het laden van de pagina te verbergen met Javascript en ook weer zichtbaar te maken met Javascript.  
-      p(class="p p__left p__left--blog" )
-        | Een ander punt is dat je moet uitkijken met 
-        span(lang="en") display: none of 
-        span(lang="en") visibility: hidden. 
-        | Als je dat doet dan is de tekst voor iedereen onzichtbaar, ook voor mensen met een screenreader. Dit kan je oplossen door de tekst buiten het zichtbare venster te plaatsen.
-      p(class="p p__left p__left--blog" )
-        pre.language-css.blog
-          span.h3.h3--hidden Voorbeeld CSS voor verborgen tekst
-          code.language-css
-            | p.hide {
-            |   position: absolute;
-            |   left: -999px;
-            | }
-      p(class="p p__left p__left--blog" )
-        | De tekst staat nu onzichtbaar buiten beeld maar is niet echt verborgen en dus nog steeds zichtbaar voor een screenreader. Als je de tekst zichtbaar wilt maken kan je position weer op static zetten. Wilt je dit er leuk uit laten zien dan kan je de left, right en top waarden laten animeren. 
-      p(class="p p__left p__left--blog" )
-        | De bezoeker moet ook kunnen zien dat de kop klikbaar is. Standaard is dit natuurlijk niet zo, een koptekst is niet interactief. Dit heb ik opgelost door onder de kop een rode streep te zetten en naast de kop een pijl naar beneden. Met CSS heb ik de muisaanwijzer verandert in een wijzend handje, je weet wel dat krijg je ook als je met de muis over een link gaat. Wat je ook nog kan is de kop onderlijnen. Als bezoekers een onderlijnde tekst zien dan is het meteen logisch dat een link is.
-      p(class="p p__left p__left--blog" )
-        pre.language-css.blog
-          span.h3.h3--hidden Voorbeeld CSS voor onderlijnde koptekst
-          code.language-css
-            | button {
-            |   text-decoration: underline;
-            |   cursor: pointer;
-            | }
-      p(class="p p__left p__left--blog" )
-        | Nu is de kop visueel zichtbaar als een link. Ik kies er voor om van de h2-kop een button te maken. Een link gebruiken we om naar een andere pagina te gaan en een button voor een actie. Een tekst zichtbaar maken is een actie. Wil je hier meer over weten kijk dan bij mijn 
-        a(href="link-of-button.html" class="link") blog
-        |  over het gebruik van een link of een button. 
-      p(class="p p__left p__left--blog" )
-        | Dus ik stop gewoon een button element in een h2 element. De button stijl ik weg met css en dan heb ik dus nog steeds een h2 kop en ik heb deze met gebruik van een button klikbaar gemaakt. En dit mag gewoon. Als je de HTML van de site valideert dan gaat dat goed. Een ander groot voordeel van het gebruik van een button is dat deze toegankelijk is met een toetsenbord en ook focus krijgt als ik hier naar toe tab met mijn toetsenbord.
-      p(class="p p__left p__left--blog")
-        | Waarom niet gewoon de h2 klikbaar maken met Javascript? Dat kan ook maar dan moet je ook keyboardfocus aan de h2 toevoegen, dat kan wel maar is meer werk dan gewoon een button element toevoegen. Meer weten over een element focus geven met Javascript? kijk dan bij mijn 
-        a(href="focus-met-javascript.html" class="link") blog
-        |  focus met JS
-      p(class="p p__left p__left--blog")
-        | Blijft er wel 1 nadeel! Als de Javascript niet werkt dan is blijft de h2-kop klikbaar, we hebben immers de button in de h2 zitten, alleen gebeurt er nu niks als de bezoeker op de tekst klik. Een gebruiker kan zich dan afvragen waarom de kop wel klikbaar, lijkt, te zijn maar er niks gebeurt. Ik los dat zelf op door de button in de h2 te zetten met Javascript. Als de Javascript nu niet werkt dan is de kop een normale h2 kop en de tekst is zichtbaar.
-        span(class="span__date") Gepubliceerd op 31 maart 2020 door Renee de Kruijf 
-        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="clickableheading" data-show-count="false") Tweet
+        pre.language-html.blog
+          span.h3.h3--hidden Voorbeeld van de HTML
+          code.language-html
+            | &lt;article class="hidenText"&gt;
+            |   &lt;h2&gt;Ik ben een kop&lt;/h2&gt;
+            |   &lt;p&gt;Hier staat tekst die zichtbaar is&lt;/p&gt;
+            |   &lt;div class="showText"&gt;
+            |     &lt;p&gt;Verborgen&lt;/p&gt;
+            |   &lt;/div&gt;
+            | &lt;/article&gt;
+        p(class="p p__left p__left--blog" )
+          | De tekst gaan we verbergen met Javascript maar we maken een class aan waarin we de tekst verbergen allen zetten we deze class dynamisch met Javscript op de div. Als je het zo doe dan is de tekst ten allen tijde te lezen mocht Javascript niet werken.
+          | Dit wordt dan de CSS:
+        p(class="p p__left p__left--blog" )
+          pre.language-css.blog
+            span.h3.h3--hidden Voorbeeld CSS voor verborgen tekst
+            code.language-css
+              | .hide {
+              |   position: absolute;
+              |   left: -9999px;
+              | }
+        p(class="p p__left p__left--blog")
+          | Met Javascript plaatsen we deze tekst nu buiten beeld door op de div de class hide te zetten.
+          p(class="p p__left p__left--blog" )
+        pre.language-javascript.blog
+            span.h3.h3--hidden Voorbeeld Javascript code
+            code.language-javascript
+                | const hiddenText = document.querySelector('.hiddenText');
+                | hiddenText.classList.add('hide');
+        p(class="p p__left p__left--blog" )
+            | Nu gaan we de h2 klikbaar maken:
+        p(class="p p__left p__left--blog")
+          pre.language-javascript.blog
+            span.h3.h3--hidden Voorbeeld Javascript code
+            code.language-javascript
+                | const heading = document.querySelector('h2');
+                | heading.addEventListener('click', () => {
+                |   hiddenText.classList.contains('hide') ? 
+                |   hiddenText.classList.remove('hide') : 
+                |   hiddenText.classList.add('hide')
+                | });
+        p(class="p p__left p__left--blog")
+          | Als je nu naar de pagina kijkt dan is de tekst verborgen, als je op de koptekst klikt dan wordt tekst zichbaar, met een tweede klik verdwijnt de tekst weer. De kopt is nu nog steeds geen interactief element, je kunt de kop dus niet bereiken of activeren met het toetsenbord. Probeer maar eens met de TAB-toets. Dus wil ik een button (het is een actie dus een button) plaatsen in de h2-tag. Ik wil de tekst van de h2 tag gebruiken voor de tekst van de button.
+        p(class="p p__left p__left--blog")
+          pre.language-javascript.blog
+            span.h3.h3--hidden Voorbeeld Javascript code
+            code.language-javascript
+                | const textHeading = heading.innerText;
+                |
+                | const button = `
+                |   &lt;button class="button"&gt;
+                |   ${textHeading}
+                |   &lt;/button&gt;
+                |   `;
+                |
+                | heading.innerHTML = button;
+        p(class="p p__left p__left--blog" )
+          pre.language-css.blog
+            span.h3.h3--hidden Voorbeeld CSS voor verborgen tekst
+            code.language-css
+              | .button {
+              |    text-decoration: underline;
+              |    cursor: pointer;
+              |    border: none;
+              |    background-color: transparent;
+              |    font-size: 2rem;
+              |    font-weight: bold;
+              |  }
+          p(class="p p__left p__left--blog" )
+            | De kop is nu klikbaar en te bereiken activeren met het toetsenbord. Doet de Javascript het niet dan is het gewone kop en de tekst is zichtbaar. Dit is nu een toegankelijk verborgen tekst.
+            span(class="span__date") Gepubliceerd op 2 april 2020 door Renee de Kruijf 
+            a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="cliackableheading" data-show-count="false") Tweet
 
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
