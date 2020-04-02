@@ -2,28 +2,13 @@ extends ../layout/layout
 include ../mixins/blogNav
 
 block prepend head
-    - var page = "blog"
-    - var title = "blog over alles en nog wat over bouwen voor het www"
-    - var description = "Webdesignpuntnl houdt een blog bij. Hier schrijven we over alles wat met het web te maken heeft."
+    - var page = "klikbarekoptekst"
+    - var title = "Klikbare koptekst met Javascript"
+    - var description = "Hoe maak je een kopstekst klikbaar met Javascript?"
     - var path = "../"
 
 block content
-  section(class="section__blog")
-    //- a(href="blog-english.html" title="english flag" class="blog__flag") 
-      img(src="../images/flag-english.svg", alt="english flag")
-    //- a(class="twitter-follow-button" href="https://twitter.com/reneedekruijf") Follow
-    h2(class="h2") blog
-    p(class="p") Deze blog gaat over allerhande onderwerpen die te maken hebben met development. Elk onderwerp is denkbaar.
-      | Je kunt dan denken aan tools zoals 
-      a(href="https://figma.com"   class="link") Figma,
-      |   
-      a(href="https://www.npmjs.com"   class="link") NPM,
-      | 
-      a(href="https://nodejs.org"   class="link") Node,
-      | 
-      a(href="https://webpack.js.org/"   class="link") Webpack
-      |  en nog veel meer.
-  +blogNav
+  +blogNav(page)
   //- Klikbare koptekst met Javascript
   article(class="article article--blog")     
     div.align
@@ -107,7 +92,6 @@ block content
             | De kop is nu klikbaar en te bereiken activeren met het toetsenbord. Doet de Javascript het niet dan is het gewone kop en de tekst is zichtbaar. Dit is nu een toegankelijk verborgen tekst.
             span(class="span__date") Gepubliceerd op 2 april 2020 door Renee de Kruijf 
             a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="cliackableheading" data-show-count="false") Tweet
-
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
   script(src=`${path}js/main-bundle.js`)
