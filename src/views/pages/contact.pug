@@ -74,23 +74,22 @@ block content
                     pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
                     placeholder="email" title="vul een geldig emailadres in")
                 label(for="emailField" class="input__textInput__label") email
-            div(class="input")
+            //- div(class="input")
                 input(
                     name="linkField" 
                     type="url"  
                     id="linkField"
                     class="input__textInput" 
-                    required
                     pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$" 
                     placeholder="url website" title="vul een geldige url in")
                 label(for="linkField" class="input__textInput__label") url website
-            div(class="input")
+            //- div(class="input")
                 input(
                     name="phone" 
                     type="tel"  
                     id="phoneField"
-                    class="input__textInput" 
-                    required
+                    class="input__textInput"
+                    pattern="^((\+|00(\s|\s?-\s?)?)31(\s|\s?-\s?)?(\(0\)[-\s]?)?|0)[1-9]((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$"
                     placeholder="telefoon" 
                     title="vul een geldig telefoonnummer in")
                 label(for="phoneField" class="input__textInput__label") telefoon
@@ -99,7 +98,6 @@ block content
                     name="remarks"  
                     id="remarksField"
                     class="input__textInput form__input__textarea" 
-                    required 
                     placeholder="bericht"
                     title="vul een vraag in")
                 label(for="remarksField" class="input__textInput__label") bericht
