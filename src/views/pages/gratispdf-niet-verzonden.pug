@@ -1,0 +1,17 @@
+extends ../layout/layout
+
+block prepend head
+    - var page = ""
+    - var title = "bericht niet verzonden"
+    - var description = "Uw bericht is niet verzonden"
+    - var path = "../"
+
+block content
+  article(class="article")
+    h2(class="h2") Uw bericht is niet verzonden
+    p(class="p p--contactForm") Helaas er is iets mis gegaan! Probeer het nogmaals of neem op andere wijze contact met ons op!
+block script
+    //- script(src=`${path}js/contactForm-bundle.js`)
+    script(src=`${path}js/main-bundle.js`)
+
+

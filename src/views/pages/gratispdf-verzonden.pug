@@ -1,0 +1,17 @@
+extends ../layout/layout
+
+block prepend head
+    - var page = ""
+    - var title = "bericht verzonden"
+    - var description = "Uw bericht is verzonden"
+    - var path = "../"
+
+block content
+  article(class="article")
+    h2(class="h2") Uw bericht is verzonden
+    p(class="p p--contactForm") Uw emailadres wordt toegevoegd aan de mailinglist en uwe ontvangt de PDF met tips zo snel mogelijk in uw mailbox.
+block script
+    //- script(src=`${path}js/contactForm-bundle.js`)
+    script(src=`${path}js/main-bundle.js`)
+
+

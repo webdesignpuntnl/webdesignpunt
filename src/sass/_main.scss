@@ -148,6 +148,10 @@
     border-radius: 5px;
     margin: 2rem 0 1rem 3rem;
   }
+
+  &__right--freeTest {
+    margin: 0 0 3rem 0;
+  }
 }
 
 .p__firstWord {
@@ -284,6 +288,14 @@ pre[class*='language-'] {
         position: absolute;
         top: 0;
         font-size: 0;
+
+        &--mailingListForm {
+          display: inline;
+          opacity: 1;
+          position: initial;
+          font-size: initial;
+          margin: 0 0 0 0.5rem;
+        }
       }
 
       &:focus::placeholder {
@@ -299,6 +311,10 @@ pre[class*='language-'] {
         border-radius: 5px;
         padding: 0.8rem 0 0.5rem 0.8rem;
         transition: background-color 300ms ease-in-out;
+      }
+
+      &--mailingListForm {
+        margin: 0 0 1rem 0;
       }
     }
 
@@ -330,7 +346,18 @@ pre[class*='language-'] {
       &:active {
         transform: translateY(2px);
       }
+
+      &--mailingListForm {
+        margin: 2rem 0 0 0;
+      }
     }
+  }
+
+  &--mailingListForm {
+    @include clearfix;
+
+    width: initial;
+    margin: 1rem 2rem 5rem 2rem;
   }
 }
 
@@ -453,9 +480,15 @@ pre[class*='language-'] {
     width: 60%;
   }
 
+  .p__right--freeTest {
+    float: right;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
   .link__button {
-    float: left;
-    margin: 4rem 0 0 3rem;
+    float: right;
+    margin: 4rem 3rem 0 0;
     width: 30%;
     max-width: 500px;
   }
@@ -479,6 +512,12 @@ pre[class*='language-'] {
 
 @mixin main--m {
   // 768
+
+  .form {
+    &--mailingListForm {
+      margin: 2rem auto 6rem auto;
+    }
+  }
 
   .section__blog {
     margin-right: 4.5rem;
@@ -515,13 +554,11 @@ pre[class*='language-'] {
   .p__right {
     width: 60%;
     float: right;
-  }
 
-  // prism coding styles
-  // pre[class*='language-'] {
-  //   margin: 10rem 1rem 4rem 3rem !important;
-  //   width: 30%;
-  // }
+    &--freeTest {
+      width: 100%;
+    }
+  }
 }
 
 @mixin main--l {

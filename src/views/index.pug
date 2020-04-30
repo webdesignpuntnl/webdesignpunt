@@ -15,11 +15,48 @@ block content
             strong.p__firstWord Het internet  
             | moet te gebruiken zijn voor iedereen. Wij bouwen en ontwerpen websites die toegankelijk en gemakkelijk te gebruiken zijn voor iedereen. Niet iedereen is immers hetzelfde, we verschillen in scholing, opvoeding en achtergond. Er is ook een groep mensen in de maatschappij met een functiebeperking. Ook met deze groep houden wij rekening tijdens het ontwerpen en in de manier waarop wij een website bouwen. Deze digitoegankelijkeid is bij ons vanzelfsprekend en staat vanaf het eerste moment voorop. Wij sluiten iedereen in.
         a(href="pages/contact.html" class="link__button link__button--cta") Gratis test  
-        p(class="p p__right p__right--index")
+        p(class="p p__left p__left--index")
             strong.p__firstWord Testen  
             | Heb je al een website? En weet je niet zeker of deze of deze door iedereen op een juiste wijze kan worden bezocht en gebruikt? Wij kunnen je site testen op toegankelijkheid. De eerste test is zelfs gratis en geheel vrijblijvend. Je site wordt op een paar punten gestest op toegankelijkheid. Mocht je meer willen testen dan is dat natuurlijk ook mogelijk. Bij deze test wordt gekeken of de site voldoet aan de regels van de 
             abbr(title="Web Content Accessibility Guidelines" lang="en") WCAG 2.1.
             |  Als er uit het advies punten ter verbetering komen en je ziet het niet zitten om dit zelf aan te pakken dan kunnen we je daar ook bij helpen.
+        p(class="p p__right p__right--freeTest")
+            strong.p__firstWord Gratis  
+            | PDF met tips en trucs die je snel en gemakkelijk kunt toepassen op je eigen site. Het enige wat het je kost is je emailadres om zo af en toe een nieuwsbrief met updates voor mijn blog of andere handige zaken die met het internet en met toegankelijkheid te maken hebben. Je kunt je natuurlijk altijd afmelden als je de mails niet langer wilt ontvangen. Wil je dat wij je website onder de loep nemen? Neem dan contact met ons op!
+        form(method="post" 
+            action="../php/formmailContact.php" 
+            enctype="multipart/form-data" 
+            autocomplete="on" 
+            id="mailingListForm"
+            class="form form--mailingListForm"
+            title="vraag de gratis pdf aan")
+            input(type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER")
+            input(type="hidden" name="recipients" value="info_@_webdesignpuntnl.com")
+            input(type="hidden" name="good_url" value="../pages/gratispdf-verzonden.html")
+            input(type="hidden" name="bad_url" value="../pages/gratispdf-niet-verzonden.html")
+            input(type="hidden" name="subject" value="Ik wil graag de gratis PDF ontvangen!")
+            fieldset(class="form__fieldset")
+                div(class="input")
+                    input(
+                        name="email" 
+                        type="email"  
+                        id="emailField"
+                        class="input__textInput input__textInput--mailingListForm" 
+                        required
+                        pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
+                        placeholder="emailadres" title="vul een geldig emailadres in")
+                    label(for="emailField" class="input__textInput__label") emailadres
+                div(class="input")
+                    input(
+                        type="checkbox"
+                        id="checkboxConfirm"
+                        required)
+                    label(for="checkboxConfirm" class="input__textInput__label input__textInput__label--mailingListForm") Ik ga akkoord met de privacy- en cookieverklaring
+                div(class="input")
+                    button(
+                        name="insturen" 
+                        type="submit" 
+                        class="input__textInput input__textInput__submitButton input__textInput__submitButton--mailingListForm") versturen
     section.alignsection.align
         pre.language-javascript
             span.h3.h3--hidden Voorbeeld Javascript code
