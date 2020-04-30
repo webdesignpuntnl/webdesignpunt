@@ -56,6 +56,12 @@
   }
 }
 
+.ol {
+  &--blog {
+    margin-left: 3rem;
+  }
+}
+
 .link__button {
   @include buttonLink;
 

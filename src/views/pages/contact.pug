@@ -10,6 +10,7 @@ block content
   article(class="article")
     h2(class="h2") contact / aanvraag
     p(class="p p--center") Wil je meer weten? Wil je je site vrijblijvend laten testen? Of wil je een afspraak maken? Vul onderstaand formulier in en we nemen zo snel mogelijk contact met je op!
+    p(class="p p--center") Velden met een * zijn verplicht!
   form(
         method="post" 
         action="../php/formmailContact.php" 
@@ -19,7 +20,7 @@ block content
         class="form"
         title="contact formulier")
         input(type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER")
-        input(type="hidden" name="recipients" value="info_@_webdesignpuntnl.com")
+        input(type="hidden" name="recipients" value="info_*_webdesignpuntnl.com")
         input(type="hidden" name="good_url" value="../pages/contact-verzonden.html")
         input(type="hidden" name="bad_url" value="../pages/contact-niet-verzonden.html")
         input(type="hidden" name="subject" value="contactformulier")
@@ -37,10 +38,10 @@ block content
                     id="nameField"
                     class="input__textInput" 
                     pattern="^[a-zA-Z\\s]*$" 
-                    placeholder="naam" 
+                    placeholder="naam *" 
                     required
                     title="gebruik alleen letters en geen cijfers") 
-                label(for="nameField" class="input__textInput__label") naam
+                label(for="nameField" class="input__textInput__label") naam *
             //- div(class="input")
                 //- div.input__message
                 input(
@@ -72,25 +73,24 @@ block content
                     class="input__textInput" 
                     required
                     pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
-                    placeholder="email" title="vul een geldig emailadres in")
-                label(for="emailField" class="input__textInput__label") email
-            div(class="input")
+                    placeholder="email *" title="vul een geldig emailadres in")
+                label(for="emailField" class="input__textInput__label") email *
+            //- div(class="input")
                 input(
                     name="linkField" 
                     type="url"  
                     id="linkField"
                     class="input__textInput" 
-                    required
                     pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$" 
                     placeholder="url website" title="vul een geldige url in")
                 label(for="linkField" class="input__textInput__label") url website
-            div(class="input")
+            //- div(class="input")
                 input(
                     name="phone" 
                     type="tel"  
                     id="phoneField"
-                    class="input__textInput" 
-                    required
+                    class="input__textInput"
+                    pattern="^((\+|00(\s|\s?-\s?)?)31(\s|\s?-\s?)?(\(0\)[-\s]?)?|0)[1-9]((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$"
                     placeholder="telefoon" 
                     title="vul een geldig telefoonnummer in")
                 label(for="phoneField" class="input__textInput__label") telefoon
@@ -99,7 +99,6 @@ block content
                     name="remarks"  
                     id="remarksField"
                     class="input__textInput form__input__textarea" 
-                    required 
                     placeholder="bericht"
                     title="vul een vraag in")
                 label(for="remarksField" class="input__textInput__label") bericht
@@ -110,9 +109,9 @@ block content
                     id="antiSpamField"
                     class="input__textInput" 
                     required
-                    placeholder="Los de som op 5 + 1" 
+                    placeholder="Los de som op 5 + 1 *" 
                     title="Geef aub het juist antwoord!")
-                label(for="antiSpamField" class="input__textInput__label") Los de som op 5 + 1
+                label(for="antiSpamField" class="input__textInput__label") Los de som op 5 + 1 *
             div(class="input")
                 button(
                     name="insturen" 
