@@ -124,6 +124,11 @@
   }
 }
 
+// blogpost about magnification software
+.p__left--tooltip {
+  display: none;
+}
+
 .index__image {
   width: 200px;
   max-width: 250px;
@@ -521,6 +526,30 @@ pre[class*='language-'] {
   .p__right {
     width: 60%;
     float: right;
+  }
+
+  // blogpost about magnification software
+  .p__left--tooltip {
+    display: block;
+    position: relative;
+  }
+
+  .hooverToolTip__poppup {
+    position: absolute;
+    left: 260px;
+    top: -180px;
+    width: 300px;
+    height: 250px;
+    border: 2px solid $orangeColor;
+    border-radius: 5px;
+    background-color: $whiteColor;
+    opacity: 0;
+    color: $blackColor;
+    padding: 1rem;
+  }
+
+  .link:hover .hooverToolTip__poppup {
+    opacity: 1;
   }
 
   // prism coding styles
