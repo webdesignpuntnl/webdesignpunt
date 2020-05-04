@@ -3,6 +3,8 @@ mixin blogNav(page)
   aside.blog__nav
     ul.blog__nav__list
       li.blog__nav__list__item
+        a(href=("vergrotings-software.html") class=(page == "vergrotingssoftware" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) vergrotingssoftware
+      li.blog__nav__list__item
         a(href=("cli.html") class=(page == "cli" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) CLI
       li.blog__nav__list__item
         a(href=("lang-attribuut.html") class=(page == "langattribuut" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) lang-attribuut

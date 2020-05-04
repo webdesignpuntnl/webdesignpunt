@@ -124,6 +124,11 @@
   }
 }
 
+// blogpost about magnification software
+.p__left--tooltip {
+  display: none;
+}
+
 .index__image {
   width: 200px;
   max-width: 250px;
@@ -560,7 +565,6 @@ pre[class*='language-'] {
   .p__right {
     width: 60%;
     float: right;
-
     &--freeTest {
       width: 100%;
     }
