@@ -36,6 +36,10 @@
     text-align: left;
     margin: 2rem 0 0.3rem 2.3rem;
   }
+
+  &--index {
+    padding-bottom: 5rem;
+  }
 }
 
 .h3 {
@@ -75,6 +79,10 @@
   width: 3rem;
   float: right;
   margin: 0 1rem 2rem 0.5rem;
+}
+
+.nextLine {
+  display: block;
 }
 
 .section__blog {
@@ -457,6 +465,10 @@ pre[class*='language-'] {
   .h2 {
     font-size: 2rem;
     padding: 5rem 0 1.5rem 0;
+
+    &--index {
+      padding-bottom: 5rem;
+    }
   }
 
   main {
@@ -506,9 +518,9 @@ pre[class*='language-'] {
 
   // prism coding styles
   pre[class*='language-'] {
-    margin: 0 1rem 0 1rem !important;
+    margin: 0 3rem 0 0 !important;
     float: right;
-    width: 33%;
+    width: 30%;
     word-break: break-all !important;
     word-wrap: break-word !important;
     overflow: hidden !important;
@@ -572,5 +584,10 @@ pre[class*='language-'] {
 }
 
 @mixin main--l {
-  //
+  //1200
+  .link__button {
+    &--cta {
+      margin-top: 1rem;
+    }
+  }
 }
