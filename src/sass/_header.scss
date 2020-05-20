@@ -99,6 +99,12 @@ a.skip-main:active {
   display: none;
 }
 
+.header__nav__menu__page--side,
+.header__nav__menu__page--tools {
+  position: absolute;
+  left: -9999px;
+}
+
 // hamburgermenu
 .menuSmall {
   display: none;
@@ -184,11 +190,6 @@ a.skip-main:active {
     }
   }
 
-  .header__nav__menu__page--side,
-  .header__nav__menu__page--tools {
-    display: none;
-  }
-
   .header__icon {
     display: block;
     width: 10%;
@@ -200,14 +201,6 @@ a.skip-main:active {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-
-    &--contact {
-      right: 2rem;
-    }
-
-    &--tools {
-      right: 6rem;
-    }
 
     &:hover,
     &:focus {
