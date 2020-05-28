@@ -53,3 +53,7 @@ require('./src/images/focus-js-headings.png');
 require('./src/images/toegankelijkheid.jpg');
 require('./src/images/validate-error.jpg');
 require('./src/images/validate-warning.jpg');
+require('./src/images/testing.svg');
+require('./src/images/building.svg');
+require('./src/images/designing.svg');
+require('./src/images/office.svg');
