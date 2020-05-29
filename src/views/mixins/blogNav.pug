@@ -3,6 +3,8 @@ mixin blogNav(page)
   aside.blog__nav
     ul.blog__nav__list
       li.blog__nav__list__item
+        a(href=("animatie.html") class=(page == "animatie" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) animatie
+      li.blog__nav__list__item
         a(href=("validate.html") class=(page == "validate" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) HTML valideren
       li.blog__nav__list__item
         a(href=("social-media-fonts.html") class=(page == "fonts" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) fonts social media
