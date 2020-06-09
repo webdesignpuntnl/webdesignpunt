@@ -7,9 +7,11 @@ block prepend head
     - var path = "../"
 
 block content
-  article(class="article")
-    h2(class="h2") contact aanvraag ontvangen
-    p(class="p p--contactForm") Uw vraag is met succes door ons ontvangen! Wij nemen zo spoedig mogelijk contact met u op!
+  section.alignsection.align
+    h2(class="h2 error__h2") Gefeliciteerd uw post is op de bus!
+    img(src="../images/mail.svg" class="error__image" alt="")
+    p(class="p error__p") 
+      | Wij nemen contact met uw op zodra wij de post hebben geopend en gelezen!
 block script
     //- script(src=`${path}js/contactForm-bundle.js`)
     script(src=`${path}js/main-bundle.js`)

@@ -57,3 +57,6 @@ require('./src/images/testing.svg');
 require('./src/images/building.svg');
 require('./src/images/designing.svg');
 require('./src/images/office.svg');
+require('./src/images/mail.svg');
+require('./src/images/error.svg');
+require('./src/images/404.svg');
