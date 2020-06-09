@@ -6,7 +6,8 @@ block prepend head
     - var path = "../"
 
 block content
-    main(class="main")
-        h1 Oeps 
-        article
-            p.error__p Helaas er is iets mis gegaan. Probeer het opnieuw of kies via de buttons een andere pagina!
+    section.alignsection.align
+        h2(class="h2 error__h2") Helaas we hebben een zogenaamde 502 error!
+        img(src="../images/error.svg" class="error__image" alt="")
+        p(class="p error__p") 
+            | Geen zorgen 502 is een code om te zeggen: er is een klein probleem op de server (gewoon de computer waar deze website op staat). Dit ligt dus niet aan uw maar aan ons. Je kunt proberen de pagina te refreshen, soms helpt even wachten ook. Mocht het niet lukken neem dan contact met ons op via mail of telefoon. Succes!
