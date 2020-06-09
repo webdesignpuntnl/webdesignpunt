@@ -1,18 +1,15 @@
 @charset 'utf-8';
 
-@import "reset";
-@import "variables";
-@import "fonts";
-@import "mixins";
-@import "common";
-@import "header";
-@import "logo";
-@import "main";
-@import "projects";
-@import "tools";
-@import "footer";
-@import "media-queries"; // must be in the bottom 
-
-
-
-
+@import 'reset';
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+@import 'common';
+@import 'header';
+@import 'logo';
+@import 'main';
+@import 'projects';
+@import 'tools';
+@import 'footer';
+@import 'error';
+@import 'media-queries'; // must be in the bottom
