@@ -71,7 +71,8 @@
   background-size: 145px;
   background-position: 10px 2px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $orangeColor;
     border-color: $whiteColor;
     background-image: url('../images/icons-social-hover.svg');

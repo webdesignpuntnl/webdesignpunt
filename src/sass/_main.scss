@@ -331,7 +331,8 @@ pre[class*='language-'] {
       border-radius: 5px;
       transition: 0.5s;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $blackColor;
         color: $whiteColor;
         border: 2px solid $blackColor;

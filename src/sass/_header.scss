@@ -61,7 +61,8 @@ a.skip-main:active {
   padding: 0.5rem 1rem;
   transition: 0.5s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     // color: $orangeColor;
     // text-shadow: $blackColor 2px 2px 3px;
     // padding: 0 0.5rem;
@@ -82,7 +83,8 @@ a.skip-main:active {
     color: $blackColor;
     cursor: initial;
 
-    &:hover {
+    &:hover,
+    &:focus {
       // color: $orangeColor;
       // text-shadow: 1px 1px 0 $blackColor;
       letter-spacing: 0.1rem;
