@@ -125,6 +125,7 @@ a.skip-main:active {
   &__line01,
   &__line02,
   &__line03 {
+    display: block;
     margin: 5px 0;
     padding: 0.1rem 0.5rem;
     background-color: $orangeColor;

@@ -54,15 +54,15 @@ function handleMenu(e) {
 
 // markup for the hamburgermenu
 const markup = `
-  <div class="menuSmall change" id="hamburgerIcon" role="button">
-    <div class="menuSmall__line01">Lijn01</div>
-    <div class="menuSmall__line02">Lijn02</div>
-    <div class="menuSmall__line03">Lijn03</div>
-  </div>`;
+<button class="menuSmall">
+<span class="menuSmall__line01"></span>
+<span class="menuSmall__line02"></span>
+<span class="menuSmall__line03"></span>
+</button>`;
 
 // put the html into the dom
 hamburgerMenu.innerHTML = markup;
-nav.appendChild(hamburgerMenu);
+nav.querySelector('.header__nav__link').after(hamburgerMenu);
 
 // call the resize function
 windowResize();
@@ -71,5 +71,6 @@ windowResize();
 handleMenu();
 
 // event listeners
-hamburgerMenu.addEventListener('click', handleMenu);
+hamburgerMenu.querySelector('button').addEventListener('click', handleMenu);
+hamburgerMenu.querySelector('button').addEventListener('focus', handleMenu);
 window.addEventListener('resize', windowResize);
