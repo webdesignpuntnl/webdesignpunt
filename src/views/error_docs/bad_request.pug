@@ -3,12 +3,12 @@ extends ../layout/layout-error
 
 block prepend head
     - var title = "400 Bad Request"
-    - var color = "blue"
      - var path = "../" 
 
 
 block content
-    main(class="main")
-        h1 Oeps - de pagina is niet gevonden
-        article
-            p.error__p Helaas er is iets mis gegaan. Probeer het opnieuw of kies via de buttons een andere pagina!
+    section.alignsection.align
+        h2(class="h2 error__h2") Helaas een zogenaamde 400 error!
+        img(src="../images/error.svg" class="error__image" alt="")
+        p(class="p error__p") 
+            | Geen zorgen 400 is een code om te zeggen: er is een klein probleem met de communicatie naar de server (dat is de computer waar deze website op staat). Dit ligt dus niet aan jou maar aan ons. Je kunt proberen de pagina te refreshen, soms helpt even wachten ook. Mocht het niet lukken neem dan contact met ons op via mail of telefoon.

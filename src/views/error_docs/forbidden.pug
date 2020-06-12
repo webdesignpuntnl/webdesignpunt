@@ -3,12 +3,12 @@ extends ../layout/layout-error
 
 block prepend head
     - var title = "403 Forbidden"
-    - var color = "blue"
      - var path = "../"
 
 
 block content
-    main(class="main")
-        h1 Oeps u heeft geen toegang tot dit document
-        article
-            p.error__p Helaas er is iets mis gegaan. Probeer het opnieuw of kies via de buttons een andere pagina!
+    section.alignsection.align
+        h2(class="h2 error__h2") Helaas een zogenaamde 403 error!
+        img(src="../images/error.svg" class="error__image" alt="")
+        p(class="p error__p") 
+            | Geen zorgen 403 is een code om te zeggen: je hebt geen toegang tot deze map of dit bestand. Vaak is het een typefout die onstaat wanneer je de link met hand invoert. Check de link, of voer deze opnieuw in door te knippen en te plakken. Mocht het niet lukken neem dan contact met ons op via mail of telefoon.
