@@ -54,12 +54,27 @@
     position: absolute;
     left: -999px;
   }
+
+  &--blog {
+    font-size: 1.3rem;
+    float: left;
+    margin: 2rem 0 0.3rem 2.3rem;
+  }
 }
 
 .ol {
   &--blog {
     margin-left: 3rem;
   }
+}
+
+.blog__numbered__list {
+  float: left;
+  font-family: $fontRaleway;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  text-align: left;
+  margin: 2rem 2rem 2rem 4rem;
 }
 
 .link__button {

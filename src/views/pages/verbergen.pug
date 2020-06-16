@@ -1,0 +1,21 @@
+extends ../layout/layout
+include ../mixins/blogNav
+
+block prepend head
+    - var page = "verbergen"
+    - var title = "verbergen"
+    - var description = "Hoe verberg je elementen op een toegankelijke manier"
+    - var path = "../"
+
+block content
+  +blogNav(page)
+  
+block script
+  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+  script(src=`${path}js/main-bundle.js`)
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-63079670-2")
+  script
+    | window.dataLayer = window.dataLayer || [];
+    | function gtag(){dataLayer.push(arguments);}
+    | gtag('js', new Date());
+    | gtag('config', 'UA-63079670-2', { 'anonymize_ip': true });

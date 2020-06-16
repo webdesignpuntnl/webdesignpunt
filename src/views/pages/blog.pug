@@ -18,24 +18,20 @@ block content
   //- sliders
   article(class="article article--blog")     
     div.align
-      h2.h2.h2--blog image-sliders
+      h2.h2.h2--blog verbergen deel 1
       p(class="p p__left p__left--blog") 
-        strong.p__firstWord Onlangs 
-        | kreeg ik van iemand een vraag over webpagina's met afbeeldingen die automatisch roteren. De zogenaamde carrousels of image-sliders.
-      p(class="p p__left p__left--blog") 
-        | Dit zijn als het ware een soort digitale fotolijsten. De afbeeldingen blijven een tijdje staan en volgens een vaste interval wordt de volgende getoond. Daar kun je dan nog allerlei effectjes aan toevoegen, bijvoorbeeld in- en uitfaden. Alles is denkbaar. Ook zie je dat er vaak kleine teksten over de afbeeldingen worden gezet. Ze staan vaak bovenaan de pagina en het ziet er altijd wel mooi en gelikt uit. Dit is goed voorbeeld van hoe je beweging en animatie kunt toepassen op een website.
-      p(class="p p__left p__left--blog") 
-        | Helaas gaan er hier ook vaak dingen mis als het om toegankelijkheid gaat. Deze carrousels worden vaak met behulp van Javascript gemaakt en er wordt niet altijd rekening gehouden met toegankelijkheid. Daarnaast hebben ze enorm veel opties waardoor het voor een leek vaak moeilijk is om de carrousels  in te stellen. Ik heb het in  een eerdere 
-        a(href="/pages/animatie.html") blog
-        |  al gehad over animaties en beweging in websites. Als je bewegende onderdelen in je website stopt zorg er dan voor dat een bezoeker de beweging stil kan zetten. Vaak hebben deze carrousels wel de optie om dit te kunnen doen maar de meeste mensen vinden het niet mooi. Daarnaast heb je dan ook een optie nodig om de bezoeker handmatig door de afbeeldingen te laten bladeren. Maar goed of het er nu mooi of niet mooi uitziet voor een grote groep bezoekers is het erg prettig om deze opties te hebben.
+        strong.p__firstWord Het 
+        | verbergen van onderdelen van een website is eigenlijk heel gewoon en er zijn een aantal verschillende technieken hoe je onderdelen van een website kunt verbergen voor de gebruiker. Misschien lijkt het wat raar dat daar verschillende technieken voor zijn, waarom is 1 niet genoeg? Er zijn verschillende situaties waarin je elementen zou willen verbergen, daar kun je dan de juiste techniek bij kiezen. Ik ben met name geïnteresseerd in de effecten die de technieken hebben op de toegankelijkheid. We kunnen bepalen welke onderdelen we voor wie 'zichtbaar' willen maken.
+      h3.h3.h3--blog Waarom willen we onderdelen verbergen?
+      ol.blog__numbered__list
+        li Compleet verborgen. Dit zijn onderdelen van een website die verborgen zijn totdat er iets verandert. Een goed voorbeeld hiervan is de pop-up.  Dat is een venster wat over de website heen verschijnt als je bijvoorbeeld op een link of knop drukt. Dit moet alleen dan zichtbaar worden. De pop-up moet dus ontoegankelijk zijn totdat er een bepaalde gebeurtenis plaats vindt.
+        li alleen visueel verborgen elementen. Dit is een beetje een lastige. Vaak zijn er elementen in en website die voor bezoekers met goed zicht meteen duidelijk zijn. We willen veel zeggen met zo min mogelijk. Daardoor worden afbeeldingen en iconen veel gebruikt. Voor andere technieken kan dit soms wel eens niet genoeg zijn. Vandaar dat we dan content toevoegen die visueel verborgen zijn maar die voor andere technische hulpmiddelen wel 'zichtbaar' zijn.
+        li alleen visueel verborgen elementen. Dit is een beetje een lastige. Vaak zijn er elementen in en website die voor bezoekers met goed zicht meteen duidelijk zijn. We willen veel zeggen met zo min mogelijk. Daardoor worden afbeeldingen en iconen veel gebruikt. Voor andere technieken kan dit soms wel eens niet genoeg zijn. Vandaar dat we dan content toevoegen die visueel verborgen zijn maar die voor andere technische hulpmiddelen wel 'zichtbaar' zijn.
       p(class="p p__left p__left--blog")
-        | Vandaar dat ik de vraag kreeg van een kennis van mij over deze carrousels in websites. Deze kennis wees mij op iets wat ik nooit gemerkt had, en dat is ook niet gek, aangezien zij een screenreader gebruikt om te surfen op het web. Als zij op een website met een screenreader een stuk tekst wilde lezen onder een carrousel dan werd het lezen steeds onderbroken door de tekst van de carrousel. Deze carrousel  wisselde om de zoveel tijd een afbeelding en over de afbeeldingen stonden korte teksten. iedere keer als er van afbeelding werd gewisseld dan onderbrak de screenreader het voorlezen van de paragraaf en werd de tekst over de afbeelding van de carrousel voorgelezen.
+        | Volgende week zal ik in deel 2 de meer technische kant van content verbergen beschrijven. 
       p(class="p p__left p__left--blog")
-        | Ik heb het zelf geprobeerd en het is echt behoorlijk irritant. Het had te maken met een klein regeltje code in de HTML. Deze code geeft een signaal aan de screenreader dat er een volgende afbeelding was geladen daardoor gaat de screenreader de tekst van de afbeelding voorlezen.  
-      p(class="p p__left p__left--blog") 
-        | Deze code heeft wel degelijk nut. Als je namelijk wilt dat de tekst over de afbeeldingen wordt voorgelezen dan zorgt dit stukje code er voor dat dat automatisch gebeurt als de volgende afbeelding getoond wordt. Dat is wel handig. Maar het is niet handig als dit gebeurt als je iets anders aan het lezen bent. Hier is een hele simpele oplossing voor! Zorg dat de bezoeker de beweging kan stoppen en dat hij handmatig door de afbeeldingen kan scrollen door middel van buttons. Dit is een simpele oplossing waarmee je website voor alle bezoekers een beter ervaring geeft. 
-        span(class="span__date") Gepubliceerd op 8 juni 2020 door Renee de Kruijf 
-        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="sliders" data-show-count="false") Tweet
+        span(class="span__date") Gepubliceerd op 16 juni 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="hiddencontent" data-show-count="false") Tweet
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
   script(src=`${path}js/main-bundle.js`)
