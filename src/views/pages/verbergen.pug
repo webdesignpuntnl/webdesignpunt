@@ -9,7 +9,23 @@ block prepend head
 
 block content
   +blogNav(page)
-  
+  //- hidden
+  article(class="article article--blog")     
+    div.align
+      h2.h2.h2--blog verbergen deel 1
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Het 
+        | verbergen van onderdelen van een website is eigenlijk heel gewoon en er zijn een aantal verschillende technieken hoe je onderdelen van een website kunt verbergen voor de gebruiker. Misschien lijkt het wat raar dat daar verschillende technieken voor zijn, waarom is 1 niet genoeg? Er zijn verschillende situaties waarin je elementen zou willen verbergen, daar kun je dan de juiste techniek bij kiezen. Ik ben met name geïnteresseerd in de effecten die de technieken hebben op de toegankelijkheid. We kunnen bepalen welke onderdelen we voor wie 'zichtbaar' willen maken.
+      h3.h3.h3--blog Waarom willen we onderdelen verbergen?
+      ol.blog__numbered__list
+        li Compleet verborgen. Dit zijn onderdelen van een website die verborgen zijn totdat er iets verandert. Een goed voorbeeld hiervan is de pop-up.  Dat is een venster wat over de website heen verschijnt als je bijvoorbeeld op een link of knop drukt. Dit moet alleen dan zichtbaar worden. De pop-up moet dus ontoegankelijk zijn totdat er een bepaalde gebeurtenis plaats vindt.
+        li alleen visueel verborgen elementen. Dit is een beetje een lastige. Vaak zijn er elementen in en website die voor bezoekers met goed zicht meteen duidelijk zijn. We willen veel zeggen met zo min mogelijk. Daardoor worden afbeeldingen en iconen veel gebruikt. Voor andere technieken kan dit soms wel eens niet genoeg zijn. Vandaar dat we dan content toevoegen die visueel verborgen zijn maar die voor andere technische hulpmiddelen wel 'zichtbaar' zijn.
+        li alleen visueel verborgen elementen. Dit is een beetje een lastige. Vaak zijn er elementen in en website die voor bezoekers met goed zicht meteen duidelijk zijn. We willen veel zeggen met zo min mogelijk. Daardoor worden afbeeldingen en iconen veel gebruikt. Voor andere technieken kan dit soms wel eens niet genoeg zijn. Vandaar dat we dan content toevoegen die visueel verborgen zijn maar die voor andere technische hulpmiddelen wel 'zichtbaar' zijn.
+      p(class="p p__left p__left--blog")
+        | Volgende week zal ik in deel 2 de meer technische kant van content verbergen beschrijven. 
+      p(class="p p__left p__left--blog")
+        span(class="span__date") Gepubliceerd op 16 juni 2020 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="hiddencontent" data-show-count="false") Tweet
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
   script(src=`${path}js/main-bundle.js`)
