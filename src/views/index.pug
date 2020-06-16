@@ -37,4 +37,41 @@ block content
             | Wij bieden online oplossingen voor diverse problemen. Wil je meer informatie over wat Webdesignpuntnl te bieden heeft vul dan het 
             a(href="pages/contact.html" class="link") contactformulier
             |  in. Wij nemen dan zo snel mogelijk contact op om de mogelijkheden te bespreken onder het genot van koffie of thee in ons kantoor in Culemborg. Bellen mag natuurlijk ook.
-        img(src="images/office.svg" class="index__image left" alt="")
+        img(src="images/office.svg" class="index__image right" alt="")
+        p(class="p p__right p__right--freeTest")
+            strong.p__firstWord Gratis  
+            | PDF met tips en trucs die je snel en gemakkelijk kunt toepassen op je eigen site. Het enige wat het je kost is je emailadres om zo af en toe een nieuwsbrief met updates voor mijn blog of andere handige zaken die met het internet en met toegankelijkheid te maken hebben. Je kunt je natuurlijk altijd afmelden als je de mails niet langer wilt ontvangen. Wil je dat wij je website onder de loep nemen? Neem dan contact met ons op!
+        form(method="post" 
+            action="../php/formmailContact.php" 
+            enctype="multipart/form-data" 
+            autocomplete="on" 
+            id="mailingListForm"
+            class="form form--mailingListForm"
+            title="vraag de gratis pdf aan")
+            input(type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER")
+            input(type="hidden" name="recipients" value="info_@_webdesignpuntnl.com")
+            input(type="hidden" name="good_url" value="../pages/gratispdf-verzonden.html")
+            input(type="hidden" name="bad_url" value="../pages/gratispdf-niet-verzonden.html")
+            input(type="hidden" name="subject" value="Ik wil graag de gratis PDF ontvangen!")
+            fieldset(class="form__fieldset")
+                div(class="input")
+                    input(
+                        name="email" 
+                        type="email"  
+                        id="emailField"
+                        class="input__textInput input__textInput--mailingListForm" 
+                        required
+                        pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
+                        placeholder="emailadres" title="vul een geldig emailadres in")
+                    label(for="emailField" class="input__textInput__label") emailadres
+                div(class="input")
+                    input(
+                        type="checkbox"
+                        id="checkboxConfirm"
+                        required)
+                    label(for="checkboxConfirm" class="input__textInput__label input__textInput__label--mailingListForm") Ik ga akkoord met de privacy- en cookieverklaring
+                div(class="input")
+                    button(
+                        name="insturen" 
+                        type="submit" 
+                        class="input__textInput input__textInput__submitButton input__textInput__submitButton--mailingListForm") versturen
