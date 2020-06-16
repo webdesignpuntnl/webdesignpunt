@@ -94,6 +94,10 @@
 
 .nextLine {
   display: block;
+
+  &--freePDF {
+    margin-top: 1.5rem;
+  }
 }
 
 .section__blog {
@@ -390,6 +394,10 @@ pre[class*='language-'] {
     width: initial;
     margin: 1rem 2rem 5rem 2rem;
   }
+}
+
+#checkboxConfirm {
+  margin-left: 0.5rem;
 }
 
 .input__textInput::placeholder {

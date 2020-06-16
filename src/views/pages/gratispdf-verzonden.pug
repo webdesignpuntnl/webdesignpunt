@@ -2,14 +2,18 @@ extends ../layout/layout
 
 block prepend head
     - var page = ""
-    - var title = "bericht verzonden"
-    - var description = "Uw bericht is verzonden"
+    - var title = "Toegankelijkheid tips"
+    - var description = "PDF met gratis toegankelijkheids tips"
     - var path = "../"
 
 block content
-  article(class="article")
-    h2(class="h2") Uw bericht is verzonden
-    p(class="p p--contactForm") Uw emailadres wordt toegevoegd aan de mailinglist en uwe ontvangt de PDF met tips zo snel mogelijk in uw mailbox.
+  section.alignsection.align
+    h2(class="h2 error__h2") Bedank voor het invullen!
+    img(src="../images/mail.svg" class="error__image" alt="")
+    p(class="p error__p") 
+      | Door op de link te klikken kunt u de PDF met gratis tips downloaden. Veel leesplezier. 
+      span.nextLine.nextLine--freePDF 
+        a(href="../gratis-tips.pdf" class="link") Gratis PDF met toegankelijkheids tips (449kb)
 block script
     //- script(src=`${path}js/contactForm-bundle.js`)
     script(src=`${path}js/main-bundle.js`)

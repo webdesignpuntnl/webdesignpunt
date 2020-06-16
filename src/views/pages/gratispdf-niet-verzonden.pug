@@ -7,9 +7,11 @@ block prepend head
     - var path = "../"
 
 block content
-  article(class="article")
-    h2(class="h2") Uw bericht is niet verzonden
-    p(class="p p--contactForm") Helaas er is iets mis gegaan! Probeer het nogmaals of neem op andere wijze contact met ons op!
+  section.alignsection.align
+    h2(class="h2 error__h2") Helaas er is een probleem met de post!
+    img(src="../images/mail.svg" class="error__image error__image--notSend" alt="")
+    p(class="p error__p") 
+      | Om onduidelijke reden is de er een probleem met de brievenbus. De post is niet verstuurd. U kunt het nog een keer proberen of neem op een andere manier contact met ons op!
 block script
     //- script(src=`${path}js/contactForm-bundle.js`)
     script(src=`${path}js/main-bundle.js`)
