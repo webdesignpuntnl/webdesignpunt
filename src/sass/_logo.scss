@@ -58,7 +58,8 @@
   }
 }
 
-.logo__top:hover {
+.logo:hover,
+.logo:focus {
   background-color: $whiteColor;
   // border: 1px solid $blackColor;
 
