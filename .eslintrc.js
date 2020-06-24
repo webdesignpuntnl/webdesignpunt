@@ -13,6 +13,7 @@ module.exports = {
         "linebreak-style": 0, //0 is off, 1 is warn, 2 is error
         "prefer-arrow-callback": 1,
         "no-console": 0,
-        "no-param-reassign": 1
+        "no-param-reassign": 1,
+        "no-return-assign": 0
     }
 };
