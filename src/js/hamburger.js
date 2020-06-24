@@ -28,6 +28,7 @@ function handleMenu(e) {
   if (menuState === 'close' || !menuState) {
     newHamburgerMenu.classList.remove('change');
     topMenu.classList.add('hideMenu');
+    topMenu.querySelectorAll('a').forEach(link => link.setAttribute('tabindex', '-1'));
     sessionStorage.setItem('menu', 'close');
     menuState = sessionStorage.getItem('menu');
 
@@ -36,6 +37,7 @@ function handleMenu(e) {
     if (e) {
       newHamburgerMenu.classList.add('change');
       topMenu.classList.remove('hideMenu');
+      topMenu.querySelectorAll('a').forEach(link => link.removeAttribute('tabindex', '-1'));
       sessionStorage.setItem('menu', 'open');
       menuState = sessionStorage.getItem('menu');
     }
@@ -43,6 +45,7 @@ function handleMenu(e) {
     // bij nog een click gaat het menu dicht en cookie op close
     newHamburgerMenu.classList.remove('change');
     topMenu.classList.add('hideMenu');
+    topMenu.querySelectorAll('a').forEach(link => link.setAttribute('tabindex', '-1'));
     sessionStorage.setItem('menu', 'close');
     menuState = sessionStorage.getItem('menu');
     // const lines = newHamburgerMenu.querySelectorAll('#line');
@@ -54,7 +57,7 @@ function handleMenu(e) {
 
 // markup for the hamburgermenu
 const markup = `
-<button class="menuSmall">
+<button class="menuSmall change">
 <span class="menuSmall__line01"></span>
 <span class="menuSmall__line02"></span>
 <span class="menuSmall__line03"></span>
@@ -72,5 +75,5 @@ handleMenu();
 
 // event listeners
 hamburgerMenu.querySelector('button').addEventListener('click', handleMenu);
-hamburgerMenu.querySelector('button').addEventListener('focus', handleMenu);
+// hamburgerMenu.querySelector('button').addEventListener('focus', handleMenu);
 window.addEventListener('resize', windowResize);
