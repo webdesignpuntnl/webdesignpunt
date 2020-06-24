@@ -24,13 +24,74 @@ block content
         | verbergen van onderdelen van een website is eigenlijk heel gewoon en er zijn een aantal verschillende technieken hoe je onderdelen van een website kunt verbergen voor de gebruiker. Misschien lijkt het wat raar dat daar verschillende technieken voor zijn, waarom is 1 niet genoeg? Er zijn verschillende situaties waarin je elementen zou willen verbergen, daar kun je dan de juiste techniek bij kiezen. Ik ben met name geïnteresseerd in de effecten die de technieken hebben op de toegankelijkheid. We kunnen bepalen welke onderdelen we voor wie 'zichtbaar' willen maken.
       h3.h3.h3--blog Waarom willen we onderdelen verbergen?
       ol.blog__numbered__list
-        li Compleet verborgen. Dit zijn onderdelen van een website die verborgen zijn totdat er iets verandert. Een goed voorbeeld hiervan is de pop-up.  Dat is een venster wat over de website heen verschijnt als je bijvoorbeeld op een link of knop drukt. Dit moet alleen dan zichtbaar worden. De pop-up moet dus ontoegankelijk zijn totdat er een bepaalde gebeurtenis plaats vindt.
-        li alleen visueel verborgen elementen. Dit is een beetje een lastige. Vaak zijn er elementen in en website die voor bezoekers met goed zicht meteen duidelijk zijn. We willen veel zeggen met zo min mogelijk. Daardoor worden afbeeldingen en iconen veel gebruikt. Voor andere technieken kan dit soms wel eens niet genoeg zijn. Vandaar dat we dan content toevoegen die visueel verborgen zijn maar die voor andere technische hulpmiddelen wel 'zichtbaar' zijn.
-        li alleen visueel verborgen elementen. Dit is een beetje een lastige. Vaak zijn er elementen in en website die voor bezoekers met goed zicht meteen duidelijk zijn. We willen veel zeggen met zo min mogelijk. Daardoor worden afbeeldingen en iconen veel gebruikt. Voor andere technieken kan dit soms wel eens niet genoeg zijn. Vandaar dat we dan content toevoegen die visueel verborgen zijn maar die voor andere technische hulpmiddelen wel 'zichtbaar' zijn.
+        li Compleet verborgen. 
+        | Dit zijn onderdelen van een website die verborgen zijn totdat er iets verandert. Een goed voorbeeld hiervan is de pop-up.  Dat is een venster wat over de website heen verschijnt als je bijvoorbeeld op een link of knop drukt. Dit moet alleen dan zichtbaar worden. De pop-up moet dus ontoegankelijk zijn totdat er een bepaalde gebeurtenis plaats vindt.
+        li alleen visueel verborgen elementen. 
+        | Dit is een beetje een lastige. Vaak zijn er elementen in en website die voor bezoekers met goed zicht meteen duidelijk zijn. We willen veel zeggen met zo min mogelijk. Daardoor worden afbeeldingen en iconen veel gebruikt. Voor andere technieken kan dit soms wel eens niet genoeg zijn. Vandaar dat we dan content toevoegen die visueel verborgen zijn maar die voor andere technische hulpmiddelen wel 'zichtbaar' zijn.
+        li alleen visueel verborgen elementen. 
+        | Dit is een beetje een lastige. Vaak zijn er elementen in en website die voor bezoekers met goed zicht meteen duidelijk zijn. We willen veel zeggen met zo min mogelijk. Daardoor worden afbeeldingen en iconen veel gebruikt. Voor andere technieken kan dit soms wel eens niet genoeg zijn. Vandaar dat we dan content toevoegen die visueel verborgen zijn maar die voor andere technische hulpmiddelen wel 'zichtbaar' zijn.
+    div.align
+      h2.h2.h2--blog#part2 verbergen deel 2
+      p(class="p p__left p__left--blog") 
+        strong.p__firstWord Er
+        | zijn een paar technieken die we kunnen gebruiken om content te verbergen. Twee met CSS en eentje met HTML.
+      ol.blog__numbered__list
+        li 
+          a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/display") Met CSS en display: none
+        | We gebruiken deze CSS regel om content compleet te verbergen voor ALLE bezoekers.
+        li 
+          a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden") Met HTML en het hidden attribuut
+        | Ook met deze regel kunnen we bepaalde content verbergen voor ALLE bezoekers. De werking is hetzelfde als de CSS bij punt 1. Mocht nu echter het CSS bestand niet laden dan is de content met dit attribuut nog steeds verborgen. Pas je zowel punt 1 en punt 2 toe dan zullen zelfs oude browsers die 1 van de 2 niet ondersteunen de content verbergen.
+        li 
+          a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility") Met CSS en visibility: hidden
+        | De content is verborgen net als dat je display: none zou gebruiken maar er zijn 2 verschillen. Op ze manier is de content wel verborgen maar de content wordt niet uit de DOM verwijderd. Dus de plek die (laten we bijvoorbeeld zeggen een afbeelding) deze content in neemt blijft bestaan. Het tweede punt is dat je op dit element nog steeds andere CSS kunt toepassen. Dit is dus handig als je gebruikt maakt van CSS animaties.
+      h3.h3.h3--blog Content visueel verbergen
+      p(class="p p__left p__left--blog") 
+        | Content is verborgen voor mensen die kunnen zien maar wel zichtbaar voor mensen die andere technische hulpmiddelen gebruiken. 
+      p(class="p p__left p__left--blog" )
+          pre.language-css.blog
+            span.h3.h3--hidden Voorbeeld CSS voor visueel verborgen content
+            code.language-css
+              | .sr-only:not(:focus):not(:active) {
+              |   clip: rect(0 0 0 0); 
+              |   clip-path: inset(50%);
+              |   height: 1px;
+              |   overflow: hidden;
+              |   position: absolute;
+              |   white-space: nowrap; 
+              |   width: 1px;
+              | }
+      p(class="p p__left p__left--blog" )
+        | In dit CSS voorbeeld wordt het element verkleind tot 1 pixel, overlopende content wordt verborgen en met position: absolute wordt het element uit de normale flow van het document gehaald. Het :not gedeelte is bedoeld om elementen die focus kunnen hebben zichtbaar te maken (geldt voor link en buttons bijvoorbeeld die focus krijgen met bijvoorbeeld de TAB-toets). Dus elementen die normaal geen focus hebben zoals paragrafen worden niet zichtbaar en interactieve elementen wel.
+      h3.h3.h3--blog Content visueel verbergen: buiten beeld
       p(class="p p__left p__left--blog")
-        | Volgende week zal ik in deel 2 de meer technische kant van content verbergen beschrijven. 
+       | Het element is nog steeds aanwezig maar staat nu buiten het zichtbare deel van de browser. 
+      p(class="p p__left p__left--blog" )
+          pre.language-css.blog
+            span.h3.h3--hidden Voorbeeld CSS voor visueel verborgen content
+            code.language-css
+              | .off-screen {
+              |    left: -100vw;
+              |    position: absolute;
+              |  }
+      p(class="p p__left p__left--blog" )
+        | Voor technische hulpmiddelen is deze content wel toegankelijk. Voor talen die van links naar rechts lezen is links buiten beeld zetten het beste anders bestaat er de kans dat je een horizontale scrollbar krijgt. Voor talen die van rechts naar links lezen geldt het tegenovergestelde. Deze techniek kun je gebruiken als je bijvoorbeeld meerdere skiplinks hebt die in beeld worden geanimeerd als ze focus krijgen.
+      h3.h3.h3--blog Content verbergen voor technische hulpmiddelen
       p(class="p p__left p__left--blog")
-        span(class="span__date") Gepubliceerd op 16 juni 2020 door Renee de Kruijf 
+       | Soms kan het goed zijn om bepaalde elementen die visueel iets toevoegen aan een website (bijvoorbeeld icon-fonts) te verbergen voor technische hulpmiddelen. Icon-fonts kunnen nogal raar geïnterpreteerd worden door tecnhnische hulpmiddelen. Het is goed om er altijd een tekst-alternatief aan te koppelen of visueel verborgen en toegankelijke tekst om de doel van het icoon te beschrijven.Door aria-hidden="true" toe te voegen kun je elementen verbergen voor screenreaders. 
+      p(class="p p__left p__left--blog")
+        pre.language-html.blog
+          span.h3.h3--hidden Voorbeeld van de HTML
+          code.language-html
+            | &lt;button type="button"&gt;
+            |   &lt;!-- een X icoon --&gt;
+            |   &lt;span class="icon-close" aria-hidden="true"&gt;&lt;/span&gt;
+            |   &lt;span class="sr-only"&gt;Element sluiten"&lt;/span&gt;
+            | &lt;/button&gt; 
+      p(class="p p__left p__left--blog")
+       | Deze button heeft een X als icoon om aan te geven dat de button bedoeld is om iets te sluiten. In dit voorbeeld wordt het icoon verborgen voor screenreaders en is er een visueel verborgen tekst om uit te leggen wat het doel is van de button.
+      p(class="p p__left p__left--blog")
+        span(class="span__date") Gepubliceerd op 24 juni 2020 door Renee de Kruijf 
         a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="hiddencontent" data-show-count="false") Tweet
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
