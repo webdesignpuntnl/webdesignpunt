@@ -60,3 +60,4 @@ require('./src/images/office.svg');
 require('./src/images/mail.svg');
 require('./src/images/error.svg');
 require('./src/images/404.svg');
+require('./src/images/echelon-logo.svg');
