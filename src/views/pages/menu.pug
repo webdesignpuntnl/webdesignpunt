@@ -2,19 +2,13 @@ extends ../layout/layout
 include ../mixins/blogNav
 
 block prepend head
-    - var page = "blog"
-    - var title = "blog over alles en nog wat over bouwen voor het www"
-    - var description = "Webdesignpuntnl houdt een blog bij. Hier schrijven we over alles wat met het web te maken heeft."
+    - var page = "menu"
+    - var title = "toegenakelijk menu"
+    - var description = "Hoe zorg je er voor dat je menu toegankelijk is voor iedereen"
     - var path = "../"
 
 block content
-  section(class="section__blog")
-    //- a(href="blog-english.html" title="english flag" class="blog__flag") 
-      img(src="../images/flag-english.svg", alt="english flag")
-    //- a(class="twitter-follow-button" href="https://twitter.com/reneedekruijf") Follow
-    h2(class="h2") blog
-    p(class="p") Deze blog gaat over allerhande onderwerpen die te maken hebben met het bouwen van websites maar met name over de toegankelijkheid van websites en het internet. Niet iedereen is hetzelfde en we surfen allemaal op onze eigen manier op het internet. Of we nou een muis gebruiken, een screenreader of een brailleregel we moet allemaal de informatie kunnen raadplgen die we zoeken of nodig hebben. Daar gaat deze blog met name over. Soms maak ik wel eens een uitstapje naar een technisch onderwerp (vind ik gewoon leuk) maar meestal wil ik mensen bewust proberen te maken de een toegankelijk en gebruiksvriendelijk internet een noodzaak is voor ons allemaal.
-  +blogNav
+  +blogNav(page)
   //- accessible menu
   article(class="article article--blog")     
     div.align
@@ -70,7 +64,7 @@ block content
         | Ik moet wel nog wat ARIA-labels (later meer over ARIA-labels in deze blog) toevoegen aan de knop en het menu. Nu meldt de screenreader alleen dat er een button is maar over deze actief is en daarmee het menu zichtbaar is dat wordt niet gemeld aan de gebruiker. Ook dit staat op mijn lijstje om te worden opgelost.
       p(class="p p__left p__left--blog")
         span(class="span__date") Gepubliceerd op 25 juni 2020 door Renee de Kruijf 
-        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="accessiblemenu" data-show-count="false") Tweet
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="accessiblemenu" data-show-count="false") Tweet  
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
   script(src=`${path}js/main-bundle.js`)
