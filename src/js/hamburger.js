@@ -16,6 +16,7 @@ function windowResize() {
     linksTopmenu.forEach(link => link.removeAttribute('tabindex'));
   } else if (windowSize <= 600) {
     getHamburgerMenu.style.display = 'block';
+    topMenu.querySelectorAll('a').forEach(link => link.removeAttribute('tabindex', '-1'));
   }
 }
 
