@@ -3,7 +3,7 @@ extends layout/layout
 block prepend head
     - var page = "index"
     - var title = "welkom bij Webdesignpuntnl"
-    - var description = "Webdesignpuntnl Culemborg is gespecialiseerd in het ontwerpen en bouwen van toegankelijke websites."
+    - var description = "Webdesignpuntnl Culemborg is gespecialiseerd in het ontwerpen, bouwen en testen van toegankelijke websites."
     - var path = ""
 
 block content
@@ -13,34 +13,36 @@ block content
     section.align
         p(class="p p__right p__right--index")
             strong.p__firstWord Testen op toegankelijkheid  
-            | Heb je een website? En weet je niet zeker of deze of deze door iedereen op een juiste wijze kan worden bezocht en gebruikt? Laat je website door ons testen op toegankelijkheid. De eerste test is altijd gratis.
-            |  Als er uit de uitlslag punten ter verbetering zijn en je ziet het niet zitten om dit zelf aan te pakken dan kunnen we je helpen deze op te lossen. Uitgebreider testen is ook mogelijk. 
+            | Heb je een website? En weet je niet zeker of deze of deze door iedereen op een juiste wijze kan worden bezocht en gebruikt? Laat je website door mij testen op toegankelijkheid. De eerste test is altijd gratis.
+            |  Als er uit de test punten ter verbetering zijn en je ziet het niet zitten om dit zelf aan te pakken dan kan ik je helpen deze op te lossen. Neem  
+            a(href="pages/contact.html") contact
+            |  op voor de mogelijkheden. 
         a(href="pages/contact.html" class="link__button link__button--cta") testen  
     section.align
         p(class="p p__left p__left--index") 
             strong.p__firstWord Toegankelijke websites
-            | Wij bouwen en ontwerpen websites die toegankelijk zijn en gemakkelijk te gebruiken door alle bezoekers. Deze digitoegankelijkeid is bij ons vanzelfsprekend en staat vanaf het eerste moment voorop. Wij sluiten iedereen in.
+            | Ik bouw en ontwerp websites die toegankelijk zijn en gemakkelijk te gebruiken door alle bezoekers. Deze digitale toegankelijkeid is bij vanzelfsprekend en staat vanaf het eerste moment voorop.
         img(src="images/testing.svg" class="index__image right" alt="")
     section.alignsection.align
         p(class="p p__right p__right--index") 
             strong.p__firstWord Ontwerpen van een website
-            | Wil je een compleet nieuwe website? Dan beginnen we met het ontwerpen van je website. We ontwerpen met je klanten en producten in de hoofdrol. Gebruiksvriendelijkheid en toegankelijkheid staan hierbij altijd bovenaan.
+            | Wil je een compleet nieuwe website? Dan beginnen ik met het ontwerpen van je website. Ik ontwerp met je klanten en producten in de hoofdrol. Gebruiksvriendelijkheid en toegankelijkheid staan hierbij altijd bovenaan.
         img(src="images/designing.svg" class="index__image left" alt="") 
     section.align
         p(class="p p__left p__left--index") 
             strong.p__firstWord Bouwen van een website
-            | We kiezen altijd een techniek die past bij jouw wensen, budget en project. Wil je de website zelf vullen met tekst en foto's? Dan maken we dat mogelijk. Heb je meer wensen dan kunnen we ook een volledig op maat gemaakt website leveren. Bij elke techniek die we kiezen is toegankelijkheid en gebruiksvriendelijkheid wederom onze belangrijkste drijfveer en nemen de bezoekers van de website de belangrijkste plaats in.
+            | Ik kies voor een techniek die pas bij jouw wensen, budget en project. Wil je de website zelf vullen met tekst en foto's? Dan is dat natuurlijk ook mogelijk. Heb je specifieke wensen? Dan kan ik ook een volledig op maat gemaakt website leveren aangepast aan jouw wensen. 
         img(src="images/building.svg" class="index__image right" alt="")
     section.align
         p(class="p p__right p__right--index") 
             strong.p__firstWord Online Oplossingen
-            | Wij bieden online oplossingen voor diverse problemen. Wil je meer informatie over wat Webdesignpuntnl te bieden heeft vul dan het 
+            | Ik bied online oplossingen voor diverse problemen. Wil je meer informatie over wat ik voor je kan betekenen? Vul dan het 
             a(href="pages/contact.html" class="link") contactformulier
-            |  in. Wij nemen dan zo snel mogelijk contact op om de mogelijkheden te bespreken onder het genot van koffie of thee in ons kantoor in Culemborg. Bellen mag natuurlijk ook.
+            |  in. Ik neem dan zo snel mogelijk contact met je op om de verschillende mogelijkheden te bespreken, onder het genot van koffie of thee in mijn kantoor in Culemborg. 
         img(src="images/office.svg" class="index__image right" alt="")
         p(class="p p__right p__right--freeTest")
             strong.p__firstWord Gratis  
-            | PDF met tips en trucs die je snel en gemakkelijk kunt toepassen op je eigen site. Het enige wat het je kost is je emailadres om zo af en toe een nieuwsbrief met updates voor mijn blog of andere handige zaken die met het internet en met toegankelijkheid te maken hebben. Je kunt je natuurlijk altijd afmelden als je de mails niet langer wilt ontvangen. Wil je dat wij je website onder de loep nemen? Neem dan contact met ons op!
+            | PDF met tips en trucs die je snel en gemakkelijk kunt toepassen op je eigen site. Het enige wat het je kost is je emailadres om zo af en toe een nieuwsbrief te ontvangen met updates voor mijn blog of andere handige zaken die met het internet en met toegankelijkheid te maken hebben. Je kunt je natuurlijk altijd afmelden als je de mails niet langer wilt ontvangen. 
         form(method="post" 
             action="../php/formmailContact.php" 
             enctype="multipart/form-data" 
