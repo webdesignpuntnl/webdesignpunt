@@ -1,6 +1,7 @@
 const nav = document.querySelector('.header__nav');
 let getHamburgerMenu = document.querySelector('.menuSmall');
 const topMenu = document.querySelector('.header__nav__menu');
+const linksTopmenu = topMenu.querySelectorAll('a');
 const hamburgerMenu = document.createElement('div');
 
 // hide the menu on pageload: shows the menu if no js
@@ -12,6 +13,7 @@ function windowResize() {
   getHamburgerMenu = document.querySelector('.menuSmall');
   if (windowSize >= 600) {
     getHamburgerMenu.style.display = 'none';
+    linksTopmenu.forEach(link => link.removeAttribute('tabindex'));
   } else if (windowSize <= 600) {
     getHamburgerMenu.style.display = 'block';
   }
@@ -28,7 +30,7 @@ function handleMenu(e) {
   if (menuState === 'close' || !menuState) {
     newHamburgerMenu.classList.remove('change');
     topMenu.classList.add('hideMenu');
-    topMenu.querySelectorAll('a').forEach(link => link.setAttribute('tabindex', '-1'));
+    linksTopmenu.forEach(link => link.setAttribute('tabindex', '-1'));
     sessionStorage.setItem('menu', 'close');
     menuState = sessionStorage.getItem('menu');
 
@@ -37,7 +39,7 @@ function handleMenu(e) {
     if (e) {
       newHamburgerMenu.classList.add('change');
       topMenu.classList.remove('hideMenu');
-      topMenu.querySelectorAll('a').forEach(link => link.removeAttribute('tabindex', '-1'));
+      linksTopmenu.forEach(link => link.removeAttribute('tabindex'));
       sessionStorage.setItem('menu', 'open');
       menuState = sessionStorage.getItem('menu');
     }
@@ -45,7 +47,7 @@ function handleMenu(e) {
     // bij nog een click gaat het menu dicht en cookie op close
     newHamburgerMenu.classList.remove('change');
     topMenu.classList.add('hideMenu');
-    topMenu.querySelectorAll('a').forEach(link => link.setAttribute('tabindex', '-1'));
+    linksTopmenu.forEach(link => link.setAttribute('tabindex', '-1'));
     sessionStorage.setItem('menu', 'close');
     menuState = sessionStorage.getItem('menu');
     // const lines = newHamburgerMenu.querySelectorAll('#line');
@@ -72,6 +74,17 @@ windowResize();
 
 // hide the menu on pageload;
 handleMenu();
+
+const windowSize = window.innerWidth;
+if (windowSize >= 600) {
+  linksTopmenu.forEach(link => {
+    if (link.hasAttribute('tabindex')) {
+      link.removeAttribute('tabindex');
+    }
+  });
+} else if (windowSize <= 600) {
+  linksTopmenu.forEach(link => link.setAttribute('tabindex', '-1'));
+}
 
 // event listeners
 hamburgerMenu.querySelector('button').addEventListener('click', handleMenu);
