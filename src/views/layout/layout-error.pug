@@ -2,12 +2,13 @@ doctype html
 html(lang="nl")
     block head
         head
-            base(href="/error_docs/") 
             meta(charset="utf-8") 
             meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes") 
-            meta(name="robots" content="noindex, follow")
-            meta(name="Description" content="Webdesignpuntnl is gespecialiseerd in het ontwerpen, bouwen en testen van websites.")
-            meta(name="copyright" content="Copyright Webdesignpuntnl Culemborg")
+            meta(name="robots" content="all") 
+            meta(name="description" content=description) 
+            meta(name="copyright" content="Copyright Webdesignpuntnl Culemborg") 
+            meta(name="image" content="https://www.webdesignpuntnl.com/site-image.jpg")
+            meta(name="name" content="Webdesignpuntnl")
             link(rel="apple-touch-icon" sizes="180x180" href=`${path}apple-touch-icon.png`)
             link(rel="icon" type="image/png" sizes="32x32" href=`${path}favicon-32x32.png`)
             link(rel="icon" type="image/png" sizes="16x16" href=`${path}favicon-16x16.png`)
@@ -15,15 +16,24 @@ html(lang="nl")
             link(rel="mask-icon" href=`${path}safari-pinned-tab.svg` color="#5bbad5")
             meta(name="msapplication-TileColor" content="#da532c")
             meta(name="theme-color" content="#ffffff")
-            meta(property="og:title" content="Webdesignpuntnl")
-            meta(property="og:description" content="Webdesignpuntnl is gespecialiseerd in het ontwerpen, bouwen en testen van websites.")
-            meta(property="og:type" content="service")
-            meta(property="og:url" content="https://www.webdesignpuntnl.com")
-            meta(property="og:image" content="https://www.webdesignpuntnl.com/favicon-32x32.png")
+            meta(name="twitter:card" content="summary")
+            meta(name="twitter:title" content="Webdesignpuntnl")
+            meta(name="twitter:description" content="Webdesignpuntnl Culemborg is gespecialiseerd in het ontwerpen, bouwen en testen van toegankelijke websites")
+            meta(name="twitter:site" content="@reneedekruijf")
+            meta(name="twitter:creator" content="@reneedekruijf")
+            meta(name="twitter:image:src" content="https://www.webdesignpuntnl.com/site-image-preview.jpg")
+            meta(name="og:title" content="Webdesignpuntnl")
+            meta(name="og:description" content="Webdesignpuntnl Culemborg is gespecialiseerd in het ontwerpen, bouwen en testen van toegankelijke websites")
+            meta(name="og:image" content="https://www.webdesignpuntnl.com/site-image-preview.jpg")
+            meta(name="og:url" content="https://www.webdesignpuntnl.com")
+            meta(name="og:site_name" content="Webdesignpuntnl")
+            meta(name="og:locale" content="nl")
+            meta(name="og:type" content="website")
+            //- link(href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet')
             //- link(href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet')
-            link(href=`${path}css/main.css` rel='stylesheet')         
-            
-            title  #{title} - Webdesignpuntnl
+            link(href=`${path}css/main.css` rel='stylesheet')
+
+            title #{title} - Webdesignpuntnl
     body
         block header
             <!-- top logo -->
