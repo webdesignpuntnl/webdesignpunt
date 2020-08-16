@@ -3,6 +3,8 @@ mixin blogNav(page)
   aside.blog__nav
     ul.blog__nav__list
       li.blog__nav__list__item
+        a(href=("wcag-draft.html") class=(page == "wcag-draft" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) WCAG 2.2
+      li.blog__nav__list__item
         a(href=("cms.html") class=(page == "cms" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) CMS
       li.blog__nav__list__item
         a(href=("menu.html") class=(page == "menu" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) menu
