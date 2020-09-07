@@ -9,7 +9,7 @@ block prepend head
 
 block content
   +blogNav(page)
-  //- wcag 2.2 criteria  
+    //- wcag 2.2 criteria  
   article(class="article article--blog")     
     div.align
       h2.h2.h2--blog Nieuw in WCAG 2.2
@@ -86,7 +86,7 @@ block content
       p(class="p p__left p__left--blog")
         | Een 
         a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-cognitive-function-test") cognitieve functie test
-        |  is een test waarbij de gebruiker informatie moet onthouden, manipuleren of omzetten.
+        | is een test waarbij de gebruiker informatie moet onthouden, manipuleren of omzetten.
       p(class="p p__left p__left--blog")
         | Een paar voorbeelden van een 
         a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-cognitive-function-test") cognitieve functie test
@@ -101,7 +101,30 @@ block content
         | Noot: Het onthouden van je eigen naam, email adres of telefoonnummer valt niet onder een 
         a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-cognitive-function-test") cognitieve functie test
       p(class="p p__left p__left--blog")
-        span(class="span__date") Gepubliceerd op 31 augustus 2020 door Renee de Kruijf 
+        a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#redundant-entry") 3.3.8 Redundant Entry (Level A)
+        | Als een gebruiker een 
+        a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-processes") proces
+        |  moet doorlopen waarbij de gebruiker informatie moet geven of heeft moeten geven om de volgende stap te kunnen voltooien dan moet deze informatie: 
+      ul.blog__numbered__list
+        li automatisch worden ingevuld of
+        li beschikbaar zijn zodat de gebruiker deze kan selecteren
+      p(class="p p__left p__left--blog")
+        | Dit doe je als je iets koopt. Je kiest een product, vult enkele gegevens in en in de volgende stap heb je deze gegevens weer nodig om de volgende stap in het koopproces te voltooien.
+      p(class="p p__left p__left--blog")
+        a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#focus-appearance-minimum") 2.4.11 Focus Appearance (Minimum) (Level AA)
+      p(class="p p__left p__left--blog")
+        | Het volgende is van toepassing op de focus-ring (als je met de tab-toets navigeert zie je door middel van deze ring waar je bent in de pagina) op elk onderdeel van de gebruikers interface:
+      ul.blog__numbered__list 
+        li <strong>minimaal gebied:</strong> het 
+          a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-focus-indication-area") focus gebied
+          |  is groter of gelijk aan een
+        a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-css-pixels") 1 CSS Pixel
+        |  rand van het element wat focus heeft, of heeft een dikte van ten minste 8 CSS Pixels langs de kortste kant van het element
+        li <strong>verandering van contrast:</strong> de kleurverandering van het focus gebied heeft een contrast ratio van ten minste 3:1 tegenover de kleur van de normale staat van het element.
+        li <strong>aangrenzende kleuren:</strong> het focus gebied heeft een contrast ratio van ten minste 3:1 tegenover alle aangrenzende kleuren voor het minimale gebied of groter of heeft een dikte van ten minste 2 CSS Pixels
+        li <strong>zichtbaarheid:</strong> het element met focus is niet compleet verborgen door inhoud gemaakt door de auteur
+      p(class="p p__left p__left--blog")
+        span(class="span__date") Gepubliceerd op 7 september 2020 door Renee de Kruijf 
         a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="wcag22" data-show-count="false") Tweet
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
