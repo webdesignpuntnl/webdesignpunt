@@ -122,15 +122,34 @@ block content
         | Het volgende is van toepassing op de focus-ring (als je met de tab-toets navigeert zie je door middel van deze ring waar je bent in de pagina) op elk onderdeel van de gebruikers interface:
       ul.blog__numbered__list 
         li <strong>minimaal gebied:</strong> het 
-        a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-focus-indication-area") focus gebied
-        |  is groter of gelijk aan een
-        a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-css-pixels") 1 CSS Pixel
-        |  rand van het element wat focus heeft, of heeft een dikte van ten minste 8 CSS Pixels langs de kortste kant van het element
+           a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-focus-indication-area") focus gebied
+           |  is groter of gelijk aan een
+           a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-css-pixels") 1 CSS Pixel
+           |  rand van het element wat focus heeft, of heeft een dikte van ten minste 8 CSS Pixels langs de kortste kant van het element
         li <strong>verandering van contrast:</strong> de kleurverandering van het focus gebied heeft een contrast ratio van ten minste 3:1 tegenover de kleur van de normale staat van het element.
         li <strong>aangrenzende kleuren:</strong> het focus gebied heeft een contrast ratio van ten minste 3:1 tegenover alle aangrenzende kleuren voor het minimale gebied of groter of heeft een dikte van ten minste 2 CSS Pixels
         li <strong>zichtbaarheid:</strong> het element met focus is niet compleet verborgen door inhoud gemaakt door de auteur
       p(class="p p__left p__left--blog")
-        span(class="span__date") Gepubliceerd op 7 september 2020 door Renee de Kruijf 
+        a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dragging") 2.5.7 Dragging (Level AA)
+      p(class="p p__left p__left--blog")
+        | Alle acties die een 
+        a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-dragging-movements") sleep beweging
+        |  gebruiken moeten kunnen worden uitgevoerd met een enkele aanwijzer zonder slepen, behalve als slepen 
+        a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-essential") essentieel
+        |  is.
+      p(class="p p__left p__left--blog")
+        a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#pointer-target-spacing") 2.5.8 Pointer Target Spacing (Level AA)
+      p(class="p p__left p__left--blog")
+        | Voor elk 
+        a(href="https://www.w3.org/TR/2020/WD-WCAG22-20200811/#dfn-target") target
+        |  (deel van de display waarin muis-acties mogelijk zijn) is er een gebied dat op zijn minst 44 CSS pixels breed en hoog is waarin zich alleen dit target bevindt en geen andere targets, behalve als:
+      ul.blog__numbered__list
+        li <strong>Vergroten:</strong> er een manier is om de afmetingen of de marges van de CSS pixel van elk target te vergroten zodat er een gebied ontstaat van 44 CSS pixels breed en hoog en waarin zich alleen dit target bevindt en geen andere targets
+        li <strong>Inline:</strong> het target bevindt zich in een zin of in een tekstblok
+        li <strong>Programma:</strong> de afmetingen van het target worden bepaald door het programma en is niet aangepast door de auteur
+        li <strong>Essentieel:</strong> de presentatie van het target is essentieel voor de informatie die wordt uitgedragen
+      p(class="p p__left p__left--blog")
+        span(class="span__date") Gepubliceerd op 21 september 2020 door Renee de Kruijf 
         a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="wcag22" data-show-count="false") Tweet
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
