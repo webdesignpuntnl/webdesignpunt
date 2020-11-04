@@ -30,6 +30,14 @@ const poppupInfo = [
     tools: 'Wordpress, css (Sass), Roots (Sage)'
   },
   {
+    client: 'Uvanti',
+    image: '../images/screenshot-uvanti.png',
+    content:
+      'Coaching staat ergens tussen een goed gesprek met een vriend(in) en een gesprek met bijvoorbeeld een psycholoog. Het is meer dan een luisterend oor.',
+    link: 'https://Uvanti.nl',
+    tools: 'Wordpress, CSS, PHP'
+  },
+  {
     client: 'calculator',
     image: '../images/calculator.png',
     content: 'In dit project heb ik de Iphone calculator nagemaakt. Met CSS-grid en ES6.',
