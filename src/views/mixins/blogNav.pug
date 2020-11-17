@@ -3,6 +3,8 @@ mixin blogNav(page)
   aside.blog__nav
     ul.blog__nav__list
       li.blog__nav__list__item
+        a(href=("responsive.html") class=(page == "responsive" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) responsive
+      li.blog__nav__list__item
         a(href=("frustraties.html") class=(page == "frustraties" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) frustraties
       li.blog__nav__list__item
         a(href=("opslag.html") class=(page == "opslag" ? "blog__nav__list__link--active" : 'blog__nav__list__link')) opslag

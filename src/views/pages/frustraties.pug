@@ -4,13 +4,12 @@ include ../mixins/blogNav
 block prepend head
     - var page = "frustraties"
     - var title = "5 frustraties"
-    - var description = "5 frustraties vor blinde of slechtziende bezoekers"
+    - var description = "5 frustraties voor blinde of slechtziende bezoekers"
     - var path = "../"
 
 block content
   +blogNav(page)
   //- frustraties  
-    //- frustraties  
   article(class="article article--blog")     
     div.align
       h2.h2.h2--blog 5 frustraties voor een screenreader
