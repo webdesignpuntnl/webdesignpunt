@@ -79,6 +79,15 @@
   margin: 2rem 2rem 2rem 4rem;
 }
 
+.quickscan__numbered__list {
+  float: right;
+  font-family: $fontRaleway;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  text-align: left;
+  margin: -4rem 2rem 8rem -2rem
+}
+
 .link__button {
   @include buttonLink;
 
@@ -606,6 +615,10 @@ pre[class*='language-'] {
       width: 100%;
     }
   }
+
+  .quickscan__numbered__list {
+    margin: -4rem 11rem 2rem 0rem;
+  }
 }
 
 @mixin main--l {
@@ -614,5 +627,9 @@ pre[class*='language-'] {
     &--cta {
       margin-top: 1rem;
     }
+  }
+
+  .quickscan__numbered__list {
+    margin: -4rem 11rem 2rem 7rem;
   }
 }

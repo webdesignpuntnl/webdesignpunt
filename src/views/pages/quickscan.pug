@@ -1,42 +1,37 @@
-extends layout/layout
+extends ../layout/layout
 
 block prepend head
     - var page = "quickscan"
     - var title = "quickscan | Webdesignpuntnl"
     - var description = "De quickscan kijkt naar een paar belangrijke toegankelijkheids eisen"
-    - var path = ""
+    - var path = "../"
 
 block content
     article(class="article")
     h2(class="h2 h2--index") Quickscan op toegankelijkheid
     //- h3.h3 hart voor een toegankelijk internet
     section.align
+        h3.h3 Mensen met een beperking
         p(class="p p__right p__right--index")
-            strong.p__firstWord Testen op toegankelijkheid  
-            | Heb je een website? En weet je niet zeker of deze of deze door iedereen op de juiste wijze kan worden bezocht en gebruikt? Laat je website door mij testen op toegankelijkheid. Met een quickscan kijk ik naar een aantal belangrijke toegankelijkheidseisen. 
-            |  Als er uit de test punten ter verbetering zijn en je ziet het niet zitten om dit zelf aan te pakken dan kan ik je helpen deze op te lossen. Neem  
-            a(href="pages/contact.html") contact
-            |  op voor de mogelijkheden. 
-        a(href="pages/quickscan.html" class="link__button link__button--cta") quickscan  
+            strong.p__firstWord 25%   
+            | van de Nederlandse bevolking heeft een beperking, dit kan zowel lichamelijk als geestelijk zijn. Voor sommigen kan dit betekenen dat ze hulpmiddelen nodig hebben om bepaalde basistaken uit te voeren. Het internet is voor veel mensen met een beperking een terugkerende uitdaging. Het internet is niet meer weg te denken uit ons dagelijkse leven, een rijbewijs aanvragen of even iets opzoeken gebeurt voornamelijk nog op het internet. Als een website, bijvoorbeeld, alleen maar bedient kan worden met een muis en niet met het toetsenbord dan wordt er een grote groep mensen uitgesloten. Of er is alleen een telefoonnummer op de website en geen contact-formulier, voor iemand die doof is wordt het een enorme opgave om contact op te nemen met dit bedrijf. Gelukkig zijn er richtlijen om een website toegankelijk te maken zodat iedereen er gebruik van kan maken.
+        img(src="../images/testing.svg" class="index__image right" alt="")
     section.align
+        h3.h3 de Quickscan
         p(class="p p__left p__left--index") 
-            strong.p__firstWord Toegankelijke websites
-            | Ik bouw en ontwerp websites die toegankelijk zijn en gemakkelijk te gebruiken door alle bezoekers. Deze digitale toegankelijkeid is bij vanzelfsprekend en staat vanaf het eerste moment voorop.
-        img(src="images/testing.svg" class="index__image right" alt="")
+            strong.p__firstWord De
+            | Quickscan is een compacte test waarbij ik op een paar belangrijke punten controleer of een website te gebruiken is met andere middelen dan een muis en een scherm. Deze test is niet bedoeld om op alle richtlijnen te controleren. Het geeft wel een goede indicatie of de website in de basis voldoet aan een aantal richtlijnen. Na deze scan is er altijd nog een complete controle nodig van de richtlijnen. Daarnaast is toegankelijkheid een continue proces wat eigenlijk steeds aandacht nodig heeft. Zeker bij een website waar door verschillende personen aan wordt gewerkt en inhoud aan wordt toegevoegd. 
+        img(src="../images/designing.svg" class="index__image left" alt="") 
     section.alignsection.align
+        h3.h3 Testpunten
         p(class="p p__right p__right--index") 
-            strong.p__firstWord Ontwerpen van een website
-            | Wil je een compleet nieuwe website? Dan beginnen ik met het ontwerpen van je website. Ik ontwerp met je klanten en producten in de hoofdrol. Gebruiksvriendelijkheid en toegankelijkheid staan hierbij altijd bovenaan.
-        img(src="images/designing.svg" class="index__image left" alt="") 
+            strong.p__firstWord Er
+            | worden 3 pagina's getest op 6 verschillende punten. 2 van de drie pagina's zijn altijd de homepage en de contactpagina, de derde wordt in overleg bepaald. Er wordt ondermeer gecontroleerd of het mogelijk is om te navigeren met het toetsenbord, of er een goede beschrijving is van de afbeeldingen en er wordt naar de contrasten gekeken tussen teksten en achtergronden. 
+        img(src="../images/building.svg" class="index__image right" alt="")
+
     section.align
+        h3.h3 Resultaten
         p(class="p p__left p__left--index") 
-            strong.p__firstWord Bouwen van een website
-            | Ik kies voor een techniek die pas bij jouw wensen, budget en project. Wil je de website zelf vullen met tekst en foto's? Dan is dat natuurlijk ook mogelijk. Heb je specifieke wensen? Dan kan ik ook een volledig op maat gemaakt website leveren aangepast aan jouw wensen. 
-        img(src="images/building.svg" class="index__image right" alt="")
-    section.align
-        p(class="p p__right p__right--index") 
-            strong.p__firstWord Online Oplossingen
-            | Ik bied online oplossingen voor diverse problemen. Wil je meer informatie over wat ik voor je kan betekenen? Vul dan het 
-            a(href="pages/contact.html" class="link") contactformulier
-            |  in. Ik neem dan zo snel mogelijk contact met je op om de verschillende mogelijkheden te bespreken, onder het genot van koffie of thee in mijn kantoor in Culemborg. 
-        img(src="images/office.svg" class="index__image right" alt="")
+            strong.p__firstWord Na 
+            | afloop ontvangt u een testrapport met mijn bevindingen die ik, eventueel ook nog in een gesprek kan toelichten. Aan de hand van dat rapport kunnen we gaan kijken naar eventuele vervolgstappen. Het doel is om zo goed als mogelijk te voldoen aan de richtlijnen die gesteld worden aan een toegankelijke website. 
+        img(src="../images/office.svg" class="index__image right" alt="")
