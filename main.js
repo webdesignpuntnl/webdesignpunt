@@ -61,6 +61,11 @@ require('./src/images/mail.svg');
 require('./src/images/error.svg');
 require('./src/images/404.svg');
 require('./src/images/screenshot-uvanti.png');
+require('./src/images/technology.svg');
+require('./src/images/web-design.svg');
+require('./src/images/recommendations.svg');
+require('./src/images/mechanic.svg');
+
 // require('./src/images/echelon-logo.svg');
 // require('./src/images/buurtpanel-logo.svg');
 // require('./src/images/windwinning-logo.svg');
