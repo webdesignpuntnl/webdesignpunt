@@ -9,7 +9,7 @@
   &__card {
     display: grid;
     grid-template-rows: 100px 150px;
-    width: 180px;
+    width: 200px;
     border: 2px solid $orangeColor;
     border-radius: 5px;
 
@@ -17,7 +17,7 @@
     color: $blackColor;
     text-decoration: none;
 
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 1rem;
 
     img {
@@ -38,8 +38,14 @@
   }
 }
 
-@mixin testimonial--m {
+@mixin testimonial--ms { // 600
   .testimonial {
-    margin: 12rem 0 2rem 0;
+    margin: 12rem 0 6rem 0;
+  }
+}
+
+@mixin testimonial--m { // 768
+  .testimonial {
+    // margin: 12rem 0 2rem 0;
   }
 }
