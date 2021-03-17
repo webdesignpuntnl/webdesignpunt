@@ -48,6 +48,11 @@
     margin: 2rem 0 0.5rem 2rem;
   }
 
+  &--right {
+    text-align: left;
+    margin: 2rem 0 0.5rem 2rem;
+  }
+
   &--hidden {
     margin: 0;
     padding: 0;
@@ -503,6 +508,13 @@ pre[class*='language-'] {
     }
   }
 
+  .h3 {
+    &--right {
+      text-align: center;
+      margin: 2rem 0 0.5rem 12rem;
+    }
+  }
+
   main {
     form {
       display: block;
@@ -605,6 +617,13 @@ pre[class*='language-'] {
     &--example {
       width: 70%;
       margin: 2rem 0 1rem 3rem;
+    }
+  }
+
+  .h3 {
+    &--right {
+      text-align: center;
+      margin: 2rem 0 0.5rem 6rem;
     }
   }
 
