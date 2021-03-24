@@ -40,6 +40,7 @@ block content
                     pattern="^[a-zA-Z\\s]*$" 
                     placeholder="naam (verplicht)" 
                     required
+                    aria-required="true"
                     title="gebruik alleen letters en geen cijfers") 
                 label(for="nameField" class="input__textInput__label") naam (verplicht)
             //- div(class="input")
@@ -72,6 +73,7 @@ block content
                     id="emailField"
                     class="input__textInput" 
                     required
+                    aria-required="true"
                     pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
                     placeholder="email (verplicht)" title="vul een geldig emailadres in")
                 label(for="emailField" class="input__textInput__label") email (verplicht)
@@ -109,6 +111,7 @@ block content
                     id="antiSpamField"
                     class="input__textInput" 
                     required
+                    aria-required="true"
                     placeholder="Los de som op 5 + 1 (verplicht)" 
                     title="Geef aub het juist antwoord!")
                 label(for="antiSpamField" class="input__textInput__label") Los de som op 5 + 1 (verplicht)
