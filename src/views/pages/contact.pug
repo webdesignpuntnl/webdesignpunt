@@ -10,7 +10,7 @@ block content
   article(class="article")
     h2(class="h2") contact / aanvraag
     p(class="p p--center") Wil je meer weten? Wil je je site vrijblijvend laten testen? Of wil je een afspraak maken? Vul onderstaand formulier in en ik neem zo snel mogelijk contact met je op!
-    p(class="p p--center") Velden met een * zijn verplicht!
+    //- p(class="p p--center") Velden met een * zijn verplicht!
   form(
         method="post" 
         action="../php/formmailContact.php" 
@@ -38,10 +38,10 @@ block content
                     id="nameField"
                     class="input__textInput" 
                     pattern="^[a-zA-Z\\s]*$" 
-                    placeholder="naam *" 
+                    placeholder="naam (verplicht)" 
                     required
                     title="gebruik alleen letters en geen cijfers") 
-                label(for="nameField" class="input__textInput__label") naam *
+                label(for="nameField" class="input__textInput__label") naam (verplicht)
             //- div(class="input")
                 //- div.input__message
                 input(
@@ -61,7 +61,7 @@ block content
                     class="input__textInput input__textInput--subjectField" 
                     title="kies onderwerp voor je vraag")
                     option(value="" selected disabled) onderwerp vraag 
-                    option(value="ik wil mijn site testen") ik wil mijn site vrijblijvend testen
+                    option(value="ik wil mijn site testen") ik wil mijn site laten testen
                     option(value="ik wil een afspraak maken") ik wil een afspraak maken
                     option(value="ik wil meer informatie") ik wil meer informatie
                 //- label(for="subjectField" class="input__textInput__label") onderwerp
@@ -73,8 +73,8 @@ block content
                     class="input__textInput" 
                     required
                     pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
-                    placeholder="email *" title="vul een geldig emailadres in")
-                label(for="emailField" class="input__textInput__label") email *
+                    placeholder="email (verplicht)" title="vul een geldig emailadres in")
+                label(for="emailField" class="input__textInput__label") email (verplicht)
             //- div(class="input")
                 input(
                     name="linkField" 
@@ -109,9 +109,9 @@ block content
                     id="antiSpamField"
                     class="input__textInput" 
                     required
-                    placeholder="Los de som op 5 + 1 *" 
+                    placeholder="Los de som op 5 + 1 (verplicht)" 
                     title="Geef aub het juist antwoord!")
-                label(for="antiSpamField" class="input__textInput__label") Los de som op 5 + 1 *
+                label(for="antiSpamField" class="input__textInput__label") Los de som op 5 + 1 (verplicht)
             div(class="input")
                 button(
                     name="insturen" 
