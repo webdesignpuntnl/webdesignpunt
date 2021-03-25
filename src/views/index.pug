@@ -5,6 +5,9 @@ block prepend head
     - var title = "welkom bij Webdesignpuntnl"
     - var description = "Webdesignpuntnl Culemborg is gespecialiseerd in het ontwerpen, bouwen en testen van toegankelijke websites"
     - var path = ""
+    script
+        | (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){ var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);} f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i); var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000)); 
+        | _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml'); var ml_account = ml('accounts', '3023458', 'e8q5w0m6i5', 'load');
 
 block content
     article(class="article")
@@ -40,42 +43,10 @@ block content
             a(href="pages/contact.html" class="link") contactformulier
             |  in. Ik neem dan zo snel mogelijk contact met je op om de verschillende mogelijkheden te bespreken, onder het genot van koffie of thee in mijn kantoor in Culemborg. 
         img(src="images/office.svg" class="index__image right" alt="")
-        //- p(class="p p__right p__right--freeTest")
-        //-     strong.p__firstWord Gratis  
-        //-     | PDF met tips en trucs die je snel en gemakkelijk kunt toepassen op je eigen site. Het enige wat het je kost is je emailadres om zo af en toe een nieuwsbrief te ontvangen met updates voor mijn blog of andere handige zaken die met het internet en met toegankelijkheid te maken hebben. Je kunt je natuurlijk altijd afmelden als je de mails niet langer wilt ontvangen. 
-        //- form(method="post" 
-        //-     action="../php/formmailContact.php" 
-        //-     enctype="multipart/form-data" 
-        //-     autocomplete="on" 
-        //-     id="mailingListForm"
-        //-     class="form form--mailingListForm"
-        //-     title="vraag de gratis pdf aan")
-        //-     input(type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER")
-        //-     input(type="hidden" name="recipients" value="info_*_webdesignpuntnl.com")
-        //-     input(type="hidden" name="good_url" value="../pages/gratispdf-verzonden.html")
-        //-     input(type="hidden" name="bad_url" value="../pages/gratispdf-niet-verzonden.html")
-        //-     input(type="hidden" name="subject" value="Ik wil graag de gratis PDF ontvangen!")
-        //-     fieldset(class="form__fieldset")
-        //-         div(class="input")
-        //-             input(
-        //-                 name="email" 
-        //-                 type="email"  
-        //-                 id="emailField"
-        //-                 class="input__textInput input__textInput--mailingListForm" 
-        //-                 required
-        //-                 pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" 
-        //-                 placeholder="emailadres" title="vul een geldig emailadres in")
-        //-             label(for="emailField" class="input__textInput__label") emailadres
-        //-         div(class="input")
-        //-             input(
-        //-                 type="checkbox"
-        //-                 id="checkboxConfirm"
-        //-                 name="conmfirm privacy"
-        //-                 required)
-        //-             label(for="checkboxConfirm" class="input__textInput__label input__textInput__label--mailingListForm") Ik ga akkoord met de privacy- en cookieverklaring
-        //-         div(class="input")
-        //-             button(
-        //-                 name="insturen" 
-        //-                 type="submit" 
-        //-                 class="input__textInput input__textInput__submitButton input__textInput__submitButton--mailingListForm") versturen
+        p(class="p p__right p__right--freeTest")
+            strong.p__firstWord Gratis  
+            | PDF met tips en trucs die je snel en gemakkelijk kunt toepassen op je eigen site. Het enige wat het je kost is je emailadres om zo af en toe een nieuwsbrief te ontvangen met updates voor mijn blog of andere handige zaken die met het internet en met toegankelijkheid te maken hebben. Je kunt je natuurlijk altijd afmelden als je de mails niet langer wilt ontvangen. 
+        div(class="ml-form-embed"
+            data-account="3023458:e8q5w0m6i5"
+            data-form="3804607:a8u8k3")
         +testimonials
