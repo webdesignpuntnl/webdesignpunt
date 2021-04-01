@@ -90,7 +90,7 @@
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
   text-align: left;
-  margin: -4rem 2rem 8rem -2rem
+  margin: -4rem 2rem 8rem -2rem;
 }
 
 .link__button {
@@ -414,6 +414,11 @@ pre[class*='language-'] {
 }
 
 #checkboxConfirm {
+  margin-left: 0.5rem;
+}
+
+.input__textInput__label--mailingList {
+  font-size: 1.3rem;
   margin-left: 0.5rem;
 }
 
