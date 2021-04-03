@@ -1,0 +1,20 @@
+extends ../layout/layout
+
+block prepend head
+    - var page = ""
+    - var title = "Je inschrijving is bevestigd download de PDF"
+    - var description = "PDF met gratis toegankelijkheids tips"
+    - var path = "../"
+
+block content
+  section.alignsection.align
+    h2(class="h2 error__h2") Bedank voor het aanmelden!
+    img(src="../images/mail.svg" class="error__image" alt="")
+    p(class="p error__p")  
+      span.nextLine.nextLine--freePDF 
+        a(href="../gratis-tips.pdf" class="link") Gratis PDF met toegankelijkheids tips (449kb)
+block script
+    //- script(src=`${path}js/contactForm-bundle.js`)
+    script(src=`${path}js/main-bundle.js`)
+
+
