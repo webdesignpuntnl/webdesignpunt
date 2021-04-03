@@ -172,6 +172,17 @@
 }
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
   float: left;
+
+  &:focus-within {
+    outline: none;
+    // background-color: $yellowColor !important;
+    background-color: $whiteColor !important;
+    box-shadow: $greyColor 1px 1px 5px;
+    border: 1px solid $orangeColor;
+    border-radius: 5px;
+    padding: 0.8rem 0 0.5rem 0.8rem;
+    transition: background-color 300ms ease-in-out;
+  }
 }
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
   margin: 0;
@@ -864,6 +875,7 @@
   margin-left: -24px;
   overflow: visible;
 }
+
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
   color: #000;
   display: block;
