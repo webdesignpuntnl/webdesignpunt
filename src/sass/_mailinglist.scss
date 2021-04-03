@@ -557,7 +557,7 @@
   .ml-form-embedBody
   .ml-form-checkboxRow
   .label-description::before {
-  top: 0 !important;
+  top: -3px !important;
   box-sizing: border-box !important;
 }
 #mlb2-3847912.ml-form-embedContainer
@@ -655,7 +655,7 @@
   .ml-form-checkboxRow
   .label-description::after {
   position: absolute;
-  top: 5px !important;
+  top: 2px !important;
   left: -19px;
   display: block;
   width: 15px;
@@ -873,7 +873,7 @@
   margin-bottom: 0;
   margin-left: 1rem;
   position: relative;
-  vertical-align: top;
+  // vertical-align: bottom;
 }
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
   font-weight: 400;
