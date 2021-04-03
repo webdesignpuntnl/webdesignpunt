@@ -166,7 +166,7 @@
 }
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow,
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent {
-  margin: 0 0 20px 0;
+  margin: 1rem 0 20px 0;
   width: 100%;
 }
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
@@ -468,6 +468,7 @@
   border-color: #ffe755 !important;
   background-color: #ffe755 !important;
   color: #020202 !important;
+  border: 1px solid $orangeColor !important;
 }
 #mlb2-3847912.ml-form-embedContainer
   .ml-form-embedWrapper
@@ -625,12 +626,12 @@
   top: 4px;
   left: -24px;
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   pointer-events: none;
   content: '';
   background-color: #fff;
-  border: #adb5bd solid 1px;
+  border: $blackColor solid 1px !important;
   border-radius: 50%;
 }
 #mlb2-3847912.ml-form-embedContainer
@@ -653,13 +654,14 @@
   .ml-form-checkboxRow
   .label-description::after {
   position: absolute;
-  top: 3px !important;
-  left: -21px;
+  top: 5px !important;
+  left: -19px;
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   content: '';
 }
+
 #mlb2-3847912.ml-form-embedContainer
   .ml-form-embedWrapper
   .ml-form-embedBody
@@ -868,6 +870,7 @@
   font-size: 12px;
   text-align: left;
   margin-bottom: 0;
+  margin-left: 1rem;
   position: relative;
   vertical-align: top;
 }
@@ -893,7 +896,7 @@
   font-weight: 400 !important;
   line-height: 18px !important;
   padding: 0 !important;
-  margin: 0 5px 0 0 !important;
+  margin: 0 5px 0 10px !important;
 }
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
   margin: 0;
