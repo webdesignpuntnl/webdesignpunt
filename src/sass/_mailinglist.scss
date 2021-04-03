@@ -143,11 +143,12 @@
 }
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
   text-align: left !important;
+  margin-bottom: 1rem !important;
 }
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
   margin-bottom: 5px;
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
   // font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-family: $fontRaleway;
   font-weight: 700;
@@ -166,7 +167,7 @@
 }
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow,
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent {
-  margin: 1rem 0 20px 0;
+  margin: 0.8rem 0 20px 0;
   width: 100%;
 }
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
@@ -192,7 +193,7 @@
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
   background-color: #fff !important;
   color: #333 !important;
-  border-color: #ccc;
+  border-color: $blackColor;
   border-radius: 4px !important;
   border-style: solid !important;
   border-width: 1px !important;
