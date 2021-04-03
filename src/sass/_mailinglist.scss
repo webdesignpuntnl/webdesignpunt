@@ -168,6 +168,8 @@
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow,
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent {
   margin: 0.8rem 0 20px 0;
+  padding: 0.8rem 0 0.5rem 0.8rem;
+  border: 1px solid transparent;
   width: 100%;
 }
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
@@ -180,7 +182,8 @@
     box-shadow: $greyColor 1px 1px 5px;
     border: 1px solid $orangeColor;
     border-radius: 5px;
-    padding: 0.8rem 0 0.5rem 0.8rem;
+    // padding: 0.8rem 0 0.5rem 0.8rem;
+    // margin: 0 0 1rem 0;
     transition: background-color 300ms ease-in-out;
   }
 }
