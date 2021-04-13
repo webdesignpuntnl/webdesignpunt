@@ -65,6 +65,7 @@ require('./src/images/technology.svg');
 require('./src/images/web-design.svg');
 require('./src/images/recommendations.svg');
 require('./src/images/mechanic.svg');
+require('./src/images/advice.svg');
 
 // require('./src/images/echelon-logo.svg');
 // require('./src/images/buurtpanel-logo.svg');
