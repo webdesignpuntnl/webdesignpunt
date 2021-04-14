@@ -69,6 +69,19 @@
   }
 }
 
+.h4 {
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+
+  &--blog {
+    float: left;
+    margin: 2rem 0 0.3rem 2.3rem;
+    text-align: left;
+    width: 100%;
+  }
+}
+
 .ol {
   &--blog {
     margin-left: 3rem;
