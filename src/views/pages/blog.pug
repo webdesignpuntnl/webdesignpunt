@@ -16,32 +16,56 @@ block content
     h2(class="h2") blog
     p(class="p") Deze blog gaat over allerhande onderwerpen die te maken hebben met het bouwen van websites maar met name over de toegankelijkheid van websites en het internet. Niet iedereen is hetzelfde en we surfen allemaal op onze eigen manier op het internet. Of we nou een muis gebruiken, een screenreader of een brailleregel we moet allemaal de informatie kunnen raadplgen die we zoeken of nodig hebben. Daar gaat deze blog met name over. Soms maak ik wel eens een uitstapje naar een technisch onderwerp (vind ik gewoon leuk) maar meestal wil ik mensen bewust proberen te maken de een toegankelijk en gebruiksvriendelijk internet een noodzaak is voor ons allemaal.
   +blogNav
-  //- responsive  
   article(class="article article--blog")     
     div.align
-      h2.h2.h2--blog Een responsive website
+      h2.h2.h2--blog WCAG (Web Content Accessibility Guidelines)
       p(class="p p__left p__left--blog") 
-        strong.p__firstWord Even
-        | een website checken op je mobiele telefoon is tegenwoordig heel normaal. Sterker nog er wordt meer gesurft met een mobiele telefoon dan bijvoorbeeld op een laptop of desktop. Vandaar dat je je website op alle schermen goed moet werken, anders is je klant of  bezoeker zo weer weg.
+        strong.p__firstWord Alles 
+        | op het internet is onderhevig aan verandering of met andere woorden het internet wordt steeds beter en makkelijker te gebruiken. Dit geldt ook voor de richtlijnen voor toegankelijkheid. Deze richtlijnen zorgen er voor dat een website door iedereen kan worden gebruikt. Niet iedereen gebruikt bijvoorbeeld een muis, er zijn ook mensen die door een beperking (lichamelijk of geestelijk) andere technieken gebruiken om een website te bezoeken. Denk bijvoorbeeld aan een toetsenbord, een screenreader (leest een pagina of gedeeltes voor) of een brailleregel (zet tekst om in Braille). 
+      h3.h3.h3--blog Web Content Accessibility Guidelines            
+      p(class="p p__left p__left--blog") 
+        | De WCAG of de Web Content Accessibility Guidelines zijn richtlijnen die ontwerpers en bouwers kunnen gebruiken om er voor te zorgen dat digitale middelen toegankelijk zijn voor iedereen. Ze worden opgesteld door de Accessibility Guidelines Working Group. In deze groep zitten allerlei mensen die iets te maken hebben met het internet, makers van browser, ontwerpers, webbouwers enzovoort. Deze richtlijnen worden steeds aangepast aan de veranderingen op het internet, in de maatschappij en in de techniek. Op dit moment gebruiken we WCAG 2.1 (verplicht voor overheidsinstellingen) maar WCAG 2.2 is al in de maak.
+      p(class="p p__left p__left--blog") 
+        | De WCAG is opgebouwd uit 4 principes:
+      ol.blog__numbered__list
+        li Waarneembaar
+        li Bedienbaar
+        li Begrijpelijk
+        li Robuust
+      p(class="p p__left p__left--blog") 
+        | Deze 4 principes zijn weer onderverdeeld in 13 richtlijnen. Zo vind je onder het principe Waarneembaar de volgende richtlijnen: Tekstalternatieven (1.1), Op tijd gebaseerde media (1.2), Aanpasbaar (1.3), Onderscheidbaar (1.4).
+        | Elke richtlijn is verder onderverdeeld in een aantal succescriteria. Deze succescriteria zijn belangrijk, want daar wordt een website, app of online document op getest. Er zijn in totaal 78 succescriteria. De principes zorgen er voor dat we het kunnen hebben over hoe mensen het internet gebruiken zonder dat we het over de technologie hoeven te hebben. Mensen kunnen het internet namelijk op verschillende manieren gebruiken en bedienen. Veel mensen gebruiken een muis maar er zijn ook mensen die het internet gebruiken met het toetsenbord of met voorleessoftware of zelfs met een Brailleregel.
+      h3.h3.h3--blog Toepassen
       p(class="p p__left p__left--blog")
-       | Een website die goed werkt op elk scherm en apparaat noemen we repsonsive. De website 'reageert' op de maat van het scherm. De website 'past' zich als het ware aan op het scherm waar je de website op kijkt.
+        | Door de principes toe te passen op je website kun je deze toegankelijk maken. Als je dit goed doet dan is de website te gebruiken door, vrijwel, iedereen en op de manier die zij zelf bepalen (muis, toetsenbord etc.). 
+      h4.h4.h4--blog 1. Waarneembaar
       p(class="p p__left p__left--blog")
-        | Een mooi voorbeeld hiervan is het menu. Als je een website bekijkt op het scherm van je laptop dan staat het menu vaak bovenaan en de meun-items staan op een lijn naast elkaar. Op een klein mobiel scherm lukt dit niet, vandaar dat je op zo'n scherm vaak een hamburgermenu ziet. Je klikt op het hamburger-icoon en het menu wordt zichtbaar.
+        | Bezoekers moeten de website en alles op de website (content) kunnen waarnemen en ervaren en ze moeten daarbij de zintuigen kunnen gebruiken die voor ze beschikbaar zijn. Afbeeldingen moeten bijvoorbeeld een beschrijving hebben voor mensen die niet of slecht kunnen zien. Een ander voorbeeld is dat iemand die een video niet kan zien ook op een andere manier (door tekst of door ondertiteling) de informatie moet kunnen krijgen.
+      h4.h4.h4--blog 2. Bedienbaar
       p(class="p p__left p__left--blog")
-        | Een ander voorbeeld is dat op een groot scherm de items vaak naast elkaar staan en over de volle breedte van het scherm. Denk hierbij aan een webshop voor kleding, dit zijn losse blokken voor elk kledingstuk, er staan dan bijvoorbeeld 4 kledingstukken naast elkaar en daaronder dan weer een rij met 4 kledingstukken. Op een klein scherm is geen plek en staan ze dan onder elkaar.
+        | Bezoekers moeten content op een website kunnen vinden en kunnen gebruiken. Dit mag niet afhangen van de manier waarop ze van de content gebruik maken. Dit moeten ze kunnen doen met elke gewenste hulptechnologie. Een website moet bijvoorbeeld te bedienen zijn met het toestenbord (voor mensen die geen muis gebruiken) en je moet dan kunnen zien waar je bent op de pagina, dus waar de focus ligt. Een link moet duidelijk beschrijven waar deze naar gaat als je er op klikt. Dus een link met beschrijving klik hier werkt niet.
+      h4.h4.h4--blog 3. Begrijpelijk
       p(class="p p__left p__left--blog")
-        | Als jouw website alleen gebouwd is voor 1 soort scherm, voor een groot scherm, dan ziet de website er op een klein scherm precies hetzelfde uit. Het nadeel hiervan is dat alles heel erg klein is. De buttons zijn klein maar de tekst ook. Je moet inzoomen om iets te kunnen lezen of ergens op te kunnen klikken, zo ben je al snel de weg kwijt. Voor mij is dit dan ook meestal (of ik moet echt iets nodig hebben en het nergens anders kunnen vinden) een reden om per direct te vertrekken van zo'n website.
+        | Zowel mensen als software moeten de inhoud van de website kunnen begrijpen en het moet duidelijk zijn hoe de website werkt. Zo moet software de taal van de pagina kunnen bepalen. Tekst moet makkelijk te lezen zijn en begrijpelijk zijn voor iedereen. Velden van een formulier moeten labels hebben zodat iedereen begrijpt wat er in zo'n veld moet komen te staan.
+      h4.h4.h4--blog 4. Robuust
       p(class="p p__left p__left--blog")
-        | Het is natuurlijk heel 'makkelijk' om zelf een website te maken met Wordpress en een standaard thema. De meeste thema's zijn responsive en werken dus goed op alles schermen maar dit moet je wel zelf checken. Dus check, voordat je het thema aanschaft, of het gemaakt is om goed te werken op zowel kleine als grote schermen.  Check dit altijd ook zelf als de website klaar is of, beter nog, tussendoor als je aan het bouwen bent. Dit kun je doen door je website te bekijken op een tablet of een mobiele telefoon. 
+        | De content moet te gebruiken zijn door zo veel mogelijk verschillende user agents. Een user agent kan een browser zijn maar dat zijn ook ander hulptechnologieën. Daarbij moet rekening worden gehouden met moderne maar ook met oude en toekomstige user agents. Dit kan je doen door een website op de juiste manier te bouwen en met foutloze code. Maar ook door te proberen code zo te schrijven dat het overal en altijd werkt. 
       p(class="p p__left p__left--blog")
-        | Een website die responsive is heeft een paar grote voordelen. Zo krijg je straf van Google (en andere zoekmachines) als je website niet responsive is. Je komt dan minder hoog in de zoekresultaten te staan. Daarnaast zorgt het voor meer bezoekers en bezoekers blijven ook langer op je website. Met andere woorden het maakt je website toegankelijker.
+      h3.h3.h3--blog drie Niveau’s
+      p(class="p p__left p__left--blog") 
+        | Verder is de WCAG onderverdeeld in 3 niveaus: A, AA en AAA. Hierbij geldt in het algemeen dat aan een succescriteria op niveau A relatief makkelijk te voldoen is. Succescriteria op niveau AAA zijn relatief moeilijk te behalen en zijn gericht op een geringe groep mensen met een zeer specifieke functiebeperking. Voor (semi)overheden in Nederland geldt dat zij minimaal moeten voldoen aan niveau AA.
+      h3.h3.h3--blog Meer informatie
       p(class="p p__left p__left--blog")
-        | Toegankelijker voor iedereen wel te verstaan. Dus ook voor mensen met een beperking. Het kan voor sommige mensen namelijk nogal lastig zijn om lange stukken tekst op een drukke pagina te lezen. Het voordeel van een website bekijken op een klein scherm is dat er vaak onderdelen weg worden gelaten. Op een klein scherm is minder plek waardoor de website vaak minder druk is. De teksten zijn smaller (omdat het scherm smaller is) waardoor het prettiger leest.
+        | Wil je meer weten over de richtlijnen en de WCAG dan kun je 
+        a(href="contact.html") contact met me opnemen.
+        |  Je kunt meer lezen op de 
+        a(href="https://www.w3.org/") de website van het W3C
+        |  en op 
+        a(href="https://www.w3.org/WAI/standards-guidelines/wcag/") de website van de WCAG.
+        
       p(class="p p__left p__left--blog")
-        | Loop geen klanten of bezoekers mis doordat je website er alleen goed uitziet op een groot scherm!
-      p(class="p p__left p__left--blog")
-        span(class="span__date") Gepubliceerd op 17 november 2020 door Renee de Kruijf 
-        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="responsive" data-show-count="false") Tweet
+        span(class="span__date") Gepubliceerd op 27 april 2021 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="wcag" data-show-count="false") Tweet
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
   script(src=`${path}js/main-bundle.js`)
