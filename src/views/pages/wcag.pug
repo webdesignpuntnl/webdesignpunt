@@ -8,8 +8,7 @@ block prepend head
     - var path = "../"
 
 block content
-  +blogNav(page)
-  //- wcag 2.2 draft  
+  +blogNav(page) 
   article(class="article article--blog")     
     div.align
       h2.h2.h2--blog WCAG (Web Content Accessibility Guidelines)
@@ -58,8 +57,8 @@ block content
         a(href="https://www.w3.org/WAI/standards-guidelines/wcag/") de website van de WCAG.
         
       p(class="p p__left p__left--blog")
-        span(class="span__date") Gepubliceerd op 16 augustus 2020 door Renee de Kruijf 
-        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="wcagdraft" data-show-count="false") Tweet
+        span(class="span__date") Gepubliceerd op 27 april 2021 door Renee de Kruijf 
+        a(href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-via="reneedekruijf" data-hashtags="wcag" data-show-count="false") Tweet
 block script
   script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
   script(src=`${path}js/main-bundle.js`)
