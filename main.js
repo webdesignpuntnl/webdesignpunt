@@ -30,6 +30,7 @@ require('./src/images/web-design.svg');
 require('./src/images/recommendations.svg');
 require('./src/images/mechanic.svg');
 require('./src/images/advice.svg');
+require('./src/images/renee-de-kruijf.jpg');
 
 // require('./src/images/polypane-screenshot.png');
 // require('./src/images/cssscan-logo.png');
