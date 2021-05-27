@@ -42,14 +42,7 @@ html(lang="nl")
             <!-- top logo -->
             header(class="header") 
                 a(href=`${path}index.html` title="homepage" class="logo" aria-label="Logo Ga naar Homepage")
-                    div(class="logo__top")
-                        div(class="logo__top__cirkelTop")
-                            span(class="logo__top__cirkelTop__orange")
-                        h1(class="logo__text") webdesign
-                            span(class="logo__text__dot") punt
-                            | nl
-                        div(class="logo__cirkelBottom") 
-                            span(class="logo__cirkelBottom__yellow")
+                    img(src=`${path}../images/logo.png`, alt="Logo Ga naar Homepage" class="logo--image")
                 //- a(href=`${path}pages/uses.html` class="header__icon header__icon--tools") tools
                 //- a(href=`${path}pages/side.html` class="header__icon header__icon--side") side
                 block navigation 

@@ -4,7 +4,6 @@
 @media screen and (min-width: 320px) {
   // use @include here and @mixin in the partial
 
-  @include logo--vs;
   @include projects--vs;
 }
 
@@ -19,7 +18,6 @@
     ######################################### */
 @media screen and (min-width: 600px) {
   @include header--ms;
-  @include logo--ms;
   @include main--ms;
   @include mailinglist--ms;
   @include testimonial--ms;
