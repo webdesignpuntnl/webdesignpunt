@@ -150,7 +150,7 @@
   color: #333;
   font-size: 16px;
   // font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  font-family: $fontRaleway;
+  font-family: $fontCustom;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
@@ -212,7 +212,7 @@
   border-style: solid !important;
   border-width: 1px !important;
   // font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  font-family: $fontRaleway;
+  font-family: $fontCustom;
   font-size: 14px !important;
   height: auto;
   line-height: 21px !important;
@@ -906,7 +906,7 @@
 #mlb2-3847912.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
   color: $blackColor !important;
   // font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
-  font-family: $fontRaleway !important;
+  font-family: $fontCustom !important;
   font-size: 0.9rem !important;
   // font-size: 12px !important;
   font-weight: 400 !important;

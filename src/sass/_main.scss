@@ -90,7 +90,7 @@
 
 .blog__numbered__list {
   float: left;
-  font-family: $fontRaleway;
+  font-family: $fontCustom;
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
   text-align: left;
@@ -99,7 +99,7 @@
 
 .quickscan__numbered__list {
   float: right;
-  font-family: $fontRaleway;
+  font-family: $fontCustom;
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
   text-align: left;
@@ -249,7 +249,7 @@
 }
 
 .list {
-  font-family: $fontRaleway;
+  font-family: $fontCustom;
   font-size: 1.1rem;
   list-style-type: disc;
   text-align: left;
@@ -389,7 +389,7 @@ pre[class*='language-'] {
     }
 
     &__textInput__submitButton {
-      font-family: $fontRaleway;
+      font-family: $fontCustom;
       font-size: 1rem;
       font-weight: 700;
       text-transform: uppercase;
