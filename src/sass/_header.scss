@@ -115,10 +115,11 @@ a.skip-main:active {
   width: 50px;
   border: 1px solid $blackColor;
   border-radius: 5px;
-  position: absolute;
-  top: 7.2rem;
-  right: 0;
-  margin: 0 1rem;
+  float: right;
+  // position: absolute;
+  // top: 12.2rem;
+  // right: 0;
+  margin: -2rem 1rem 0 1rem;
   padding: 0.2rem 0.4rem;
   cursor: pointer;
 
